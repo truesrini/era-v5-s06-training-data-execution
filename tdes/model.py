@@ -4,8 +4,10 @@ It consumes exactly what the data system produces: token ids, position ids (lear
 embeddings indexed by the packed position ids), segment ids (block-causal attention mask) and
 a loss mask. Per-token cross-entropy is returned for the learning ledger.
 
-Determinism: CPU, one intra-op thread and `torch.use_deterministic_algorithms(True)`, so a
-resumed or replayed run reproduces the original weights bit for bit (checked via weight hashes).
+Determinism: `torch.use_deterministic_algorithms(True)`, one intra-op CPU thread, TF32 off and a
+fixed cuBLAS workspace (set in tdes/__init__.py), so on a given device a resumed or replayed run
+reproduces the original weights bit for bit (checked via weight hashes). Runs on CPU by default
+or on CUDA with `--device cuda`.
 """
 import math
 
@@ -18,20 +20,31 @@ from .util import array_hash
 
 torch.set_num_threads(1)
 torch.use_deterministic_algorithms(True)
+torch.backends.cuda.matmul.allow_tf32 = False
+torch.backends.cudnn.allow_tf32 = False
+torch.backends.cudnn.benchmark = False
+
+
+def resolve_device(name):
+    if name == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("device 'cuda' requested but torch.cuda.is_available() is False "
+                           "(install a CUDA build of torch, or use --device cpu)")
+    return torch.device(name)
 
 _DTYPES = {"float32": torch.float32, "float64": torch.float64}
 
 
 def attention_allowed(seg):
     """(B, L) segment ids -> (B, L, L) bool: same non-pad segment and causal; pads see only self."""
-    L = seg.shape[1]
-    causal = torch.tril(torch.ones(L, L, dtype=torch.bool))[None]
+    L, dev = seg.shape[1], seg.device
+    causal = torch.tril(torch.ones(L, L, dtype=torch.bool, device=dev))[None]
     same = (seg[:, :, None] == seg[:, None, :]) & (seg[:, :, None] > 0)
-    return (causal & same) | torch.eye(L, dtype=torch.bool)[None]
+    return (causal & same) | torch.eye(L, dtype=torch.bool, device=dev)[None]
 
 
 class TinyLM(nn.Module):
     def __init__(self, vocab, d, ff, max_len, seed, std, dtype="float32"):
+        # parameters are drawn on the CPU, so initial weights are identical on every device
         super().__init__()
         g = torch.Generator().manual_seed(int(seed) % (2 ** 63))
         dt = _DTYPES[dtype]
@@ -69,31 +82,35 @@ class TinyLM(nn.Module):
         return array_hash(*[a[k] for k in sorted(a)])
 
 
-def to_tensors(arrays):
+def _device(model):
+    return next(model.parameters()).device
+
+
+def to_tensors(arrays, device="cpu"):
     tokens, positions, seg, labels, loss_mask = arrays
-    return (torch.as_tensor(tokens, dtype=torch.long), torch.as_tensor(positions, dtype=torch.long),
-            torch.as_tensor(seg, dtype=torch.long), torch.as_tensor(labels, dtype=torch.long),
-            torch.as_tensor(loss_mask))
+    as_t = lambda a, dt=None: torch.as_tensor(a, dtype=dt, device=device)
+    return (as_t(tokens, torch.long), as_t(positions, torch.long), as_t(seg, torch.long),
+            as_t(labels, torch.long), as_t(loss_mask))
 
 
 def loss_and_backward(model, arrays, loss_scale):
     """Accumulate d(sum_t mask*CE*scale)/dparams into .grad. Returns (weighted loss, CE (B,L) numpy)."""
-    t = to_tensors(arrays)
+    t = to_tensors(arrays, _device(model))
     ce = model.token_ce(*t)
     loss = (ce * t[4].to(ce.dtype)).sum() * loss_scale
     loss.backward()
-    return float(loss.detach()), ce.detach().numpy()
+    return float(loss.detach()), ce.detach().cpu().numpy()
 
 
 def eval_ce(model, arrays):
     with torch.no_grad():
-        ce = model.token_ce(*to_tensors(arrays))
-    return ce.numpy()
+        ce = model.token_ce(*to_tensors(arrays, _device(model)))
+    return ce.cpu().numpy()
 
 
 def grad_vector(model, arrays):
     """Flattened gradient of the mean loss over loss-bearing tokens (does not touch .grad)."""
-    t = to_tensors(arrays)
+    t = to_tensors(arrays, _device(model))
     ce = model.token_ce(*t)
     n = max(1.0, float(t[4].sum()))
     loss = (ce * t[4].to(ce.dtype)).sum() / n
@@ -144,7 +161,7 @@ class Optimizer:
         st = self.opt.state_dict()["state"]
         arrs = []
         for i in sorted(st):
-            arrs += [st[i]["exp_avg"].numpy(), st[i]["exp_avg_sq"].numpy(), np.asarray(float(st[i]["step"]))]
+            arrs += [st[i]["exp_avg"].cpu().numpy(), st[i]["exp_avg_sq"].cpu().numpy(), np.asarray(float(st[i]["step"]))]
         return array_hash(*arrs)
 
 

@@ -39,23 +39,23 @@
   },
   "firewall_ngrams_checked": 20202,
   "mode": "resume",
-  "resume_latency_s": 0.437796,
+  "resume_latency_s": 0.472601,
   "store": {
     "cache_hit_rate": 0.6049,
     "cache_hits": 865,
     "cache_misses": 565,
-    "mean_shard_read_ms": 1.171,
+    "mean_shard_read_ms": 1.261,
     "shard_reads": 565
   },
   "tag": "resume",
   "timings_s": {
-    "checkpoint": 0.129165,
-    "firewall": 0.25528,
-    "ledger_io": 1.025283,
-    "loader_total": 1.931337,
-    "opus_scoring": 1.604049,
-    "packing_verify": 0.253847,
-    "train_compute": 0.59582
+    "checkpoint": 0.141745,
+    "firewall": 0.278095,
+    "ledger_io": 1.025904,
+    "loader_total": 2.104737,
+    "opus_scoring": 1.753022,
+    "packing_verify": 0.267328,
+    "train_compute": 0.732886
   },
-  "wall_s": 4.441854
+  "wall_s": 4.808459
 }

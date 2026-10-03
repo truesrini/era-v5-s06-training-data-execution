@@ -163,6 +163,22 @@ class ModelTests(unittest.TestCase):
         run(m2, o2, [3])
         self.assertEqual(m1.weights_hash(), m2.weights_hash())
 
+    @unittest.skipUnless(torch.cuda.is_available(), "needs a CUDA build of torch and a GPU")
+    def test_cuda_training_is_bit_reproducible(self):
+        from tdes.config import small_config
+        cfg = small_config()
+        arr = self._batch(np.random.default_rng(3))
+        hashes = []
+        for _ in range(2):
+            m = TinyLM(20, 8, 12, 10, 0, 0.3).to("cuda")
+            opt = Optimizer(m, cfg)
+            for s in (1, 2, 3):
+                opt.zero_grad()
+                loss_and_backward(m, arr, 0.05)
+                opt.step(s)
+            hashes.append(m.weights_hash())
+        self.assertEqual(hashes[0], hashes[1])
+
 
 if __name__ == "__main__":
     unittest.main()

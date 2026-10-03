@@ -41,18 +41,18 @@
     "cache_hit_rate": 0.5655,
     "cache_hits": 518,
     "cache_misses": 398,
-    "mean_shard_read_ms": 1.264,
+    "mean_shard_read_ms": 1.305,
     "shard_reads": 398
   },
   "tag": "fork",
   "timings_s": {
-    "checkpoint": 0.09553,
-    "firewall": 0.18291,
-    "ledger_io": 0.646886,
-    "loader_total": 1.446909,
-    "opus_scoring": 1.194836,
-    "packing_verify": 0.177735,
-    "train_compute": 0.430477
+    "checkpoint": 0.093535,
+    "firewall": 0.194952,
+    "ledger_io": 0.65538,
+    "loader_total": 1.490232,
+    "opus_scoring": 1.242419,
+    "packing_verify": 0.194398,
+    "train_compute": 0.526441
   },
-  "wall_s": 3.028133
+  "wall_s": 3.204708
 }

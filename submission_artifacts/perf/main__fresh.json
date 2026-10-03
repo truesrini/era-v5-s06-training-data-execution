@@ -41,18 +41,18 @@
     "cache_hit_rate": 0.5757,
     "cache_hits": 1225,
     "cache_misses": 903,
-    "mean_shard_read_ms": 1.356,
+    "mean_shard_read_ms": 1.253,
     "shard_reads": 903
   },
   "tag": "fresh",
   "timings_s": {
-    "checkpoint": 0.270246,
-    "firewall": 0.51375,
-    "ledger_io": 1.643179,
-    "loader_total": 3.418161,
-    "opus_scoring": 2.806905,
-    "packing_verify": 0.467922,
-    "train_compute": 1.063908
+    "checkpoint": 0.248635,
+    "firewall": 0.451293,
+    "ledger_io": 1.773107,
+    "loader_total": 3.286862,
+    "opus_scoring": 2.713046,
+    "packing_verify": 0.431076,
+    "train_compute": 1.124826
   },
-  "wall_s": 7.463
+  "wall_s": 7.408103
 }

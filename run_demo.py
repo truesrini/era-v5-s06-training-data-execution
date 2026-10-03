@@ -75,6 +75,8 @@ def main():
     ap.add_argument("--art", default=os.path.join(ROOT, "submission_artifacts"))
     ap.add_argument("--quick", action="store_true", help="tiny configuration (used by the tests)")
     ap.add_argument("--skip-tests", action="store_true")
+    ap.add_argument("--device", choices=["cpu", "cuda"], default="cpu",
+                    help="where the model trains (default cpu); cuda needs a CUDA build of torch")
     a = ap.parse_args()
     art = os.path.abspath(a.art)
     t0 = time.perf_counter()
@@ -82,9 +84,10 @@ def main():
     os.makedirs(art)
     log = RunLog(os.path.join(art, "run.log"), "demo")
     cfg = small_config() if a.quick else default_config()
+    cfg["train"]["device"] = a.device
     log.section("TDES: Training Data Execution System demo")
     import torch
-    log.info(f"python {platform.python_version()} numpy {np.__version__} torch {torch.__version__} on {platform.system()} {platform.machine()}; "
+    log.info(f"python {platform.python_version()} numpy {np.__version__} torch {torch.__version__} device {a.device}{' (' + torch.cuda.get_device_name(0) + ')' if a.device == 'cuda' else ''} on {platform.system()} {platform.machine()}; "
              f"artifacts -> {art}")
     demo, T = cfg["demo"], cfg["train"]["total_steps"]
 

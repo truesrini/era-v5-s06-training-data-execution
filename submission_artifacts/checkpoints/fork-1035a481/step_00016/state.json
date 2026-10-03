@@ -1,7 +1,7 @@
 {
   "branch": "fork-1035a481",
   "checkpoint_id": "ckpt-fork-1035a481-s00016-9ab2929f34",
-  "config_hash": "89766e18619f3bf5d244b1b6e44df9505cba9d51bb0b460551468edcb3a6fa5c",
+  "config_hash": "ee6b5e88854a3e034b497c2cb792f30a488056a902fb10b695d8c38200fa21b0",
   "counters": {
     "loss_tokens": 29682,
     "nonpad_tokens": 32000,
@@ -11,7 +11,7 @@
   "global_step": 16,
   "ledger_offsets": {
     "consumption": {
-      "last_hash": "a19155588f3a11f5219d50b25bb51fd781c670a91c7207c6cc9ca0cf8f99d9f8",
+      "last_hash": "ed86b2c6c29c3835c1223f913f31b522630d131f5d228c8767188cead1bf9c0a",
       "offset": 42,
       "path": "ledgers/fork-1035a481/consumption.jsonl"
     },
@@ -334,7 +334,7 @@
     "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
     "seed": 20260801
   },
-  "run_id": "v5s06-0e5b60c85f",
+  "run_id": "v5s06-77e57077f7",
   "schedule_hash": "98a36e9d6fc002829874b2f8eddd844f6f786e04588f1c3ff54a86fd5acd252e",
   "scheduler": {
     "next_lr": 0.006003840142464886,

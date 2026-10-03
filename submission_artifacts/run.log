@@ -1,298 +1,298 @@
-2026-10-03 12:58:31.598 INFO   [demo] ============ TDES: Training Data Execution System demo ============
-2026-10-03 12:58:31.599 INFO   [demo] python 3.10.11 numpy 1.24.3 torch 2.14.1+cpu on Windows AMD64; artifacts -> C:\Desk\Learning\ERA\Ex06\submission_artifacts
-2026-10-03 12:58:31.602 INFO   [demo] ============ documents -> cleaned corpus ============
-2026-10-03 12:58:31.677 EVENT  [demo] documents cleaned | 785 raw docs -> 781 kept, 4 exact duplicates dropped, cleaning_pipeline_hash=f6151a93de29
-2026-10-03 12:58:31.677 INFO   [demo] ============ tokenizer ============
-2026-10-03 12:58:33.248 EVENT  [demo] tokenizer frozen | vocab=649 hash=6755ee6fea85c6d2 (file sealed read-only)
-2026-10-03 12:58:33.250 CHECK  [demo] [PASS] tokenizer_hash_verified | reloaded hash 6755ee6fea85c6d2 == lock 6755ee6fea85c6d2
-2026-10-03 12:58:33.268 CHECK  [demo] [PASS] tokenizer_deterministic | 29 documents re-encoded identically by the reloaded tokenizer
-2026-10-03 12:58:33.269 CHECK  [demo] [PASS] tokenizer_nfc_stable | NFD-decomposed Hindi encodes to the same ids as NFC
-2026-10-03 12:58:33.269 CHECK  [demo] [PASS] special_tokens_not_injectable | literal '<|assistant|>' in text encodes as bytes, not the control id
-2026-10-03 12:58:33.269 INFO   [demo] ============ tokenized shards + manifests ============
-2026-10-03 12:58:33.585 EVENT  [demo] shards created | 43 immutable shards, 116773 tokens, files sealed read-only
-2026-10-03 12:58:33.585 INFO   [demo] ============ evaluation registry + admission ============
-2026-10-03 12:58:34.074 CHECK  [demo] [PASS] manifests_validated | 44/44 manifests: manifest hash, tokenizer hash, file hashes, content hash, sealed, lineage
-2026-10-03 12:58:34.074 EVENT  [demo] manifests validated | 44/44
-2026-10-03 12:58:34.074 CHECK  [demo] [PASS] all_manifests_bind_frozen_tokenizer | every manifest records tokenizer_hash 6755ee6fea85c6d2
-2026-10-03 12:58:34.074 CHECK  [demo] [PASS] shard_files_immutable | write to shards/shd-agentic-train-9173827a9592/tokens.npy refused (read-only seal)
-2026-10-03 12:58:34.075 CHECK  [demo] [PASS] license_gate_blocked_unknown_source | blocked: ['shd-code-train-85006bfca373']
-2026-10-03 12:58:34.075 CHECK  [demo] [PASS] contaminated_shard_quarantined | quarantined ['shd-general_web-train-785bb33ff511']; derived ['shd-general_web-train-896422f889e4'] with parent lineage
-2026-10-03 12:58:34.075 INFO   [demo] ============ evaluation / validation firewall drill ============
-2026-10-03 12:58:34.079 CHECK  [demo] [PASS] eval_shard_blocked | 2 test shard(s) refused: test_shard_never_train
-2026-10-03 12:58:34.088 CHECK  [demo] [PASS] validation_shard_blocked | 7 validation shard(s) refused: validation_shard_never_gradient_bearing
-2026-10-03 12:58:34.090 CHECK  [demo] [PASS] quarantined_shard_blocked | contaminated shard refused at pool entry
-2026-10-03 12:58:34.092 CHECK  [demo] [PASS] eval_batch_blocked_at_serve_time | packed sequence holding a benchmark item rejected before training
-2026-10-03 12:58:34.274 CHECK  [demo] [PASS] admitted_train_shards_clean | 0 eval-overlapping docs across 32 admitted shards
-2026-10-03 12:58:34.274 EVENT  [demo] evaluation data blocked | test=2 validation=7 quarantined=1 license_blocked=1
-2026-10-03 12:58:34.276 INFO   [demo] ============ mixture schedule ============
-2026-10-03 12:58:34.277 CHECK  [demo] [PASS] every_active_lane_has_packable_supply | packable tokens per lane {'general_web': 30210, 'code': 17213, 'math_science': 15258, 'indic': 16835, 'reasoning': 9417, 'agentic': 7146, 'anneal_reserve': 4112}; structured samples dropped as oversize {'general_web': 0, 'code': 0, 'math_science': 0, 'indic': 0, 'reasoning': 0, 'agentic': 16, 'anneal_reserve': 0}
-2026-10-03 12:58:34.282 CHECK  [demo] [PASS] mixture_compiled | 3 stages, 32 steps, schedule_hash=1bbc44a6a1b6
-2026-10-03 12:58:34.283 CHECK  [demo] [PASS] protected_floors_in_every_step_quota | indic/agentic/reasoning floors reserved in all step quotas
-2026-10-03 12:58:34.283 INFO   [demo] stage foundation: steps 1-12 tokens 0-24576 max |planned-quota| share dev 0.002917
-2026-10-03 12:58:34.283 INFO   [demo] stage reasoning_midtrain: steps 13-24 tokens 24576-49152 max |planned-quota| share dev 0.004375
-2026-10-03 12:58:34.283 INFO   [demo] stage anneal: steps 25-32 tokens 49152-65536 max |planned-quota| share dev 0.00662
-2026-10-03 12:58:34.283 INFO   [demo] supply general_web: need 20160 vs 30210 unique -> 0.667 epochs [ok]
-2026-10-03 12:58:34.283 INFO   [demo] supply code: need 18048 vs 17213 unique -> 1.049 epochs [repeat]
-2026-10-03 12:58:34.284 INFO   [demo] supply math_science: need 15360 vs 15258 unique -> 1.007 epochs [repeat]
-2026-10-03 12:58:34.284 INFO   [demo] supply indic: need 18240 vs 16835 unique -> 1.083 epochs [repeat]
-2026-10-03 12:58:34.284 INFO   [demo] supply reasoning: need 11136 vs 9417 unique -> 1.183 epochs [repeat]
-2026-10-03 12:58:34.284 INFO   [demo] supply agentic: need 8832 vs 7146 unique -> 1.236 epochs [repeat]
-2026-10-03 12:58:34.284 INFO   [demo] supply anneal_reserve: need 6528 vs 4112 unique -> 1.588 epochs [repeat]
-2026-10-03 12:58:34.285 EVENT  [demo] mixture compiled | schedule_hash=1bbc44a6a1b6
-2026-10-03 12:58:34.301 EVENT  [demo] packing policies compared | general_web:pad_only=0.7284/concat_chop=0.9958/greedy_first_fit=0.9673/best_fit_decreasing=0.9875 code:pad_only=0.7471/concat_chop=0.9961/greedy_first_fit=0.9675/best_fit_decreasing=0.9888 math_science:pad_only=0.745/concat_chop=0.9934/greedy_first_fit=0.9313/best_fit_decreasing=0.9461 indic:pad_only=0.7187/concat_chop=0.9964/greedy_first_fit=0.9262/best_fit_decreasing=0.9462 reasoning:pad_only=0.9196/concat_chop=0.9942/greedy_first_fit=0.9196/best_fit_decreasing=0.9196 agentic:pad_only=0.8723/concat_chop=0.9969/greedy_first_fit=0.8723/best_fit_decreasing=0.8723 anneal_reserve:pad_only=0.4589/concat_chop=0.9735/greedy_first_fit=0.9179/best_fit_decreasing=0.9179
-2026-10-03 12:58:34.304 INFO   [demo] ============ uninterrupted reference run (expected stream) ============
-2026-10-03 12:58:34.304 INFO   [demo] spawn: python -m tdes.trainer --mode fresh --branch reference --until 32 --checkpoint-every 0
-2026-10-03 12:58:39.632 INFO   [train:reference] [reference] fresh run v5s06-0e5b60c85f: B=16 seqs x L=128, ranks=2, micro_batch=2, grad_accum=4, steps 1..32, loader tdes-loader/1.0+84c02a0e6f.6891f0
-2026-10-03 12:58:39.981 EVENT  [train:reference] batches packed | [reference] step   1 foundation         b00001-3483caa8b24e util=0.991 loss_tok=1912 loss=6.4760 gnorm=0.024 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 7, 'override': 2, 'rejected': 8}
-2026-10-03 12:58:39.981 EVENT  [train:reference] OPUS decisions recorded | [reference] step 1: 31 candidate records
-2026-10-03 12:58:40.328 EVENT  [train:reference] batches packed | [reference] step   2 foundation         b00002-7f42ff8a56e7 util=0.983 loss_tok=1894 loss=6.4711 gnorm=0.026 lanes={'general_web': 5, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 6, 'override': 2, 'rejected': 8}
-2026-10-03 12:58:40.328 EVENT  [train:reference] OPUS decisions recorded | [reference] step 2: 30 candidate records
-2026-10-03 12:58:40.665 EVENT  [train:reference] batches packed | [reference] step   3 foundation         b00003-8cd157f2eab1 util=0.988 loss_tok=1901 loss=6.4600 gnorm=0.032 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 7, 'rejected': 8, 'override': 3}
-2026-10-03 12:58:40.665 EVENT  [train:reference] OPUS decisions recorded | [reference] step 3: 31 candidate records
-2026-10-03 12:58:40.980 EVENT  [train:reference] batches packed | [reference] step   4 foundation         b00004-36dfc6def2de util=0.979 loss_tok=1885 loss=6.4393 gnorm=0.054 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 4, 'rejected': 10, 'override': 3}
-2026-10-03 12:58:40.980 EVENT  [train:reference] OPUS decisions recorded | [reference] step 4: 30 candidate records
-2026-10-03 12:58:41.300 EVENT  [train:reference] batches packed | [reference] step   5 foundation         b00005-b8a4978c708a util=0.976 loss_tok=1832 loss=6.3960 gnorm=0.118 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 2, 'reasoning': 2, 'agentic': 1} opus={'accepted': 13, 'deferred': 7, 'override': 3, 'rejected': 7}
-2026-10-03 12:58:41.300 EVENT  [train:reference] OPUS decisions recorded | [reference] step 5: 30 candidate records
-2026-10-03 12:58:41.626 EVENT  [train:reference] batches packed | [reference] step   6 foundation         b00006-d22a843fa51f util=0.970 loss_tok=1822 loss=6.2822 gnorm=0.246 lanes={'general_web': 5, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 2} opus={'accepted': 14, 'deferred': 6, 'override': 2, 'rejected': 8}
-2026-10-03 12:58:41.627 EVENT  [train:reference] OPUS decisions recorded | [reference] step 6: 30 candidate records
-2026-10-03 12:58:41.964 EVENT  [train:reference] batches packed | [reference] step   7 foundation         b00007-600727c2a7e0 util=0.979 loss_tok=1886 loss=6.0494 gnorm=0.422 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 2, 'rejected': 13, 'override': 2}
-2026-10-03 12:58:41.964 EVENT  [train:reference] OPUS decisions recorded | [reference] step 7: 31 candidate records
-2026-10-03 12:58:42.273 EVENT  [train:reference] batches packed | [reference] step   8 foundation         b00008-d5567c25b14f util=0.989 loss_tok=1903 loss=5.7034 gnorm=0.405 lanes={'general_web': 5, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'rejected': 8, 'deferred': 6, 'override': 3}
-2026-10-03 12:58:42.273 EVENT  [train:reference] OPUS decisions recorded | [reference] step 8: 30 candidate records
-2026-10-03 12:58:42.576 EVENT  [train:reference] batches packed | [reference] step   9 foundation         b00009-d2f50a96bce2 util=0.979 loss_tok=1885 loss=5.9672 gnorm=1.713 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 7, 'rejected': 6, 'override': 2}
-2026-10-03 12:58:42.576 EVENT  [train:reference] OPUS decisions recorded | [reference] step 9: 29 candidate records
-2026-10-03 12:58:42.902 EVENT  [train:reference] batches packed | [reference] step  10 foundation         b00010-465164e9d4ae util=0.978 loss_tok=1885 loss=5.9475 gnorm=1.261 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 15, 'deferred': 7, 'rejected': 7, 'override': 1}
-2026-10-03 12:58:42.902 EVENT  [train:reference] OPUS decisions recorded | [reference] step 10: 30 candidate records
-2026-10-03 12:58:43.274 EVENT  [train:reference] batches packed | [reference] step  11 foundation         b00011-6a91a7ecff2c util=0.980 loss_tok=1890 loss=5.5127 gnorm=0.409 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 13, 'override': 1}
-2026-10-03 12:58:43.274 EVENT  [train:reference] OPUS decisions recorded | [reference] step 11: 34 candidate records
-2026-10-03 12:58:43.617 EVENT  [train:reference] batches packed | [reference] step  12 foundation         b00012-44a51c83a699 util=0.979 loss_tok=1884 loss=5.5410 gnorm=0.268 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 6, 'rejected': 9, 'override': 3}
-2026-10-03 12:58:43.617 EVENT  [train:reference] OPUS decisions recorded | [reference] step 12: 31 candidate records
-2026-10-03 12:58:43.942 EVENT  [train:reference] batches packed | [reference] step  13 reasoning_midtrain b00013-630619fcfa24 util=0.973 loss_tok=1787 loss=5.5269 gnorm=0.361 lanes={'general_web': 4, 'code': 4, 'math_science': 2, 'indic': 2, 'reasoning': 2, 'agentic': 2} opus={'accepted': 13, 'deferred': 6, 'override': 3, 'rejected': 6}
-2026-10-03 12:58:43.942 EVENT  [train:reference] OPUS decisions recorded | [reference] step 13: 28 candidate records
-2026-10-03 12:58:44.265 EVENT  [train:reference] batches packed | [reference] step  14 reasoning_midtrain b00014-53ff80748c4e util=0.963 loss_tok=1808 loss=5.6027 gnorm=0.348 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 14, 'deferred': 4, 'rejected': 10, 'override': 2}
-2026-10-03 12:58:44.265 EVENT  [train:reference] OPUS decisions recorded | [reference] step 14: 30 candidate records
-2026-10-03 12:58:44.586 EVENT  [train:reference] batches packed | [reference] step  15 reasoning_midtrain b00015-17a4a7ea0544 util=0.966 loss_tok=1764 loss=5.6216 gnorm=0.354 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 14, 'deferred': 4, 'rejected': 9, 'override': 2}
-2026-10-03 12:58:44.586 EVENT  [train:reference] OPUS decisions recorded | [reference] step 15: 29 candidate records
-2026-10-03 12:58:44.907 EVENT  [train:reference] batches packed | [reference] step  16 reasoning_midtrain b00016-5426334f613b util=0.961 loss_tok=1752 loss=5.5943 gnorm=0.318 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 5, 'rejected': 9, 'override': 1}
-2026-10-03 12:58:44.907 EVENT  [train:reference] OPUS decisions recorded | [reference] step 16: 30 candidate records
-2026-10-03 12:58:45.255 EVENT  [train:reference] batches packed | [reference] step  17 reasoning_midtrain b00017-f71bd43819a6 util=0.966 loss_tok=1765 loss=5.5217 gnorm=0.298 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 1} opus={'accepted': 16, 'rejected': 11, 'deferred': 4}
-2026-10-03 12:58:45.255 EVENT  [train:reference] OPUS decisions recorded | [reference] step 17: 31 candidate records
-2026-10-03 12:58:45.594 EVENT  [train:reference] batches packed | [reference] step  18 reasoning_midtrain b00018-2557a5460d3f util=0.968 loss_tok=1821 loss=5.4911 gnorm=0.249 lanes={'general_web': 3, 'code': 4, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 6, 'rejected': 10, 'override': 1}
-2026-10-03 12:58:45.594 EVENT  [train:reference] OPUS decisions recorded | [reference] step 18: 32 candidate records
-2026-10-03 12:58:45.908 EVENT  [train:reference] batches packed | [reference] step  19 reasoning_midtrain b00019-33968ee14352 util=0.968 loss_tok=1771 loss=5.4989 gnorm=0.418 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 5, 'rejected': 10, 'override': 1}
-2026-10-03 12:58:45.908 EVENT  [train:reference] OPUS decisions recorded | [reference] step 19: 31 candidate records
-2026-10-03 12:58:46.262 EVENT  [train:reference] batches packed | [reference] step  20 reasoning_midtrain b00020-944de24aa42d util=0.971 loss_tok=1774 loss=5.4624 gnorm=0.498 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 6, 'rejected': 10, 'override': 1}
-2026-10-03 12:58:46.262 EVENT  [train:reference] OPUS decisions recorded | [reference] step 20: 32 candidate records
-2026-10-03 12:58:46.576 EVENT  [train:reference] batches packed | [reference] step  21 reasoning_midtrain b00021-6d9c77833193 util=0.971 loss_tok=1772 loss=5.3783 gnorm=0.428 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 2, 'reasoning': 3, 'agentic': 1} opus={'accepted': 15, 'deferred': 3, 'rejected': 13, 'override': 1}
-2026-10-03 12:58:46.576 EVENT  [train:reference] OPUS decisions recorded | [reference] step 21: 32 candidate records
-2026-10-03 12:58:46.908 EVENT  [train:reference] batches packed | [reference] step  22 reasoning_midtrain b00022-6a3f21bd52a5 util=0.944 loss_tok=1726 loss=5.3967 gnorm=0.279 lanes={'general_web': 3, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 6, 'rejected': 9, 'override': 1}
-2026-10-03 12:58:46.908 EVENT  [train:reference] OPUS decisions recorded | [reference] step 22: 31 candidate records
-2026-10-03 12:58:47.248 EVENT  [train:reference] batches packed | [reference] step  23 reasoning_midtrain b00023-26540dc75ded util=0.973 loss_tok=1831 loss=5.3561 gnorm=0.229 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 9, 'override': 1}
-2026-10-03 12:58:47.249 EVENT  [train:reference] OPUS decisions recorded | [reference] step 23: 30 candidate records
-2026-10-03 12:58:47.574 EVENT  [train:reference] batches packed | [reference] step  24 reasoning_midtrain b00024-20afc512764c util=0.953 loss_tok=1746 loss=5.3666 gnorm=0.196 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 4, 'rejected': 10, 'override': 1}
-2026-10-03 12:58:47.574 EVENT  [train:reference] OPUS decisions recorded | [reference] step 24: 30 candidate records
-2026-10-03 12:58:47.937 EVENT  [train:reference] batches packed | [reference] step  25 anneal             b00025-2ae7a2788d58 util=0.951 loss_tok=1574 loss=5.5143 gnorm=0.229 lanes={'code': 3, 'math_science': 2, 'indic': 4, 'reasoning': 3, 'agentic': 2, 'anneal_reserve': 2} opus={'rejected': 16, 'accepted': 16, 'deferred': 6}
-2026-10-03 12:58:47.937 EVENT  [train:reference] OPUS decisions recorded | [reference] step 25: 38 candidate records
-2026-10-03 12:58:48.282 EVENT  [train:reference] batches packed | [reference] step  26 anneal             b00026-5f337f565dda util=0.961 loss_tok=1592 loss=5.5065 gnorm=0.237 lanes={'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 3} opus={'accepted': 16, 'rejected': 8, 'deferred': 6}
-2026-10-03 12:58:48.282 EVENT  [train:reference] OPUS decisions recorded | [reference] step 26: 30 candidate records
-2026-10-03 12:58:48.606 EVENT  [train:reference] batches packed | [reference] step  27 anneal             b00027-d9f0999f3182 util=0.967 loss_tok=1506 loss=5.4777 gnorm=0.338 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 1, 'anneal_reserve': 5} opus={'accepted': 16, 'rejected': 10, 'deferred': 2}
-2026-10-03 12:58:48.606 EVENT  [train:reference] OPUS decisions recorded | [reference] step 27: 28 candidate records
-2026-10-03 12:58:48.967 EVENT  [train:reference] batches packed | [reference] step  28 anneal             b00028-5270d34a0d3d util=0.971 loss_tok=1502 loss=5.5479 gnorm=0.259 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 14}
-2026-10-03 12:58:48.967 EVENT  [train:reference] OPUS decisions recorded | [reference] step 28: 35 candidate records
-2026-10-03 12:58:49.331 EVENT  [train:reference] batches packed | [reference] step  29 anneal             b00029-3c3287f4349a util=0.941 loss_tok=1465 loss=5.5008 gnorm=0.321 lanes={'code': 1, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 15}
-2026-10-03 12:58:49.331 EVENT  [train:reference] OPUS decisions recorded | [reference] step 29: 36 candidate records
-2026-10-03 12:58:49.672 EVENT  [train:reference] batches packed | [reference] step  30 anneal             b00030-bebf9ffa0d95 util=0.945 loss_tok=1512 loss=5.5252 gnorm=0.291 lanes={'code': 2, 'math_science': 2, 'indic': 4, 'reasoning': 2, 'agentic': 1, 'anneal_reserve': 5} opus={'accepted': 16, 'rejected': 13, 'deferred': 3}
-2026-10-03 12:58:49.672 EVENT  [train:reference] OPUS decisions recorded | [reference] step 30: 32 candidate records
-2026-10-03 12:58:50.071 EVENT  [train:reference] batches packed | [reference] step  31 anneal             b00031-fc51f729dd74 util=0.937 loss_tok=1454 loss=5.4183 gnorm=0.286 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 2, 'anneal_reserve': 4} opus={'accepted': 16, 'deferred': 6, 'rejected': 13}
-2026-10-03 12:58:50.071 EVENT  [train:reference] OPUS decisions recorded | [reference] step 31: 35 candidate records
-2026-10-03 12:58:50.397 EVENT  [train:reference] batches packed | [reference] step  32 anneal             b00032-7aca15aa6915 util=0.927 loss_tok=1447 loss=5.4304 gnorm=0.276 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 10}
-2026-10-03 12:58:50.397 EVENT  [train:reference] OPUS decisions recorded | [reference] step 32: 31 candidate records
-2026-10-03 12:58:50.441 EVENT  [train:reference] checkpoint saved | [reference] ckpt-reference-s00032-92a435d6e8 at step 32; consumption ledger offset 321 hash b4b5b8db362d
-2026-10-03 12:58:50.441 CHECK  [train:reference] [PASS] checkpoint_saved | checkpoints/reference/step_00032 reloads to weights_hash 92a435d6e8a9; bound to ledger offset 321
-2026-10-03 12:58:50.960 INFO   [demo] ============ main run: train until the deliberate crash ============
-2026-10-03 12:58:50.960 INFO   [demo] spawn: python -m tdes.trainer --mode fresh --branch main --until 32 --crash-at 21 --crash-after 3
-2026-10-03 12:58:56.827 INFO   [train:main] [main] fresh run v5s06-0e5b60c85f: B=16 seqs x L=128, ranks=2, micro_batch=2, grad_accum=4, steps 1..32, loader tdes-loader/1.0+84c02a0e6f.6891f0
-2026-10-03 12:58:57.134 EVENT  [train:main] batches packed | [main] step   1 foundation         b00001-3483caa8b24e util=0.991 loss_tok=1912 loss=6.4760 gnorm=0.024 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 7, 'override': 2, 'rejected': 8}
-2026-10-03 12:58:57.134 EVENT  [train:main] OPUS decisions recorded | [main] step 1: 31 candidate records
-2026-10-03 12:58:57.475 EVENT  [train:main] batches packed | [main] step   2 foundation         b00002-7f42ff8a56e7 util=0.983 loss_tok=1894 loss=6.4711 gnorm=0.026 lanes={'general_web': 5, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 6, 'override': 2, 'rejected': 8}
-2026-10-03 12:58:57.475 EVENT  [train:main] OPUS decisions recorded | [main] step 2: 30 candidate records
-2026-10-03 12:58:57.807 EVENT  [train:main] batches packed | [main] step   3 foundation         b00003-8cd157f2eab1 util=0.988 loss_tok=1901 loss=6.4600 gnorm=0.032 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 7, 'rejected': 8, 'override': 3}
-2026-10-03 12:58:57.807 EVENT  [train:main] OPUS decisions recorded | [main] step 3: 31 candidate records
-2026-10-03 12:58:58.119 EVENT  [train:main] batches packed | [main] step   4 foundation         b00004-36dfc6def2de util=0.979 loss_tok=1885 loss=6.4393 gnorm=0.054 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 4, 'rejected': 10, 'override': 3}
-2026-10-03 12:58:58.119 EVENT  [train:main] OPUS decisions recorded | [main] step 4: 30 candidate records
-2026-10-03 12:58:58.164 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00004-6c27b3b692 at step 4; consumption ledger offset 41 hash 7ccb078f9b71
-2026-10-03 12:58:58.164 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00004 reloads to weights_hash 6c27b3b69238; bound to ledger offset 41
-2026-10-03 12:58:58.482 EVENT  [train:main] batches packed | [main] step   5 foundation         b00005-b8a4978c708a util=0.976 loss_tok=1832 loss=6.3960 gnorm=0.118 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 2, 'reasoning': 2, 'agentic': 1} opus={'accepted': 13, 'deferred': 7, 'override': 3, 'rejected': 7}
-2026-10-03 12:58:58.482 EVENT  [train:main] OPUS decisions recorded | [main] step 5: 30 candidate records
-2026-10-03 12:58:58.834 EVENT  [train:main] batches packed | [main] step   6 foundation         b00006-d22a843fa51f util=0.970 loss_tok=1822 loss=6.2822 gnorm=0.246 lanes={'general_web': 5, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 2} opus={'accepted': 14, 'deferred': 6, 'override': 2, 'rejected': 8}
-2026-10-03 12:58:58.834 EVENT  [train:main] OPUS decisions recorded | [main] step 6: 30 candidate records
-2026-10-03 12:58:59.174 EVENT  [train:main] batches packed | [main] step   7 foundation         b00007-600727c2a7e0 util=0.979 loss_tok=1886 loss=6.0494 gnorm=0.422 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 2, 'rejected': 13, 'override': 2}
-2026-10-03 12:58:59.174 EVENT  [train:main] OPUS decisions recorded | [main] step 7: 31 candidate records
-2026-10-03 12:58:59.449 EVENT  [train:main] batches packed | [main] step   8 foundation         b00008-d5567c25b14f util=0.989 loss_tok=1903 loss=5.7034 gnorm=0.405 lanes={'general_web': 5, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'rejected': 8, 'deferred': 6, 'override': 3}
-2026-10-03 12:58:59.449 EVENT  [train:main] OPUS decisions recorded | [main] step 8: 30 candidate records
-2026-10-03 12:58:59.493 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00008-835ab9af05 at step 8; consumption ledger offset 82 hash 65c074d9ea29
-2026-10-03 12:58:59.493 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00008 reloads to weights_hash 835ab9af05aa; bound to ledger offset 82
-2026-10-03 12:58:59.821 EVENT  [train:main] batches packed | [main] step   9 foundation         b00009-d2f50a96bce2 util=0.979 loss_tok=1885 loss=5.9672 gnorm=1.713 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 7, 'rejected': 6, 'override': 2}
-2026-10-03 12:58:59.821 EVENT  [train:main] OPUS decisions recorded | [main] step 9: 29 candidate records
-2026-10-03 12:59:00.157 EVENT  [train:main] batches packed | [main] step  10 foundation         b00010-465164e9d4ae util=0.978 loss_tok=1885 loss=5.9475 gnorm=1.261 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 15, 'deferred': 7, 'rejected': 7, 'override': 1}
-2026-10-03 12:59:00.157 EVENT  [train:main] OPUS decisions recorded | [main] step 10: 30 candidate records
-2026-10-03 12:59:00.508 EVENT  [train:main] batches packed | [main] step  11 foundation         b00011-6a91a7ecff2c util=0.980 loss_tok=1890 loss=5.5127 gnorm=0.409 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 13, 'override': 1}
-2026-10-03 12:59:00.508 EVENT  [train:main] OPUS decisions recorded | [main] step 11: 34 candidate records
-2026-10-03 12:59:00.864 EVENT  [train:main] batches packed | [main] step  12 foundation         b00012-44a51c83a699 util=0.979 loss_tok=1884 loss=5.5410 gnorm=0.268 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 6, 'rejected': 9, 'override': 3}
-2026-10-03 12:59:00.864 EVENT  [train:main] OPUS decisions recorded | [main] step 12: 31 candidate records
-2026-10-03 12:59:00.964 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00012-312938f65f at step 12; consumption ledger offset 123 hash cc6cd0f9468b
-2026-10-03 12:59:00.965 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00012 reloads to weights_hash 312938f65fec; bound to ledger offset 123
-2026-10-03 12:59:01.530 EVENT  [train:main] batches packed | [main] step  13 reasoning_midtrain b00013-630619fcfa24 util=0.973 loss_tok=1787 loss=5.5269 gnorm=0.361 lanes={'general_web': 4, 'code': 4, 'math_science': 2, 'indic': 2, 'reasoning': 2, 'agentic': 2} opus={'accepted': 13, 'deferred': 6, 'override': 3, 'rejected': 6}
-2026-10-03 12:59:01.530 EVENT  [train:main] OPUS decisions recorded | [main] step 13: 28 candidate records
-2026-10-03 12:59:01.936 EVENT  [train:main] batches packed | [main] step  14 reasoning_midtrain b00014-53ff80748c4e util=0.963 loss_tok=1808 loss=5.6027 gnorm=0.348 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 14, 'deferred': 4, 'rejected': 10, 'override': 2}
-2026-10-03 12:59:01.936 EVENT  [train:main] OPUS decisions recorded | [main] step 14: 30 candidate records
-2026-10-03 12:59:02.292 EVENT  [train:main] batches packed | [main] step  15 reasoning_midtrain b00015-17a4a7ea0544 util=0.966 loss_tok=1764 loss=5.6216 gnorm=0.354 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 14, 'deferred': 4, 'rejected': 9, 'override': 2}
-2026-10-03 12:59:02.293 EVENT  [train:main] OPUS decisions recorded | [main] step 15: 29 candidate records
-2026-10-03 12:59:02.634 EVENT  [train:main] batches packed | [main] step  16 reasoning_midtrain b00016-5426334f613b util=0.961 loss_tok=1752 loss=5.5943 gnorm=0.318 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 5, 'rejected': 9, 'override': 1}
-2026-10-03 12:59:02.634 EVENT  [train:main] OPUS decisions recorded | [main] step 16: 30 candidate records
-2026-10-03 12:59:02.680 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00016-bd21238a75 at step 16; consumption ledger offset 164 hash c64dd641d817
-2026-10-03 12:59:02.681 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00016 reloads to weights_hash bd21238a7571; bound to ledger offset 164
-2026-10-03 12:59:03.049 EVENT  [train:main] batches packed | [main] step  17 reasoning_midtrain b00017-f71bd43819a6 util=0.966 loss_tok=1765 loss=5.5217 gnorm=0.298 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 1} opus={'accepted': 16, 'rejected': 11, 'deferred': 4}
-2026-10-03 12:59:03.049 EVENT  [train:main] OPUS decisions recorded | [main] step 17: 31 candidate records
-2026-10-03 12:59:03.449 EVENT  [train:main] batches packed | [main] step  18 reasoning_midtrain b00018-2557a5460d3f util=0.968 loss_tok=1821 loss=5.4911 gnorm=0.249 lanes={'general_web': 3, 'code': 4, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 6, 'rejected': 10, 'override': 1}
-2026-10-03 12:59:03.449 EVENT  [train:main] OPUS decisions recorded | [main] step 18: 32 candidate records
-2026-10-03 12:59:03.810 EVENT  [train:main] batches packed | [main] step  19 reasoning_midtrain b00019-33968ee14352 util=0.968 loss_tok=1771 loss=5.4989 gnorm=0.418 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 5, 'rejected': 10, 'override': 1}
-2026-10-03 12:59:03.811 EVENT  [train:main] OPUS decisions recorded | [main] step 19: 31 candidate records
-2026-10-03 12:59:04.240 EVENT  [train:main] batches packed | [main] step  20 reasoning_midtrain b00020-944de24aa42d util=0.971 loss_tok=1774 loss=5.4624 gnorm=0.498 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 6, 'rejected': 10, 'override': 1}
-2026-10-03 12:59:04.240 EVENT  [train:main] OPUS decisions recorded | [main] step 20: 32 candidate records
-2026-10-03 12:59:04.286 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00020-3a4df7e38d at step 20; consumption ledger offset 205 hash ea6d15f34ca9
-2026-10-03 12:59:04.287 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00020 reloads to weights_hash 3a4df7e38df8; bound to ledger offset 205
-2026-10-03 12:59:04.541 EVENT  [train:main] crash simulated | process killed inside step 21 after 3 of 8 microbatches (exit code 86); last checkpoint ckpt-main-s00020-3a4df7e38d
-2026-10-03 12:59:04.700 CHECK  [demo] [PASS] crash_was_real_process_death | training process exited with code 86 mid-step (expected 86)
-2026-10-03 12:59:04.700 INFO   [demo] ============ resume from the latest checkpoint ============
-2026-10-03 12:59:04.700 INFO   [demo] spawn: python -m tdes.trainer --mode resume --branch main --until 32 --reference-branch reference
-2026-10-03 12:59:10.467 EVENT  [train:main] run resumed | [main] restored ckpt-main-s00020-3a4df7e38d (step 20); consumption ledger offset 205; superseded 4 uncommitted consumption records, 32 OPUS records
-2026-10-03 12:59:10.721 CHECK  [train:main] [PASS] resume_next_batch_matched | step 21: resumed b00021-6d9c77833193 == crashed-process plan b00021-6d9c77833193 == reference b00021-6d9c77833193
-2026-10-03 12:59:10.822 EVENT  [train:main] batches packed | [main] step  21 reasoning_midtrain b00021-6d9c77833193 util=0.971 loss_tok=1772 loss=5.3783 gnorm=0.428 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 2, 'reasoning': 3, 'agentic': 1} opus={'accepted': 15, 'deferred': 3, 'rejected': 13, 'override': 1}
-2026-10-03 12:59:10.822 EVENT  [train:main] OPUS decisions recorded | [main] step 21: 32 candidate records
-2026-10-03 12:59:11.144 EVENT  [train:main] batches packed | [main] step  22 reasoning_midtrain b00022-6a3f21bd52a5 util=0.944 loss_tok=1726 loss=5.3967 gnorm=0.279 lanes={'general_web': 3, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 6, 'rejected': 9, 'override': 1}
-2026-10-03 12:59:11.144 EVENT  [train:main] OPUS decisions recorded | [main] step 22: 31 candidate records
-2026-10-03 12:59:11.487 EVENT  [train:main] batches packed | [main] step  23 reasoning_midtrain b00023-26540dc75ded util=0.973 loss_tok=1831 loss=5.3561 gnorm=0.229 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 9, 'override': 1}
-2026-10-03 12:59:11.487 EVENT  [train:main] OPUS decisions recorded | [main] step 23: 30 candidate records
-2026-10-03 12:59:11.823 EVENT  [train:main] batches packed | [main] step  24 reasoning_midtrain b00024-20afc512764c util=0.953 loss_tok=1746 loss=5.3666 gnorm=0.196 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 4, 'rejected': 10, 'override': 1}
-2026-10-03 12:59:11.823 EVENT  [train:main] OPUS decisions recorded | [main] step 24: 30 candidate records
-2026-10-03 12:59:11.866 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00024-9a60571448 at step 24; consumption ledger offset 251 hash 4a2d77710b8a
-2026-10-03 12:59:11.866 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00024 reloads to weights_hash 9a6057144843; bound to ledger offset 251
-2026-10-03 12:59:12.248 EVENT  [train:main] batches packed | [main] step  25 anneal             b00025-2ae7a2788d58 util=0.951 loss_tok=1574 loss=5.5143 gnorm=0.229 lanes={'code': 3, 'math_science': 2, 'indic': 4, 'reasoning': 3, 'agentic': 2, 'anneal_reserve': 2} opus={'rejected': 16, 'accepted': 16, 'deferred': 6}
-2026-10-03 12:59:12.250 EVENT  [train:main] OPUS decisions recorded | [main] step 25: 38 candidate records
-2026-10-03 12:59:12.599 EVENT  [train:main] batches packed | [main] step  26 anneal             b00026-5f337f565dda util=0.961 loss_tok=1592 loss=5.5065 gnorm=0.237 lanes={'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 3} opus={'accepted': 16, 'rejected': 8, 'deferred': 6}
-2026-10-03 12:59:12.600 EVENT  [train:main] OPUS decisions recorded | [main] step 26: 30 candidate records
-2026-10-03 12:59:12.909 EVENT  [train:main] batches packed | [main] step  27 anneal             b00027-d9f0999f3182 util=0.967 loss_tok=1506 loss=5.4777 gnorm=0.338 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 1, 'anneal_reserve': 5} opus={'accepted': 16, 'rejected': 10, 'deferred': 2}
-2026-10-03 12:59:12.909 EVENT  [train:main] OPUS decisions recorded | [main] step 27: 28 candidate records
-2026-10-03 12:59:13.268 EVENT  [train:main] batches packed | [main] step  28 anneal             b00028-5270d34a0d3d util=0.971 loss_tok=1502 loss=5.5479 gnorm=0.259 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 14}
-2026-10-03 12:59:13.268 EVENT  [train:main] OPUS decisions recorded | [main] step 28: 35 candidate records
-2026-10-03 12:59:13.313 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00028-bb0dff8901 at step 28; consumption ledger offset 292 hash 490dbb1d69aa
-2026-10-03 12:59:13.314 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00028 reloads to weights_hash bb0dff8901b1; bound to ledger offset 292
-2026-10-03 12:59:13.644 EVENT  [train:main] batches packed | [main] step  29 anneal             b00029-3c3287f4349a util=0.941 loss_tok=1465 loss=5.5008 gnorm=0.321 lanes={'code': 1, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 15}
-2026-10-03 12:59:13.644 EVENT  [train:main] OPUS decisions recorded | [main] step 29: 36 candidate records
-2026-10-03 12:59:13.980 EVENT  [train:main] batches packed | [main] step  30 anneal             b00030-bebf9ffa0d95 util=0.945 loss_tok=1512 loss=5.5252 gnorm=0.291 lanes={'code': 2, 'math_science': 2, 'indic': 4, 'reasoning': 2, 'agentic': 1, 'anneal_reserve': 5} opus={'accepted': 16, 'rejected': 13, 'deferred': 3}
-2026-10-03 12:59:13.981 EVENT  [train:main] OPUS decisions recorded | [main] step 30: 32 candidate records
-2026-10-03 12:59:14.333 EVENT  [train:main] batches packed | [main] step  31 anneal             b00031-fc51f729dd74 util=0.937 loss_tok=1454 loss=5.4183 gnorm=0.286 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 2, 'anneal_reserve': 4} opus={'accepted': 16, 'deferred': 6, 'rejected': 13}
-2026-10-03 12:59:14.333 EVENT  [train:main] OPUS decisions recorded | [main] step 31: 35 candidate records
-2026-10-03 12:59:14.677 EVENT  [train:main] batches packed | [main] step  32 anneal             b00032-7aca15aa6915 util=0.927 loss_tok=1447 loss=5.4304 gnorm=0.276 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 10}
-2026-10-03 12:59:14.677 EVENT  [train:main] OPUS decisions recorded | [main] step 32: 31 candidate records
-2026-10-03 12:59:14.721 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00032-92a435d6e8 at step 32; consumption ledger offset 333 hash 35d30f072722
-2026-10-03 12:59:14.722 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00032 reloads to weights_hash 92a435d6e8a9; bound to ledger offset 333
-2026-10-03 12:59:15.261 INFO   [demo] ============ replay an earlier interval from the ledger ============
-2026-10-03 12:59:15.261 INFO   [demo] spawn: python -m tdes.trainer --mode replay --source-branch main --from-step 8 --to-step 16
-2026-10-03 12:59:21.116 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step   9 foundation         b00009-d2f50a96bce2 util=0.979 loss_tok=1885 loss=5.9672 gnorm=1.713 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1}
-2026-10-03 12:59:21.116 INFO   [replay:replay-main-s00008] replay step 9: b00009-d2f50a96bce2 vs original b00009-d2f50a96bce2 -> identical (weights 9f54bfd07261)
-2026-10-03 12:59:21.266 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  10 foundation         b00010-465164e9d4ae util=0.978 loss_tok=1885 loss=5.9475 gnorm=1.261 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1}
-2026-10-03 12:59:21.266 INFO   [replay:replay-main-s00008] replay step 10: b00010-465164e9d4ae vs original b00010-465164e9d4ae -> identical (weights f1da4fdcaffc)
-2026-10-03 12:59:21.414 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  11 foundation         b00011-6a91a7ecff2c util=0.980 loss_tok=1890 loss=5.5127 gnorm=0.409 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1}
-2026-10-03 12:59:21.414 INFO   [replay:replay-main-s00008] replay step 11: b00011-6a91a7ecff2c vs original b00011-6a91a7ecff2c -> identical (weights ffa4b11c062a)
-2026-10-03 12:59:21.577 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  12 foundation         b00012-44a51c83a699 util=0.979 loss_tok=1884 loss=5.5410 gnorm=0.268 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1}
-2026-10-03 12:59:21.578 INFO   [replay:replay-main-s00008] replay step 12: b00012-44a51c83a699 vs original b00012-44a51c83a699 -> identical (weights 312938f65fec)
-2026-10-03 12:59:21.624 EVENT  [replay:replay-main-s00008] checkpoint saved | [replay-main-s00008] ckpt-replay-main-s00008-s00012-312938f65f at step 12; consumption ledger offset 42 hash 5624a68e6fa6
-2026-10-03 12:59:21.624 CHECK  [replay:replay-main-s00008] [PASS] checkpoint_saved | checkpoints/replay-main-s00008/step_00012 reloads to weights_hash 312938f65fec; bound to ledger offset 42
-2026-10-03 12:59:21.790 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  13 reasoning_midtrain b00013-630619fcfa24 util=0.973 loss_tok=1787 loss=5.5269 gnorm=0.361 lanes={'general_web': 4, 'code': 4, 'math_science': 2, 'indic': 2, 'reasoning': 2, 'agentic': 2}
-2026-10-03 12:59:21.790 INFO   [replay:replay-main-s00008] replay step 13: b00013-630619fcfa24 vs original b00013-630619fcfa24 -> identical (weights 33d912ada134)
-2026-10-03 12:59:21.969 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  14 reasoning_midtrain b00014-53ff80748c4e util=0.963 loss_tok=1808 loss=5.6027 gnorm=0.348 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1}
-2026-10-03 12:59:21.969 INFO   [replay:replay-main-s00008] replay step 14: b00014-53ff80748c4e vs original b00014-53ff80748c4e -> identical (weights 4d2a6c95745f)
-2026-10-03 12:59:22.121 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  15 reasoning_midtrain b00015-17a4a7ea0544 util=0.966 loss_tok=1764 loss=5.6216 gnorm=0.354 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2}
-2026-10-03 12:59:22.121 INFO   [replay:replay-main-s00008] replay step 15: b00015-17a4a7ea0544 vs original b00015-17a4a7ea0544 -> identical (weights 254b9310b45f)
-2026-10-03 12:59:22.261 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  16 reasoning_midtrain b00016-5426334f613b util=0.961 loss_tok=1752 loss=5.5943 gnorm=0.318 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2}
-2026-10-03 12:59:22.261 INFO   [replay:replay-main-s00008] replay step 16: b00016-5426334f613b vs original b00016-5426334f613b -> identical (weights bd21238a7571)
-2026-10-03 12:59:22.305 EVENT  [replay:replay-main-s00008] checkpoint saved | [replay-main-s00008] ckpt-replay-main-s00008-s00016-bd21238a75 at step 16; consumption ledger offset 83 hash 56bfd4417b29
-2026-10-03 12:59:22.305 CHECK  [replay:replay-main-s00008] [PASS] checkpoint_saved | checkpoints/replay-main-s00008/step_00016 reloads to weights_hash bd21238a7571; bound to ledger offset 83
-2026-10-03 12:59:22.305 EVENT  [replay:replay-main-s00008] historical stream replayed | steps 9-16 of 'main' rebuilt from ledger span refs and retrained from ckpt-main-s00008-835ab9af05
-2026-10-03 12:59:22.306 CHECK  [replay:replay-main-s00008] [PASS] replay_hash_matched | 8 batches: batch ids, token spans, sequence and loss-mask hashes identical
-2026-10-03 12:59:22.306 CHECK  [replay:replay-main-s00008] [PASS] replay_weights_matched | weights after step 16 bd21238a7571 == original bd21238a7571
-2026-10-03 12:59:22.834 INFO   [demo] ============ fork a new data branch from an earlier checkpoint ============
-2026-10-03 12:59:22.834 INFO   [demo] spawn: python -m tdes.trainer --mode fork --source-branch main --from-step 12 --steps 8 --overrides-json {"mixture.stages.1.mixture": {"general_web": 0.12, "code": 0.2, "math_science": 0.16, "indic": 0.28, "reasoning": 0.14, "agentic": 0.1, "anneal_reserve": 0.0}, "opus.reject_quantile": 0.4}
-2026-10-03 12:59:28.588 EVENT  [fork:fork-1035a481] branch forked | fork-1035a481 from ckpt-main-s00012-312938f65f (ledger offset 123); overrides ['mixture.stages.1.mixture', 'opus.reject_quantile']
-2026-10-03 12:59:28.945 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  13 reasoning_midtrain b00013-4773b7151e05 util=0.973 loss_tok=1786 loss=5.5908 gnorm=0.331 lanes={'general_web': 3, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 13, 'deferred': 5, 'override': 3, 'rejected': 12}
-2026-10-03 12:59:28.945 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 13: 33 candidate records
-2026-10-03 12:59:29.318 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  14 reasoning_midtrain b00014-12d90ae902a1 util=0.967 loss_tok=1810 loss=5.5600 gnorm=0.371 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 4, 'reasoning': 2, 'agentic': 1} opus={'accepted': 13, 'deferred': 4, 'rejected': 16, 'override': 3}
-2026-10-03 12:59:29.319 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 14: 36 candidate records
-2026-10-03 12:59:29.667 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  15 reasoning_midtrain b00015-377c8e379842 util=0.958 loss_tok=1756 loss=5.6806 gnorm=0.333 lanes={'general_web': 3, 'code': 3, 'math_science': 2, 'indic': 4, 'reasoning': 2, 'agentic': 2} opus={'accepted': 14, 'deferred': 4, 'rejected': 15, 'override': 2}
-2026-10-03 12:59:29.667 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 15: 35 candidate records
-2026-10-03 12:59:30.042 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  16 reasoning_midtrain b00016-f78bcfdb695c util=0.957 loss_tok=1751 loss=5.6208 gnorm=0.305 lanes={'general_web': 1, 'code': 3, 'math_science': 3, 'indic': 5, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 4, 'rejected': 17, 'override': 1}
-2026-10-03 12:59:30.042 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 16: 37 candidate records
-2026-10-03 12:59:30.094 EVENT  [fork:fork-1035a481] checkpoint saved | [fork-1035a481] ckpt-fork-1035a481-s00016-9ab2929f34 at step 16; consumption ledger offset 42 hash a19155588f3a
-2026-10-03 12:59:30.094 CHECK  [fork:fork-1035a481] [PASS] checkpoint_saved | checkpoints/fork-1035a481/step_00016 reloads to weights_hash 9ab2929f3414; bound to ledger offset 42
-2026-10-03 12:59:30.479 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  17 reasoning_midtrain b00017-27e2d9725ec4 util=0.968 loss_tok=1767 loss=5.5711 gnorm=0.287 lanes={'general_web': 2, 'code': 3, 'math_science': 3, 'indic': 4, 'reasoning': 3, 'agentic': 1} opus={'accepted': 14, 'deferred': 5, 'rejected': 10, 'override': 2}
-2026-10-03 12:59:30.480 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 17: 31 candidate records
-2026-10-03 12:59:30.836 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  18 reasoning_midtrain b00018-4375abdcda4d util=0.966 loss_tok=1822 loss=5.5968 gnorm=0.250 lanes={'general_web': 2, 'code': 4, 'math_science': 2, 'indic': 5, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 14, 'override': 1}
-2026-10-03 12:59:30.836 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 18: 35 candidate records
-2026-10-03 12:59:31.164 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  19 reasoning_midtrain b00019-61a226c18b31 util=0.973 loss_tok=1772 loss=5.4884 gnorm=0.422 lanes={'general_web': 2, 'code': 3, 'math_science': 3, 'indic': 4, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 3, 'rejected': 14, 'override': 1}
-2026-10-03 12:59:31.164 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 19: 33 candidate records
-2026-10-03 12:59:31.554 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  20 reasoning_midtrain b00020-7d0a6018a659 util=0.971 loss_tok=1772 loss=5.5431 gnorm=0.406 lanes={'general_web': 2, 'code': 3, 'math_science': 2, 'indic': 5, 'reasoning': 2, 'agentic': 2} opus={'accepted': 16, 'rejected': 15, 'deferred': 3}
-2026-10-03 12:59:31.554 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 20: 34 candidate records
-2026-10-03 12:59:31.600 EVENT  [fork:fork-1035a481] checkpoint saved | [fork-1035a481] ckpt-fork-1035a481-s00020-bbfab6a7af at step 20; consumption ledger offset 83 hash 1deb3dfbd843
-2026-10-03 12:59:31.600 CHECK  [fork:fork-1035a481] [PASS] checkpoint_saved | checkpoints/fork-1035a481/step_00020 reloads to weights_hash bbfab6a7af1c; bound to ledger offset 83
-2026-10-03 12:59:31.615 CHECK  [fork:fork-1035a481] [PASS] fork_diverged_explicitly | step 13: fork b00013-4773b7151e05 vs parent b00013-630619fcfa24; divergence recorded in ledgers/fork-1035a481/consumption.jsonl
-2026-10-03 12:59:32.149 INFO   [demo] ============ audit ============
-2026-10-03 12:59:32.418 CHECK  [demo] [PASS] audit.ledger_hash_chains_valid | 12 ledgers, 4528 records, every prev_hash/event_hash verified
-2026-10-03 12:59:33.123 CHECK  [demo] [PASS] audit.checkpoints_bound_to_ledger_offsets | 13 checkpoints: weights hash, ledger offset+hash, offset == own checkpoint_saved event, last committed step and weights agree
-2026-10-03 12:59:33.123 CHECK  [demo] [PASS] audit.committed_stream_has_no_gaps_or_repeats | steps 1..32 each committed exactly once (duplicates=[], gaps=[]); 4 uncommitted records superseded by an explicit rollback record
-2026-10-03 12:59:33.123 CHECK  [demo] [PASS] audit.every_step_complete | each step has 8 microbatches whose samples equal the batch_planned sample list
-2026-10-03 12:59:33.124 CHECK  [demo] [PASS] audit.resumed_stream_equals_uninterrupted_run | 32/32 batch hashes equal the reference run; final weights 92a435d6e8a9 == reference 92a435d6e8a9
-2026-10-03 12:59:33.564 CHECK  [demo] [PASS] audit.no_eval_or_validation_token_in_any_trained_batch | 158525 consumed tokens across 4 branches re-scanned against 2315 eval 12-gram fingerprints and shard permissions: 0 violations
-2026-10-03 12:59:33.564 CHECK  [demo] [PASS] audit.validation_reads_are_gradient_free | 13 validation reads logged, all eval-only (gradient=false)
-2026-10-03 12:59:33.564 CHECK  [demo] [PASS] audit.blocked_events_recorded | 12 block/quarantine events in the firewall ledger
-2026-10-03 12:59:33.803 CHECK  [demo] [PASS] audit.packed_samples_rebuild_bit_exact | 512 consumed samples rebuilt from span refs: sample ids, sequence hashes and loss-mask hashes identical
-2026-10-03 12:59:33.803 CHECK  [demo] [PASS] audit.mask_and_position_invariants | 512 samples: no loss on pads, no loss across segment ends, position ids reset per segment, block-causal attention, structured samples never split
-2026-10-03 12:59:33.803 CHECK  [demo] [PASS] audit.lane_packing_policy_applied | every sample used its lane's packing policy
-2026-10-03 12:59:33.803 CHECK  [demo] [PASS] audit.ledger_token_counts_reconstruct | ledger counts {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948} == recount from shards {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948}
-2026-10-03 12:59:33.803 CHECK  [demo] [PASS] audit.actual_shares_equal_compiled_quotas | per stage, consumed sequences per lane equal the compiled per-step quotas exactly
-2026-10-03 12:59:33.804 CHECK  [demo] [PASS] audit.planned_vs_actual_shares_within_tolerance | foundation max|dev|=0.0029 (tol 0.0200); reasoning_midtrain max|dev|=0.0044 (tol 0.0200); anneal max|dev|=0.0066 (tol 0.0200)
-2026-10-03 12:59:33.804 CHECK  [demo] [PASS] audit.protected_floors_held_every_step | indic/agentic/reasoning floors met in all 32 committed steps (0 violations)
-2026-10-03 12:59:33.804 CHECK  [demo] [PASS] audit.anneal_reserve_fenced | anneal-reserve shards consumed only in the anneal stage
-2026-10-03 12:59:33.822 CHECK  [demo] [PASS] audit.every_consumed_sample_has_accepted_decision | 512/512 consumed samples link to an accepted OPUS record
-2026-10-03 12:59:33.823 CHECK  [demo] [PASS] audit.all_decision_kinds_exercised | accepted=512 rejected=320 deferred=166 protected_floor_override=42; reasons={'proxy_utility_above_threshold': 437, 'quota_full_above_threshold': 166, 'protected_floor_override': 42, 'quota_fill_below_threshold': 33, 'low_proxy_utility': 281, 'quota_pressure': 31, 'duplicate': 6, 'stage_mismatch': 2}
-2026-10-03 12:59:33.823 CHECK  [demo] [PASS] audit.rejected_or_deferred_candidates_never_consumed | 0 rejected/deferred candidates were consumed
-2026-10-03 12:59:33.823 CHECK  [demo] [PASS] audit.decision_records_complete | 998 records carry 12 required fields
-2026-10-03 12:59:34.414 CHECK  [demo] [PASS] audit.every_consumed_sample_has_learning_record | 512 sample learning records; 0 consumed samples without one
-2026-10-03 12:59:34.415 CHECK  [demo] [PASS] audit.token_trace_reconciles_with_ledger | 55948 token-level losses; per-sample means equal ledger loss_before and link to span/shard/doc
-2026-10-03 12:59:34.425 CHECK  [demo] [PASS] audit.shard_report_cards_written | 32 shard report cards (loss, ppl, delta, grad norm, OPUS score, class)
-2026-10-03 12:59:34.425 CHECK  [demo] [PASS] audit.replay_ledger_matches_original | replay-main-s00008: 8 steps, batch hashes + token spans + post-step weights equal to 'main'
-2026-10-03 12:59:34.426 CHECK  [demo] [PASS] audit.fork_lineage_explicit | fork-1035a481: first record is branch_forked at step 13 with the parent's ledger offset 123; lineage = main[1..12] + fork-1035a481[13..20]
-2026-10-03 12:59:34.427 EVENT  [demo] audit completed | 25/25 audit checks passed
-2026-10-03 12:59:34.435 INFO   [demo] ============ performance ============
-2026-10-03 12:59:34.439 EVENT  [demo] performance measured | util=0.9671 (pad-only 0.7377), raw=5505 tok/s, useful loss-bearing=4700 tok/s, accepted=5324 tok/s, loader wait 44.9%, resume latency 0.437796s
-2026-10-03 12:59:34.439 CHECK  [demo] [PASS] throughput_reconstructs_from_ledger | perf counts {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948} == ledger recount {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948}
-2026-10-03 12:59:34.439 INFO   [demo] ============ automated invariant tests ============
-2026-10-03 13:00:27.200 CHECK  [demo] [PASS] unit_tests_passed | 38 tests in 52.76s (failures=0, errors=0)
-2026-10-03 13:00:27.201 INFO   [demo] ============ evidence bundle ============
-2026-10-03 13:00:27.280 EVENT  [demo] evidence bundle written | overall PASS: end_to_end=PASS, tokenizer_integrity=PASS, shards_manifests=PASS, evaluation_firewall=PASS, packing_correctness=PASS, mixture_compliance=PASS, opus_audit_trail=PASS, consumption_ledger=PASS, crash_recovery=PASS, replay=PASS, fork=PASS, learning_trace=PASS, throughput=PASS, tests=PASS
-2026-10-03 13:00:27.282 INFO   [demo] demo finished in 115.8s; overall PASS
-2026-10-03 13:00:27.282 INFO   [demo]   PASS  End-to-end execution
-2026-10-03 13:00:27.282 INFO   [demo]   PASS  Tokenizer integrity
-2026-10-03 13:00:27.282 INFO   [demo]   PASS  Immutable shards and manifests
-2026-10-03 13:00:27.284 INFO   [demo]   PASS  Evaluation firewall
-2026-10-03 13:00:27.284 INFO   [demo]   PASS  Packing correctness
-2026-10-03 13:00:27.284 INFO   [demo]   PASS  Mixture compliance
-2026-10-03 13:00:27.284 INFO   [demo]   PASS  OPUS audit trail
-2026-10-03 13:00:27.284 INFO   [demo]   PASS  Consumption ledger and checkpoints
-2026-10-03 13:00:27.285 INFO   [demo]   PASS  Crash recovery
-2026-10-03 13:00:27.285 INFO   [demo]   PASS  Replay
-2026-10-03 13:00:27.285 INFO   [demo]   PASS  Fork from an earlier checkpoint
-2026-10-03 13:00:27.285 INFO   [demo]   PASS  Learning trace
-2026-10-03 13:00:27.285 INFO   [demo]   PASS  Throughput
-2026-10-03 13:00:27.285 INFO   [demo]   PASS  Automated invariant tests
+2026-10-03 13:22:11.248 INFO   [demo] ============ TDES: Training Data Execution System demo ============
+2026-10-03 13:22:11.249 INFO   [demo] python 3.10.11 numpy 1.24.3 torch 2.14.1+cu126 device cpu on Windows AMD64; artifacts -> C:\Desk\Learning\ERA\Ex06\submission_artifacts
+2026-10-03 13:22:11.251 INFO   [demo] ============ documents -> cleaned corpus ============
+2026-10-03 13:22:11.329 EVENT  [demo] documents cleaned | 785 raw docs -> 781 kept, 4 exact duplicates dropped, cleaning_pipeline_hash=f6151a93de29
+2026-10-03 13:22:11.329 INFO   [demo] ============ tokenizer ============
+2026-10-03 13:22:12.921 EVENT  [demo] tokenizer frozen | vocab=649 hash=6755ee6fea85c6d2 (file sealed read-only)
+2026-10-03 13:22:12.923 CHECK  [demo] [PASS] tokenizer_hash_verified | reloaded hash 6755ee6fea85c6d2 == lock 6755ee6fea85c6d2
+2026-10-03 13:22:12.940 CHECK  [demo] [PASS] tokenizer_deterministic | 29 documents re-encoded identically by the reloaded tokenizer
+2026-10-03 13:22:12.940 CHECK  [demo] [PASS] tokenizer_nfc_stable | NFD-decomposed Hindi encodes to the same ids as NFC
+2026-10-03 13:22:12.941 CHECK  [demo] [PASS] special_tokens_not_injectable | literal '<|assistant|>' in text encodes as bytes, not the control id
+2026-10-03 13:22:12.941 INFO   [demo] ============ tokenized shards + manifests ============
+2026-10-03 13:22:13.293 EVENT  [demo] shards created | 43 immutable shards, 116773 tokens, files sealed read-only
+2026-10-03 13:22:13.293 INFO   [demo] ============ evaluation registry + admission ============
+2026-10-03 13:22:13.779 CHECK  [demo] [PASS] manifests_validated | 44/44 manifests: manifest hash, tokenizer hash, file hashes, content hash, sealed, lineage
+2026-10-03 13:22:13.779 EVENT  [demo] manifests validated | 44/44
+2026-10-03 13:22:13.779 CHECK  [demo] [PASS] all_manifests_bind_frozen_tokenizer | every manifest records tokenizer_hash 6755ee6fea85c6d2
+2026-10-03 13:22:13.780 CHECK  [demo] [PASS] shard_files_immutable | write to shards/shd-agentic-train-9173827a9592/tokens.npy refused (read-only seal)
+2026-10-03 13:22:13.780 CHECK  [demo] [PASS] license_gate_blocked_unknown_source | blocked: ['shd-code-train-85006bfca373']
+2026-10-03 13:22:13.780 CHECK  [demo] [PASS] contaminated_shard_quarantined | quarantined ['shd-general_web-train-785bb33ff511']; derived ['shd-general_web-train-896422f889e4'] with parent lineage
+2026-10-03 13:22:13.780 INFO   [demo] ============ evaluation / validation firewall drill ============
+2026-10-03 13:22:13.784 CHECK  [demo] [PASS] eval_shard_blocked | 2 test shard(s) refused: test_shard_never_train
+2026-10-03 13:22:13.789 CHECK  [demo] [PASS] validation_shard_blocked | 7 validation shard(s) refused: validation_shard_never_gradient_bearing
+2026-10-03 13:22:13.791 CHECK  [demo] [PASS] quarantined_shard_blocked | contaminated shard refused at pool entry
+2026-10-03 13:22:13.793 CHECK  [demo] [PASS] eval_batch_blocked_at_serve_time | packed sequence holding a benchmark item rejected before training
+2026-10-03 13:22:13.983 CHECK  [demo] [PASS] admitted_train_shards_clean | 0 eval-overlapping docs across 32 admitted shards
+2026-10-03 13:22:13.984 EVENT  [demo] evaluation data blocked | test=2 validation=7 quarantined=1 license_blocked=1
+2026-10-03 13:22:13.984 INFO   [demo] ============ mixture schedule ============
+2026-10-03 13:22:13.985 CHECK  [demo] [PASS] every_active_lane_has_packable_supply | packable tokens per lane {'general_web': 30210, 'code': 17213, 'math_science': 15258, 'indic': 16835, 'reasoning': 9417, 'agentic': 7146, 'anneal_reserve': 4112}; structured samples dropped as oversize {'general_web': 0, 'code': 0, 'math_science': 0, 'indic': 0, 'reasoning': 0, 'agentic': 16, 'anneal_reserve': 0}
+2026-10-03 13:22:13.991 CHECK  [demo] [PASS] mixture_compiled | 3 stages, 32 steps, schedule_hash=1bbc44a6a1b6
+2026-10-03 13:22:13.992 CHECK  [demo] [PASS] protected_floors_in_every_step_quota | indic/agentic/reasoning floors reserved in all step quotas
+2026-10-03 13:22:13.992 INFO   [demo] stage foundation: steps 1-12 tokens 0-24576 max |planned-quota| share dev 0.002917
+2026-10-03 13:22:13.992 INFO   [demo] stage reasoning_midtrain: steps 13-24 tokens 24576-49152 max |planned-quota| share dev 0.004375
+2026-10-03 13:22:13.992 INFO   [demo] stage anneal: steps 25-32 tokens 49152-65536 max |planned-quota| share dev 0.00662
+2026-10-03 13:22:13.992 INFO   [demo] supply general_web: need 20160 vs 30210 unique -> 0.667 epochs [ok]
+2026-10-03 13:22:13.993 INFO   [demo] supply code: need 18048 vs 17213 unique -> 1.049 epochs [repeat]
+2026-10-03 13:22:13.993 INFO   [demo] supply math_science: need 15360 vs 15258 unique -> 1.007 epochs [repeat]
+2026-10-03 13:22:13.993 INFO   [demo] supply indic: need 18240 vs 16835 unique -> 1.083 epochs [repeat]
+2026-10-03 13:22:13.993 INFO   [demo] supply reasoning: need 11136 vs 9417 unique -> 1.183 epochs [repeat]
+2026-10-03 13:22:13.993 INFO   [demo] supply agentic: need 8832 vs 7146 unique -> 1.236 epochs [repeat]
+2026-10-03 13:22:13.994 INFO   [demo] supply anneal_reserve: need 6528 vs 4112 unique -> 1.588 epochs [repeat]
+2026-10-03 13:22:13.994 EVENT  [demo] mixture compiled | schedule_hash=1bbc44a6a1b6
+2026-10-03 13:22:14.013 EVENT  [demo] packing policies compared | general_web:pad_only=0.7284/concat_chop=0.9958/greedy_first_fit=0.9673/best_fit_decreasing=0.9875 code:pad_only=0.7471/concat_chop=0.9961/greedy_first_fit=0.9675/best_fit_decreasing=0.9888 math_science:pad_only=0.745/concat_chop=0.9934/greedy_first_fit=0.9313/best_fit_decreasing=0.9461 indic:pad_only=0.7187/concat_chop=0.9964/greedy_first_fit=0.9262/best_fit_decreasing=0.9462 reasoning:pad_only=0.9196/concat_chop=0.9942/greedy_first_fit=0.9196/best_fit_decreasing=0.9196 agentic:pad_only=0.8723/concat_chop=0.9969/greedy_first_fit=0.8723/best_fit_decreasing=0.8723 anneal_reserve:pad_only=0.4589/concat_chop=0.9735/greedy_first_fit=0.9179/best_fit_decreasing=0.9179
+2026-10-03 13:22:14.016 INFO   [demo] ============ uninterrupted reference run (expected stream) ============
+2026-10-03 13:22:14.016 INFO   [demo] spawn: python -m tdes.trainer --mode fresh --branch reference --until 32 --checkpoint-every 0
+2026-10-03 13:22:21.506 INFO   [train:reference] [reference] fresh run v5s06-77e57077f7: B=16 seqs x L=128, ranks=2, micro_batch=2, grad_accum=4, steps 1..32, device cpu, loader tdes-loader/1.0+84c02a0e6f.6891f0
+2026-10-03 13:22:21.997 EVENT  [train:reference] batches packed | [reference] step   1 foundation         b00001-3483caa8b24e util=0.991 loss_tok=1912 loss=6.4760 gnorm=0.024 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 7, 'override': 2, 'rejected': 8}
+2026-10-03 13:22:21.997 EVENT  [train:reference] OPUS decisions recorded | [reference] step 1: 31 candidate records
+2026-10-03 13:22:22.358 EVENT  [train:reference] batches packed | [reference] step   2 foundation         b00002-7f42ff8a56e7 util=0.983 loss_tok=1894 loss=6.4711 gnorm=0.026 lanes={'general_web': 5, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 6, 'override': 2, 'rejected': 8}
+2026-10-03 13:22:22.360 EVENT  [train:reference] OPUS decisions recorded | [reference] step 2: 30 candidate records
+2026-10-03 13:22:22.684 EVENT  [train:reference] batches packed | [reference] step   3 foundation         b00003-8cd157f2eab1 util=0.988 loss_tok=1901 loss=6.4600 gnorm=0.032 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 7, 'rejected': 8, 'override': 3}
+2026-10-03 13:22:22.684 EVENT  [train:reference] OPUS decisions recorded | [reference] step 3: 31 candidate records
+2026-10-03 13:22:23.007 EVENT  [train:reference] batches packed | [reference] step   4 foundation         b00004-36dfc6def2de util=0.979 loss_tok=1885 loss=6.4393 gnorm=0.054 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 4, 'rejected': 10, 'override': 3}
+2026-10-03 13:22:23.007 EVENT  [train:reference] OPUS decisions recorded | [reference] step 4: 30 candidate records
+2026-10-03 13:22:23.339 EVENT  [train:reference] batches packed | [reference] step   5 foundation         b00005-b8a4978c708a util=0.976 loss_tok=1832 loss=6.3960 gnorm=0.118 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 2, 'reasoning': 2, 'agentic': 1} opus={'accepted': 13, 'deferred': 7, 'override': 3, 'rejected': 7}
+2026-10-03 13:22:23.339 EVENT  [train:reference] OPUS decisions recorded | [reference] step 5: 30 candidate records
+2026-10-03 13:22:23.692 EVENT  [train:reference] batches packed | [reference] step   6 foundation         b00006-d22a843fa51f util=0.970 loss_tok=1822 loss=6.2822 gnorm=0.246 lanes={'general_web': 5, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 2} opus={'accepted': 14, 'deferred': 6, 'override': 2, 'rejected': 8}
+2026-10-03 13:22:23.693 EVENT  [train:reference] OPUS decisions recorded | [reference] step 6: 30 candidate records
+2026-10-03 13:22:24.052 EVENT  [train:reference] batches packed | [reference] step   7 foundation         b00007-600727c2a7e0 util=0.979 loss_tok=1886 loss=6.0494 gnorm=0.422 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 2, 'rejected': 13, 'override': 2}
+2026-10-03 13:22:24.053 EVENT  [train:reference] OPUS decisions recorded | [reference] step 7: 31 candidate records
+2026-10-03 13:22:24.375 EVENT  [train:reference] batches packed | [reference] step   8 foundation         b00008-d5567c25b14f util=0.989 loss_tok=1903 loss=5.7034 gnorm=0.405 lanes={'general_web': 5, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'rejected': 8, 'deferred': 6, 'override': 3}
+2026-10-03 13:22:24.375 EVENT  [train:reference] OPUS decisions recorded | [reference] step 8: 30 candidate records
+2026-10-03 13:22:24.714 EVENT  [train:reference] batches packed | [reference] step   9 foundation         b00009-d2f50a96bce2 util=0.979 loss_tok=1885 loss=5.9672 gnorm=1.713 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 7, 'rejected': 6, 'override': 2}
+2026-10-03 13:22:24.714 EVENT  [train:reference] OPUS decisions recorded | [reference] step 9: 29 candidate records
+2026-10-03 13:22:25.031 EVENT  [train:reference] batches packed | [reference] step  10 foundation         b00010-465164e9d4ae util=0.978 loss_tok=1885 loss=5.9475 gnorm=1.261 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 15, 'deferred': 7, 'rejected': 7, 'override': 1}
+2026-10-03 13:22:25.031 EVENT  [train:reference] OPUS decisions recorded | [reference] step 10: 30 candidate records
+2026-10-03 13:22:25.403 EVENT  [train:reference] batches packed | [reference] step  11 foundation         b00011-6a91a7ecff2c util=0.980 loss_tok=1890 loss=5.5127 gnorm=0.409 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 13, 'override': 1}
+2026-10-03 13:22:25.403 EVENT  [train:reference] OPUS decisions recorded | [reference] step 11: 34 candidate records
+2026-10-03 13:22:25.772 EVENT  [train:reference] batches packed | [reference] step  12 foundation         b00012-44a51c83a699 util=0.979 loss_tok=1884 loss=5.5410 gnorm=0.268 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 6, 'rejected': 9, 'override': 3}
+2026-10-03 13:22:25.772 EVENT  [train:reference] OPUS decisions recorded | [reference] step 12: 31 candidate records
+2026-10-03 13:22:26.113 EVENT  [train:reference] batches packed | [reference] step  13 reasoning_midtrain b00013-630619fcfa24 util=0.973 loss_tok=1787 loss=5.5269 gnorm=0.361 lanes={'general_web': 4, 'code': 4, 'math_science': 2, 'indic': 2, 'reasoning': 2, 'agentic': 2} opus={'accepted': 13, 'deferred': 6, 'override': 3, 'rejected': 6}
+2026-10-03 13:22:26.113 EVENT  [train:reference] OPUS decisions recorded | [reference] step 13: 28 candidate records
+2026-10-03 13:22:26.466 EVENT  [train:reference] batches packed | [reference] step  14 reasoning_midtrain b00014-53ff80748c4e util=0.963 loss_tok=1808 loss=5.6027 gnorm=0.348 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 14, 'deferred': 4, 'rejected': 10, 'override': 2}
+2026-10-03 13:22:26.466 EVENT  [train:reference] OPUS decisions recorded | [reference] step 14: 30 candidate records
+2026-10-03 13:22:26.807 EVENT  [train:reference] batches packed | [reference] step  15 reasoning_midtrain b00015-17a4a7ea0544 util=0.966 loss_tok=1764 loss=5.6216 gnorm=0.354 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 14, 'deferred': 4, 'rejected': 9, 'override': 2}
+2026-10-03 13:22:26.807 EVENT  [train:reference] OPUS decisions recorded | [reference] step 15: 29 candidate records
+2026-10-03 13:22:27.153 EVENT  [train:reference] batches packed | [reference] step  16 reasoning_midtrain b00016-5426334f613b util=0.961 loss_tok=1752 loss=5.5943 gnorm=0.318 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 5, 'rejected': 9, 'override': 1}
+2026-10-03 13:22:27.153 EVENT  [train:reference] OPUS decisions recorded | [reference] step 16: 30 candidate records
+2026-10-03 13:22:27.510 EVENT  [train:reference] batches packed | [reference] step  17 reasoning_midtrain b00017-f71bd43819a6 util=0.966 loss_tok=1765 loss=5.5217 gnorm=0.298 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 1} opus={'accepted': 16, 'rejected': 11, 'deferred': 4}
+2026-10-03 13:22:27.510 EVENT  [train:reference] OPUS decisions recorded | [reference] step 17: 31 candidate records
+2026-10-03 13:22:27.874 EVENT  [train:reference] batches packed | [reference] step  18 reasoning_midtrain b00018-2557a5460d3f util=0.968 loss_tok=1821 loss=5.4911 gnorm=0.249 lanes={'general_web': 3, 'code': 4, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 6, 'rejected': 10, 'override': 1}
+2026-10-03 13:22:27.875 EVENT  [train:reference] OPUS decisions recorded | [reference] step 18: 32 candidate records
+2026-10-03 13:22:28.201 EVENT  [train:reference] batches packed | [reference] step  19 reasoning_midtrain b00019-33968ee14352 util=0.968 loss_tok=1771 loss=5.4989 gnorm=0.418 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 5, 'rejected': 10, 'override': 1}
+2026-10-03 13:22:28.201 EVENT  [train:reference] OPUS decisions recorded | [reference] step 19: 31 candidate records
+2026-10-03 13:22:28.559 EVENT  [train:reference] batches packed | [reference] step  20 reasoning_midtrain b00020-944de24aa42d util=0.971 loss_tok=1774 loss=5.4624 gnorm=0.498 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 6, 'rejected': 10, 'override': 1}
+2026-10-03 13:22:28.559 EVENT  [train:reference] OPUS decisions recorded | [reference] step 20: 32 candidate records
+2026-10-03 13:22:28.892 EVENT  [train:reference] batches packed | [reference] step  21 reasoning_midtrain b00021-6d9c77833193 util=0.971 loss_tok=1772 loss=5.3783 gnorm=0.428 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 2, 'reasoning': 3, 'agentic': 1} opus={'accepted': 15, 'deferred': 3, 'rejected': 13, 'override': 1}
+2026-10-03 13:22:28.892 EVENT  [train:reference] OPUS decisions recorded | [reference] step 21: 32 candidate records
+2026-10-03 13:22:29.252 EVENT  [train:reference] batches packed | [reference] step  22 reasoning_midtrain b00022-6a3f21bd52a5 util=0.944 loss_tok=1726 loss=5.3967 gnorm=0.279 lanes={'general_web': 3, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 6, 'rejected': 9, 'override': 1}
+2026-10-03 13:22:29.252 EVENT  [train:reference] OPUS decisions recorded | [reference] step 22: 31 candidate records
+2026-10-03 13:22:29.607 EVENT  [train:reference] batches packed | [reference] step  23 reasoning_midtrain b00023-26540dc75ded util=0.973 loss_tok=1831 loss=5.3561 gnorm=0.229 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 9, 'override': 1}
+2026-10-03 13:22:29.607 EVENT  [train:reference] OPUS decisions recorded | [reference] step 23: 30 candidate records
+2026-10-03 13:22:29.968 EVENT  [train:reference] batches packed | [reference] step  24 reasoning_midtrain b00024-20afc512764c util=0.953 loss_tok=1746 loss=5.3666 gnorm=0.196 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 4, 'rejected': 10, 'override': 1}
+2026-10-03 13:22:29.968 EVENT  [train:reference] OPUS decisions recorded | [reference] step 24: 30 candidate records
+2026-10-03 13:22:30.354 EVENT  [train:reference] batches packed | [reference] step  25 anneal             b00025-2ae7a2788d58 util=0.951 loss_tok=1574 loss=5.5143 gnorm=0.229 lanes={'code': 3, 'math_science': 2, 'indic': 4, 'reasoning': 3, 'agentic': 2, 'anneal_reserve': 2} opus={'rejected': 16, 'accepted': 16, 'deferred': 6}
+2026-10-03 13:22:30.354 EVENT  [train:reference] OPUS decisions recorded | [reference] step 25: 38 candidate records
+2026-10-03 13:22:30.709 EVENT  [train:reference] batches packed | [reference] step  26 anneal             b00026-5f337f565dda util=0.961 loss_tok=1592 loss=5.5065 gnorm=0.237 lanes={'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 3} opus={'accepted': 16, 'rejected': 8, 'deferred': 6}
+2026-10-03 13:22:30.709 EVENT  [train:reference] OPUS decisions recorded | [reference] step 26: 30 candidate records
+2026-10-03 13:22:31.042 EVENT  [train:reference] batches packed | [reference] step  27 anneal             b00027-d9f0999f3182 util=0.967 loss_tok=1506 loss=5.4777 gnorm=0.338 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 1, 'anneal_reserve': 5} opus={'accepted': 16, 'rejected': 10, 'deferred': 2}
+2026-10-03 13:22:31.042 EVENT  [train:reference] OPUS decisions recorded | [reference] step 27: 28 candidate records
+2026-10-03 13:22:31.420 EVENT  [train:reference] batches packed | [reference] step  28 anneal             b00028-5270d34a0d3d util=0.971 loss_tok=1502 loss=5.5479 gnorm=0.259 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 14}
+2026-10-03 13:22:31.420 EVENT  [train:reference] OPUS decisions recorded | [reference] step 28: 35 candidate records
+2026-10-03 13:22:31.780 EVENT  [train:reference] batches packed | [reference] step  29 anneal             b00029-3c3287f4349a util=0.941 loss_tok=1465 loss=5.5008 gnorm=0.321 lanes={'code': 1, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 15}
+2026-10-03 13:22:31.780 EVENT  [train:reference] OPUS decisions recorded | [reference] step 29: 36 candidate records
+2026-10-03 13:22:32.147 EVENT  [train:reference] batches packed | [reference] step  30 anneal             b00030-bebf9ffa0d95 util=0.945 loss_tok=1512 loss=5.5252 gnorm=0.291 lanes={'code': 2, 'math_science': 2, 'indic': 4, 'reasoning': 2, 'agentic': 1, 'anneal_reserve': 5} opus={'accepted': 16, 'rejected': 13, 'deferred': 3}
+2026-10-03 13:22:32.147 EVENT  [train:reference] OPUS decisions recorded | [reference] step 30: 32 candidate records
+2026-10-03 13:22:32.507 EVENT  [train:reference] batches packed | [reference] step  31 anneal             b00031-fc51f729dd74 util=0.937 loss_tok=1454 loss=5.4183 gnorm=0.286 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 2, 'anneal_reserve': 4} opus={'accepted': 16, 'deferred': 6, 'rejected': 13}
+2026-10-03 13:22:32.507 EVENT  [train:reference] OPUS decisions recorded | [reference] step 31: 35 candidate records
+2026-10-03 13:22:32.865 EVENT  [train:reference] batches packed | [reference] step  32 anneal             b00032-7aca15aa6915 util=0.927 loss_tok=1447 loss=5.4304 gnorm=0.276 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 10}
+2026-10-03 13:22:32.865 EVENT  [train:reference] OPUS decisions recorded | [reference] step 32: 31 candidate records
+2026-10-03 13:22:32.924 EVENT  [train:reference] checkpoint saved | [reference] ckpt-reference-s00032-92a435d6e8 at step 32; consumption ledger offset 321 hash f9d7ed0c029d
+2026-10-03 13:22:32.925 CHECK  [train:reference] [PASS] checkpoint_saved | checkpoints/reference/step_00032 reloads to weights_hash 92a435d6e8a9; bound to ledger offset 321
+2026-10-03 13:22:33.636 INFO   [demo] ============ main run: train until the deliberate crash ============
+2026-10-03 13:22:33.637 INFO   [demo] spawn: python -m tdes.trainer --mode fresh --branch main --until 32 --crash-at 21 --crash-after 3
+2026-10-03 13:22:41.663 INFO   [train:main] [main] fresh run v5s06-77e57077f7: B=16 seqs x L=128, ranks=2, micro_batch=2, grad_accum=4, steps 1..32, device cpu, loader tdes-loader/1.0+84c02a0e6f.6891f0
+2026-10-03 13:22:42.136 EVENT  [train:main] batches packed | [main] step   1 foundation         b00001-3483caa8b24e util=0.991 loss_tok=1912 loss=6.4760 gnorm=0.024 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 7, 'override': 2, 'rejected': 8}
+2026-10-03 13:22:42.136 EVENT  [train:main] OPUS decisions recorded | [main] step 1: 31 candidate records
+2026-10-03 13:22:42.511 EVENT  [train:main] batches packed | [main] step   2 foundation         b00002-7f42ff8a56e7 util=0.983 loss_tok=1894 loss=6.4711 gnorm=0.026 lanes={'general_web': 5, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 6, 'override': 2, 'rejected': 8}
+2026-10-03 13:22:42.511 EVENT  [train:main] OPUS decisions recorded | [main] step 2: 30 candidate records
+2026-10-03 13:22:42.865 EVENT  [train:main] batches packed | [main] step   3 foundation         b00003-8cd157f2eab1 util=0.988 loss_tok=1901 loss=6.4600 gnorm=0.032 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 7, 'rejected': 8, 'override': 3}
+2026-10-03 13:22:42.865 EVENT  [train:main] OPUS decisions recorded | [main] step 3: 31 candidate records
+2026-10-03 13:22:43.196 EVENT  [train:main] batches packed | [main] step   4 foundation         b00004-36dfc6def2de util=0.979 loss_tok=1885 loss=6.4393 gnorm=0.054 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 4, 'rejected': 10, 'override': 3}
+2026-10-03 13:22:43.196 EVENT  [train:main] OPUS decisions recorded | [main] step 4: 30 candidate records
+2026-10-03 13:22:43.252 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00004-6c27b3b692 at step 4; consumption ledger offset 41 hash 5bd5ed66bf20
+2026-10-03 13:22:43.252 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00004 reloads to weights_hash 6c27b3b69238; bound to ledger offset 41
+2026-10-03 13:22:43.578 EVENT  [train:main] batches packed | [main] step   5 foundation         b00005-b8a4978c708a util=0.976 loss_tok=1832 loss=6.3960 gnorm=0.118 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 2, 'reasoning': 2, 'agentic': 1} opus={'accepted': 13, 'deferred': 7, 'override': 3, 'rejected': 7}
+2026-10-03 13:22:43.578 EVENT  [train:main] OPUS decisions recorded | [main] step 5: 30 candidate records
+2026-10-03 13:22:43.914 EVENT  [train:main] batches packed | [main] step   6 foundation         b00006-d22a843fa51f util=0.970 loss_tok=1822 loss=6.2822 gnorm=0.246 lanes={'general_web': 5, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 2} opus={'accepted': 14, 'deferred': 6, 'override': 2, 'rejected': 8}
+2026-10-03 13:22:43.914 EVENT  [train:main] OPUS decisions recorded | [main] step 6: 30 candidate records
+2026-10-03 13:22:44.253 EVENT  [train:main] batches packed | [main] step   7 foundation         b00007-600727c2a7e0 util=0.979 loss_tok=1886 loss=6.0494 gnorm=0.422 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 2, 'rejected': 13, 'override': 2}
+2026-10-03 13:22:44.253 EVENT  [train:main] OPUS decisions recorded | [main] step 7: 31 candidate records
+2026-10-03 13:22:44.594 EVENT  [train:main] batches packed | [main] step   8 foundation         b00008-d5567c25b14f util=0.989 loss_tok=1903 loss=5.7034 gnorm=0.405 lanes={'general_web': 5, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'rejected': 8, 'deferred': 6, 'override': 3}
+2026-10-03 13:22:44.594 EVENT  [train:main] OPUS decisions recorded | [main] step 8: 30 candidate records
+2026-10-03 13:22:44.642 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00008-835ab9af05 at step 8; consumption ledger offset 82 hash d8b50d15369b
+2026-10-03 13:22:44.642 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00008 reloads to weights_hash 835ab9af05aa; bound to ledger offset 82
+2026-10-03 13:22:44.993 EVENT  [train:main] batches packed | [main] step   9 foundation         b00009-d2f50a96bce2 util=0.979 loss_tok=1885 loss=5.9672 gnorm=1.713 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 14, 'deferred': 7, 'rejected': 6, 'override': 2}
+2026-10-03 13:22:44.993 EVENT  [train:main] OPUS decisions recorded | [main] step 9: 29 candidate records
+2026-10-03 13:22:45.344 EVENT  [train:main] batches packed | [main] step  10 foundation         b00010-465164e9d4ae util=0.978 loss_tok=1885 loss=5.9475 gnorm=1.261 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 15, 'deferred': 7, 'rejected': 7, 'override': 1}
+2026-10-03 13:22:45.344 EVENT  [train:main] OPUS decisions recorded | [main] step 10: 30 candidate records
+2026-10-03 13:22:45.719 EVENT  [train:main] batches packed | [main] step  11 foundation         b00011-6a91a7ecff2c util=0.980 loss_tok=1890 loss=5.5127 gnorm=0.409 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 13, 'override': 1}
+2026-10-03 13:22:45.719 EVENT  [train:main] OPUS decisions recorded | [main] step 11: 34 candidate records
+2026-10-03 13:22:46.088 EVENT  [train:main] batches packed | [main] step  12 foundation         b00012-44a51c83a699 util=0.979 loss_tok=1884 loss=5.5410 gnorm=0.268 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1} opus={'accepted': 13, 'deferred': 6, 'rejected': 9, 'override': 3}
+2026-10-03 13:22:46.089 EVENT  [train:main] OPUS decisions recorded | [main] step 12: 31 candidate records
+2026-10-03 13:22:46.138 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00012-312938f65f at step 12; consumption ledger offset 123 hash a656fa47b69b
+2026-10-03 13:22:46.138 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00012 reloads to weights_hash 312938f65fec; bound to ledger offset 123
+2026-10-03 13:22:46.483 EVENT  [train:main] batches packed | [main] step  13 reasoning_midtrain b00013-630619fcfa24 util=0.973 loss_tok=1787 loss=5.5269 gnorm=0.361 lanes={'general_web': 4, 'code': 4, 'math_science': 2, 'indic': 2, 'reasoning': 2, 'agentic': 2} opus={'accepted': 13, 'deferred': 6, 'override': 3, 'rejected': 6}
+2026-10-03 13:22:46.483 EVENT  [train:main] OPUS decisions recorded | [main] step 13: 28 candidate records
+2026-10-03 13:22:46.840 EVENT  [train:main] batches packed | [main] step  14 reasoning_midtrain b00014-53ff80748c4e util=0.963 loss_tok=1808 loss=5.6027 gnorm=0.348 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 14, 'deferred': 4, 'rejected': 10, 'override': 2}
+2026-10-03 13:22:46.840 EVENT  [train:main] OPUS decisions recorded | [main] step 14: 30 candidate records
+2026-10-03 13:22:47.190 EVENT  [train:main] batches packed | [main] step  15 reasoning_midtrain b00015-17a4a7ea0544 util=0.966 loss_tok=1764 loss=5.6216 gnorm=0.354 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 14, 'deferred': 4, 'rejected': 9, 'override': 2}
+2026-10-03 13:22:47.190 EVENT  [train:main] OPUS decisions recorded | [main] step 15: 29 candidate records
+2026-10-03 13:22:47.548 EVENT  [train:main] batches packed | [main] step  16 reasoning_midtrain b00016-5426334f613b util=0.961 loss_tok=1752 loss=5.5943 gnorm=0.318 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 5, 'rejected': 9, 'override': 1}
+2026-10-03 13:22:47.548 EVENT  [train:main] OPUS decisions recorded | [main] step 16: 30 candidate records
+2026-10-03 13:22:47.595 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00016-bd21238a75 at step 16; consumption ledger offset 164 hash 0385cc8c7f21
+2026-10-03 13:22:47.595 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00016 reloads to weights_hash bd21238a7571; bound to ledger offset 164
+2026-10-03 13:22:47.953 EVENT  [train:main] batches packed | [main] step  17 reasoning_midtrain b00017-f71bd43819a6 util=0.966 loss_tok=1765 loss=5.5217 gnorm=0.298 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 1} opus={'accepted': 16, 'rejected': 11, 'deferred': 4}
+2026-10-03 13:22:47.953 EVENT  [train:main] OPUS decisions recorded | [main] step 17: 31 candidate records
+2026-10-03 13:22:48.319 EVENT  [train:main] batches packed | [main] step  18 reasoning_midtrain b00018-2557a5460d3f util=0.968 loss_tok=1821 loss=5.4911 gnorm=0.249 lanes={'general_web': 3, 'code': 4, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 6, 'rejected': 10, 'override': 1}
+2026-10-03 13:22:48.320 EVENT  [train:main] OPUS decisions recorded | [main] step 18: 32 candidate records
+2026-10-03 13:22:48.655 EVENT  [train:main] batches packed | [main] step  19 reasoning_midtrain b00019-33968ee14352 util=0.968 loss_tok=1771 loss=5.4989 gnorm=0.418 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 5, 'rejected': 10, 'override': 1}
+2026-10-03 13:22:48.655 EVENT  [train:main] OPUS decisions recorded | [main] step 19: 31 candidate records
+2026-10-03 13:22:49.008 EVENT  [train:main] batches packed | [main] step  20 reasoning_midtrain b00020-944de24aa42d util=0.971 loss_tok=1774 loss=5.4624 gnorm=0.498 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 6, 'rejected': 10, 'override': 1}
+2026-10-03 13:22:49.009 EVENT  [train:main] OPUS decisions recorded | [main] step 20: 32 candidate records
+2026-10-03 13:22:49.066 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00020-3a4df7e38d at step 20; consumption ledger offset 205 hash c8bafb42e38c
+2026-10-03 13:22:49.067 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00020 reloads to weights_hash 3a4df7e38df8; bound to ledger offset 205
+2026-10-03 13:22:49.331 EVENT  [train:main] crash simulated | process killed inside step 21 after 3 of 8 microbatches (exit code 86); last checkpoint ckpt-main-s00020-3a4df7e38d
+2026-10-03 13:22:49.611 CHECK  [demo] [PASS] crash_was_real_process_death | training process exited with code 86 mid-step (expected 86)
+2026-10-03 13:22:49.612 INFO   [demo] ============ resume from the latest checkpoint ============
+2026-10-03 13:22:49.612 INFO   [demo] spawn: python -m tdes.trainer --mode resume --branch main --until 32 --reference-branch reference
+2026-10-03 13:22:57.652 EVENT  [train:main] run resumed | [main] restored ckpt-main-s00020-3a4df7e38d (step 20); consumption ledger offset 205; superseded 4 uncommitted consumption records, 32 OPUS records
+2026-10-03 13:22:57.934 CHECK  [train:main] [PASS] resume_next_batch_matched | step 21: resumed b00021-6d9c77833193 == crashed-process plan b00021-6d9c77833193 == reference b00021-6d9c77833193
+2026-10-03 13:22:58.152 EVENT  [train:main] batches packed | [main] step  21 reasoning_midtrain b00021-6d9c77833193 util=0.971 loss_tok=1772 loss=5.3783 gnorm=0.428 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 2, 'reasoning': 3, 'agentic': 1} opus={'accepted': 15, 'deferred': 3, 'rejected': 13, 'override': 1}
+2026-10-03 13:22:58.152 EVENT  [train:main] OPUS decisions recorded | [main] step 21: 32 candidate records
+2026-10-03 13:22:58.527 EVENT  [train:main] batches packed | [main] step  22 reasoning_midtrain b00022-6a3f21bd52a5 util=0.944 loss_tok=1726 loss=5.3967 gnorm=0.279 lanes={'general_web': 3, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 6, 'rejected': 9, 'override': 1}
+2026-10-03 13:22:58.527 EVENT  [train:main] OPUS decisions recorded | [main] step 22: 31 candidate records
+2026-10-03 13:22:58.880 EVENT  [train:main] batches packed | [main] step  23 reasoning_midtrain b00023-26540dc75ded util=0.973 loss_tok=1831 loss=5.3561 gnorm=0.229 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 9, 'override': 1}
+2026-10-03 13:22:58.881 EVENT  [train:main] OPUS decisions recorded | [main] step 23: 30 candidate records
+2026-10-03 13:22:59.237 EVENT  [train:main] batches packed | [main] step  24 reasoning_midtrain b00024-20afc512764c util=0.953 loss_tok=1746 loss=5.3666 gnorm=0.196 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 4, 'rejected': 10, 'override': 1}
+2026-10-03 13:22:59.237 EVENT  [train:main] OPUS decisions recorded | [main] step 24: 30 candidate records
+2026-10-03 13:22:59.288 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00024-9a60571448 at step 24; consumption ledger offset 251 hash 45bffc3b675c
+2026-10-03 13:22:59.288 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00024 reloads to weights_hash 9a6057144843; bound to ledger offset 251
+2026-10-03 13:22:59.660 EVENT  [train:main] batches packed | [main] step  25 anneal             b00025-2ae7a2788d58 util=0.951 loss_tok=1574 loss=5.5143 gnorm=0.229 lanes={'code': 3, 'math_science': 2, 'indic': 4, 'reasoning': 3, 'agentic': 2, 'anneal_reserve': 2} opus={'rejected': 16, 'accepted': 16, 'deferred': 6}
+2026-10-03 13:22:59.661 EVENT  [train:main] OPUS decisions recorded | [main] step 25: 38 candidate records
+2026-10-03 13:23:00.015 EVENT  [train:main] batches packed | [main] step  26 anneal             b00026-5f337f565dda util=0.961 loss_tok=1592 loss=5.5065 gnorm=0.237 lanes={'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 3} opus={'accepted': 16, 'rejected': 8, 'deferred': 6}
+2026-10-03 13:23:00.015 EVENT  [train:main] OPUS decisions recorded | [main] step 26: 30 candidate records
+2026-10-03 13:23:00.380 EVENT  [train:main] batches packed | [main] step  27 anneal             b00027-d9f0999f3182 util=0.967 loss_tok=1506 loss=5.4777 gnorm=0.338 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 1, 'anneal_reserve': 5} opus={'accepted': 16, 'rejected': 10, 'deferred': 2}
+2026-10-03 13:23:00.381 EVENT  [train:main] OPUS decisions recorded | [main] step 27: 28 candidate records
+2026-10-03 13:23:00.757 EVENT  [train:main] batches packed | [main] step  28 anneal             b00028-5270d34a0d3d util=0.971 loss_tok=1502 loss=5.5479 gnorm=0.259 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 14}
+2026-10-03 13:23:00.757 EVENT  [train:main] OPUS decisions recorded | [main] step 28: 35 candidate records
+2026-10-03 13:23:00.805 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00028-bb0dff8901 at step 28; consumption ledger offset 292 hash 2d4d353a24b3
+2026-10-03 13:23:00.805 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00028 reloads to weights_hash bb0dff8901b1; bound to ledger offset 292
+2026-10-03 13:23:01.179 EVENT  [train:main] batches packed | [main] step  29 anneal             b00029-3c3287f4349a util=0.941 loss_tok=1465 loss=5.5008 gnorm=0.321 lanes={'code': 1, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 15}
+2026-10-03 13:23:01.179 EVENT  [train:main] OPUS decisions recorded | [main] step 29: 36 candidate records
+2026-10-03 13:23:01.527 EVENT  [train:main] batches packed | [main] step  30 anneal             b00030-bebf9ffa0d95 util=0.945 loss_tok=1512 loss=5.5252 gnorm=0.291 lanes={'code': 2, 'math_science': 2, 'indic': 4, 'reasoning': 2, 'agentic': 1, 'anneal_reserve': 5} opus={'accepted': 16, 'rejected': 13, 'deferred': 3}
+2026-10-03 13:23:01.528 EVENT  [train:main] OPUS decisions recorded | [main] step 30: 32 candidate records
+2026-10-03 13:23:01.883 EVENT  [train:main] batches packed | [main] step  31 anneal             b00031-fc51f729dd74 util=0.937 loss_tok=1454 loss=5.4183 gnorm=0.286 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 3, 'agentic': 2, 'anneal_reserve': 4} opus={'accepted': 16, 'deferred': 6, 'rejected': 13}
+2026-10-03 13:23:01.883 EVENT  [train:main] OPUS decisions recorded | [main] step 31: 35 candidate records
+2026-10-03 13:23:02.218 EVENT  [train:main] batches packed | [main] step  32 anneal             b00032-7aca15aa6915 util=0.927 loss_tok=1447 loss=5.4304 gnorm=0.276 lanes={'code': 2, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2, 'anneal_reserve': 5} opus={'accepted': 16, 'deferred': 5, 'rejected': 10}
+2026-10-03 13:23:02.219 EVENT  [train:main] OPUS decisions recorded | [main] step 32: 31 candidate records
+2026-10-03 13:23:02.267 EVENT  [train:main] checkpoint saved | [main] ckpt-main-s00032-92a435d6e8 at step 32; consumption ledger offset 333 hash 9217ea4d7ed9
+2026-10-03 13:23:02.267 CHECK  [train:main] [PASS] checkpoint_saved | checkpoints/main/step_00032 reloads to weights_hash 92a435d6e8a9; bound to ledger offset 333
+2026-10-03 13:23:02.899 INFO   [demo] ============ replay an earlier interval from the ledger ============
+2026-10-03 13:23:02.900 INFO   [demo] spawn: python -m tdes.trainer --mode replay --source-branch main --from-step 8 --to-step 16
+2026-10-03 13:23:11.003 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step   9 foundation         b00009-d2f50a96bce2 util=0.979 loss_tok=1885 loss=5.9672 gnorm=1.713 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1}
+2026-10-03 13:23:11.003 INFO   [replay:replay-main-s00008] replay step 9: b00009-d2f50a96bce2 vs original b00009-d2f50a96bce2 -> identical (weights 9f54bfd07261)
+2026-10-03 13:23:11.154 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  10 foundation         b00010-465164e9d4ae util=0.978 loss_tok=1885 loss=5.9475 gnorm=1.261 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1}
+2026-10-03 13:23:11.154 INFO   [replay:replay-main-s00008] replay step 10: b00010-465164e9d4ae vs original b00010-465164e9d4ae -> identical (weights f1da4fdcaffc)
+2026-10-03 13:23:11.317 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  11 foundation         b00011-6a91a7ecff2c util=0.980 loss_tok=1890 loss=5.5127 gnorm=0.409 lanes={'general_web': 6, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 1, 'agentic': 1}
+2026-10-03 13:23:11.319 INFO   [replay:replay-main-s00008] replay step 11: b00011-6a91a7ecff2c vs original b00011-6a91a7ecff2c -> identical (weights ffa4b11c062a)
+2026-10-03 13:23:11.489 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  12 foundation         b00012-44a51c83a699 util=0.979 loss_tok=1884 loss=5.5410 gnorm=0.268 lanes={'general_web': 5, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 1, 'agentic': 1}
+2026-10-03 13:23:11.489 INFO   [replay:replay-main-s00008] replay step 12: b00012-44a51c83a699 vs original b00012-44a51c83a699 -> identical (weights 312938f65fec)
+2026-10-03 13:23:11.540 EVENT  [replay:replay-main-s00008] checkpoint saved | [replay-main-s00008] ckpt-replay-main-s00008-s00012-312938f65f at step 12; consumption ledger offset 42 hash d63a44bba441
+2026-10-03 13:23:11.540 CHECK  [replay:replay-main-s00008] [PASS] checkpoint_saved | checkpoints/replay-main-s00008/step_00012 reloads to weights_hash 312938f65fec; bound to ledger offset 42
+2026-10-03 13:23:11.704 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  13 reasoning_midtrain b00013-630619fcfa24 util=0.973 loss_tok=1787 loss=5.5269 gnorm=0.361 lanes={'general_web': 4, 'code': 4, 'math_science': 2, 'indic': 2, 'reasoning': 2, 'agentic': 2}
+2026-10-03 13:23:11.704 INFO   [replay:replay-main-s00008] replay step 13: b00013-630619fcfa24 vs original b00013-630619fcfa24 -> identical (weights 33d912ada134)
+2026-10-03 13:23:11.883 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  14 reasoning_midtrain b00014-53ff80748c4e util=0.963 loss_tok=1808 loss=5.6027 gnorm=0.348 lanes={'general_web': 4, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 1}
+2026-10-03 13:23:11.883 INFO   [replay:replay-main-s00008] replay step 14: b00014-53ff80748c4e vs original b00014-53ff80748c4e -> identical (weights 4d2a6c95745f)
+2026-10-03 13:23:12.050 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  15 reasoning_midtrain b00015-17a4a7ea0544 util=0.966 loss_tok=1764 loss=5.6216 gnorm=0.354 lanes={'general_web': 4, 'code': 3, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2}
+2026-10-03 13:23:12.051 INFO   [replay:replay-main-s00008] replay step 15: b00015-17a4a7ea0544 vs original b00015-17a4a7ea0544 -> identical (weights 254b9310b45f)
+2026-10-03 13:23:12.204 EVENT  [replay:replay-main-s00008] batches packed | [replay-main-s00008] step  16 reasoning_midtrain b00016-5426334f613b util=0.961 loss_tok=1752 loss=5.5943 gnorm=0.318 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 3, 'reasoning': 2, 'agentic': 2}
+2026-10-03 13:23:12.204 INFO   [replay:replay-main-s00008] replay step 16: b00016-5426334f613b vs original b00016-5426334f613b -> identical (weights bd21238a7571)
+2026-10-03 13:23:12.255 EVENT  [replay:replay-main-s00008] checkpoint saved | [replay-main-s00008] ckpt-replay-main-s00008-s00016-bd21238a75 at step 16; consumption ledger offset 83 hash 08c09e3fc83c
+2026-10-03 13:23:12.255 CHECK  [replay:replay-main-s00008] [PASS] checkpoint_saved | checkpoints/replay-main-s00008/step_00016 reloads to weights_hash bd21238a7571; bound to ledger offset 83
+2026-10-03 13:23:12.255 EVENT  [replay:replay-main-s00008] historical stream replayed | steps 9-16 of 'main' rebuilt from ledger span refs and retrained from ckpt-main-s00008-835ab9af05
+2026-10-03 13:23:12.256 CHECK  [replay:replay-main-s00008] [PASS] replay_hash_matched | 8 batches: batch ids, token spans, sequence and loss-mask hashes identical
+2026-10-03 13:23:12.256 CHECK  [replay:replay-main-s00008] [PASS] replay_weights_matched | weights after step 16 bd21238a7571 == original bd21238a7571
+2026-10-03 13:23:12.881 INFO   [demo] ============ fork a new data branch from an earlier checkpoint ============
+2026-10-03 13:23:12.883 INFO   [demo] spawn: python -m tdes.trainer --mode fork --source-branch main --from-step 12 --steps 8 --overrides-json {"mixture.stages.1.mixture": {"general_web": 0.12, "code": 0.2, "math_science": 0.16, "indic": 0.28, "reasoning": 0.14, "agentic": 0.1, "anneal_reserve": 0.0}, "opus.reject_quantile": 0.4}
+2026-10-03 13:23:20.651 EVENT  [fork:fork-1035a481] branch forked | fork-1035a481 from ckpt-main-s00012-312938f65f (ledger offset 123); overrides ['mixture.stages.1.mixture', 'opus.reject_quantile']
+2026-10-03 13:23:21.184 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  13 reasoning_midtrain b00013-4773b7151e05 util=0.973 loss_tok=1786 loss=5.5908 gnorm=0.331 lanes={'general_web': 3, 'code': 4, 'math_science': 2, 'indic': 3, 'reasoning': 2, 'agentic': 2} opus={'accepted': 13, 'deferred': 5, 'override': 3, 'rejected': 12}
+2026-10-03 13:23:21.184 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 13: 33 candidate records
+2026-10-03 13:23:21.546 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  14 reasoning_midtrain b00014-12d90ae902a1 util=0.967 loss_tok=1810 loss=5.5600 gnorm=0.371 lanes={'general_web': 3, 'code': 3, 'math_science': 3, 'indic': 4, 'reasoning': 2, 'agentic': 1} opus={'accepted': 13, 'deferred': 4, 'rejected': 16, 'override': 3}
+2026-10-03 13:23:21.546 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 14: 36 candidate records
+2026-10-03 13:23:21.916 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  15 reasoning_midtrain b00015-377c8e379842 util=0.958 loss_tok=1756 loss=5.6806 gnorm=0.333 lanes={'general_web': 3, 'code': 3, 'math_science': 2, 'indic': 4, 'reasoning': 2, 'agentic': 2} opus={'accepted': 14, 'deferred': 4, 'rejected': 15, 'override': 2}
+2026-10-03 13:23:21.917 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 15: 35 candidate records
+2026-10-03 13:23:22.317 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  16 reasoning_midtrain b00016-f78bcfdb695c util=0.957 loss_tok=1751 loss=5.6208 gnorm=0.305 lanes={'general_web': 1, 'code': 3, 'math_science': 3, 'indic': 5, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 4, 'rejected': 17, 'override': 1}
+2026-10-03 13:23:22.317 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 16: 37 candidate records
+2026-10-03 13:23:22.366 EVENT  [fork:fork-1035a481] checkpoint saved | [fork-1035a481] ckpt-fork-1035a481-s00016-9ab2929f34 at step 16; consumption ledger offset 42 hash ed86b2c6c29c
+2026-10-03 13:23:22.366 CHECK  [fork:fork-1035a481] [PASS] checkpoint_saved | checkpoints/fork-1035a481/step_00016 reloads to weights_hash 9ab2929f3414; bound to ledger offset 42
+2026-10-03 13:23:22.710 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  17 reasoning_midtrain b00017-27e2d9725ec4 util=0.968 loss_tok=1767 loss=5.5711 gnorm=0.287 lanes={'general_web': 2, 'code': 3, 'math_science': 3, 'indic': 4, 'reasoning': 3, 'agentic': 1} opus={'accepted': 14, 'deferred': 5, 'rejected': 10, 'override': 2}
+2026-10-03 13:23:22.710 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 17: 31 candidate records
+2026-10-03 13:23:23.075 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  18 reasoning_midtrain b00018-4375abdcda4d util=0.966 loss_tok=1822 loss=5.5968 gnorm=0.250 lanes={'general_web': 2, 'code': 4, 'math_science': 2, 'indic': 5, 'reasoning': 2, 'agentic': 1} opus={'accepted': 15, 'deferred': 5, 'rejected': 14, 'override': 1}
+2026-10-03 13:23:23.076 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 18: 35 candidate records
+2026-10-03 13:23:23.423 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  19 reasoning_midtrain b00019-61a226c18b31 util=0.973 loss_tok=1772 loss=5.4884 gnorm=0.422 lanes={'general_web': 2, 'code': 3, 'math_science': 3, 'indic': 4, 'reasoning': 2, 'agentic': 2} opus={'accepted': 15, 'deferred': 3, 'rejected': 14, 'override': 1}
+2026-10-03 13:23:23.423 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 19: 33 candidate records
+2026-10-03 13:23:23.790 EVENT  [fork:fork-1035a481] batches packed | [fork-1035a481] step  20 reasoning_midtrain b00020-7d0a6018a659 util=0.971 loss_tok=1772 loss=5.5431 gnorm=0.406 lanes={'general_web': 2, 'code': 3, 'math_science': 2, 'indic': 5, 'reasoning': 2, 'agentic': 2} opus={'accepted': 16, 'rejected': 15, 'deferred': 3}
+2026-10-03 13:23:23.790 EVENT  [fork:fork-1035a481] OPUS decisions recorded | [fork-1035a481] step 20: 34 candidate records
+2026-10-03 13:23:23.838 EVENT  [fork:fork-1035a481] checkpoint saved | [fork-1035a481] ckpt-fork-1035a481-s00020-bbfab6a7af at step 20; consumption ledger offset 83 hash 70cf7dc24726
+2026-10-03 13:23:23.838 CHECK  [fork:fork-1035a481] [PASS] checkpoint_saved | checkpoints/fork-1035a481/step_00020 reloads to weights_hash bbfab6a7af1c; bound to ledger offset 83
+2026-10-03 13:23:23.855 CHECK  [fork:fork-1035a481] [PASS] fork_diverged_explicitly | step 13: fork b00013-4773b7151e05 vs parent b00013-630619fcfa24; divergence recorded in ledgers/fork-1035a481/consumption.jsonl
+2026-10-03 13:23:24.502 INFO   [demo] ============ audit ============
+2026-10-03 13:23:24.793 CHECK  [demo] [PASS] audit.ledger_hash_chains_valid | 12 ledgers, 4528 records, every prev_hash/event_hash verified
+2026-10-03 13:23:25.554 CHECK  [demo] [PASS] audit.checkpoints_bound_to_ledger_offsets | 13 checkpoints: weights hash, ledger offset+hash, offset == own checkpoint_saved event, last committed step and weights agree
+2026-10-03 13:23:25.555 CHECK  [demo] [PASS] audit.committed_stream_has_no_gaps_or_repeats | steps 1..32 each committed exactly once (duplicates=[], gaps=[]); 4 uncommitted records superseded by an explicit rollback record
+2026-10-03 13:23:25.555 CHECK  [demo] [PASS] audit.every_step_complete | each step has 8 microbatches whose samples equal the batch_planned sample list
+2026-10-03 13:23:25.555 CHECK  [demo] [PASS] audit.resumed_stream_equals_uninterrupted_run | 32/32 batch hashes equal the reference run; final weights 92a435d6e8a9 == reference 92a435d6e8a9
+2026-10-03 13:23:26.030 CHECK  [demo] [PASS] audit.no_eval_or_validation_token_in_any_trained_batch | 158525 consumed tokens across 4 branches re-scanned against 2315 eval 12-gram fingerprints and shard permissions: 0 violations
+2026-10-03 13:23:26.031 CHECK  [demo] [PASS] audit.validation_reads_are_gradient_free | 13 validation reads logged, all eval-only (gradient=false)
+2026-10-03 13:23:26.031 CHECK  [demo] [PASS] audit.blocked_events_recorded | 12 block/quarantine events in the firewall ledger
+2026-10-03 13:23:26.295 CHECK  [demo] [PASS] audit.packed_samples_rebuild_bit_exact | 512 consumed samples rebuilt from span refs: sample ids, sequence hashes and loss-mask hashes identical
+2026-10-03 13:23:26.296 CHECK  [demo] [PASS] audit.mask_and_position_invariants | 512 samples: no loss on pads, no loss across segment ends, position ids reset per segment, block-causal attention, structured samples never split
+2026-10-03 13:23:26.296 CHECK  [demo] [PASS] audit.lane_packing_policy_applied | every sample used its lane's packing policy
+2026-10-03 13:23:26.297 CHECK  [demo] [PASS] audit.ledger_token_counts_reconstruct | ledger counts {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948} == recount from shards {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948}
+2026-10-03 13:23:26.297 CHECK  [demo] [PASS] audit.actual_shares_equal_compiled_quotas | per stage, consumed sequences per lane equal the compiled per-step quotas exactly
+2026-10-03 13:23:26.298 CHECK  [demo] [PASS] audit.planned_vs_actual_shares_within_tolerance | foundation max|dev|=0.0029 (tol 0.0200); reasoning_midtrain max|dev|=0.0044 (tol 0.0200); anneal max|dev|=0.0066 (tol 0.0200)
+2026-10-03 13:23:26.298 CHECK  [demo] [PASS] audit.protected_floors_held_every_step | indic/agentic/reasoning floors met in all 32 committed steps (0 violations)
+2026-10-03 13:23:26.298 CHECK  [demo] [PASS] audit.anneal_reserve_fenced | anneal-reserve shards consumed only in the anneal stage
+2026-10-03 13:23:26.317 CHECK  [demo] [PASS] audit.every_consumed_sample_has_accepted_decision | 512/512 consumed samples link to an accepted OPUS record
+2026-10-03 13:23:26.318 CHECK  [demo] [PASS] audit.all_decision_kinds_exercised | accepted=512 rejected=320 deferred=166 protected_floor_override=42; reasons={'proxy_utility_above_threshold': 437, 'quota_full_above_threshold': 166, 'protected_floor_override': 42, 'quota_fill_below_threshold': 33, 'low_proxy_utility': 281, 'quota_pressure': 31, 'duplicate': 6, 'stage_mismatch': 2}
+2026-10-03 13:23:26.318 CHECK  [demo] [PASS] audit.rejected_or_deferred_candidates_never_consumed | 0 rejected/deferred candidates were consumed
+2026-10-03 13:23:26.318 CHECK  [demo] [PASS] audit.decision_records_complete | 998 records carry 12 required fields
+2026-10-03 13:23:26.965 CHECK  [demo] [PASS] audit.every_consumed_sample_has_learning_record | 512 sample learning records; 0 consumed samples without one
+2026-10-03 13:23:26.965 CHECK  [demo] [PASS] audit.token_trace_reconciles_with_ledger | 55948 token-level losses; per-sample means equal ledger loss_before and link to span/shard/doc
+2026-10-03 13:23:26.977 CHECK  [demo] [PASS] audit.shard_report_cards_written | 32 shard report cards (loss, ppl, delta, grad norm, OPUS score, class)
+2026-10-03 13:23:26.979 CHECK  [demo] [PASS] audit.replay_ledger_matches_original | replay-main-s00008: 8 steps, batch hashes + token spans + post-step weights equal to 'main'
+2026-10-03 13:23:26.979 CHECK  [demo] [PASS] audit.fork_lineage_explicit | fork-1035a481: first record is branch_forked at step 13 with the parent's ledger offset 123; lineage = main[1..12] + fork-1035a481[13..20]
+2026-10-03 13:23:26.980 EVENT  [demo] audit completed | 25/25 audit checks passed
+2026-10-03 13:23:26.988 INFO   [demo] ============ performance ============
+2026-10-03 13:23:26.991 EVENT  [demo] performance measured | util=0.9671 (pad-only 0.7377), raw=5365 tok/s, useful loss-bearing=4580 tok/s, accepted=5188 tok/s, loader wait 44.1%, resume latency 0.472601s
+2026-10-03 13:23:26.992 CHECK  [demo] [PASS] throughput_reconstructs_from_ledger | perf counts {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948} == ledger recount {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948}
+2026-10-03 13:23:26.992 INFO   [demo] ============ automated invariant tests ============
+2026-10-03 13:24:37.522 CHECK  [demo] [PASS] unit_tests_passed | 39 tests in 70.53s (failures=0, errors=0)
+2026-10-03 13:24:37.522 INFO   [demo] ============ evidence bundle ============
+2026-10-03 13:24:37.618 EVENT  [demo] evidence bundle written | overall PASS: end_to_end=PASS, tokenizer_integrity=PASS, shards_manifests=PASS, evaluation_firewall=PASS, packing_correctness=PASS, mixture_compliance=PASS, opus_audit_trail=PASS, consumption_ledger=PASS, crash_recovery=PASS, replay=PASS, fork=PASS, learning_trace=PASS, throughput=PASS, tests=PASS
+2026-10-03 13:24:37.620 INFO   [demo] demo finished in 146.6s; overall PASS
+2026-10-03 13:24:37.620 INFO   [demo]   PASS  End-to-end execution
+2026-10-03 13:24:37.620 INFO   [demo]   PASS  Tokenizer integrity
+2026-10-03 13:24:37.620 INFO   [demo]   PASS  Immutable shards and manifests
+2026-10-03 13:24:37.621 INFO   [demo]   PASS  Evaluation firewall
+2026-10-03 13:24:37.621 INFO   [demo]   PASS  Packing correctness
+2026-10-03 13:24:37.621 INFO   [demo]   PASS  Mixture compliance
+2026-10-03 13:24:37.621 INFO   [demo]   PASS  OPUS audit trail
+2026-10-03 13:24:37.621 INFO   [demo]   PASS  Consumption ledger and checkpoints
+2026-10-03 13:24:37.622 INFO   [demo]   PASS  Crash recovery
+2026-10-03 13:24:37.622 INFO   [demo]   PASS  Replay
+2026-10-03 13:24:37.622 INFO   [demo]   PASS  Fork from an earlier checkpoint
+2026-10-03 13:24:37.622 INFO   [demo]   PASS  Learning trace
+2026-10-03 13:24:37.622 INFO   [demo]   PASS  Throughput
+2026-10-03 13:24:37.622 INFO   [demo]   PASS  Automated invariant tests

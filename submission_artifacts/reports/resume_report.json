@@ -58,11 +58,11 @@
   "final_step": 32,
   "final_weights_hash": "92a435d6e8a93601ea63bbb19762c30c1745f71176eee9cb70d512c3295668fd",
   "ledger_offset": {
-    "last_hash": "ea6d15f34ca959e09e09830a9241eaabbea4c9c36adc50563563898fecf6c924",
+    "last_hash": "c8bafb42e38c9bd543b19423a63b2bc010ac80366069ec86c9c9e76ad1f139fd",
     "offset": 205,
     "path": "ledgers/main/consumption.jsonl"
   },
-  "resume_latency_s": 0.437796,
+  "resume_latency_s": 0.472601,
   "resumed_from": "ckpt-main-s00020-3a4df7e38d",
   "resumed_next_batch": {
     "batch_hash": "6d9c7783319385a6484fbe66cdfe3e8da8d5fbe1d437d9cd797cf36aca58c79b",

@@ -1,6 +1,6 @@
 {
   "command": "python run_demo.py",
-  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "config_hash": "77e57077f73dacc789d8df1549550a7bc5939aea4cf7b76146ed0ccdf7f708f0",
   "format": "tdes-evidence-v1",
   "generated_by": "tdes.evidence.build_evidence (from reports written by the run)",
   "overall": "PASS",
@@ -598,7 +598,7 @@
         },
         {
           "check": "useful_tokens_per_second_measured",
-          "detail": "4699.6 loss-bearing tok/s = 55948 / 11.9049 s",
+          "detail": "4579.68 loss-bearing tok/s = 55948 / 12.2166 s",
           "passed": true
         }
       ],
@@ -609,13 +609,13 @@
       "evidence_label": "Performance report",
       "id": "throughput",
       "key_values": {
-        "accepted_tokens_per_s_after_opus": 5323.71,
-        "loader_wait_fraction": 0.4494,
+        "accepted_tokens_per_s_after_opus": 5187.88,
+        "loader_wait_fraction": 0.4413,
         "packing_utilization": 0.967072,
-        "raw_tokens_per_s": 5504.98,
-        "replay_latency_s": 0.123572,
-        "resume_latency_s": 0.437796,
-        "useful_loss_bearing_tokens_per_s": 4699.6
+        "raw_tokens_per_s": 5364.52,
+        "replay_latency_s": 0.135828,
+        "resume_latency_s": 0.472601,
+        "useful_loss_bearing_tokens_per_s": 4579.68
       },
       "requirement": "Throughput",
       "result": "PASS"
@@ -624,7 +624,7 @@
       "checks": [
         {
           "check": "unit_tests_passed",
-          "detail": "38 tests, failures=0, errors=0",
+          "detail": "39 tests, failures=0, errors=0",
           "passed": true
         }
       ],
@@ -638,13 +638,13 @@
         "errors": 0,
         "failures": 0,
         "passed": true,
-        "ran": 38,
-        "seconds": 52.76
+        "ran": 39,
+        "seconds": 70.53
       },
       "requirement": "Automated invariant tests",
       "result": "PASS"
     }
   ],
-  "run_id": "v5s06-0e5b60c85f",
+  "run_id": "v5s06-77e57077f7",
   "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
 }

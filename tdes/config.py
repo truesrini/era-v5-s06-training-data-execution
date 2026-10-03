@@ -43,6 +43,7 @@ DEFAULT_CONFIG = {
         "weight_decay": 0.01,
         "grad_clip": 1.0,
         "packing_buffer": 8,
+        "device": "cpu",          # or "cuda" (python run_demo.py --device cuda)
     },
     "opus": {
         "enabled": True,

@@ -1,7 +1,7 @@
 {
   "branch": "replay-main-s00008",
   "checkpoint_id": "ckpt-replay-main-s00008-s00012-312938f65f",
-  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "config_hash": "77e57077f73dacc789d8df1549550a7bc5939aea4cf7b76146ed0ccdf7f708f0",
   "counters": {
     "loss_tokens": 22579,
     "nonpad_tokens": 24104,
@@ -11,7 +11,7 @@
   "global_step": 12,
   "ledger_offsets": {
     "consumption": {
-      "last_hash": "5624a68e6fa671295dace8bded21db38129da34d11d453ae0e5f5af4ecdfd777",
+      "last_hash": "d63a44bba4411dfb8a1cdf154e1a4ff9692671c732f6b58fa9a3d7411ea3bd7f",
       "offset": 42,
       "path": "ledgers/replay-main-s00008/consumption.jsonl"
     },
@@ -401,7 +401,7 @@
     "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
     "seed": 20260801
   },
-  "run_id": "v5s06-0e5b60c85f",
+  "run_id": "v5s06-77e57077f7",
   "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
   "scheduler": {
     "next_lr": 0.007894144344319015,

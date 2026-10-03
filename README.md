@@ -21,7 +21,20 @@ It needs Python 3.10+, numpy and PyTorch (CPU is enough, no GPU):
 pip install -r requirements.txt
 ```
 
-The demo takes about 2 minutes on a laptop CPU, about half of which is the test suite. The command deletes and regenerates `submission_artifacts/`, runs the 38 invariant
+The demo takes about 2 minutes on a laptop CPU, about half of which is the test suite.
+
+To train on an NVIDIA GPU instead, install a CUDA build of torch (for example
+`pip install torch --index-url https://download.pytorch.org/whl/cu126`) and run:
+
+```bash
+python run_demo.py --device cuda
+```
+
+CPU stays the default because the demo must run on any machine. On the development laptop
+(GTX 1660 Ti) the GPU run also passes every requirement, including bit-exact resume and replay,
+but it is slower (about 4.0k vs 5.5k raw tokens/s). This model is so small that kernel-launch
+overhead outweighs the GPU's compute, and most of the wall time is OPUS scoring and ledger I/O.
+Weight hashes are reproducible within a device, not across devices. The command deletes and regenerates `submission_artifacts/`, runs the 38 invariant
 tests, and exits 0 only if every requirement in the evidence bundle passes.
 
 To run only the tests:
@@ -81,9 +94,9 @@ system produces:
 - segment ids, used to build the block-causal attention mask
 - the loss mask
 
-It returns the cross-entropy of every token, which feeds the learning ledger. Torch runs on CPU
-with one thread and `torch.use_deterministic_algorithms(True)`, so float reductions are
-deterministic and resume and replay can be checked **bit for bit** through weight hashes. OPUS
+It returns the cross-entropy of every token, which feeds the learning ledger. Torch runs with
+`torch.use_deterministic_algorithms(True)`, one CPU thread, TF32 off and a fixed cuBLAS
+workspace, so float reductions are deterministic on either device and resume and replay can be checked **bit for bit** through weight hashes. OPUS
 scores each candidate with `torch.autograd.grad` and the cosine similarity to the proxy gradient.
 
 ## Design decisions

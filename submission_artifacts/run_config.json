@@ -115,6 +115,7 @@
       0.95
     ],
     "checkpoint_every": 4,
+    "device": "cpu",
     "eps": 1e-08,
     "grad_accum": 4,
     "grad_clip": 1.0,

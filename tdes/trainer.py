@@ -26,7 +26,7 @@ from .mixture import compile_schedule
 import torch
 
 from .model import (Optimizer, TinyLM, checkpoint_weights_hash, eval_ce, grad_vector, loss_and_backward,
-                    state_dict_hash)
+                    resolve_device, state_dict_hash)
 from .packing import build_sequence, lane_units, verify_sequence
 from .shards import ShardStore, load_manifests
 from .tokenizer import Tokenizer
@@ -74,8 +74,9 @@ class Trainer:
         self.B, self.L = global_batch(self.cfg), t["seq_len"]
         self.W, self.mb, self.accum = t["world_size"], t["micro_batch"], t["grad_accum"]
         self.ckpt_every = t["checkpoint_every"] if checkpoint_every is None else checkpoint_every
+        self.device = resolve_device(t.get("device", "cpu"))
         self.model = TinyLM(env.tokenizer.vocab_size, m["d_model"], m["d_ff"], self.L,
-                            self.cfg["seed"], m["init_std"], m["dtype"])
+                            self.cfg["seed"], m["init_std"], m["dtype"]).to(self.device)
         self.opt = Optimizer(self.model, self.cfg)
         self.loader = DataLoader(self.cfg, self.schedule, env.store, env.train_manifests, env.tokenizer)
         ldir = os.path.join(self.art, "ledgers", branch)
@@ -371,11 +372,11 @@ class Trainer:
 
     def load_checkpoint(self, path):
         state = read_json(os.path.join(path, "state.json"))
-        sd = torch.load(os.path.join(path, "model.pt"), map_location="cpu", weights_only=True)
+        sd = torch.load(os.path.join(path, "model.pt"), map_location=self.device, weights_only=True)
         if state_dict_hash(sd) != state["weights_hash"]:
             raise RuntimeError(f"checkpoint {path} weights do not match its state.json")
         self.model.load_state_dict(sd)
-        self.opt.opt.load_state_dict(torch.load(os.path.join(path, "optimizer.pt"), map_location="cpu", weights_only=True))
+        self.opt.opt.load_state_dict(torch.load(os.path.join(path, "optimizer.pt"), map_location=self.device, weights_only=True))
         if self.opt.state_hash() != state["optimizer_hash"]:
             raise RuntimeError(f"checkpoint {path} optimizer state does not match its state.json")
         self.loader.load_state_dict(state["loader_state"])
@@ -445,7 +446,7 @@ def mode_fresh(art, branch, until, crash_at=None, crash_after=None, checkpoint_e
     tr = Trainer(env, branch, log, checkpoint_every=checkpoint_every)
     tr.mode = tr.perf_tag = "fresh"
     log.info(f"[{branch}] fresh run {env.run_id}: B={tr.B} seqs x L={tr.L}, ranks={tr.W}, micro_batch={tr.mb}, "
-             f"grad_accum={tr.accum}, steps 1..{until}, loader {LOADER_VERSION}")
+             f"grad_accum={tr.accum}, steps 1..{until}, device {tr.device}, loader {LOADER_VERSION}")
     tr.run(until, crash_at=crash_at, crash_after=crash_after)
     return tr
 
