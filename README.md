@@ -34,7 +34,7 @@ CPU stays the default because the demo must run on any machine. On the developme
 (GTX 1660 Ti) the GPU run also passes every requirement, including bit-exact resume and replay,
 but it is slower (about 4.0k vs 5.5k raw tokens/s). This model is so small that kernel-launch
 overhead outweighs the GPU's compute, and most of the wall time is OPUS scoring and ledger I/O.
-Weight hashes are reproducible within a device, not across devices. The command deletes and regenerates `submission_artifacts/`, runs the 38 invariant
+Weight hashes are reproducible within a device, not across devices. The command deletes and regenerates `submission_artifacts/`, runs the 39 invariant
 tests, and exits 0 only if every requirement in the evidence bundle passes.
 
 To run only the tests:
@@ -58,6 +58,33 @@ python -m unittest discover -s tests -t . -v
 | 9 | **Replays** steps 9–16 from the ledger, starting at the step-8 checkpoint, and proves ids, spans, hashes and weights match | `trainer.mode_replay` |
 | 10 | **Forks** a new data branch from the step-12 checkpoint with a changed mixture and OPUS threshold | `trainer.mode_fork` |
 | 11 | **Audits** everything from disk, measures performance, runs the tests and writes the evidence bundle | `tdes/audit.py`, `tdes/performance.py`, `tdes/evidence.py` |
+
+## Assignment checklist
+
+Each item the assignment asks the system to demonstrate, where it is implemented, and which
+generated artifact proves it.
+
+| Requirement | Implementation | Proof in `submission_artifacts/` |
+|---|---|---|
+| Immutable tokenized shards with manifests | `shards.py`: content-hash ids, read-only files, hash re-verified on every load | `manifests/shards/*.json`, `reports/manifest_validation.json` |
+| Frozen tokenizer and content hashes | `tokenizer.py`: canonical-spec hash, sealed file, lock file | `manifests/tokenizer.lock.json`, `[PASS] tokenizer_hash_verified` |
+| Packing policies for different data types | `packing.py`: `concat_chop`, `best_fit_chunked`, `structure_preserving` | `reports/packing_policy_lab.json` |
+| Correct loss masks, attention masks and position ids | `packing.build_sequence` / `verify_sequence`, used by the model | `reports/packed_batch_report.json`, `audit.mask_and_position_invariants` |
+| Curriculum stages, lane weights and protected floors | `mixture.py`: per-step quotas, floors reserved first, anneal fence | `manifests/mixture_schedule.json`, `audit_report.json#mixture` |
+| Evaluation and validation firewalls | `firewall.py`: registry, n-gram fingerprints, canaries, checks at admission, pool entry and serve time | `ledgers/firewall.jsonl`, `[PASS] eval_shard_blocked` |
+| OPUS acceptance, rejection, deferral, protected-floor override | `opus.py`, `loader.py` | `ledgers/main/opus.jsonl`, `audit.all_decision_kinds_exercised` |
+| Training consumption and learning ledgers | `trainer.py`, hash-chained `util.Ledger` | `ledgers/main/consumption.jsonl`, `learning.jsonl` |
+| Token-level or sample-level loss tracking | Per-token CE and per-sample loss before/after each update | `ledgers/main/token_trace/`, `reports/learning_report.json` |
+| Checkpoints tied to ledger offsets | `state.json` stores offset + last hash of every ledger | `checkpoints/*/step_*/state.json`, `audit.checkpoints_bound_to_ledger_offsets` |
+| Crash recovery without skipped or repeated batches | Real `os._exit` mid-step, then resume with an explicit rollback record | `reports/resume_report.json`, `[PASS] resume_next_batch_matched` |
+| Replay of the same historical data stream | `mode_replay` rebuilds batches from ledger span refs | `reports/replay_report.json`, `[PASS] replay_hash_matched` |
+| Forking from an earlier checkpoint | `mode_fork` writes a `branch_forked` record and its own schedule | `reports/fork_report.json`, `ledgers/fork-*/` |
+| Packing utilization and useful loss-bearing tokens/s | `performance.py`, reconciled against the audit's recount | `performance.json` |
+
+The submission items are covered as well: one command (`python run_demo.py`), automated tests
+(`tests/`, 39 tests), the execution log (`run.log`, with all 13 required events and the 5
+required `[PASS]` lines), the evidence bundle (`evidence.json`, `evidence.md`), and the
+generated manifests, ledgers, checkpoints and performance report.
 
 ## Architecture
 
