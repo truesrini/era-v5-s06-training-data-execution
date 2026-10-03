@@ -21,7 +21,9 @@ It needs Python 3.10+, numpy and PyTorch (CPU is enough, no GPU):
 pip install -r requirements.txt
 ```
 
-The demo takes about 2 minutes on a laptop CPU, about half of which is the test suite.
+The demo takes about 2 minutes on a laptop CPU, about half of which is the test suite. The
+command deletes and regenerates `submission_artifacts/`, runs the 39 invariant tests, and exits 0
+only if every requirement in the evidence bundle passes.
 
 To train on an NVIDIA GPU instead, install a CUDA build of torch (for example
 `pip install torch --index-url https://download.pytorch.org/whl/cu126`) and run:
@@ -34,8 +36,7 @@ CPU stays the default because the demo must run on any machine. On the developme
 (GTX 1660 Ti) the GPU run also passes every requirement, including bit-exact resume and replay,
 but it is slower (about 4.0k vs 5.5k raw tokens/s). This model is so small that kernel-launch
 overhead outweighs the GPU's compute, and most of the wall time is OPUS scoring and ledger I/O.
-Weight hashes are reproducible within a device, not across devices. The command deletes and regenerates `submission_artifacts/`, runs the 39 invariant
-tests, and exits 0 only if every requirement in the evidence bundle passes.
+Weight hashes are reproducible within a device, not across devices.
 
 To run only the tests:
 
