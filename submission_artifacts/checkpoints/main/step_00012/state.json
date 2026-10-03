@@ -1,28 +1,28 @@
 {
   "branch": "main",
-  "checkpoint_id": "ckpt-main-s00012-ae048d3549",
+  "checkpoint_id": "ckpt-main-s00012-312938f65f",
   "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
   "counters": {
-    "loss_tokens": 22610,
-    "nonpad_tokens": 24118,
+    "loss_tokens": 22579,
+    "nonpad_tokens": 24104,
     "positions": 24576
   },
-  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "dataloader_version": "tdes-loader/1.0+84c02a0e6f.6891f0",
   "global_step": 12,
   "ledger_offsets": {
     "consumption": {
-      "last_hash": "6264d04b58373bab559632cc745cb3fe5ebffbc9e2a7a32ed40098b54512d66c",
+      "last_hash": "cc6cd0f9468ba04732330fd16cc6293e5a88a54a455a70bbdaac1c8fb8351d1f",
       "offset": 123,
       "path": "ledgers/main/consumption.jsonl"
     },
     "learning": {
-      "last_hash": "08207cfc25c824341af2ccb57f991924f3500a942f6fbbc7fc9b96e2be19158d",
+      "last_hash": "c0663dcbe608c46400ece8e4b2d72cf97b8d7207903043391e363222591336b5",
       "offset": 207,
       "path": "ledgers/main/learning.jsonl"
     },
     "opus": {
-      "last_hash": "0c6747fcf7adb39acc5a24382175d1d23c7bcd97f6e01e89b7257211aac76e11",
-      "offset": 358,
+      "last_hash": "1aadf1ffa1e25d7a27b9f02b1ecbdc332c1964990ba3a1b9955294cf7c4b5360",
+      "offset": 367,
       "path": "ledgers/main/opus.jsonl"
     }
   },
@@ -30,11 +30,11 @@
     "cand_counter": 303,
     "deferred": [
       {
-        "candidate_id": "cand-000277",
+        "candidate_id": "cand-000279",
         "defer_count": 1,
         "first_step": 12,
         "lane": "general_web",
-        "last_score": 0.4931331278007206,
+        "last_score": 0.45947420460106464,
         "spans": [
           {
             "doc_id": "src_web_india_news/train/00013",
@@ -57,11 +57,11 @@
         ]
       },
       {
-        "candidate_id": "cand-000278",
+        "candidate_id": "cand-000280",
         "defer_count": 1,
         "first_step": 12,
         "lane": "general_web",
-        "last_score": 0.4161471454239881,
+        "last_score": 0.38656383306438324,
         "spans": [
           {
             "doc_id": "src_web_india_news/train/00054",
@@ -75,38 +75,47 @@
         ]
       },
       {
-        "candidate_id": "cand-000258",
-        "defer_count": 2,
-        "first_step": 11,
+        "candidate_id": "cand-000283",
+        "defer_count": 1,
+        "first_step": 12,
         "lane": "code",
-        "last_score": 0.13608583821337605,
+        "last_score": 0.10810938872397517,
         "spans": [
           {
-            "doc_id": "src_code_permissive/train/00042",
-            "doc_index": 18,
-            "end": 122,
+            "doc_id": "src_code_permissive/train/00011",
+            "doc_index": 11,
+            "end": 85,
             "epoch": 0,
-            "shard_id": "shd-code-train-f7edc679ba1d",
-            "span_id": "shd-code-train-f7edc679ba1d:18:0-122",
+            "shard_id": "shd-code-train-6b4e59183e95",
+            "span_id": "shd-code-train-6b4e59183e95:11:0-85",
             "start": 0
+          },
+          {
+            "doc_id": "src_code_permissive/train/00075",
+            "doc_index": 3,
+            "end": 165,
+            "epoch": 0,
+            "shard_id": "shd-code-train-c9bbe04bac8d",
+            "span_id": "shd-code-train-c9bbe04bac8d:3:125-165",
+            "start": 125
           }
         ]
       },
       {
-        "candidate_id": "cand-000285",
+        "candidate_id": "cand-000284",
         "defer_count": 1,
         "first_step": 12,
         "lane": "code",
-        "last_score": 0.07866029288177473,
+        "last_score": 0.10334590399807342,
         "spans": [
           {
-            "doc_id": "src_code_permissive/train/00024",
-            "doc_index": 0,
-            "end": 247,
+            "doc_id": "src_code_permissive/train/00010",
+            "doc_index": 10,
+            "end": 123,
             "epoch": 0,
-            "shard_id": "shd-code-train-f7edc679ba1d",
-            "span_id": "shd-code-train-f7edc679ba1d:0:124-247",
-            "start": 124
+            "shard_id": "shd-code-train-6b4e59183e95",
+            "span_id": "shd-code-train-6b4e59183e95:10:0-123",
+            "start": 0
           }
         ]
       },
@@ -115,75 +124,75 @@
         "defer_count": 1,
         "first_step": 12,
         "lane": "math_science",
-        "last_score": 0.18062552987786212,
+        "last_score": -0.012625909860411125,
         "spans": [
           {
-            "doc_id": "src_math_textbooks/train/00060",
-            "doc_index": 12,
-            "end": 219,
+            "doc_id": "src_math_textbooks/train/00072",
+            "doc_index": 0,
+            "end": 166,
             "epoch": 0,
-            "shard_id": "shd-math_science-train-56bd36818176",
-            "span_id": "shd-math_science-train-56bd36818176:12:91-219",
-            "start": 91
-          }
-        ]
-      },
-      {
-        "candidate_id": "cand-000264",
-        "defer_count": 2,
-        "first_step": 11,
-        "lane": "math_science",
-        "last_score": 0.11141712563613577,
-        "spans": [
+            "shard_id": "shd-math_science-train-d79ca19c09ac",
+            "span_id": "shd-math_science-train-d79ca19c09ac:0:160-166",
+            "start": 160
+          },
+          {
+            "doc_id": "src_math_textbooks/train/00002",
+            "doc_index": 2,
+            "end": 88,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-551548043c5e",
+            "span_id": "shd-math_science-train-551548043c5e:2:0-88",
+            "start": 0
+          },
           {
             "doc_id": "src_math_textbooks/train/00066",
             "doc_index": 18,
-            "end": 162,
+            "end": 34,
             "epoch": 0,
             "shard_id": "shd-math_science-train-56bd36818176",
-            "span_id": "shd-math_science-train-56bd36818176:18:34-162",
-            "start": 34
+            "span_id": "shd-math_science-train-56bd36818176:18:0-34",
+            "start": 0
           }
         ]
       },
       {
-        "candidate_id": "cand-000296",
+        "candidate_id": "cand-000297",
         "defer_count": 1,
         "first_step": 12,
         "lane": "reasoning",
-        "last_score": -0.0385876381320372,
+        "last_score": -0.06590985190283655,
         "spans": [
           {
-            "doc_id": "src_reasoning_banded/train/00079",
-            "doc_index": 7,
-            "end": 119,
+            "doc_id": "src_reasoning_banded/train/00034",
+            "doc_index": 10,
+            "end": 116,
             "epoch": 0,
-            "shard_id": "shd-reasoning-train-1c47f9da7dd9",
-            "span_id": "shd-reasoning-train-1c47f9da7dd9:7:0-119",
+            "shard_id": "shd-reasoning-train-fca2f5d1b1ce",
+            "span_id": "shd-reasoning-train-fca2f5d1b1ce:10:0-116",
             "start": 0
           }
         ]
       }
     ],
-    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "loader_version": "tdes-loader/1.0+84c02a0e6f.6891f0",
     "recent": [
       [
         9,
         [
+          "ps-cc7b469f9088258b",
           "ps-41057a55cbf16ce0",
           "ps-9940a04d8d8829f8",
           "ps-dbddb243be60edec",
           "ps-817b90f785686b76",
-          "ps-2b7218826a4d0ca7",
-          "ps-995df740e840fdb8",
+          "ps-8ed2b376577bf9dd",
+          "ps-07cbd5a55b1a4f23",
           "ps-290b5058f832e75b",
-          "ps-ab3e7113d50d80e2",
+          "ps-0aef1594982b50eb",
           "ps-72327b1460b8ee77",
           "ps-4585251733a2a0d1",
-          "ps-cbe4dcf901b88d83",
-          "ps-f05ca4ecdbaecb3f",
-          "ps-94df2e6877f562e3",
-          "ps-e9184c6b1306d56e",
+          "ps-d9d69638d7d50695",
+          "ps-85ba79e5c2cd51db",
+          "ps-5ba591a39c39a2a1",
           "ps-ab0a1899ace5640c",
           "ps-745bc89a60e7a2f3"
         ]
@@ -191,64 +200,64 @@
       [
         10,
         [
-          "ps-cc7b469f9088258b",
+          "ps-b8f5f273d5247687",
+          "ps-b11972f0f4f420f1",
           "ps-05619c5554f0e425",
           "ps-0a378cf688102ab7",
           "ps-97ddc5924c90bdc4",
-          "ps-4e8d769efdecdf4b",
-          "ps-10c9a0caeb2dd63f",
-          "ps-343c84da65be4b76",
+          "ps-a15be95e1816e05c",
           "ps-95ebdc9b7750a01a",
+          "ps-85cd5c2bc3f7d7df",
           "ps-fc347b7ac72920ce",
-          "ps-c830ee646678b845",
-          "ps-312ab240adf2121f",
+          "ps-0b527851aa8cc912",
+          "ps-cbe4dcf901b88d83",
           "ps-d6e15b1f0c5fc76b",
           "ps-9db9e0aa0066b33f",
           "ps-11b3f215ad552c77",
-          "ps-1878bff403397297",
-          "ps-379ba31daaea1337"
+          "ps-c47d4e0f69e1e76a",
+          "ps-363dd9b4f5e2c320"
         ]
       ],
       [
         11,
         [
+          "ps-4e8d769efdecdf4b",
           "ps-572889c5dd9c194a",
           "ps-fd92c2f92093f1ad",
           "ps-3bbdd2ce515a2606",
           "ps-0f30ae4ec506d065",
           "ps-9fb355541b4b3046",
-          "ps-f65a25f02da2b320",
-          "ps-85cd5c2bc3f7d7df",
-          "ps-89ae2f95f861123d",
           "ps-7e79a7daa32fba32",
-          "ps-17c03d5f63208f5a",
-          "ps-f5eb8a1674ab82e4",
+          "ps-65a67a7aa3fcc8b5",
+          "ps-50e6910d85adc969",
+          "ps-5bc6dc7df67d4645",
+          "ps-c830ee646678b845",
           "ps-a9fe01c994c9a9d6",
-          "ps-fbc5f71b9d6fc952",
-          "ps-eb128897014c7e63",
-          "ps-c6c78fd078b490f9",
+          "ps-b736e40dc33628a1",
+          "ps-bd16c87a5a903939",
+          "ps-0011a0b7d7fc5073",
           "ps-2cf231e66eecab9e"
         ]
       ],
       [
         12,
         [
+          "ps-2b7218826a4d0ca7",
+          "ps-f65a25f02da2b320",
           "ps-a3cbe800d023f1b5",
           "ps-8386666d053a401f",
           "ps-8be33e2192729e20",
-          "ps-c9b7d57953938b56",
-          "ps-ec452e7e337f5e8c",
-          "ps-65a67a7aa3fcc8b5",
-          "ps-bd905f87afc91604",
-          "ps-50e6910d85adc969",
-          "ps-d289896bd6eccc1c",
-          "ps-06a3008bacb5c3ac",
-          "ps-6c7d27ffb80bb8c6",
+          "ps-71fcf97e3dc17ebf",
+          "ps-313b3061d97c924e",
+          "ps-fc5f608def972662",
+          "ps-312ab240adf2121f",
+          "ps-17c03d5f63208f5a",
+          "ps-f60f16743626ca52",
+          "ps-5ef0d73933010264",
           "ps-3d069b84c25b4961",
-          "ps-d4e0a32a9cb37286",
-          "ps-50a7eb7758a0754d",
+          "ps-98ed8fd4e4f89392",
           "ps-12fe6c56b1751093",
-          "ps-bb854f19ad8728f3"
+          "ps-02e5c56788cbae77"
         ]
       ]
     ],
@@ -286,7 +295,7 @@
         ],
         "epoch": 0,
         "offset": 0,
-        "pos": 30
+        "pos": 29
       },
       "anneal_reserve": {
         "buffer": [],
@@ -313,35 +322,39 @@
             0
           ],
           [
-            102,
+            118,
             0
           ],
           [
-            118,
+            27,
+            0
+          ],
+          [
+            48,
             0
           ]
         ],
         "epoch": 0,
         "offset": 0,
-        "pos": 60
+        "pos": 70
       },
       "general_web": {
         "buffer": [],
         "epoch": 0,
-        "offset": 199,
-        "pos": 52
+        "offset": 188,
+        "pos": 51
       },
       "indic": {
         "buffer": [],
         "epoch": 0,
-        "offset": 97,
-        "pos": 79
+        "offset": 62,
+        "pos": 78
       },
       "math_science": {
         "buffer": [],
         "epoch": 0,
-        "offset": 219,
-        "pos": 33
+        "offset": 162,
+        "pos": 30
       },
       "reasoning": {
         "buffer": [
@@ -366,24 +379,24 @@
             0
           ],
           [
-            66,
+            48,
             0
           ],
           [
-            48,
+            76,
             0
           ]
         ],
         "epoch": 0,
         "offset": 0,
-        "pos": 31
+        "pos": 32
       }
     }
   },
   "mode": "fresh",
-  "optimizer_hash": "2d758512ee499448596ab4c2a3475aac55eeae7eb17d0854ab3eea214f35bb21",
+  "optimizer_hash": "5738fb32d115836c202a40cbbd9142a413dc11ab8f289e5f7292db54db756442",
   "optimizer_t": 12,
-  "previous_checkpoint": "ckpt-main-s00008-d8a1a817d2",
+  "previous_checkpoint": "ckpt-main-s00008-835ab9af05",
   "rng_state": {
     "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
     "seed": 20260801
@@ -395,5 +408,5 @@
     "step": 12
   },
   "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
-  "weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df"
+  "weights_hash": "312938f65fece25f9ac76929b052467937bb0361ea97319609f9b4dabd7a8b06"
 }

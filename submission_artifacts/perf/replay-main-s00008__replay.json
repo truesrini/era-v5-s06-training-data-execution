@@ -2,14 +2,14 @@
   "accounted_through_step": 16,
   "branch": "replay-main-s00008",
   "counts": {
-    "accepted_tokens": 15967,
+    "accepted_tokens": 15930,
     "candidate_tokens": 0,
     "candidates_by_lane": {},
     "candidates_scored": 0,
     "decisions": {},
     "firewall_sequences_checked": 128,
-    "loss_tokens": 14711,
-    "nonpad_tokens": 15967,
+    "loss_tokens": 14655,
+    "nonpad_tokens": 15930,
     "packing_checks": 128,
     "packing_failures": 0,
     "positions": 16384,
@@ -17,23 +17,23 @@
     "rejections_by_lane": {},
     "steps": 8
   },
-  "firewall_ngrams_checked": 13807,
+  "firewall_ngrams_checked": 13760,
   "mode": "replay",
-  "replay_latency_s": 0.115756,
+  "replay_latency_s": 0.123572,
   "store": {
-    "cache_hit_rate": 0.5091,
-    "cache_hits": 365,
-    "cache_misses": 352,
-    "mean_shard_read_ms": 1.12,
-    "shard_reads": 352
+    "cache_hit_rate": 0.4694,
+    "cache_hits": 338,
+    "cache_misses": 382,
+    "mean_shard_read_ms": 1.189,
+    "shard_reads": 382
   },
   "tag": "replay",
   "timings_s": {
-    "checkpoint": 0.092776,
-    "firewall": 0.161537,
-    "ledger_io": 0.343626,
-    "packing_verify": 0.164341,
-    "train_compute": 0.602614
+    "checkpoint": 0.086975,
+    "firewall": 0.187447,
+    "ledger_io": 0.358649,
+    "packing_verify": 0.187461,
+    "train_compute": 0.396642
   },
-  "wall_s": 1.626213
+  "wall_s": 1.48973
 }

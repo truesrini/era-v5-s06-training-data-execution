@@ -152,7 +152,7 @@
         },
         {
           "check": "audit.no_eval_or_validation_token_in_any_trained_batch",
-          "detail": "158154 consumed tokens across 4 branches re-scanned against 2315 eval 12-gram fingerprints and shard permissions: 0 violations",
+          "detail": "158525 consumed tokens across 4 branches re-scanned against 2315 eval 12-gram fingerprints and shard permissions: 0 violations",
           "passed": true
         },
         {
@@ -176,7 +176,7 @@
       "evidence_label": "Blocked-shard event",
       "id": "evaluation_firewall",
       "key_values": {
-        "scanned_consumed_tokens": 158154,
+        "scanned_consumed_tokens": 158525,
         "violations": 0
       },
       "requirement": "Evaluation firewall",
@@ -201,12 +201,12 @@
         },
         {
           "check": "audit.ledger_token_counts_reconstruct",
-          "detail": "ledger counts {'positions': 65536, 'nonpad_tokens': 63223, 'loss_tokens': 55875} == recount from shards {'positions': 65536, 'nonpad_tokens': 63223, 'loss_tokens': 55875}",
+          "detail": "ledger counts {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948} == recount from shards {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948}",
           "passed": true
         },
         {
           "check": "packed_batch_report_rebuilds",
-          "detail": "step 1 batch b00001-1804915c345f rebuilt sample by sample",
+          "detail": "step 1 batch b00001-3483caa8b24e rebuilt sample by sample",
           "passed": true
         }
       ],
@@ -218,8 +218,8 @@
       "evidence_label": "Packed-batch report",
       "id": "packing_correctness",
       "key_values": {
-        "loss_bearing_fraction": 0.852585,
-        "utilization": 0.964706
+        "loss_bearing_fraction": 0.853699,
+        "utilization": 0.967072
       },
       "requirement": "Packing correctness",
       "result": "PASS"
@@ -286,7 +286,7 @@
         },
         {
           "check": "audit.all_decision_kinds_exercised",
-          "detail": "accepted=512 rejected=306 deferred=160 protected_floor_override=42; reasons={'proxy_utility_above_threshold': 445, 'quota_full_above_threshold': 160, 'protected_floor_override': 42, 'quota_fill_below_threshold': 25, 'low_proxy_utility': 273, 'quota_pressure': 29, 'stage_mismatch': 1, 'duplicate': 3}",
+          "detail": "accepted=512 rejected=320 deferred=166 protected_floor_override=42; reasons={'proxy_utility_above_threshold': 437, 'quota_full_above_threshold': 166, 'protected_floor_override': 42, 'quota_fill_below_threshold': 33, 'low_proxy_utility': 281, 'quota_pressure': 31, 'duplicate': 6, 'stage_mismatch': 2}",
           "passed": true
         },
         {
@@ -296,7 +296,7 @@
         },
         {
           "check": "audit.decision_records_complete",
-          "detail": "978 records carry 12 required fields",
+          "detail": "998 records carry 12 required fields",
           "passed": true
         }
       ],
@@ -305,26 +305,26 @@
         "ledgers/main/opus.jsonl#seq=21 (rejected)",
         "ledgers/main/opus.jsonl#seq=5 (deferred)",
         "ledgers/main/opus.jsonl#seq=18 (protected_floor_override)",
-        "ledgers/main/opus.jsonl#seq=765 (stage_mismatch)"
+        "ledgers/main/opus.jsonl#seq=766 (stage_mismatch)"
       ],
       "evidence_label": "Candidate decision records",
       "id": "opus_audit_trail",
       "key_values": {
         "protected_floor_overrides": 42,
         "reasons": {
-          "duplicate": 3,
-          "low_proxy_utility": 273,
+          "duplicate": 6,
+          "low_proxy_utility": 281,
           "protected_floor_override": 42,
-          "proxy_utility_above_threshold": 445,
-          "quota_fill_below_threshold": 25,
-          "quota_full_above_threshold": 160,
-          "quota_pressure": 29,
-          "stage_mismatch": 1
+          "proxy_utility_above_threshold": 437,
+          "quota_fill_below_threshold": 33,
+          "quota_full_above_threshold": 166,
+          "quota_pressure": 31,
+          "stage_mismatch": 2
         },
         "status": {
           "accepted": 512,
-          "deferred": 160,
-          "rejected": 306
+          "deferred": 166,
+          "rejected": 320
         }
       },
       "requirement": "OPUS audit trail",
@@ -334,7 +334,7 @@
       "checks": [
         {
           "check": "audit.ledger_hash_chains_valid",
-          "detail": "12 ledgers, 4490 records, every prev_hash/event_hash verified",
+          "detail": "12 ledgers, 4528 records, every prev_hash/event_hash verified",
           "passed": true
         },
         {
@@ -373,7 +373,7 @@
       "checks": [
         {
           "check": "resume_next_batch_matched",
-          "detail": "expected step 21: crashed-process plan b00021-9ef54897a1ee, reference b00021-9ef54897a1ee, resumed b00021-9ef54897a1ee",
+          "detail": "expected step 21: crashed-process plan b00021-6d9c77833193, reference b00021-6d9c77833193, resumed b00021-6d9c77833193",
           "passed": true
         },
         {
@@ -383,7 +383,7 @@
         },
         {
           "check": "audit.resumed_stream_equals_uninterrupted_run",
-          "detail": "32/32 batch hashes equal the reference run; final weights 5e49b0b888b7 == reference 5e49b0b888b7",
+          "detail": "32/32 batch hashes equal the reference run; final weights 92a435d6e8a9 == reference 92a435d6e8a9",
           "passed": true
         }
       ],
@@ -395,12 +395,12 @@
       "evidence_label": "Expected and resumed batch ids",
       "id": "crash_recovery",
       "key_values": {
-        "expected_batch_hash": "9ef54897a1eebff65964671ee16623a0d7dfcb50bc2ca664e069b87d3c49f39f",
-        "expected_batch_id": "b00021-9ef54897a1ee",
-        "reference_batch_id": "b00021-9ef54897a1ee",
-        "resumed_batch_hash": "9ef54897a1eebff65964671ee16623a0d7dfcb50bc2ca664e069b87d3c49f39f",
-        "resumed_batch_id": "b00021-9ef54897a1ee",
-        "resumed_from": "ckpt-main-s00020-59ce18a967"
+        "expected_batch_hash": "6d9c7783319385a6484fbe66cdfe3e8da8d5fbe1d437d9cd797cf36aca58c79b",
+        "expected_batch_id": "b00021-6d9c77833193",
+        "reference_batch_id": "b00021-6d9c77833193",
+        "resumed_batch_hash": "6d9c7783319385a6484fbe66cdfe3e8da8d5fbe1d437d9cd797cf36aca58c79b",
+        "resumed_batch_id": "b00021-6d9c77833193",
+        "resumed_from": "ckpt-main-s00020-3a4df7e38d"
       },
       "requirement": "Crash recovery",
       "result": "PASS"
@@ -432,59 +432,59 @@
         "steps": [
           {
             "global_step": 9,
-            "orig_batch_hash": "2c434e546e5bc87e5e23faa4c6784db5e2eda61baad947c23d3ca2f02c86f687",
-            "orig_weights_hash": "75e042373bff7c721b2562312ffdeac3d2d4718b5b9ae8662cf9efc98df0d57a",
-            "replay_batch_hash": "2c434e546e5bc87e5e23faa4c6784db5e2eda61baad947c23d3ca2f02c86f687",
-            "replay_weights_hash": "75e042373bff7c721b2562312ffdeac3d2d4718b5b9ae8662cf9efc98df0d57a"
+            "orig_batch_hash": "d2f50a96bce21150c61fd36a20e39a1f025742a5d40b2e4685ff504e3f38d5b3",
+            "orig_weights_hash": "9f54bfd07261bd67fcd8442243612bb6357ef55f228e64cf9d550cafe092d2f9",
+            "replay_batch_hash": "d2f50a96bce21150c61fd36a20e39a1f025742a5d40b2e4685ff504e3f38d5b3",
+            "replay_weights_hash": "9f54bfd07261bd67fcd8442243612bb6357ef55f228e64cf9d550cafe092d2f9"
           },
           {
             "global_step": 10,
-            "orig_batch_hash": "e9dbe5c449e68be785616709facaf92fbc33eb8378af81ceabe0aeff7a64a770",
-            "orig_weights_hash": "cef8f372631501f9e65353000a9d48ef59c9c5423f786330bab096d498726d0c",
-            "replay_batch_hash": "e9dbe5c449e68be785616709facaf92fbc33eb8378af81ceabe0aeff7a64a770",
-            "replay_weights_hash": "cef8f372631501f9e65353000a9d48ef59c9c5423f786330bab096d498726d0c"
+            "orig_batch_hash": "465164e9d4ae82bd015d5a3eaf34a087a165624265b2bcfc11fda8fc251de09d",
+            "orig_weights_hash": "f1da4fdcaffcca6782c3465e152ebf5364f5fa64cf2b1930bbfefddc00b34ed7",
+            "replay_batch_hash": "465164e9d4ae82bd015d5a3eaf34a087a165624265b2bcfc11fda8fc251de09d",
+            "replay_weights_hash": "f1da4fdcaffcca6782c3465e152ebf5364f5fa64cf2b1930bbfefddc00b34ed7"
           },
           {
             "global_step": 11,
-            "orig_batch_hash": "4c59360ce0a35ed916fa25cebd21a6251a93179a9002f3b03e24de446ee84a64",
-            "orig_weights_hash": "b53d182083a28ed7d8421b640778e1687ec7c9ca198ee43cb7461131847711cd",
-            "replay_batch_hash": "4c59360ce0a35ed916fa25cebd21a6251a93179a9002f3b03e24de446ee84a64",
-            "replay_weights_hash": "b53d182083a28ed7d8421b640778e1687ec7c9ca198ee43cb7461131847711cd"
+            "orig_batch_hash": "6a91a7ecff2c028dfe61c4e8ff4e95980fb3d7b2aa23caf4525e2565d7bc880f",
+            "orig_weights_hash": "ffa4b11c062a0b4eaab55bfa14f1c9763dd77649eae53d5b404c2095c6341989",
+            "replay_batch_hash": "6a91a7ecff2c028dfe61c4e8ff4e95980fb3d7b2aa23caf4525e2565d7bc880f",
+            "replay_weights_hash": "ffa4b11c062a0b4eaab55bfa14f1c9763dd77649eae53d5b404c2095c6341989"
           },
           {
             "global_step": 12,
-            "orig_batch_hash": "83fe46adf6848bc1e397e81fb3d35ecd348ef1bbe4b08ad950a146a73b3e5890",
-            "orig_weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df",
-            "replay_batch_hash": "83fe46adf6848bc1e397e81fb3d35ecd348ef1bbe4b08ad950a146a73b3e5890",
-            "replay_weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df"
+            "orig_batch_hash": "44a51c83a6999b5394184011b72a11b0926734eeb26e2099c38686ef5d46ef53",
+            "orig_weights_hash": "312938f65fece25f9ac76929b052467937bb0361ea97319609f9b4dabd7a8b06",
+            "replay_batch_hash": "44a51c83a6999b5394184011b72a11b0926734eeb26e2099c38686ef5d46ef53",
+            "replay_weights_hash": "312938f65fece25f9ac76929b052467937bb0361ea97319609f9b4dabd7a8b06"
           },
           {
             "global_step": 13,
-            "orig_batch_hash": "598047280e2a846e34ffb57d79b7d8b0c47e8a95a0c1641c50c7d3f4d65e7883",
-            "orig_weights_hash": "6ff290740f90f2100ab6437b27029553aebda8bcc8a66fc2ba2d43493e592f1b",
-            "replay_batch_hash": "598047280e2a846e34ffb57d79b7d8b0c47e8a95a0c1641c50c7d3f4d65e7883",
-            "replay_weights_hash": "6ff290740f90f2100ab6437b27029553aebda8bcc8a66fc2ba2d43493e592f1b"
+            "orig_batch_hash": "630619fcfa2448a83c26fd6424ed1d5e5c79580bf65f09e1a5a9de8a05fc669d",
+            "orig_weights_hash": "33d912ada13422a51d967c6e6f2be057a9188a5553d987ede40fbbf1c88bbec1",
+            "replay_batch_hash": "630619fcfa2448a83c26fd6424ed1d5e5c79580bf65f09e1a5a9de8a05fc669d",
+            "replay_weights_hash": "33d912ada13422a51d967c6e6f2be057a9188a5553d987ede40fbbf1c88bbec1"
           },
           {
             "global_step": 14,
-            "orig_batch_hash": "0afa302c202a05a942509e638d031947c481d9dfdd9a66daec2a6f555029df45",
-            "orig_weights_hash": "330e17a9c50314675c8a611390fbb804c99a4d82e4bebc2f8e2ab5c8b365eee6",
-            "replay_batch_hash": "0afa302c202a05a942509e638d031947c481d9dfdd9a66daec2a6f555029df45",
-            "replay_weights_hash": "330e17a9c50314675c8a611390fbb804c99a4d82e4bebc2f8e2ab5c8b365eee6"
+            "orig_batch_hash": "53ff80748c4e41f60ec965077dca63fe990cbd5a3fe4af48c05c96f55920b6f5",
+            "orig_weights_hash": "4d2a6c95745f30a31a2f11fc56534373619065deb3190e094dae50b0911d9c96",
+            "replay_batch_hash": "53ff80748c4e41f60ec965077dca63fe990cbd5a3fe4af48c05c96f55920b6f5",
+            "replay_weights_hash": "4d2a6c95745f30a31a2f11fc56534373619065deb3190e094dae50b0911d9c96"
           },
           {
             "global_step": 15,
-            "orig_batch_hash": "9d6048d75f4e216df73eb03eb2bd951e27d1016d711bf86a603cac0c06ae64b2",
-            "orig_weights_hash": "940c4e650ac984a2632d1f7a917086a920e16128c589d80f54a154fa26869af2",
-            "replay_batch_hash": "9d6048d75f4e216df73eb03eb2bd951e27d1016d711bf86a603cac0c06ae64b2",
-            "replay_weights_hash": "940c4e650ac984a2632d1f7a917086a920e16128c589d80f54a154fa26869af2"
+            "orig_batch_hash": "17a4a7ea0544bfdc96b2446db1f52bf1d23195584e2811c1c622a7963f84bf70",
+            "orig_weights_hash": "254b9310b45fba30734806bfefda86c4c11735bf95c1ba89db9feb35e45c04a3",
+            "replay_batch_hash": "17a4a7ea0544bfdc96b2446db1f52bf1d23195584e2811c1c622a7963f84bf70",
+            "replay_weights_hash": "254b9310b45fba30734806bfefda86c4c11735bf95c1ba89db9feb35e45c04a3"
           },
           {
             "global_step": 16,
-            "orig_batch_hash": "05b741664b0055feac0266b1f8125221279cb3d546c2c0194328164f337d70d7",
-            "orig_weights_hash": "1838ca64f70deea4f248e2e3fb8b1c635e9bc5990aa5638b0393376247d36251",
-            "replay_batch_hash": "05b741664b0055feac0266b1f8125221279cb3d546c2c0194328164f337d70d7",
-            "replay_weights_hash": "1838ca64f70deea4f248e2e3fb8b1c635e9bc5990aa5638b0393376247d36251"
+            "orig_batch_hash": "5426334f613bbe0aff2ef940d3da0001e9b96d8421986372cdaa2278e7c67d3f",
+            "orig_weights_hash": "bd21238a757194a5c464d610b0fa479d746f6caef4c3996060798cf1e2fb6ee0",
+            "replay_batch_hash": "5426334f613bbe0aff2ef940d3da0001e9b96d8421986372cdaa2278e7c67d3f",
+            "replay_weights_hash": "bd21238a757194a5c464d610b0fa479d746f6caef4c3996060798cf1e2fb6ee0"
           }
         ]
       },
@@ -495,24 +495,24 @@
       "checks": [
         {
           "check": "fork_diverged_explicitly",
-          "detail": "fork-ad01c550 from ckpt-main-s00012-ae048d3549",
+          "detail": "fork-1035a481 from ckpt-main-s00012-312938f65f",
           "passed": true
         },
         {
           "check": "audit.fork_lineage_explicit",
-          "detail": "fork-ad01c550: first record is branch_forked at step 13 with the parent's ledger offset 123; lineage = main[1..12] + fork-ad01c550[13..20]",
+          "detail": "fork-1035a481: first record is branch_forked at step 13 with the parent's ledger offset 123; lineage = main[1..12] + fork-1035a481[13..20]",
           "passed": true
         }
       ],
       "evidence": [
         "reports/fork_report.json",
-        "ledgers/fork-ad01c550/consumption.jsonl#seq=0",
-        "manifests/mixture_schedule.fork-ad01c550.json"
+        "ledgers/fork-1035a481/consumption.jsonl#seq=0",
+        "manifests/mixture_schedule.fork-1035a481.json"
       ],
       "evidence_label": "Branch-forked record",
       "id": "fork",
       "key_values": {
-        "branch": "fork-ad01c550",
+        "branch": "fork-1035a481",
         "divergence_step": 13,
         "overrides": {
           "mixture.stages.1.mixture": {
@@ -539,7 +539,7 @@
         },
         {
           "check": "audit.token_trace_reconciles_with_ledger",
-          "detail": "55875 token-level losses; per-sample means equal ledger loss_before and link to span/shard/doc",
+          "detail": "55948 token-level losses; per-sample means equal ledger loss_before and link to span/shard/doc",
           "passed": true
         },
         {
@@ -560,14 +560,14 @@
           "useful": 32
         },
         "example": {
-          "loss_after": 6.466786,
-          "loss_before": 6.475923,
+          "loss_after": 6.46609,
+          "loss_before": 6.475038,
           "sample_id": "ps-7aae2e5c359122e3",
           "spans": [
             {
               "doc_id": "src_web_edu_crawl/train/00008",
-              "loss_after": 6.466786,
-              "loss_before": 6.475923,
+              "loss_after": 6.46609,
+              "loss_before": 6.475038,
               "n_loss_tokens": 127,
               "repeated_pass": 1,
               "shard_id": "shd-general_web-train-e726c40dfb40",
@@ -583,22 +583,22 @@
       "checks": [
         {
           "check": "throughput_reconstructs_from_ledger",
-          "detail": "positions/non-pad/loss-bearing counts equal the audit recount {'loss_tokens': 55875, 'nonpad_tokens': 63223, 'positions': 65536}",
+          "detail": "positions/non-pad/loss-bearing counts equal the audit recount {'loss_tokens': 55948, 'nonpad_tokens': 63378, 'positions': 65536}",
           "passed": true
         },
         {
           "check": "packing_utilization_at_least_0.90",
-          "detail": "utilization 0.964706",
+          "detail": "utilization 0.967072",
           "passed": true
         },
         {
           "check": "beats_pad_only_baseline",
-          "detail": "0.964706 vs pad-only 0.73774 (x1.3077)",
+          "detail": "0.967072 vs pad-only 0.73774 (x1.3109)",
           "passed": true
         },
         {
           "check": "useful_tokens_per_second_measured",
-          "detail": "4757.9 loss-bearing tok/s = 55875 / 11.7436 s",
+          "detail": "4699.6 loss-bearing tok/s = 55948 / 11.9049 s",
           "passed": true
         }
       ],
@@ -609,13 +609,13 @@
       "evidence_label": "Performance report",
       "id": "throughput",
       "key_values": {
-        "accepted_tokens_per_s_after_opus": 5383.6,
-        "loader_wait_fraction": 0.4338,
-        "packing_utilization": 0.964706,
-        "raw_tokens_per_s": 5580.55,
-        "replay_latency_s": 0.115756,
-        "resume_latency_s": 0.479774,
-        "useful_loss_bearing_tokens_per_s": 4757.9
+        "accepted_tokens_per_s_after_opus": 5323.71,
+        "loader_wait_fraction": 0.4494,
+        "packing_utilization": 0.967072,
+        "raw_tokens_per_s": 5504.98,
+        "replay_latency_s": 0.123572,
+        "resume_latency_s": 0.437796,
+        "useful_loss_bearing_tokens_per_s": 4699.6
       },
       "requirement": "Throughput",
       "result": "PASS"
@@ -639,7 +639,7 @@
         "failures": 0,
         "passed": true,
         "ran": 38,
-        "seconds": 12.36
+        "seconds": 52.76
       },
       "requirement": "Automated invariant tests",
       "result": "PASS"

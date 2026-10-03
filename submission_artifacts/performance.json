@@ -7,108 +7,108 @@
     "useful_loss_bearing_tokens_per_s": "positions with loss_mask=1 / train-loop wall seconds"
   },
   "main_run": {
-    "accepted_tokens_per_s_after_opus": 5383.6,
-    "checkpoint_s": 0.3487,
-    "firewall_s": 0.6299,
-    "ledger_io_s": 2.6224,
-    "loader_wait_fraction": 0.4338,
-    "loader_wait_s": 5.0944,
-    "loss_bearing_fraction": 0.852585,
-    "loss_bearing_tokens": 55875,
-    "nonpad_tokens": 63223,
+    "accepted_tokens_per_s_after_opus": 5323.71,
+    "checkpoint_s": 0.3994,
+    "firewall_s": 0.769,
+    "ledger_io_s": 2.6685,
+    "loader_wait_fraction": 0.4494,
+    "loader_wait_s": 5.3495,
+    "loss_bearing_fraction": 0.853699,
+    "loss_bearing_tokens": 55948,
+    "nonpad_tokens": 63378,
     "opus": {
-      "acceptance_rate": 0.5235,
-      "candidate_tokens_scored": 120821,
+      "acceptance_rate": 0.513,
+      "candidate_tokens_scored": 122892,
       "decisions": {
         "accepted": 512,
-        "deferred": 160,
-        "rejected": 306
+        "deferred": 166,
+        "rejected": 320
       },
       "rejection_rate_by_lane": {
-        "agentic": 0.2262,
-        "anneal_reserve": 0.2857,
-        "code": 0.3333,
-        "general_web": 0.0904,
-        "indic": 0.484,
-        "math_science": 0.1866,
-        "reasoning": 0.4737
+        "agentic": 0.2619,
+        "anneal_reserve": 0.6277,
+        "code": 0.1863,
+        "general_web": 0.0778,
+        "indic": 0.4272,
+        "math_science": 0.1591,
+        "reasoning": 0.5649
       }
     },
-    "opus_scoring_s": 4.2019,
-    "packing_utilization": 0.964706,
-    "packing_verify_s": 0.6216,
+    "opus_scoring_s": 4.411,
+    "packing_utilization": 0.967072,
+    "packing_verify_s": 0.7218,
     "pad_only_baseline_utilization": 0.73774,
-    "padding_fraction": 0.035294,
+    "padding_fraction": 0.032928,
     "positions": 65536,
-    "raw_tokens_per_s": 5580.55,
-    "replay_latency_s": 0.115756,
-    "resume_latency_s": 0.479774,
+    "raw_tokens_per_s": 5504.98,
+    "replay_latency_s": 0.123572,
+    "resume_latency_s": 0.437796,
     "segments": [
       {
         "accounted_through_step": 20,
         "steps": 20,
         "tag": "fresh",
-        "wall_s": 7.166459
+        "wall_s": 7.463
       },
       {
         "accounted_through_step": 32,
         "steps": 12,
         "tag": "resume",
-        "wall_s": 4.577177
+        "wall_s": 4.441854
       }
     ],
     "shard_cache": {
-      "cache_hit_rate": 0.5902,
-      "cache_hits": 2078,
-      "cache_misses": 1443,
-      "mean_shard_read_ms": 1.162
+      "cache_hit_rate": 0.5874,
+      "cache_hits": 2090,
+      "cache_misses": 1468,
+      "mean_shard_read_ms": 1.264
     },
     "steps": 32,
-    "train_compute_s": 2.0916,
-    "useful_loss_bearing_tokens_per_s": 4757.9,
+    "train_compute_s": 1.6597,
+    "useful_loss_bearing_tokens_per_s": 4699.6,
     "utilization_by_lane": {
-      "agentic": 0.8682,
-      "anneal_reserve": 0.9324,
-      "code": 0.9435,
+      "agentic": 0.8601,
+      "anneal_reserve": 0.9403,
+      "code": 0.9596,
       "general_web": 1.0,
       "indic": 1.0,
       "math_science": 1.0,
-      "reasoning": 0.9242
+      "reasoning": 0.9208
     },
-    "utilization_gain_vs_pad_only": 1.3077,
-    "wall_s": 11.7436
+    "utilization_gain_vs_pad_only": 1.3109,
+    "wall_s": 11.9049
   },
   "other_branches": [
     {
-      "branch": "fork-ad01c550",
-      "loss_tokens": 14171,
+      "branch": "fork-1035a481",
+      "loss_tokens": 14236,
       "positions": 16384,
       "steps": 8,
       "tag": "fork",
-      "wall_s": 3.216689
+      "wall_s": 3.028133
     },
     {
       "branch": "reference",
-      "loss_tokens": 55875,
+      "loss_tokens": 55948,
       "positions": 65536,
       "steps": 32,
       "tag": "fresh",
-      "wall_s": 10.93866
+      "wall_s": 10.814563
     },
     {
       "branch": "replay-main-s00008",
-      "loss_tokens": 14711,
+      "loss_tokens": 14655,
       "positions": 16384,
       "steps": 8,
       "tag": "replay",
-      "wall_s": 1.626213
+      "wall_s": 1.48973
     }
   ],
   "reconciliation": {
     "all_match": true,
     "ledger_recount": {
-      "loss_tokens": 55875,
-      "nonpad_tokens": 63223,
+      "loss_tokens": 55948,
+      "nonpad_tokens": 63378,
       "positions": 65536
     },
     "match": {
@@ -118,8 +118,8 @@
     },
     "note": "perf counts come from the training processes; the audit recounts the same quantities by rebuilding every consumed sample from its span refs",
     "perf_counts": {
-      "loss_tokens": 55875,
-      "nonpad_tokens": 63223,
+      "loss_tokens": 55948,
+      "nonpad_tokens": 63378,
       "positions": 65536
     }
   }

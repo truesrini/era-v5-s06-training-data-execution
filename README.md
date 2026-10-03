@@ -15,8 +15,13 @@ documents -> tokenized shards -> manifests -> mixture schedule -> packing -> bat
 python run_demo.py
 ```
 
-It needs Python 3.10+ and numpy, and nothing else (no torch, no GPU). It takes about 50 seconds on
-a laptop CPU. The command deletes and regenerates `submission_artifacts/`, runs the 38 invariant
+It needs Python 3.10+, numpy and PyTorch (CPU is enough, no GPU):
+
+```bash
+pip install -r requirements.txt
+```
+
+The demo takes about 2 minutes on a laptop CPU, about half of which is the test suite. The command deletes and regenerates `submission_artifacts/`, runs the 38 invariant
 tests, and exits 0 only if every requirement in the evidence bundle passes.
 
 To run only the tests:
@@ -65,18 +70,21 @@ python -m unittest discover -s tests -t . -v
 
 ### The model
 
-The model is a one-block causal transformer written in numpy (`tdes/model.py`), with a
-hand-written backward pass that is checked against finite differences in the tests. It deliberately
-consumes everything the data system produces:
+The model is a one-block causal transformer in PyTorch (`tdes/model.py`), trained with
+`torch.optim.AdamW`, global-norm clipping and a warmup-cosine schedule. Gradients come from
+autograd, and the tests check them against finite differences. Checkpoints are `model.pt` and
+`optimizer.pt` written with `torch.save`. The model deliberately consumes everything the data
+system produces:
 
 - token ids
 - position ids, used to index learned position embeddings
 - segment ids, used to build the block-causal attention mask
 - the loss mask
 
-It returns the cross-entropy of every token, which feeds the learning ledger. All BLAS libraries
-are pinned to one thread, so float reductions are deterministic and resume and replay can be checked
-**bit for bit** through weight hashes.
+It returns the cross-entropy of every token, which feeds the learning ledger. Torch runs on CPU
+with one thread and `torch.use_deterministic_algorithms(True)`, so float reductions are
+deterministic and resume and replay can be checked **bit for bit** through weight hashes. OPUS
+scores each candidate with `torch.autograd.grad` and the cosine similarity to the proxy gradient.
 
 ## Design decisions
 
@@ -192,7 +200,7 @@ every consumed sample from its span references, and recounts the tokens that
 | `manifests/` | `tokenizer.json` and its `.lock`, `shards/*.json`, `catalog.json`, `eval_registry.json` with fingerprints, `mixture_schedule*.json`, `cleaning_report.json` |
 | `shards/` | Immutable tokenized shards |
 | `ledgers/` | `firewall.jsonl`, plus `<branch>/{consumption,opus,learning}.jsonl` and `token_trace/` for `main`, `reference`, `replay-main-s00008` and `fork-*` |
-| `checkpoints/` | `<branch>/step_N/{model.npz, optimizer.npz, state.json, COMPLETE}` |
+| `checkpoints/` | `<branch>/step_N/{model.pt, optimizer.pt, state.json, COMPLETE}` |
 | `reports/` | Build, admission, manifest validation, packing lab, packed-batch report, resume, replay, fork, audit, learning report cards, tests |
 | `perf/` | Raw per-process counters and timings that `performance.json` aggregates |
 | `corpus/` | The raw generated documents |
@@ -213,7 +221,7 @@ every consumed sample from its span references, and recounts the tokens that
 
 ## Limitations and honest notes
 
-- The corpus is synthetic and template-generated, so the model is tiny and CPU-only. Loss falls
+- The corpus is synthetic and template-generated, so the model is tiny and runs on CPU. Loss falls
   from 6.47 to about 5.4 in 32 steps. The point is the data system, not model quality.
 - Throughput numbers are wall-clock measurements on whatever machine runs the demo, so they vary
   between runs. The counts behind them do not vary and are reconciled exactly against the ledger.

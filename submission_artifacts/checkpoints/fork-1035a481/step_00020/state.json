@@ -1,0 +1,331 @@
+{
+  "branch": "fork-1035a481",
+  "checkpoint_id": "ckpt-fork-1035a481-s00020-bbfab6a7af",
+  "config_hash": "89766e18619f3bf5d244b1b6e44df9505cba9d51bb0b460551468edcb3a6fa5c",
+  "counters": {
+    "loss_tokens": 36815,
+    "nonpad_tokens": 39943,
+    "positions": 40960
+  },
+  "dataloader_version": "tdes-loader/1.0+84c02a0e6f.6891f0",
+  "global_step": 20,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "1deb3dfbd843f3b2e01548a7232379c2ff2684e62018f5aefd6aba03080103ee",
+      "offset": 83,
+      "path": "ledgers/fork-1035a481/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "47eb28c134bccc1ee945c2ab63815604e7ff235a50bb1c5a40796b4ebf8f6c19",
+      "offset": 138,
+      "path": "ledgers/fork-1035a481/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "f031d53f3f2322b802d4dc73de120fd9f2ae8498636da9a032114fc57d9dcf37",
+      "offset": 274,
+      "path": "ledgers/fork-1035a481/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 541,
+    "deferred": [
+      {
+        "candidate_id": "cand-000514",
+        "defer_count": 1,
+        "first_step": 20,
+        "lane": "code",
+        "last_score": 0.16924095595418065,
+        "spans": [
+          {
+            "doc_id": "src_code_permissive/train/00030",
+            "doc_index": 6,
+            "end": 128,
+            "epoch": 0,
+            "shard_id": "shd-code-train-f7edc679ba1d",
+            "span_id": "shd-code-train-f7edc679ba1d:6:0-128",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000484",
+        "defer_count": 2,
+        "first_step": 19,
+        "lane": "code",
+        "last_score": 0.02495418895324191,
+        "spans": [
+          {
+            "doc_id": "src_code_permissive/train/00060",
+            "doc_index": 12,
+            "end": 343,
+            "epoch": 0,
+            "shard_id": "shd-code-train-c4632678cd6e",
+            "span_id": "shd-code-train-c4632678cd6e:12:245-343",
+            "start": 245
+          },
+          {
+            "doc_id": "src_code_permissive/train/00087",
+            "doc_index": 15,
+            "end": 273,
+            "epoch": 0,
+            "shard_id": "shd-code-train-c9bbe04bac8d",
+            "span_id": "shd-code-train-c9bbe04bac8d:15:248-273",
+            "start": 248
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000500",
+        "defer_count": 2,
+        "first_step": 19,
+        "lane": "agentic",
+        "last_score": 0.2164615565325122,
+        "spans": [
+          {
+            "doc_id": "src_agentic_tierA/train/00075",
+            "doc_index": 3,
+            "end": 101,
+            "epoch": 0,
+            "shard_id": "shd-agentic-train-c171a9233421",
+            "span_id": "shd-agentic-train-c171a9233421:3:0-101",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+84c02a0e6f.6891f0",
+    "recent": [
+      [
+        17,
+        [
+          "ps-7196ee15c3327b1b",
+          "ps-c5a916ec468957f1",
+          "ps-1d8f5fbc23aeba71",
+          "ps-e9bea005845136ac",
+          "ps-f8b2a16ac1bd84ee",
+          "ps-6c13f8ce9b6e3b31",
+          "ps-b58d23bafb51d207",
+          "ps-1068c9fee9169df1",
+          "ps-86145d605ced0c10",
+          "ps-583a932f6b4eb6db",
+          "ps-644e05d643ecde24",
+          "ps-46dd8614df055880",
+          "ps-cd6a0647a3975394",
+          "ps-2247e9c7eba6f1d4",
+          "ps-ee143a2ee24d88cf",
+          "ps-e0e4f6fe9a4f27cf"
+        ]
+      ],
+      [
+        18,
+        [
+          "ps-e14f67f12558e1a9",
+          "ps-1cb4c2e461a8f08c",
+          "ps-97a147b8b74ea4ed",
+          "ps-b73f166c216221a3",
+          "ps-1a3f09673a0ae622",
+          "ps-29cd4635489a7e44",
+          "ps-a669fa7739b79239",
+          "ps-5d143a19981096d1",
+          "ps-4010032ed1d8651c",
+          "ps-be01645383a63df2",
+          "ps-e192bd510a631fe4",
+          "ps-84c384c8ac7e62a1",
+          "ps-5d9796248cc9f9cc",
+          "ps-5507a59eab00e7d8",
+          "ps-c890b2e44f512c6a",
+          "ps-84c0b2eb50c03acd"
+        ]
+      ],
+      [
+        19,
+        [
+          "ps-56efcf4d4af0cb42",
+          "ps-fc49cf43485d2740",
+          "ps-75f5dd0a0b556403",
+          "ps-d5fb15af88840384",
+          "ps-d2a2890da1614a0b",
+          "ps-1ee5308462286b22",
+          "ps-7282511fe7eda034",
+          "ps-a79e364cc99e17ad",
+          "ps-4e823e8a69945a38",
+          "ps-e4869acff7c18e74",
+          "ps-1f3c1bcadc939f9c",
+          "ps-568169bdb419a248",
+          "ps-68939bf58779de51",
+          "ps-d2e0ecd400419ff2",
+          "ps-216454d2a2cb7794",
+          "ps-6a70e3fd83983666"
+        ]
+      ],
+      [
+        20,
+        [
+          "ps-80a5f130ad21b674",
+          "ps-db320b08f9402126",
+          "ps-cb64922c55fe2909",
+          "ps-22caf63bac915689",
+          "ps-abba8af21c909a55",
+          "ps-ae9182c1e31c433c",
+          "ps-a1f2e475d0dafd4b",
+          "ps-0a961e48f17a862b",
+          "ps-432ffccdba9da16b",
+          "ps-8da9d9ccf60aacf0",
+          "ps-d81f63ce4ade052e",
+          "ps-b9ca16fc349b7be8",
+          "ps-0badfb1b7181213e",
+          "ps-b47631eedd7846f9",
+          "ps-f8cb86590a55a71a",
+          "ps-79491b5c004a0980"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            56,
+            0
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            45,
+            0
+          ],
+          [
+            61,
+            0
+          ],
+          [
+            19,
+            0
+          ],
+          [
+            31,
+            0
+          ],
+          [
+            12,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 52
+      },
+      "anneal_reserve": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 0
+      },
+      "code": {
+        "buffer": [
+          [
+            66,
+            0
+          ],
+          [
+            82,
+            0
+          ],
+          [
+            84,
+            0
+          ],
+          [
+            85,
+            0
+          ],
+          [
+            57,
+            0
+          ],
+          [
+            131,
+            0
+          ],
+          [
+            154,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 108
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 73,
+        "pos": 65
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 1,
+        "offset": 49,
+        "pos": 43
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 71,
+        "pos": 51
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            46,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            48,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            42,
+            0
+          ],
+          [
+            60,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 79
+      }
+    }
+  },
+  "mode": "fork",
+  "optimizer_hash": "52e904977e77bc67d4c31daea822056471a20c9edadcd91cb0594f24a18efb6e",
+  "optimizer_t": 20,
+  "previous_checkpoint": "ckpt-fork-1035a481-s00016-9ab2929f34",
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "98a36e9d6fc002829874b2f8eddd844f6f786e04588f1c3ff54a86fd5acd252e",
+  "scheduler": {
+    "next_lr": 0.004013744221201749,
+    "step": 20
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "bbfab6a7af1c25809cd99fc5d475f86f0c2291a26827794f5d86f78bd7099918"
+}

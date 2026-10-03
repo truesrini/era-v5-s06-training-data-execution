@@ -1,148 +1,157 @@
-"""A tiny one-block causal transformer in numpy with a hand-written backward pass.
+"""A tiny one-block causal transformer in PyTorch, trained with torch.optim.AdamW.
 
 It consumes exactly what the data system produces: token ids, position ids (learned position
 embeddings indexed by the packed position ids), segment ids (block-causal attention mask) and
 a loss mask. Per-token cross-entropy is returned for the learning ledger.
+
+Determinism: CPU, one intra-op thread and `torch.use_deterministic_algorithms(True)`, so a
+resumed or replayed run reproduces the original weights bit for bit (checked via weight hashes).
 """
+import math
+
 import numpy as np
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 
-from .util import params_hash
+from .util import array_hash
 
-PARAM_NAMES = ("E", "P", "Wq", "Wk", "Wv", "Wo", "W1", "b1", "W2", "Wout")
-NEG = -1e9
+torch.set_num_threads(1)
+torch.use_deterministic_algorithms(True)
 
-
-def init_params(vocab, d, ff, max_len, seed, std, dtype="float32"):
-    rng = np.random.default_rng(seed)
-    p = {
-        "E": rng.normal(0, std, (vocab, d)), "P": rng.normal(0, std, (max_len, d)),
-        "Wq": rng.normal(0, std, (d, d)), "Wk": rng.normal(0, std, (d, d)),
-        "Wv": rng.normal(0, std, (d, d)), "Wo": rng.normal(0, std, (d, d)),
-        "W1": rng.normal(0, std, (d, ff)), "b1": np.zeros(ff), "W2": rng.normal(0, std, (ff, d)),
-        "Wout": rng.normal(0, std, (d, vocab)),
-    }
-    return {k: v.astype(dtype) for k, v in p.items()}
+_DTYPES = {"float32": torch.float32, "float64": torch.float64}
 
 
 def attention_allowed(seg):
-    """(B, L) segment ids -> (B, L, L) boolean: same non-pad segment and causal; pads see self."""
-    B, L = seg.shape
-    causal = np.tril(np.ones((L, L), dtype=bool))[None]
+    """(B, L) segment ids -> (B, L, L) bool: same non-pad segment and causal; pads see only self."""
+    L = seg.shape[1]
+    causal = torch.tril(torch.ones(L, L, dtype=torch.bool))[None]
     same = (seg[:, :, None] == seg[:, None, :]) & (seg[:, :, None] > 0)
-    return (causal & same) | np.eye(L, dtype=bool)[None]
+    return (causal & same) | torch.eye(L, dtype=torch.bool)[None]
 
 
-def forward_backward(params, tokens, positions, seg, labels, loss_mask, loss_scale, need_grad=True):
-    """Returns (sum of weighted loss, per-token CE (B,L) [0 where unmasked], grads or None).
-    Weighted loss = sum_t loss_mask_t * CE_t * loss_scale."""
-    dt = params["E"].dtype
-    E, P = params["E"], params["P"]
-    d = E.shape[1]
-    x0 = E[tokens] + P[positions]
-    q, k, v = x0 @ params["Wq"], x0 @ params["Wk"], x0 @ params["Wv"]
-    allowed = attention_allowed(seg)
-    s = (q @ np.swapaxes(k, 1, 2)) / np.sqrt(d).astype(dt)
-    s = np.where(allowed, s, NEG).astype(dt)
-    s = s - s.max(-1, keepdims=True)
-    a = np.exp(s)
-    a = a / a.sum(-1, keepdims=True)
-    c = a @ v
-    x1 = x0 + c @ params["Wo"]
-    u = x1 @ params["W1"] + params["b1"]
-    r = np.maximum(u, 0)
-    x2 = x1 + r @ params["W2"]
-    logits = x2 @ params["Wout"]
-    logits = logits - logits.max(-1, keepdims=True)
-    ex = np.exp(logits)
-    z = ex.sum(-1, keepdims=True)
-    lab = np.where(labels >= 0, labels, 0)
-    logp_true = np.take_along_axis(logits, lab[..., None], -1)[..., 0] - np.log(z[..., 0])
-    ce = (-logp_true) * (loss_mask > 0)
-    w = (loss_mask * loss_scale).astype(dt)
-    total = float((ce * w).sum())
-    if not need_grad:
-        return total, ce, None
+class TinyLM(nn.Module):
+    def __init__(self, vocab, d, ff, max_len, seed, std, dtype="float32"):
+        super().__init__()
+        g = torch.Generator().manual_seed(int(seed) % (2 ** 63))
+        dt = _DTYPES[dtype]
 
-    g = {}
-    dlogits = ex / z
-    np.put_along_axis(dlogits, lab[..., None], np.take_along_axis(dlogits, lab[..., None], -1) - 1, -1)
-    dlogits *= w[..., None]
-    flat = lambda t: t.reshape(-1, t.shape[-1])
-    g["Wout"] = flat(x2).T @ flat(dlogits)
-    dx2 = dlogits @ params["Wout"].T
-    g["W2"] = flat(r).T @ flat(dx2)
-    du = (dx2 @ params["W2"].T) * (u > 0)
-    g["W1"] = flat(x1).T @ flat(du)
-    g["b1"] = du.sum((0, 1))
-    dx1 = dx2 + du @ params["W1"].T
-    g["Wo"] = flat(c).T @ flat(dx1)
-    dc = dx1 @ params["Wo"].T
-    da = dc @ np.swapaxes(v, 1, 2)
-    dv = np.swapaxes(a, 1, 2) @ dc
-    ds = a * (da - (da * a).sum(-1, keepdims=True))
-    ds = ds / np.sqrt(d).astype(dt)
-    dq = ds @ k
-    dk = np.swapaxes(ds, 1, 2) @ q
-    g["Wq"] = flat(x0).T @ flat(dq)
-    g["Wk"] = flat(x0).T @ flat(dk)
-    g["Wv"] = flat(x0).T @ flat(dv)
-    dx0 = dx1 + dq @ params["Wq"].T + dk @ params["Wk"].T + dv @ params["Wv"].T
-    gE = np.zeros_like(E)
-    np.add.at(gE, tokens.reshape(-1), flat(dx0))
-    gP = np.zeros_like(P)
-    np.add.at(gP, positions.reshape(-1), flat(dx0))
-    g["E"], g["P"] = gE, gP
-    g = {kk: vv.astype(dt) for kk, vv in g.items()}
-    return total, ce, g
+        def p(*shape):
+            return nn.Parameter(torch.randn(*shape, generator=g, dtype=torch.float64).mul(std).to(dt))
+        self.E, self.P = p(vocab, d), p(max_len, d)
+        self.Wq, self.Wk, self.Wv, self.Wo = p(d, d), p(d, d), p(d, d), p(d, d)
+        self.W1, self.b1, self.W2 = p(d, ff), nn.Parameter(torch.zeros(ff, dtype=dt)), p(ff, d)
+        self.Wout = p(d, vocab)
+        self.d = d
+
+    def forward(self, tokens, positions, seg):
+        x0 = self.E[tokens] + self.P[positions]
+        q, k, v = x0 @ self.Wq, x0 @ self.Wk, x0 @ self.Wv
+        s = (q @ k.transpose(1, 2)) / math.sqrt(self.d)
+        s = s.masked_fill(~attention_allowed(seg), float("-inf"))
+        x1 = x0 + torch.softmax(s, dim=-1) @ v @ self.Wo
+        x2 = x1 + F.relu(x1 @ self.W1 + self.b1) @ self.W2
+        return x2 @ self.Wout
+
+    def token_ce(self, tokens, positions, seg, labels, loss_mask):
+        """Per-token cross-entropy (B, L); zero where loss_mask is 0."""
+        logits = self(tokens, positions, seg)
+        lab = labels.clamp(min=0)
+        ce = F.cross_entropy(logits.reshape(-1, logits.shape[-1]), lab.reshape(-1), reduction="none")
+        return ce.reshape(labels.shape) * (loss_mask > 0)
+
+    # ------------------------------------------------------------------ hashing / io
+    def state_arrays(self):
+        return {k: v.detach().cpu().numpy() for k, v in self.state_dict().items()}
+
+    def weights_hash(self):
+        a = self.state_arrays()
+        return array_hash(*[a[k] for k in sorted(a)])
 
 
-def flat_grad(g):
-    return np.concatenate([g[k].ravel().astype(np.float64) for k in PARAM_NAMES])
+def to_tensors(arrays):
+    tokens, positions, seg, labels, loss_mask = arrays
+    return (torch.as_tensor(tokens, dtype=torch.long), torch.as_tensor(positions, dtype=torch.long),
+            torch.as_tensor(seg, dtype=torch.long), torch.as_tensor(labels, dtype=torch.long),
+            torch.as_tensor(loss_mask))
 
 
-class Adam:
-    """AdamW with global-norm clipping and warmup + cosine LR. All state is checkpointed."""
+def loss_and_backward(model, arrays, loss_scale):
+    """Accumulate d(sum_t mask*CE*scale)/dparams into .grad. Returns (weighted loss, CE (B,L) numpy)."""
+    t = to_tensors(arrays)
+    ce = model.token_ce(*t)
+    loss = (ce * t[4].to(ce.dtype)).sum() * loss_scale
+    loss.backward()
+    return float(loss.detach()), ce.detach().numpy()
 
-    def __init__(self, params, cfg):
+
+def eval_ce(model, arrays):
+    with torch.no_grad():
+        ce = model.token_ce(*to_tensors(arrays))
+    return ce.numpy()
+
+
+def grad_vector(model, arrays):
+    """Flattened gradient of the mean loss over loss-bearing tokens (does not touch .grad)."""
+    t = to_tensors(arrays)
+    ce = model.token_ce(*t)
+    n = max(1.0, float(t[4].sum()))
+    loss = (ce * t[4].to(ce.dtype)).sum() / n
+    grads = torch.autograd.grad(loss, list(model.parameters()))
+    return torch.cat([g.reshape(-1) for g in grads]).double(), float(loss.detach())
+
+
+class Optimizer:
+    """torch.optim.AdamW (no decay on biases) + global-norm clipping + warmup/cosine LR."""
+
+    def __init__(self, model, cfg):
         t = cfg["train"]
         self.lr_peak, self.warmup, self.total = t["lr"], t["warmup_steps"], t["total_steps"]
-        self.min_frac, self.b1, self.b2 = t["min_lr_frac"], t["betas"][0], t["betas"][1]
-        self.eps, self.wd, self.clip = t["eps"], t["weight_decay"], t["grad_clip"]
-        self.m = {k: np.zeros_like(v) for k, v in params.items()}
-        self.v = {k: np.zeros_like(v) for k, v in params.items()}
-        self.t = 0
+        self.min_frac, self.clip = t["min_lr_frac"], t["grad_clip"]
+        decay = [p for n, p in model.named_parameters() if n != "b1"]
+        no_decay = [p for n, p in model.named_parameters() if n == "b1"]
+        self.model = model
+        self.opt = torch.optim.AdamW([{"params": decay, "weight_decay": t["weight_decay"]},
+                                      {"params": no_decay, "weight_decay": 0.0}],
+                                     lr=self.lr_peak, betas=tuple(t["betas"]), eps=t["eps"], foreach=False)
 
     def lr_at(self, step):
         if step <= self.warmup:
             return self.lr_peak * step / self.warmup
-        frac = (step - self.warmup) / max(1, self.total - self.warmup)
-        frac = min(1.0, frac)
-        return self.lr_peak * (self.min_frac + (1 - self.min_frac) * 0.5 * (1 + np.cos(np.pi * frac)))
+        frac = min(1.0, (step - self.warmup) / max(1, self.total - self.warmup))
+        return self.lr_peak * (self.min_frac + (1 - self.min_frac) * 0.5 * (1 + math.cos(math.pi * frac)))
 
-    def step(self, params, grads, global_step):
-        norm = float(np.sqrt(sum(float((g.astype(np.float64) ** 2).sum()) for g in grads.values())))
-        scale = min(1.0, self.clip / (norm + 1e-12))
+    def zero_grad(self):
+        self.opt.zero_grad(set_to_none=False)
+        for p in self.model.parameters():
+            if p.grad is None:
+                p.grad = torch.zeros_like(p)
+
+    def step(self, global_step):
+        norm = float(torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.clip, foreach=False))
         lr = float(self.lr_at(global_step))
-        self.t += 1
-        bc1, bc2 = 1 - self.b1 ** self.t, 1 - self.b2 ** self.t
-        for k in PARAM_NAMES:
-            g = grads[k] * np.asarray(scale, dtype=grads[k].dtype)
-            self.m[k] = self.b1 * self.m[k] + (1 - self.b1) * g
-            self.v[k] = self.b2 * self.v[k] + (1 - self.b2) * g * g
-            upd = (self.m[k] / bc1) / (np.sqrt(self.v[k] / bc2) + self.eps)
-            decay = self.wd * params[k] if k not in ("b1",) else 0.0
-            params[k] = (params[k] - lr * (upd + decay)).astype(params[k].dtype)
+        for g in self.opt.param_groups:
+            g["lr"] = lr
+        self.opt.step()
         return norm, lr
 
-    def state_arrays(self):
-        out = {f"m.{k}": v for k, v in self.m.items()}
-        out.update({f"v.{k}": v for k, v in self.v.items()})
-        return out
+    @property
+    def t(self):
+        st = self.opt.state_dict()["state"]
+        return int(next(iter(st.values()))["step"]) if st else 0
 
-    def load_arrays(self, arrs, t):
-        self.m = {k: arrs[f"m.{k}"] for k in PARAM_NAMES}
-        self.v = {k: arrs[f"v.{k}"] for k in PARAM_NAMES}
-        self.t = t
+    def state_hash(self):
+        st = self.opt.state_dict()["state"]
+        arrs = []
+        for i in sorted(st):
+            arrs += [st[i]["exp_avg"].numpy(), st[i]["exp_avg_sq"].numpy(), np.asarray(float(st[i]["step"]))]
+        return array_hash(*arrs)
 
 
-__all__ = ["init_params", "forward_backward", "flat_grad", "Adam", "params_hash", "attention_allowed", "PARAM_NAMES"]
+def state_dict_hash(sd):
+    return array_hash(*[sd[k].detach().cpu().numpy() for k in sorted(sd)])
+
+
+def checkpoint_weights_hash(path):
+    """Hash of the weights stored in a checkpoint's model.pt (same convention as weights_hash)."""
+    return state_dict_hash(torch.load(path, map_location="cpu", weights_only=True))

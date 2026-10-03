@@ -1,10 +1,13 @@
+import copy
 import unittest
 
 import numpy as np
 
 from tests.helpers import env
 from tdes.config import LANE_POLICY
-from tdes.model import Adam, forward_backward, init_params
+import torch
+
+from tdes.model import Optimizer, TinyLM, eval_ce, loss_and_backward, to_tensors
 from tdes.packing import LaneStream, build_sequence, lane_units, simulate_policy, verify_sequence
 
 
@@ -98,53 +101,67 @@ class ModelTests(unittest.TestCase):
                 pos[b, idx] = np.arange(len(idx))
         tok = rng.integers(0, 20, (B, L))
         lab = rng.integers(0, 20, (B, L))
-        lm = ((rng.random((B, L)) > 0.3) & (seg > 0)).astype(float)
+        lm = ((rng.random((B, L)) > 0.3) & (seg > 0)).astype(np.float32)
         return tok, pos, seg, lab, lm
 
-    def test_gradient_matches_finite_differences(self):
+    def test_autograd_matches_finite_differences(self):
         rng = np.random.default_rng(0)
-        p = init_params(20, 8, 12, 10, 0, 0.3, "float64")
-        tok, pos, seg, lab, lm = self._batch(rng)
-        _, _, g = forward_backward(p, tok, pos, seg, lab, lm, 0.1)
+        m = TinyLM(20, 8, 12, 10, 0, 0.3, "float64")
+        arr = self._batch(rng)
+        m.zero_grad()
+        loss_and_backward(m, arr, 0.1)
+        t = to_tensors(arr)
+
+        def f():
+            with torch.no_grad():
+                return float((m.token_ce(*t) * t[4]).sum() * 0.1)
         worst = 0.0
-        for k in p:
+        for name, p in m.named_parameters():
+            flat = p.data.view(-1)
             for _ in range(4):
-                i = tuple(int(rng.integers(0, s)) for s in p[k].shape)
-                old = p[k][i]
-                p[k][i] = old + 1e-5
-                a = forward_backward(p, tok, pos, seg, lab, lm, 0.1, need_grad=False)[0]
-                p[k][i] = old - 1e-5
-                b = forward_backward(p, tok, pos, seg, lab, lm, 0.1, need_grad=False)[0]
-                p[k][i] = old
-                num = (a - b) / 2e-5
-                worst = max(worst, abs(num - g[k][i]) / (abs(num) + abs(g[k][i]) + 1e-9))
+                i = int(rng.integers(0, flat.numel()))
+                old = float(flat[i])
+                flat[i] = old + 1e-6
+                a = f()
+                flat[i] = old - 1e-6
+                b = f()
+                flat[i] = old
+                num, ana = (a - b) / 2e-6, float(p.grad.view(-1)[i])
+                worst = max(worst, abs(num - ana) / (abs(num) + abs(ana) + 1e-9))
         self.assertLess(worst, 1e-4)
 
     def test_attention_is_isolated_per_segment(self):
         rng = np.random.default_rng(1)
-        p = init_params(20, 8, 12, 10, 0, 0.3, "float64")
+        m = TinyLM(20, 8, 12, 10, 0, 0.3, "float64")
         tok, pos, seg, lab, lm = self._batch(rng)
-        _, ce1, _ = forward_backward(p, tok, pos, seg, lab, np.ones_like(lm) * (seg > 0), 1.0, need_grad=False)
+        full = (seg > 0).astype(np.float32)
+        ce1 = eval_ce(m, (tok, pos, seg, lab, full))
         tok2 = tok.copy()
         tok2[1, :6] = (tok2[1, :6] + 7) % 20          # change only segment 1 of row 1
-        _, ce2, _ = forward_backward(p, tok2, pos, seg, lab, np.ones_like(lm) * (seg > 0), 1.0, need_grad=False)
+        ce2 = eval_ce(m, (tok2, pos, seg, lab, full))
         np.testing.assert_allclose(ce1[1, 6:], ce2[1, 6:], rtol=0, atol=1e-12)
 
-    def test_optimizer_state_roundtrip(self):
+    def test_training_is_bit_reproducible_and_optimizer_state_roundtrips(self):
         from tdes.config import small_config
         cfg = small_config()
-        p = init_params(20, 8, 12, 10, 0, 0.3)
-        opt = Adam(p, cfg)
-        g = {k: np.ones_like(v) for k, v in p.items()}
-        opt.step(p, g, 1)
-        opt2 = Adam(p, cfg)
-        opt2.load_arrays(opt.state_arrays(), opt.t)
-        p1 = {k: v.copy() for k, v in p.items()}
-        opt.step(p1, g, 2)
-        p2 = {k: v.copy() for k, v in p.items()}
-        opt2.step(p2, g, 2)
-        for k in p:
-            np.testing.assert_array_equal(p1[k], p2[k])
+        arr = self._batch(np.random.default_rng(2))
+
+        def run(m, opt, steps):
+            for s in steps:
+                opt.zero_grad()
+                loss_and_backward(m, arr, 0.05)
+                opt.step(s)
+        m1 = TinyLM(20, 8, 12, 10, 0, 0.3)
+        o1 = Optimizer(m1, cfg)
+        run(m1, o1, [1, 2])
+        m2 = TinyLM(20, 8, 12, 10, 0, 0.3)
+        o2 = Optimizer(m2, cfg)
+        m2.load_state_dict(m1.state_dict())
+        o2.opt.load_state_dict(copy.deepcopy(o1.opt.state_dict()))   # as torch.load would give
+        self.assertEqual(o1.state_hash(), o2.state_hash())
+        run(m1, o1, [3])
+        run(m2, o2, [3])
+        self.assertEqual(m1.weights_hash(), m2.weights_hash())
 
 
 if __name__ == "__main__":

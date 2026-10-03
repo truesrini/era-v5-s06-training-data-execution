@@ -1,5 +1,5 @@
 {
-  "branch": "fork-ad01c550",
+  "branch": "fork-1035a481",
   "checks": {
     "first_fork_batch_differs_from_parent": true,
     "fork_ledger_starts_with_branch_forked": true,
@@ -7,7 +7,7 @@
   },
   "divergence_step": 13,
   "final_step": 20,
-  "final_weights_hash": "b528c9d4805892aff35df96a4ca54dd470eb3b41e2705eaa15368219f0dd1787",
+  "final_weights_hash": "bbfab6a7af1c25809cd99fc5d475f86f0c2291a26827794f5d86f78bd7099918",
   "fork_schedule_hash": "98a36e9d6fc002829874b2f8eddd844f6f786e04588f1c3ff54a86fd5acd252e",
   "overrides": {
     "mixture.stages.1.mixture": {
@@ -22,57 +22,57 @@
     "opus.reject_quantile": 0.4
   },
   "parent_branch": "main",
-  "parent_checkpoint": "ckpt-main-s00012-ae048d3549",
+  "parent_checkpoint": "ckpt-main-s00012-312938f65f",
   "parent_schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
-  "parent_weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df",
+  "parent_weights_hash": "312938f65fece25f9ac76929b052467937bb0361ea97319609f9b4dabd7a8b06",
   "steps": [
     {
       "differs": true,
-      "fork_batch_id": "b00013-aa85c2be97f4",
+      "fork_batch_id": "b00013-4773b7151e05",
       "global_step": 13,
-      "parent_batch_id": "b00013-598047280e2a"
+      "parent_batch_id": "b00013-630619fcfa24"
     },
     {
       "differs": true,
-      "fork_batch_id": "b00014-de9ea5b24afc",
+      "fork_batch_id": "b00014-12d90ae902a1",
       "global_step": 14,
-      "parent_batch_id": "b00014-0afa302c202a"
+      "parent_batch_id": "b00014-53ff80748c4e"
     },
     {
       "differs": true,
-      "fork_batch_id": "b00015-3a029791edc9",
+      "fork_batch_id": "b00015-377c8e379842",
       "global_step": 15,
-      "parent_batch_id": "b00015-9d6048d75f4e"
+      "parent_batch_id": "b00015-17a4a7ea0544"
     },
     {
       "differs": true,
-      "fork_batch_id": "b00016-0132925353b4",
+      "fork_batch_id": "b00016-f78bcfdb695c",
       "global_step": 16,
-      "parent_batch_id": "b00016-05b741664b00"
+      "parent_batch_id": "b00016-5426334f613b"
     },
     {
       "differs": true,
-      "fork_batch_id": "b00017-4d21f70228e8",
+      "fork_batch_id": "b00017-27e2d9725ec4",
       "global_step": 17,
-      "parent_batch_id": "b00017-4ee3221fd0be"
+      "parent_batch_id": "b00017-f71bd43819a6"
     },
     {
       "differs": true,
-      "fork_batch_id": "b00018-5120fea89927",
+      "fork_batch_id": "b00018-4375abdcda4d",
       "global_step": 18,
-      "parent_batch_id": "b00018-ec8234895107"
+      "parent_batch_id": "b00018-2557a5460d3f"
     },
     {
       "differs": true,
-      "fork_batch_id": "b00019-bceeee925cf9",
+      "fork_batch_id": "b00019-61a226c18b31",
       "global_step": 19,
-      "parent_batch_id": "b00019-600015094a8e"
+      "parent_batch_id": "b00019-33968ee14352"
     },
     {
       "differs": true,
-      "fork_batch_id": "b00020-ad9d0d5d7486",
+      "fork_batch_id": "b00020-7d0a6018a659",
       "global_step": 20,
-      "parent_batch_id": "b00020-fd0ea65a01f4"
+      "parent_batch_id": "b00020-944de24aa42d"
     }
   ]
 }

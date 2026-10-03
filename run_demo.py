@@ -83,7 +83,8 @@ def main():
     log = RunLog(os.path.join(art, "run.log"), "demo")
     cfg = small_config() if a.quick else default_config()
     log.section("TDES: Training Data Execution System demo")
-    log.info(f"python {platform.python_version()} numpy {np.__version__} on {platform.system()} {platform.machine()}; "
+    import torch
+    log.info(f"python {platform.python_version()} numpy {np.__version__} torch {torch.__version__} on {platform.system()} {platform.machine()}; "
              f"artifacts -> {art}")
     demo, T = cfg["demo"], cfg["train"]["total_steps"]
 

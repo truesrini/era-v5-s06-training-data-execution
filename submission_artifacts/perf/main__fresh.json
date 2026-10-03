@@ -2,57 +2,57 @@
   "accounted_through_step": 20,
   "branch": "main",
   "counts": {
-    "accepted_tokens": 39928,
-    "candidate_tokens": 76155,
+    "accepted_tokens": 39947,
+    "candidate_tokens": 76110,
     "candidates_by_lane": {
-      "agentic": 50,
-      "code": 129,
+      "agentic": 52,
+      "code": 111,
       "general_web": 143,
-      "indic": 150,
-      "math_science": 84,
-      "reasoning": 53
+      "indic": 146,
+      "math_science": 86,
+      "reasoning": 72
     },
-    "candidates_scored": 609,
+    "candidates_scored": 610,
     "decisions": {
       "accepted": 320,
-      "deferred": 104,
-      "rejected": 185
+      "deferred": 110,
+      "rejected": 180
     },
     "firewall_sequences_checked": 320,
-    "loss_tokens": 36837,
-    "nonpad_tokens": 39928,
+    "loss_tokens": 36821,
+    "nonpad_tokens": 39947,
     "packing_checks": 320,
     "packing_failures": 0,
     "positions": 40960,
-    "rejected_tokens": 21572,
+    "rejected_tokens": 19649,
     "rejections_by_lane": {
-      "agentic": 14,
-      "code": 45,
-      "general_web": 13,
-      "indic": 86,
-      "math_science": 12,
-      "reasoning": 15
+      "agentic": 18,
+      "code": 19,
+      "general_web": 10,
+      "indic": 82,
+      "math_science": 15,
+      "reasoning": 36
     },
     "steps": 20
   },
-  "firewall_ngrams_checked": 34636,
+  "firewall_ngrams_checked": 34642,
   "mode": "fresh",
   "store": {
-    "cache_hit_rate": 0.5708,
-    "cache_hits": 1217,
-    "cache_misses": 915,
-    "mean_shard_read_ms": 1.163,
-    "shard_reads": 915
+    "cache_hit_rate": 0.5757,
+    "cache_hits": 1225,
+    "cache_misses": 903,
+    "mean_shard_read_ms": 1.356,
+    "shard_reads": 903
   },
   "tag": "fresh",
   "timings_s": {
-    "checkpoint": 0.218514,
-    "firewall": 0.402444,
-    "ledger_io": 1.61451,
-    "loader_total": 3.148445,
-    "opus_scoring": 2.586925,
-    "packing_verify": 0.396889,
-    "train_compute": 1.297929
+    "checkpoint": 0.270246,
+    "firewall": 0.51375,
+    "ledger_io": 1.643179,
+    "loader_total": 3.418161,
+    "opus_scoring": 2.806905,
+    "packing_verify": 0.467922,
+    "train_compute": 1.063908
   },
-  "wall_s": 7.166459
+  "wall_s": 7.463
 }

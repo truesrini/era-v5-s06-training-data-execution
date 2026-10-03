@@ -48,10 +48,6 @@ def seed_int(*parts) -> int:
     return int(sha256_json(list(parts))[:15], 16)
 
 
-def params_hash(params: dict) -> str:
-    return array_hash(*[params[k] for k in sorted(params)])
-
-
 # ----------------------------------------------------------------------------- files
 def write_json(path: str, obj, readonly: bool = False) -> str:
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)

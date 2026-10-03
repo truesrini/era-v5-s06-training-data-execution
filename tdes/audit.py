@@ -13,7 +13,8 @@ from .firewall import EvalRegistry, ngram_hashes
 from .packing import build_sequence, verify_sequence
 from .shards import ShardStore, load_manifests
 from .tokenizer import Tokenizer
-from .util import Ledger, params_hash, read_json, rel, write_json
+from .model import checkpoint_weights_hash
+from .util import Ledger, read_json, rel, write_json
 
 
 def _committed_steps(recs):
@@ -70,8 +71,7 @@ def audit(art, log, main="main", reference="reference"):
     for st_path in sorted(glob.glob(os.path.join(art, "checkpoints", "*", "step_*", "state.json"))):
         st = read_json(st_path)
         d = os.path.dirname(st_path)
-        with np.load(os.path.join(d, "model.npz")) as z:
-            w_ok = params_hash({k: z[k] for k in z.files}) == st["weights_hash"]
+        w_ok = checkpoint_weights_hash(os.path.join(d, "model.pt")) == st["weights_hash"]
         row = {"checkpoint_id": st["checkpoint_id"], "path": rel(d, art), "step": st["global_step"], "weights_ok": w_ok}
         for name, off in st["ledger_offsets"].items():
             recs = Ledger.read(os.path.join(art, off["path"]))

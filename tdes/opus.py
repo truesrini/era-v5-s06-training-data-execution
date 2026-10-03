@@ -21,13 +21,6 @@ import math
 import numpy as np
 
 
-def cosine(a, b):
-    na, nb = float(np.linalg.norm(a)), float(np.linalg.norm(b))
-    if na == 0 or nb == 0:
-        return 0.0
-    return float(np.dot(a, b) / (na * nb))
-
-
 def threshold(scores, quantile):
     if not scores:
         return 0.0

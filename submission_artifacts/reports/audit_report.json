@@ -1,7 +1,7 @@
 {
   "checkpoints": [
     {
-      "checkpoint_id": "ckpt-fork-ad01c550-s00016-6a84451c0b",
+      "checkpoint_id": "ckpt-fork-1035a481-s00016-9ab2929f34",
       "consumption_bound": true,
       "consumption_offset": 42,
       "last_committed_step_matches": true,
@@ -10,13 +10,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 133,
-      "path": "checkpoints/fork-ad01c550/step_00016",
+      "opus_offset": 141,
+      "path": "checkpoints/fork-1035a481/step_00016",
       "step": 16,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-fork-ad01c550-s00020-b528c9d480",
+      "checkpoint_id": "ckpt-fork-1035a481-s00020-bbfab6a7af",
       "consumption_bound": true,
       "consumption_offset": 83,
       "last_committed_step_matches": true,
@@ -25,13 +25,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 277,
-      "path": "checkpoints/fork-ad01c550/step_00020",
+      "opus_offset": 274,
+      "path": "checkpoints/fork-1035a481/step_00020",
       "step": 20,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-main-s00004-7e7b48a44b",
+      "checkpoint_id": "ckpt-main-s00004-6c27b3b692",
       "consumption_bound": true,
       "consumption_offset": 41,
       "last_committed_step_matches": true,
@@ -40,13 +40,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 120,
+      "opus_offset": 122,
       "path": "checkpoints/main/step_00004",
       "step": 4,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-main-s00008-d8a1a817d2",
+      "checkpoint_id": "ckpt-main-s00008-835ab9af05",
       "consumption_bound": true,
       "consumption_offset": 82,
       "last_committed_step_matches": true,
@@ -55,13 +55,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 239,
+      "opus_offset": 243,
       "path": "checkpoints/main/step_00008",
       "step": 8,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-main-s00012-ae048d3549",
+      "checkpoint_id": "ckpt-main-s00012-312938f65f",
       "consumption_bound": true,
       "consumption_offset": 123,
       "last_committed_step_matches": true,
@@ -70,13 +70,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 358,
+      "opus_offset": 367,
       "path": "checkpoints/main/step_00012",
       "step": 12,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-main-s00016-1838ca64f7",
+      "checkpoint_id": "ckpt-main-s00016-bd21238a75",
       "consumption_bound": true,
       "consumption_offset": 164,
       "last_committed_step_matches": true,
@@ -85,13 +85,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 478,
+      "opus_offset": 484,
       "path": "checkpoints/main/step_00016",
       "step": 16,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-main-s00020-59ce18a967",
+      "checkpoint_id": "ckpt-main-s00020-3a4df7e38d",
       "consumption_bound": true,
       "consumption_offset": 205,
       "last_committed_step_matches": true,
@@ -100,13 +100,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 609,
+      "opus_offset": 610,
       "path": "checkpoints/main/step_00020",
       "step": 20,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-main-s00024-0e0d76e34d",
+      "checkpoint_id": "ckpt-main-s00024-9a60571448",
       "consumption_bound": true,
       "consumption_offset": 251,
       "last_committed_step_matches": true,
@@ -115,13 +115,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 765,
+      "opus_offset": 766,
       "path": "checkpoints/main/step_00024",
       "step": 24,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-main-s00028-4a8c4a0bf9",
+      "checkpoint_id": "ckpt-main-s00028-bb0dff8901",
       "consumption_bound": true,
       "consumption_offset": 292,
       "last_committed_step_matches": true,
@@ -130,13 +130,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 889,
+      "opus_offset": 897,
       "path": "checkpoints/main/step_00028",
       "step": 28,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-main-s00032-5e49b0b888",
+      "checkpoint_id": "ckpt-main-s00032-92a435d6e8",
       "consumption_bound": true,
       "consumption_offset": 333,
       "last_committed_step_matches": true,
@@ -145,13 +145,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 1010,
+      "opus_offset": 1031,
       "path": "checkpoints/main/step_00032",
       "step": 32,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-reference-s00032-5e49b0b888",
+      "checkpoint_id": "ckpt-reference-s00032-92a435d6e8",
       "consumption_bound": true,
       "consumption_offset": 321,
       "last_committed_step_matches": true,
@@ -160,13 +160,13 @@
       "offset_points_at_own_checkpoint_event": true,
       "ok": true,
       "opus_bound": true,
-      "opus_offset": 978,
+      "opus_offset": 998,
       "path": "checkpoints/reference/step_00032",
       "step": 32,
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-replay-main-s00008-s00012-ae048d3549",
+      "checkpoint_id": "ckpt-replay-main-s00008-s00012-312938f65f",
       "consumption_bound": true,
       "consumption_offset": 42,
       "last_committed_step_matches": true,
@@ -181,7 +181,7 @@
       "weights_ok": true
     },
     {
-      "checkpoint_id": "ckpt-replay-main-s00008-s00016-1838ca64f7",
+      "checkpoint_id": "ckpt-replay-main-s00008-s00016-bd21238a75",
       "consumption_bound": true,
       "consumption_offset": 83,
       "last_committed_step_matches": true,
@@ -198,7 +198,7 @@
   ],
   "checks": [
     {
-      "detail": "12 ledgers, 4490 records, every prev_hash/event_hash verified",
+      "detail": "12 ledgers, 4528 records, every prev_hash/event_hash verified",
       "evidence": null,
       "name": "ledger_hash_chains_valid",
       "passed": true,
@@ -226,14 +226,14 @@
       "section": "stream"
     },
     {
-      "detail": "32/32 batch hashes equal the reference run; final weights 5e49b0b888b7 == reference 5e49b0b888b7",
+      "detail": "32/32 batch hashes equal the reference run; final weights 92a435d6e8a9 == reference 92a435d6e8a9",
       "evidence": null,
       "name": "resumed_stream_equals_uninterrupted_run",
       "passed": true,
       "section": "resume"
     },
     {
-      "detail": "158154 consumed tokens across 4 branches re-scanned against 2315 eval 12-gram fingerprints and shard permissions: 0 violations",
+      "detail": "158525 consumed tokens across 4 branches re-scanned against 2315 eval 12-gram fingerprints and shard permissions: 0 violations",
       "evidence": null,
       "name": "no_eval_or_validation_token_in_any_trained_batch",
       "passed": true,
@@ -275,7 +275,7 @@
       "section": "packing"
     },
     {
-      "detail": "ledger counts {'positions': 65536, 'nonpad_tokens': 63223, 'loss_tokens': 55875} == recount from shards {'positions': 65536, 'nonpad_tokens': 63223, 'loss_tokens': 55875}",
+      "detail": "ledger counts {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948} == recount from shards {'positions': 65536, 'nonpad_tokens': 63378, 'loss_tokens': 55948}",
       "evidence": null,
       "name": "ledger_token_counts_reconstruct",
       "passed": true,
@@ -317,7 +317,7 @@
       "section": "opus"
     },
     {
-      "detail": "accepted=512 rejected=306 deferred=160 protected_floor_override=42; reasons={'proxy_utility_above_threshold': 445, 'quota_full_above_threshold': 160, 'protected_floor_override': 42, 'quota_fill_below_threshold': 25, 'low_proxy_utility': 273, 'quota_pressure': 29, 'stage_mismatch': 1, 'duplicate': 3}",
+      "detail": "accepted=512 rejected=320 deferred=166 protected_floor_override=42; reasons={'proxy_utility_above_threshold': 437, 'quota_full_above_threshold': 166, 'protected_floor_override': 42, 'quota_fill_below_threshold': 33, 'low_proxy_utility': 281, 'quota_pressure': 31, 'duplicate': 6, 'stage_mismatch': 2}",
       "evidence": "ledgers/main/opus.jsonl",
       "name": "all_decision_kinds_exercised",
       "passed": true,
@@ -331,7 +331,7 @@
       "section": "opus"
     },
     {
-      "detail": "978 records carry 12 required fields",
+      "detail": "998 records carry 12 required fields",
       "evidence": null,
       "name": "decision_records_complete",
       "passed": true,
@@ -345,7 +345,7 @@
       "section": "learning"
     },
     {
-      "detail": "55875 token-level losses; per-sample means equal ledger loss_before and link to span/shard/doc",
+      "detail": "55948 token-level losses; per-sample means equal ledger loss_before and link to span/shard/doc",
       "evidence": null,
       "name": "token_trace_reconciles_with_ledger",
       "passed": true,
@@ -366,7 +366,7 @@
       "section": "replay"
     },
     {
-      "detail": "fork-ad01c550: first record is branch_forked at step 13 with the parent's ledger offset 123; lineage = main[1..12] + fork-ad01c550[13..20]",
+      "detail": "fork-1035a481: first record is branch_forked at step 13 with the parent's ledger offset 123; lineage = main[1..12] + fork-1035a481[13..20]",
       "evidence": null,
       "name": "fork_lineage_explicit",
       "passed": true,
@@ -472,12 +472,12 @@
         "type": "batch_blocked"
       }
     ],
-    "scanned_tokens": 158154,
+    "scanned_tokens": 158525,
     "validation_reads": 13,
     "violations": []
   },
   "fork": {
-    "branch": "fork-ad01c550",
+    "branch": "fork-1035a481",
     "divergence_step": 13,
     "lineage_steps": [
       1,
@@ -507,7 +507,7 @@
       "useful": 32
     },
     "sample_records": 512,
-    "token_trace_rows": 55875
+    "token_trace_rows": 55948
   },
   "ledger_chains": {
     "ledgers/firewall.jsonl": {
@@ -515,20 +515,20 @@
       "first_bad": null,
       "records": 31
     },
-    "ledgers/fork-ad01c550/consumption.jsonl": {
+    "ledgers/fork-1035a481/consumption.jsonl": {
       "chain_ok": true,
       "first_bad": null,
       "records": 83
     },
-    "ledgers/fork-ad01c550/learning.jsonl": {
+    "ledgers/fork-1035a481/learning.jsonl": {
       "chain_ok": true,
       "first_bad": null,
       "records": 138
     },
-    "ledgers/fork-ad01c550/opus.jsonl": {
+    "ledgers/fork-1035a481/opus.jsonl": {
       "chain_ok": true,
       "first_bad": null,
-      "records": 277
+      "records": 274
     },
     "ledgers/main/consumption.jsonl": {
       "chain_ok": true,
@@ -543,7 +543,7 @@
     "ledgers/main/opus.jsonl": {
       "chain_ok": true,
       "first_bad": null,
-      "records": 1010
+      "records": 1031
     },
     "ledgers/reference/consumption.jsonl": {
       "chain_ok": true,
@@ -558,7 +558,7 @@
     "ledgers/reference/opus.jsonl": {
       "chain_ok": true,
       "first_bad": null,
-      "records": 978
+      "records": 998
     },
     "ledgers/replay-main-s00008/consumption.jsonl": {
       "chain_ok": true,
@@ -586,13 +586,13 @@
         },
         "actual_equals_compiled_quota": true,
         "actual_share_loss_tokens": {
-          "agentic": 0.040557,
+          "agentic": 0.039107,
           "anneal_reserve": 0.0,
-          "code": 0.205705,
-          "general_web": 0.34613,
-          "indic": 0.195444,
-          "math_science": 0.172888,
-          "reasoning": 0.039275
+          "code": 0.206342,
+          "general_web": 0.346605,
+          "indic": 0.195403,
+          "math_science": 0.173258,
+          "reasoning": 0.039284
         },
         "actual_share_sequences": {
           "agentic": 0.067708,
@@ -646,13 +646,13 @@
         },
         "actual_equals_compiled_quota": true,
         "actual_share_loss_tokens": {
-          "agentic": 0.060086,
+          "agentic": 0.056528,
           "anneal_reserve": 0.0,
-          "code": 0.214875,
-          "general_web": 0.256049,
-          "indic": 0.202283,
-          "math_science": 0.184738,
-          "reasoning": 0.08197
+          "code": 0.221936,
+          "general_web": 0.254726,
+          "indic": 0.201389,
+          "math_science": 0.18375,
+          "reasoning": 0.081672
         },
         "actual_share_sequences": {
           "agentic": 0.098958,
@@ -706,13 +706,13 @@
         },
         "actual_equals_compiled_quota": true,
         "actual_share_loss_tokens": {
-          "agentic": 0.077848,
-          "anneal_reserve": 0.188194,
-          "code": 0.167966,
+          "agentic": 0.079987,
+          "anneal_reserve": 0.185944,
+          "code": 0.168852,
           "general_web": 0.0,
-          "indic": 0.271763,
-          "math_science": 0.188277,
-          "reasoning": 0.105953
+          "indic": 0.271988,
+          "math_science": 0.188682,
+          "reasoning": 0.104547
         },
         "actual_share_sequences": {
           "agentic": 0.109375,
@@ -761,78 +761,78 @@
     "by_lane": {
       "agentic": {
         "accepted": 46,
-        "deferred": 19,
-        "rejected": 19
+        "deferred": 16,
+        "rejected": 22
       },
       "anneal_reserve": {
         "accepted": 34,
-        "deferred": 6,
-        "rejected": 16
+        "deferred": 1,
+        "rejected": 59
       },
       "code": {
         "accepted": 94,
-        "deferred": 30,
-        "rejected": 62
+        "deferred": 37,
+        "rejected": 30
       },
       "general_web": {
         "accepted": 105,
-        "deferred": 46,
-        "rejected": 15
+        "deferred": 49,
+        "rejected": 13
       },
       "indic": {
         "accepted": 95,
-        "deferred": 18,
-        "rejected": 106
+        "deferred": 23,
+        "rejected": 88
       },
       "math_science": {
         "accepted": 80,
-        "deferred": 29,
-        "rejected": 25
+        "deferred": 31,
+        "rejected": 21
       },
       "reasoning": {
         "accepted": 58,
-        "deferred": 12,
-        "rejected": 63
+        "deferred": 9,
+        "rejected": 87
       }
     },
     "protected_floor_overrides": 42,
     "reasons": {
-      "duplicate": 3,
-      "low_proxy_utility": 273,
+      "duplicate": 6,
+      "low_proxy_utility": 281,
       "protected_floor_override": 42,
-      "proxy_utility_above_threshold": 445,
-      "quota_fill_below_threshold": 25,
-      "quota_full_above_threshold": 160,
-      "quota_pressure": 29,
-      "stage_mismatch": 1
+      "proxy_utility_above_threshold": 437,
+      "quota_fill_below_threshold": 33,
+      "quota_full_above_threshold": 166,
+      "quota_pressure": 31,
+      "stage_mismatch": 2
     },
-    "records": 978,
+    "records": 998,
     "rejection_rate_by_lane": {
-      "agentic": 0.2262,
-      "anneal_reserve": 0.2857,
-      "code": 0.3333,
-      "general_web": 0.0904,
-      "indic": 0.484,
-      "math_science": 0.1866,
-      "reasoning": 0.4737
+      "agentic": 0.2619,
+      "anneal_reserve": 0.6277,
+      "code": 0.1863,
+      "general_web": 0.0778,
+      "indic": 0.4272,
+      "math_science": 0.1591,
+      "reasoning": 0.5649
     },
     "status": {
       "accepted": 512,
-      "deferred": 160,
-      "rejected": 306
+      "deferred": 166,
+      "rejected": 320
     }
   },
   "packing": {
     "invariant_failures": [],
-    "loss_bearing_fraction": 0.852585,
+    "loss_bearing_fraction": 0.853699,
     "loss_tokens_by_lane": {
-      "agentic": 3130,
-      "anneal_reserve": 2270,
-      "code": 11233,
-      "general_web": 13255,
-      "indic": 11986,
-      "math_science": 10097,
-      "reasoning": 3904
+      "agentic": 3052,
+      "anneal_reserve": 2241,
+      "code": 11425,
+      "general_web": 13256,
+      "indic": 11983,
+      "math_science": 10103,
+      "reasoning": 3888
     },
     "mismatches": [],
     "positions_by_lane": {
@@ -846,30 +846,30 @@
     },
     "rebuilt_samples": 512,
     "totals": {
-      "loss_tokens": 55875,
-      "nonpad_tokens": 63223,
+      "loss_tokens": 55948,
+      "nonpad_tokens": 63378,
       "positions": 65536
     },
-    "utilization": 0.964706,
+    "utilization": 0.967072,
     "utilization_by_lane": {
-      "agentic": 0.8682,
-      "anneal_reserve": 0.9324,
-      "code": 0.9435,
+      "agentic": 0.8601,
+      "anneal_reserve": 0.9403,
+      "code": 0.9596,
       "general_web": 1.0,
       "indic": 1.0,
       "math_science": 1.0,
-      "reasoning": 0.9242
+      "reasoning": 0.9208
     }
   },
   "queries": {
     "what_preceded_the_largest_loss_spike": {
-      "loss_increase": 0.364413,
+      "loss_increase": 0.263842,
       "opus_accepted_before_spike": [
         {
           "decision_id": "opd-00008-000",
           "lane": "general_web",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.7870542866756185,
+          "score": 0.7470348410503533,
           "shard_ids": [
             "shd-general_web-train-d198d7a136b1",
             "shd-general_web-train-da1acf065374"
@@ -880,9 +880,9 @@
           "decision_id": "opd-00008-001",
           "lane": "general_web",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.702113351047116,
+          "score": 0.6920251187671925,
           "shard_ids": [
-            "shd-general_web-train-da1acf065374"
+            "shd-general_web-train-6610b2596e7e"
           ],
           "step": 8
         },
@@ -890,9 +890,8 @@
           "decision_id": "opd-00008-002",
           "lane": "general_web",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.6941353681849125,
+          "score": 0.6511492720027567,
           "shard_ids": [
-            "shd-general_web-train-6610b2596e7e",
             "shd-general_web-train-da1acf065374"
           ],
           "step": 8
@@ -901,10 +900,10 @@
           "decision_id": "opd-00008-003",
           "lane": "general_web",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.6859040111272845,
+          "score": 0.6246314063244037,
           "shard_ids": [
-            "shd-general_web-train-7f6313c11dd2",
-            "shd-general_web-train-e726c40dfb40"
+            "shd-general_web-train-6610b2596e7e",
+            "shd-general_web-train-da1acf065374"
           ],
           "step": 8
         },
@@ -912,7 +911,7 @@
           "decision_id": "opd-00008-004",
           "lane": "general_web",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.6433671924196652,
+          "score": 0.574271692073864,
           "shard_ids": [
             "shd-general_web-train-896422f889e4",
             "shd-general_web-train-d198d7a136b1"
@@ -923,7 +922,7 @@
           "decision_id": "opd-00008-008",
           "lane": "code",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.5078451110970515,
+          "score": 0.4042107115689565,
           "shard_ids": [
             "shd-code-train-c4632678cd6e"
           ],
@@ -933,7 +932,7 @@
           "decision_id": "opd-00008-009",
           "lane": "code",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.47130083391749883,
+          "score": 0.3843137143134465,
           "shard_ids": [
             "shd-code-train-c4632678cd6e"
           ],
@@ -943,7 +942,7 @@
           "decision_id": "opd-00008-010",
           "lane": "code",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.4710017123997284,
+          "score": 0.36637668764045744,
           "shard_ids": [
             "shd-code-train-f7edc679ba1d"
           ],
@@ -953,9 +952,9 @@
           "decision_id": "opd-00008-011",
           "lane": "code",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.4436596385560198,
+          "score": 0.3351344197862763,
           "shard_ids": [
-            "shd-code-train-c4632678cd6e"
+            "shd-code-train-f7edc679ba1d"
           ],
           "step": 8
         },
@@ -963,7 +962,7 @@
           "decision_id": "opd-00008-014",
           "lane": "math_science",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.49254551963972176,
+          "score": 0.371494778680279,
           "shard_ids": [
             "shd-math_science-train-512d6b0ff386"
           ],
@@ -973,10 +972,9 @@
           "decision_id": "opd-00008-015",
           "lane": "math_science",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.429837995905257,
+          "score": 0.36367464710337777,
           "shard_ids": [
-            "shd-math_science-train-512d6b0ff386",
-            "shd-math_science-train-551548043c5e"
+            "shd-math_science-train-512d6b0ff386"
           ],
           "step": 8
         },
@@ -984,9 +982,8 @@
           "decision_id": "opd-00008-017",
           "lane": "indic",
           "reason": "protected_floor_override",
-          "score": 0.2652794069353118,
+          "score": -0.005214636842761467,
           "shard_ids": [
-            "shd-indic-train-be029172628d",
             "shd-indic-train-ca6702e9807e"
           ],
           "step": 8
@@ -995,9 +992,10 @@
           "decision_id": "opd-00008-018",
           "lane": "indic",
           "reason": "protected_floor_override",
-          "score": 0.24814592324198728,
+          "score": -0.17447890013302403,
           "shard_ids": [
-            "shd-indic-train-be029172628d"
+            "shd-indic-train-8eadc41d7a86",
+            "shd-indic-train-ca6702e9807e"
           ],
           "step": 8
         },
@@ -1005,8 +1003,9 @@
           "decision_id": "opd-00008-019",
           "lane": "indic",
           "reason": "quota_fill_below_threshold",
-          "score": 0.20624196647633103,
+          "score": -0.13494807893184757,
           "shard_ids": [
+            "shd-indic-train-8eadc41d7a86",
             "shd-indic-train-ca6702e9807e"
           ],
           "step": 8
@@ -1014,8 +1013,8 @@
         {
           "decision_id": "opd-00008-026",
           "lane": "reasoning",
-          "reason": "protected_floor_override",
-          "score": 0.2504449987629131,
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.21365358540248677,
           "shard_ids": [
             "shd-reasoning-train-c3f8074fcf9a"
           ],
@@ -1024,8 +1023,8 @@
         {
           "decision_id": "opd-00008-028",
           "lane": "agentic",
-          "reason": "proxy_utility_above_threshold",
-          "score": 0.3246105791938127,
+          "reason": "protected_floor_override",
+          "score": 0.1410406448076101,
           "shard_ids": [
             "shd-agentic-train-9173827a9592"
           ],
@@ -1035,28 +1034,7 @@
           "decision_id": "opd-00009-000",
           "lane": "general_web",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.669004082734751,
-          "shard_ids": [
-            "shd-general_web-train-a40d1340a215"
-          ],
-          "step": 9
-        },
-        {
-          "decision_id": "opd-00009-001",
-          "lane": "general_web",
-          "reason": "proxy_utility_above_threshold",
-          "score": 0.6653957475582873,
-          "shard_ids": [
-            "shd-general_web-train-a40d1340a215",
-            "shd-general_web-train-e726c40dfb40"
-          ],
-          "step": 9
-        },
-        {
-          "decision_id": "opd-00009-002",
-          "lane": "general_web",
-          "reason": "proxy_utility_above_threshold",
-          "score": 0.6552873875509444,
+          "score": 0.7169318795134444,
           "shard_ids": [
             "shd-general_web-train-7f6313c11dd2",
             "shd-general_web-train-896422f889e4"
@@ -1064,12 +1042,32 @@
           "step": 9
         },
         {
+          "decision_id": "opd-00009-001",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.7145273014500194,
+          "shard_ids": [
+            "shd-general_web-train-a40d1340a215"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-002",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.7139651612973629,
+          "shard_ids": [
+            "shd-general_web-train-e726c40dfb40"
+          ],
+          "step": 9
+        },
+        {
           "decision_id": "opd-00009-003",
           "lane": "general_web",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.6451773804358402,
+          "score": 0.7017665484540047,
           "shard_ids": [
-            "shd-general_web-train-e726c40dfb40"
+            "shd-general_web-train-d198d7a136b1"
           ],
           "step": 9
         },
@@ -1077,10 +1075,10 @@
           "decision_id": "opd-00009-004",
           "lane": "general_web",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.5933572969913152,
+          "score": 0.6998245756552034,
           "shard_ids": [
-            "shd-general_web-train-6610b2596e7e",
-            "shd-general_web-train-a40d1340a215"
+            "shd-general_web-train-a40d1340a215",
+            "shd-general_web-train-e726c40dfb40"
           ],
           "step": 9
         },
@@ -1088,7 +1086,7 @@
           "decision_id": "opd-00009-008",
           "lane": "code",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.4553340773363853,
+          "score": 0.6084195091406975,
           "shard_ids": [
             "shd-code-train-6b4e59183e95"
           ],
@@ -1098,9 +1096,9 @@
           "decision_id": "opd-00009-009",
           "lane": "code",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.42135217992982926,
+          "score": 0.5738266022000393,
           "shard_ids": [
-            "shd-code-train-c9bbe04bac8d"
+            "shd-code-train-f7edc679ba1d"
           ],
           "step": 9
         },
@@ -1108,9 +1106,9 @@
           "decision_id": "opd-00009-010",
           "lane": "code",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.39707988405015915,
+          "score": 0.5543509079578375,
           "shard_ids": [
-            "shd-code-train-f7edc679ba1d"
+            "shd-code-train-c4632678cd6e"
           ],
           "step": 9
         },
@@ -1118,7 +1116,7 @@
           "decision_id": "opd-00009-013",
           "lane": "math_science",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.49164884122087954,
+          "score": 0.7018494989973255,
           "shard_ids": [
             "shd-math_science-train-512d6b0ff386",
             "shd-math_science-train-56bd36818176"
@@ -1129,7 +1127,7 @@
           "decision_id": "opd-00009-014",
           "lane": "math_science",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.4322926495316696,
+          "score": 0.6742935093632714,
           "shard_ids": [
             "shd-math_science-train-551548043c5e"
           ],
@@ -1139,18 +1137,18 @@
           "decision_id": "opd-00009-015",
           "lane": "math_science",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.3965435269360803,
+          "score": 0.6513447016631865,
           "shard_ids": [
             "shd-math_science-train-512d6b0ff386",
-            "shd-math_science-train-56bd36818176"
+            "shd-math_science-train-551548043c5e"
           ],
           "step": 9
         },
         {
           "decision_id": "opd-00009-018",
           "lane": "indic",
-          "reason": "proxy_utility_above_threshold",
-          "score": 0.3537858770219264,
+          "reason": "protected_floor_override",
+          "score": 0.5008863267967756,
           "shard_ids": [
             "shd-indic-train-8eadc41d7a86",
             "shd-indic-train-ca6702e9807e"
@@ -1160,9 +1158,10 @@
         {
           "decision_id": "opd-00009-019",
           "lane": "indic",
-          "reason": "proxy_utility_above_threshold",
-          "score": 0.32846863451890324,
+          "reason": "protected_floor_override",
+          "score": 0.43556756512292655,
           "shard_ids": [
+            "shd-indic-train-2ece284f9797",
             "shd-indic-train-ca6702e9807e"
           ],
           "step": 9
@@ -1170,29 +1169,29 @@
         {
           "decision_id": "opd-00009-020",
           "lane": "indic",
-          "reason": "quota_fill_below_threshold",
-          "score": 0.3281425744710712,
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.5605766368876455,
           "shard_ids": [
-            "shd-indic-train-2ece284f9797",
-            "shd-indic-train-8eadc41d7a86"
+            "shd-indic-train-8eadc41d7a86",
+            "shd-indic-train-ca6702e9807e"
           ],
           "step": 9
         },
         {
-          "decision_id": "opd-00009-027",
+          "decision_id": "opd-00009-025",
           "lane": "reasoning",
-          "reason": "protected_floor_override",
-          "score": 0.2022929717344067,
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.5033956286714122,
           "shard_ids": [
             "shd-reasoning-train-1c47f9da7dd9"
           ],
           "step": 9
         },
         {
-          "decision_id": "opd-00009-029",
+          "decision_id": "opd-00009-027",
           "lane": "agentic",
           "reason": "proxy_utility_above_threshold",
-          "score": 0.43831708230551814,
+          "score": 0.5940216423189411,
           "shard_ids": [
             "shd-agentic-train-a5ba98a2da48"
           ],
@@ -1206,35 +1205,59 @@
       "shards": [
         {
           "lanes": [
-            "indic"
+            "general_web"
           ],
-          "loss_tokens": 1011,
-          "shard_id": "shd-indic-train-8eadc41d7a86",
-          "spans": 17
+          "loss_tokens": 884,
+          "shard_id": "shd-general_web-train-d198d7a136b1",
+          "spans": 13
+        },
+        {
+          "lanes": [
+            "code"
+          ],
+          "loss_tokens": 1112,
+          "shard_id": "shd-code-train-6b4e59183e95",
+          "spans": 13
         },
         {
           "lanes": [
             "math_science"
           ],
-          "loss_tokens": 757,
+          "loss_tokens": 883,
           "shard_id": "shd-math_science-train-56bd36818176",
-          "spans": 14
+          "spans": 13
         },
         {
           "lanes": [
-            "general_web"
+            "indic"
           ],
-          "loss_tokens": 757,
-          "shard_id": "shd-general_web-train-d198d7a136b1",
+          "loss_tokens": 882,
+          "shard_id": "shd-indic-train-3305107b346f",
+          "spans": 13
+        },
+        {
+          "lanes": [
+            "math_science"
+          ],
+          "loss_tokens": 883,
+          "shard_id": "shd-math_science-train-512d6b0ff386",
           "spans": 12
         },
         {
           "lanes": [
             "general_web"
           ],
-          "loss_tokens": 884,
+          "loss_tokens": 758,
           "shard_id": "shd-general_web-train-e726c40dfb40",
           "spans": 11
+        },
+        {
+          "lanes": [
+            "indic"
+          ],
+          "loss_tokens": 758,
+          "shard_id": "shd-indic-train-8eadc41d7a86",
+          "spans": 10
         },
         {
           "lanes": [
@@ -1242,63 +1265,63 @@
           ],
           "loss_tokens": 758,
           "shard_id": "shd-general_web-train-6610b2596e7e",
-          "spans": 11
-        },
-        {
-          "lanes": [
-            "math_science"
-          ],
-          "loss_tokens": 755,
-          "shard_id": "shd-math_science-train-512d6b0ff386",
-          "spans": 11
-        },
-        {
-          "lanes": [
-            "indic"
-          ],
-          "loss_tokens": 756,
-          "shard_id": "shd-indic-train-3305107b346f",
-          "spans": 11
-        },
-        {
-          "lanes": [
-            "code"
-          ],
-          "loss_tokens": 979,
-          "shard_id": "shd-code-train-f7edc679ba1d",
-          "spans": 10
-        },
-        {
-          "lanes": [
-            "code"
-          ],
-          "loss_tokens": 860,
-          "shard_id": "shd-code-train-6b4e59183e95",
-          "spans": 10
-        },
-        {
-          "lanes": [
-            "math_science"
-          ],
-          "loss_tokens": 757,
-          "shard_id": "shd-math_science-train-d79ca19c09ac",
           "spans": 10
         },
         {
           "lanes": [
             "general_web"
           ],
-          "loss_tokens": 758,
+          "loss_tokens": 631,
           "shard_id": "shd-general_web-train-da1acf065374",
-          "spans": 10
+          "spans": 9
         },
         {
           "lanes": [
             "code"
           ],
-          "loss_tokens": 602,
-          "shard_id": "shd-code-train-c9bbe04bac8d",
+          "loss_tokens": 730,
+          "shard_id": "shd-code-train-f7edc679ba1d",
+          "spans": 8
+        },
+        {
+          "lanes": [
+            "indic"
+          ],
+          "loss_tokens": 630,
+          "shard_id": "shd-indic-train-ca6702e9807e",
+          "spans": 8
+        },
+        {
+          "lanes": [
+            "indic"
+          ],
+          "loss_tokens": 379,
+          "shard_id": "shd-indic-train-be029172628d",
+          "spans": 8
+        },
+        {
+          "lanes": [
+            "code"
+          ],
+          "loss_tokens": 727,
+          "shard_id": "shd-code-train-c4632678cd6e",
           "spans": 7
+        },
+        {
+          "lanes": [
+            "math_science"
+          ],
+          "loss_tokens": 506,
+          "shard_id": "shd-math_science-train-d79ca19c09ac",
+          "spans": 7
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 378,
+          "shard_id": "shd-general_web-train-7f6313c11dd2",
+          "spans": 6
         },
         {
           "lanes": [
@@ -1318,18 +1341,10 @@
         },
         {
           "lanes": [
-            "indic"
+            "code"
           ],
-          "loss_tokens": 505,
-          "shard_id": "shd-indic-train-ca6702e9807e",
-          "spans": 6
-        },
-        {
-          "lanes": [
-            "indic"
-          ],
-          "loss_tokens": 505,
-          "shard_id": "shd-indic-train-be029172628d",
+          "loss_tokens": 475,
+          "shard_id": "shd-code-train-c9bbe04bac8d",
           "spans": 6
         },
         {
@@ -1342,35 +1357,35 @@
         },
         {
           "lanes": [
-            "general_web"
+            "agentic"
           ],
-          "loss_tokens": 252,
-          "shard_id": "shd-general_web-train-7f6313c11dd2",
-          "spans": 5
-        },
-        {
-          "lanes": [
-            "code"
-          ],
-          "loss_tokens": 598,
-          "shard_id": "shd-code-train-c4632678cd6e",
+          "loss_tokens": 319,
+          "shard_id": "shd-agentic-train-9173827a9592",
           "spans": 5
         },
         {
           "lanes": [
             "reasoning"
           ],
-          "loss_tokens": 335,
-          "shard_id": "shd-reasoning-train-b92ef5e889e1",
+          "loss_tokens": 338,
+          "shard_id": "shd-reasoning-train-c3f8074fcf9a",
           "spans": 5
         },
         {
           "lanes": [
-            "agentic"
+            "indic"
           ],
-          "loss_tokens": 362,
-          "shard_id": "shd-agentic-train-9173827a9592",
-          "spans": 5
+          "loss_tokens": 252,
+          "shard_id": "shd-indic-train-2ece284f9797",
+          "spans": 4
+        },
+        {
+          "lanes": [
+            "reasoning"
+          ],
+          "loss_tokens": 208,
+          "shard_id": "shd-reasoning-train-1c47f9da7dd9",
+          "spans": 3
         },
         {
           "lanes": [
@@ -1392,41 +1407,25 @@
           "lanes": [
             "reasoning"
           ],
-          "loss_tokens": 200,
-          "shard_id": "shd-reasoning-train-c3f8074fcf9a",
-          "spans": 3
+          "loss_tokens": 135,
+          "shard_id": "shd-reasoning-train-fca2f5d1b1ce",
+          "spans": 2
         },
         {
           "lanes": [
             "reasoning"
           ],
-          "loss_tokens": 138,
-          "shard_id": "shd-reasoning-train-1c47f9da7dd9",
+          "loss_tokens": 132,
+          "shard_id": "shd-reasoning-train-b92ef5e889e1",
           "spans": 2
         },
         {
           "lanes": [
             "agentic"
           ],
-          "loss_tokens": 144,
+          "loss_tokens": 121,
           "shard_id": "shd-agentic-train-9f31a36166f3",
           "spans": 2
-        },
-        {
-          "lanes": [
-            "reasoning"
-          ],
-          "loss_tokens": 136,
-          "shard_id": "shd-reasoning-train-fca2f5d1b1ce",
-          "spans": 2
-        },
-        {
-          "lanes": [
-            "indic"
-          ],
-          "loss_tokens": 126,
-          "shard_id": "shd-indic-train-2ece284f9797",
-          "spans": 1
         },
         {
           "lanes": [
@@ -1447,50 +1446,50 @@
     "branch": "replay-main-s00008",
     "rows": [
       {
-        "original": "2c434e546e5bc87e5e23faa4c6784db5e2eda61baad947c23d3ca2f02c86f687",
-        "replay": "2c434e546e5bc87e5e23faa4c6784db5e2eda61baad947c23d3ca2f02c86f687",
+        "original": "d2f50a96bce21150c61fd36a20e39a1f025742a5d40b2e4685ff504e3f38d5b3",
+        "replay": "d2f50a96bce21150c61fd36a20e39a1f025742a5d40b2e4685ff504e3f38d5b3",
         "step": 9,
         "weights_equal": true
       },
       {
-        "original": "e9dbe5c449e68be785616709facaf92fbc33eb8378af81ceabe0aeff7a64a770",
-        "replay": "e9dbe5c449e68be785616709facaf92fbc33eb8378af81ceabe0aeff7a64a770",
+        "original": "465164e9d4ae82bd015d5a3eaf34a087a165624265b2bcfc11fda8fc251de09d",
+        "replay": "465164e9d4ae82bd015d5a3eaf34a087a165624265b2bcfc11fda8fc251de09d",
         "step": 10,
         "weights_equal": true
       },
       {
-        "original": "4c59360ce0a35ed916fa25cebd21a6251a93179a9002f3b03e24de446ee84a64",
-        "replay": "4c59360ce0a35ed916fa25cebd21a6251a93179a9002f3b03e24de446ee84a64",
+        "original": "6a91a7ecff2c028dfe61c4e8ff4e95980fb3d7b2aa23caf4525e2565d7bc880f",
+        "replay": "6a91a7ecff2c028dfe61c4e8ff4e95980fb3d7b2aa23caf4525e2565d7bc880f",
         "step": 11,
         "weights_equal": true
       },
       {
-        "original": "83fe46adf6848bc1e397e81fb3d35ecd348ef1bbe4b08ad950a146a73b3e5890",
-        "replay": "83fe46adf6848bc1e397e81fb3d35ecd348ef1bbe4b08ad950a146a73b3e5890",
+        "original": "44a51c83a6999b5394184011b72a11b0926734eeb26e2099c38686ef5d46ef53",
+        "replay": "44a51c83a6999b5394184011b72a11b0926734eeb26e2099c38686ef5d46ef53",
         "step": 12,
         "weights_equal": true
       },
       {
-        "original": "598047280e2a846e34ffb57d79b7d8b0c47e8a95a0c1641c50c7d3f4d65e7883",
-        "replay": "598047280e2a846e34ffb57d79b7d8b0c47e8a95a0c1641c50c7d3f4d65e7883",
+        "original": "630619fcfa2448a83c26fd6424ed1d5e5c79580bf65f09e1a5a9de8a05fc669d",
+        "replay": "630619fcfa2448a83c26fd6424ed1d5e5c79580bf65f09e1a5a9de8a05fc669d",
         "step": 13,
         "weights_equal": true
       },
       {
-        "original": "0afa302c202a05a942509e638d031947c481d9dfdd9a66daec2a6f555029df45",
-        "replay": "0afa302c202a05a942509e638d031947c481d9dfdd9a66daec2a6f555029df45",
+        "original": "53ff80748c4e41f60ec965077dca63fe990cbd5a3fe4af48c05c96f55920b6f5",
+        "replay": "53ff80748c4e41f60ec965077dca63fe990cbd5a3fe4af48c05c96f55920b6f5",
         "step": 14,
         "weights_equal": true
       },
       {
-        "original": "9d6048d75f4e216df73eb03eb2bd951e27d1016d711bf86a603cac0c06ae64b2",
-        "replay": "9d6048d75f4e216df73eb03eb2bd951e27d1016d711bf86a603cac0c06ae64b2",
+        "original": "17a4a7ea0544bfdc96b2446db1f52bf1d23195584e2811c1c622a7963f84bf70",
+        "replay": "17a4a7ea0544bfdc96b2446db1f52bf1d23195584e2811c1c622a7963f84bf70",
         "step": 15,
         "weights_equal": true
       },
       {
-        "original": "05b741664b0055feac0266b1f8125221279cb3d546c2c0194328164f337d70d7",
-        "replay": "05b741664b0055feac0266b1f8125221279cb3d546c2c0194328164f337d70d7",
+        "original": "5426334f613bbe0aff2ef940d3da0001e9b96d8421986372cdaa2278e7c67d3f",
+        "replay": "5426334f613bbe0aff2ef940d3da0001e9b96d8421986372cdaa2278e7c67d3f",
         "step": 16,
         "weights_equal": true
       }

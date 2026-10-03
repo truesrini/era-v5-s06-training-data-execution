@@ -2,60 +2,60 @@
   "accounted_through_step": 32,
   "branch": "main",
   "counts": {
-    "accepted_tokens": 23295,
-    "candidate_tokens": 44666,
+    "accepted_tokens": 23431,
+    "candidate_tokens": 46782,
     "candidates_by_lane": {
-      "agentic": 34,
-      "anneal_reserve": 56,
-      "code": 57,
-      "general_web": 23,
-      "indic": 69,
-      "math_science": 50,
-      "reasoning": 80
+      "agentic": 32,
+      "anneal_reserve": 94,
+      "code": 50,
+      "general_web": 24,
+      "indic": 60,
+      "math_science": 46,
+      "reasoning": 82
     },
-    "candidates_scored": 368,
+    "candidates_scored": 386,
     "decisions": {
       "accepted": 192,
       "deferred": 56,
-      "rejected": 121
+      "rejected": 140
     },
     "firewall_sequences_checked": 192,
-    "loss_tokens": 19038,
-    "nonpad_tokens": 23295,
+    "loss_tokens": 19127,
+    "nonpad_tokens": 23431,
     "packing_checks": 192,
     "packing_failures": 0,
     "positions": 24576,
-    "rejected_tokens": 11062,
+    "rejected_tokens": 10831,
     "rejections_by_lane": {
-      "agentic": 5,
-      "anneal_reserve": 16,
-      "code": 17,
-      "general_web": 2,
-      "indic": 20,
-      "math_science": 13,
-      "reasoning": 48
+      "agentic": 4,
+      "anneal_reserve": 59,
+      "code": 11,
+      "general_web": 3,
+      "indic": 6,
+      "math_science": 6,
+      "reasoning": 51
     },
     "steps": 12
   },
-  "firewall_ngrams_checked": 20058,
+  "firewall_ngrams_checked": 20202,
   "mode": "resume",
-  "resume_latency_s": 0.479774,
+  "resume_latency_s": 0.437796,
   "store": {
-    "cache_hit_rate": 0.6199,
-    "cache_hits": 861,
-    "cache_misses": 528,
-    "mean_shard_read_ms": 1.161,
-    "shard_reads": 528
+    "cache_hit_rate": 0.6049,
+    "cache_hits": 865,
+    "cache_misses": 565,
+    "mean_shard_read_ms": 1.171,
+    "shard_reads": 565
   },
   "tag": "resume",
   "timings_s": {
-    "checkpoint": 0.130197,
-    "firewall": 0.227502,
-    "ledger_io": 1.007889,
-    "loader_total": 1.946003,
-    "opus_scoring": 1.615013,
-    "packing_verify": 0.224668,
-    "train_compute": 0.79367
+    "checkpoint": 0.129165,
+    "firewall": 0.25528,
+    "ledger_io": 1.025283,
+    "loader_total": 1.931337,
+    "opus_scoring": 1.604049,
+    "packing_verify": 0.253847,
+    "train_compute": 0.59582
   },
-  "wall_s": 4.577177
+  "wall_s": 4.441854
 }

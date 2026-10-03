@@ -23,12 +23,14 @@ from .config import ATTENTION_POLICY, LANE_POLICY, LANES, POSITION_POLICY, apply
 from .firewall import EvalRegistry, Firewall
 from .loader import LOADER_VERSION, Batch, DataLoader
 from .mixture import compile_schedule
-from .model import Adam, PARAM_NAMES, flat_grad, forward_backward, init_params
-from .opus import cosine
+import torch
+
+from .model import (Optimizer, TinyLM, checkpoint_weights_hash, eval_ce, grad_vector, loss_and_backward,
+                    state_dict_hash)
 from .packing import build_sequence, lane_units, verify_sequence
 from .shards import ShardStore, load_manifests
 from .tokenizer import Tokenizer
-from .util import (Ledger, RunLog, Stopwatch, array_hash, params_hash, read_json, rel, sha256_json,
+from .util import (Ledger, RunLog, Stopwatch, array_hash, read_json, rel, sha256_json,
                    write_json)
 
 CRASH_EXIT_CODE = 86
@@ -72,9 +74,9 @@ class Trainer:
         self.B, self.L = global_batch(self.cfg), t["seq_len"]
         self.W, self.mb, self.accum = t["world_size"], t["micro_batch"], t["grad_accum"]
         self.ckpt_every = t["checkpoint_every"] if checkpoint_every is None else checkpoint_every
-        self.params = init_params(env.tokenizer.vocab_size, m["d_model"], m["d_ff"], self.L,
-                                  self.cfg["seed"], m["init_std"], m["dtype"])
-        self.opt = Adam(self.params, self.cfg)
+        self.model = TinyLM(env.tokenizer.vocab_size, m["d_model"], m["d_ff"], self.L,
+                            self.cfg["seed"], m["init_std"], m["dtype"])
+        self.opt = Optimizer(self.model, self.cfg)
         self.loader = DataLoader(self.cfg, self.schedule, env.store, env.train_manifests, env.tokenizer)
         ldir = os.path.join(self.art, "ledgers", branch)
         self.ldir = ldir
@@ -110,20 +112,15 @@ class Trainer:
                 "version": "proxy-v1-" + sha256_json([s.seq_hash for s in seqs])[:10]}
 
     def _proxy_grad(self):
-        arr = _seqs_to_arrays(self._proxy["seqs"])
-        n = float(arr[4].sum())
-        _, _, g = forward_backward(self.params, *arr, loss_scale=1.0 / n)
-        return flat_grad(g)
+        return grad_vector(self.model, _seqs_to_arrays(self._proxy["seqs"]))[0]
 
     def _make_scorer(self, gp):
         def scorer(seqs):
             out = []
             with self.sw.time("opus_scoring"):
                 for s in seqs:
-                    n = max(1, s.n_loss)
-                    arr = _seqs_to_arrays([s])
-                    tot, _ce, g = forward_backward(self.params, *arr, loss_scale=1.0 / n)
-                    out.append((cosine(flat_grad(g), gp), tot, s.n_loss))
+                    g, loss = grad_vector(self.model, _seqs_to_arrays([s]))
+                    out.append((float(torch.nn.functional.cosine_similarity(g, gp, dim=0)), loss, s.n_loss))
                     self.perf["candidates_scored"] += 1
                     self.perf["candidate_tokens"] += s.n_tokens
             return out
@@ -137,7 +134,7 @@ class Trainer:
                 with self.sw.time("opus_scoring"):
                     gp = self._proxy_grad()
             ctx = {"branch": self.branch, "scoring_checkpoint": self.last_ckpt_id,
-                   "scoring_model_hash": params_hash(self.params)[:16], "proxy_version": self._proxy["version"]}
+                   "scoring_model_hash": self.model.weights_hash()[:16], "proxy_version": self._proxy["version"]}
             batch, decisions = self.loader.build_batch(step, self._make_scorer(gp), ctx)
         return batch, decisions
 
@@ -186,7 +183,7 @@ class Trainer:
 
         arr_all = _seqs_to_arrays(batch.seqs)
         n_loss_total = float(arr_all[4].sum())
-        grads = {k: np.zeros_like(v) for k, v in self.params.items()}
+        self.opt.zero_grad()
         ce_before = np.zeros((self.B, self.L), dtype=np.float32)
         loss_sum = 0.0
         consumed = 0
@@ -196,9 +193,7 @@ class Trainer:
                 seqs = [batch.seqs[g] for g in gidx]
                 arr = _seqs_to_arrays(seqs)
                 with self.sw.time("train_compute"):
-                    tot, ce, g = forward_backward(self.params, *arr, loss_scale=1.0 / n_loss_total)
-                    for k in PARAM_NAMES:
-                        grads[k] += g[k]
+                    tot, ce = loss_and_backward(self.model, arr, 1.0 / n_loss_total)   # grads accumulate
                 loss_sum += tot
                 ce_before[gidx] = ce
                 with self.sw.time("ledger_io"):
@@ -228,9 +223,9 @@ class Trainer:
                     sys.stdout.flush()
                     os._exit(CRASH_EXIT_CODE)
         with self.sw.time("train_compute"):
-            gnorm, lr = self.opt.step(self.params, grads, step)
-            _, ce_after, _ = forward_backward(self.params, *arr_all, loss_scale=1.0, need_grad=False)
-        whash = params_hash(self.params)
+            gnorm, lr = self.opt.step(step)
+            ce_after = eval_ce(self.model, arr_all)
+        whash = self.model.weights_hash()
         positions = self.B * self.L
         nonpad = int((arr_all[2] > 0).sum())
         nloss = int(n_loss_total)
@@ -324,10 +319,8 @@ class Trainer:
             st = LaneStream(lane, LANE_POLICY[lane], units, self.L, self.cfg["seed"], 4)
             seqs = [build_sequence(st.next_spans(), self.env.store, self.L, lane, LANE_POLICY[lane]) for _ in range(2)]
             arr = _seqs_to_arrays(seqs)
-            n = float(arr[4].sum())
-            tot, _, g = forward_backward(self.params, *arr, loss_scale=1.0 / max(n, 1), need_grad=False)
-            assert g is None
-            res[lane] = round(tot, 5)
+            n = max(1.0, float(arr[4].sum()))
+            res[lane] = round(float(eval_ce(self.model, arr).sum() / n), 5)   # torch.no_grad: no gradient
         self.env.firewall.log_validation_read(sorted(val), self.branch, step)
         self.learn.append("validation_eval", {"branch": self.branch, "global_step": step, "loss_by_lane": res,
                                               "gradient": False})
@@ -336,7 +329,7 @@ class Trainer:
     # ------------------------------------------------------------------ checkpoints
     def save_checkpoint(self):
         t0 = time.perf_counter()
-        whash = params_hash(self.params)
+        whash = self.model.weights_hash()
         ckpt_id = f"ckpt-{self.branch}-s{self.step:05d}-{whash[:10]}"
         val = self.validation_eval(self.step)
         self.cons.append("checkpoint_saved", {"run_id": self.env.run_id, "branch": self.branch,
@@ -344,7 +337,7 @@ class Trainer:
                                               "weights_hash": whash, "validation_loss": val})
         state = {
             "checkpoint_id": ckpt_id, "run_id": self.env.run_id, "branch": self.branch, "global_step": self.step,
-            "weights_hash": whash, "optimizer_hash": array_hash(*[v for _, v in sorted(self.opt.state_arrays().items())]),
+            "weights_hash": whash, "optimizer_hash": self.opt.state_hash(),
             "optimizer_t": self.opt.t, "scheduler": {"step": self.step, "next_lr": float(self.opt.lr_at(self.step + 1))},
             "rng_state": {"seed": self.cfg["seed"], "note": "all data randomness is derived from (seed, lane, epoch); "
                                                             "model init from seed; no other RNG is consumed"},
@@ -358,16 +351,15 @@ class Trainer:
         final = os.path.join(self.ckpt_root, f"step_{self.step:05d}")
         tmp = final + ".tmp"
         os.makedirs(tmp, exist_ok=True)
-        np.savez(os.path.join(tmp, "model.npz"), **self.params)
-        np.savez(os.path.join(tmp, "optimizer.npz"), **self.opt.state_arrays())
+        torch.save(self.model.state_dict(), os.path.join(tmp, "model.pt"))
+        torch.save(self.opt.opt.state_dict(), os.path.join(tmp, "optimizer.pt"))
         write_json(os.path.join(tmp, "state.json"), state)
         with open(os.path.join(tmp, "COMPLETE"), "w") as f:
             f.write(ckpt_id + "\n")
         os.replace(tmp, final)
         self.last_ckpt_id = ckpt_id
         # verify by reloading
-        with np.load(os.path.join(final, "model.npz")) as z:
-            ok = params_hash({k: z[k] for k in z.files}) == whash
+        ok = checkpoint_weights_hash(os.path.join(final, "model.pt")) == whash
         self.sw.add("checkpoint", time.perf_counter() - t0)
         write_perf(self, self.perf_tag, {"wall_s": round(time.perf_counter() - self.t_start, 6),
                                          "accounted_through_step": self.step})
@@ -379,14 +371,13 @@ class Trainer:
 
     def load_checkpoint(self, path):
         state = read_json(os.path.join(path, "state.json"))
-        with np.load(os.path.join(path, "model.npz")) as z:
-            params = {k: z[k] for k in z.files}
-        if params_hash(params) != state["weights_hash"]:
+        sd = torch.load(os.path.join(path, "model.pt"), map_location="cpu", weights_only=True)
+        if state_dict_hash(sd) != state["weights_hash"]:
             raise RuntimeError(f"checkpoint {path} weights do not match its state.json")
-        with np.load(os.path.join(path, "optimizer.npz")) as z:
-            arrs = {k: z[k] for k in z.files}
-        self.params = params
-        self.opt.load_arrays(arrs, state["optimizer_t"])
+        self.model.load_state_dict(sd)
+        self.opt.opt.load_state_dict(torch.load(os.path.join(path, "optimizer.pt"), map_location="cpu", weights_only=True))
+        if self.opt.state_hash() != state["optimizer_hash"]:
+            raise RuntimeError(f"checkpoint {path} optimizer state does not match its state.json")
         self.loader.load_state_dict(state["loader_state"])
         self.step = state["global_step"]
         self.counters = dict(state["counters"])
@@ -531,7 +522,7 @@ def mode_resume(art, branch, until, reference_branch=None):
     tr.run(until)
     report["resume_latency_s"] = round(first.get("latency_s", 0.0), 6)
     report["final_step"] = tr.step
-    report["final_weights_hash"] = params_hash(tr.params)
+    report["final_weights_hash"] = tr.model.weights_hash()
     write_json(os.path.join(art, "reports", "resume_report.json"), report)
     write_perf(tr, "resume", {"wall_s": round(time.perf_counter() - t_start, 6), "accounted_through_step": tr.step,
                               "resume_latency_s": report["resume_latency_s"]})
@@ -650,7 +641,7 @@ def mode_fork(art, parent_branch, from_step, n_steps, overrides):
     report = {"branch": branch, "parent_branch": parent_branch, "parent_checkpoint": state["checkpoint_id"],
               "parent_weights_hash": state["weights_hash"], "divergence_step": first, "overrides": overrides,
               "fork_schedule_hash": sched["schedule_hash"], "parent_schedule_hash": state["schedule_hash"],
-              "steps": rows, "final_step": tr.step, "final_weights_hash": params_hash(tr.params)}
+              "steps": rows, "final_step": tr.step, "final_weights_hash": tr.model.weights_hash()}
     fork_rec = Ledger.read(tr.cons.path)[0]
     ok = rows and rows[0]["differs"] and min(mine) == first
     report["checks"] = {"first_fork_batch_differs_from_parent": bool(rows and rows[0]["differs"]),

@@ -1,22 +1,22 @@
 {
   "branch": "replay-main-s00008",
-  "checkpoint_id": "ckpt-replay-main-s00008-s00012-ae048d3549",
+  "checkpoint_id": "ckpt-replay-main-s00008-s00012-312938f65f",
   "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
   "counters": {
-    "loss_tokens": 22610,
-    "nonpad_tokens": 24118,
+    "loss_tokens": 22579,
+    "nonpad_tokens": 24104,
     "positions": 24576
   },
-  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "dataloader_version": "tdes-loader/1.0+84c02a0e6f.6891f0",
   "global_step": 12,
   "ledger_offsets": {
     "consumption": {
-      "last_hash": "c9b4e73a130517c36388b60751f3e23455ca627ce2fc46cc3bab10d728698397",
+      "last_hash": "5624a68e6fa671295dace8bded21db38129da34d11d453ae0e5f5af4ecdfd777",
       "offset": 42,
       "path": "ledgers/replay-main-s00008/consumption.jsonl"
     },
     "learning": {
-      "last_hash": "d811222442a6f92a6535886e8dfdcce122a7016d62531d1433399a93c60f4670",
+      "last_hash": "46284caf6025c1f6f105237c4b81a0e3a9c649c8338f1f4d62b85ec139484494",
       "offset": 69,
       "path": "ledgers/replay-main-s00008/learning.jsonl"
     },
@@ -30,11 +30,38 @@
     "cand_counter": 204,
     "deferred": [
       {
-        "candidate_id": "cand-000181",
+        "candidate_id": "cand-000182",
         "defer_count": 1,
         "first_step": 8,
         "lane": "general_web",
-        "last_score": 0.6261449602401689,
+        "last_score": 0.5393496108687422,
+        "spans": [
+          {
+            "doc_id": "src_web_india_news/train/00001",
+            "doc_index": 15,
+            "end": 182,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-896422f889e4",
+            "span_id": "shd-general_web-train-896422f889e4:15:93-182",
+            "start": 93
+          },
+          {
+            "doc_id": "src_web_edu_crawl/train/00082",
+            "doc_index": 10,
+            "end": 39,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-7f6313c11dd2",
+            "span_id": "shd-general_web-train-7f6313c11dd2:10:0-39",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000180",
+        "defer_count": 1,
+        "first_step": 8,
+        "lane": "general_web",
+        "last_score": 0.5220163498860237,
         "spans": [
           {
             "doc_id": "src_web_india_news/train/00043",
@@ -60,35 +87,26 @@
         "candidate_id": "cand-000183",
         "defer_count": 1,
         "first_step": 8,
-        "lane": "general_web",
-        "last_score": 0.6098455207251731,
+        "lane": "code",
+        "last_score": 0.31873847940557265,
         "spans": [
           {
-            "doc_id": "src_web_india_news/train/00001",
-            "doc_index": 15,
-            "end": 182,
+            "doc_id": "src_code_permissive/train/00046",
+            "doc_index": 22,
+            "end": 244,
             "epoch": 0,
-            "shard_id": "shd-general_web-train-896422f889e4",
-            "span_id": "shd-general_web-train-896422f889e4:15:93-182",
-            "start": 93
-          },
-          {
-            "doc_id": "src_web_edu_crawl/train/00082",
-            "doc_index": 10,
-            "end": 39,
-            "epoch": 0,
-            "shard_id": "shd-general_web-train-7f6313c11dd2",
-            "span_id": "shd-general_web-train-7f6313c11dd2:10:0-39",
-            "start": 0
+            "shard_id": "shd-code-train-f7edc679ba1d",
+            "span_id": "shd-code-train-f7edc679ba1d:22:122-244",
+            "start": 122
           }
         ]
       },
       {
-        "candidate_id": "cand-000160",
-        "defer_count": 2,
-        "first_step": 7,
+        "candidate_id": "cand-000184",
+        "defer_count": 1,
+        "first_step": 8,
         "lane": "code",
-        "last_score": 0.42570011453212137,
+        "last_score": 0.27993600579194067,
         "spans": [
           {
             "doc_id": "src_code_permissive/train/00007",
@@ -111,62 +129,71 @@
         ]
       },
       {
-        "candidate_id": "cand-000186",
-        "defer_count": 1,
-        "first_step": 8,
-        "lane": "code",
-        "last_score": 0.41223937099475677,
+        "candidate_id": "cand-000159",
+        "defer_count": 2,
+        "first_step": 7,
+        "lane": "math_science",
+        "last_score": 0.22074057940196826,
         "spans": [
           {
-            "doc_id": "src_code_permissive/train/00027",
-            "doc_index": 3,
-            "end": 128,
+            "doc_id": "src_math_textbooks/train/00059",
+            "doc_index": 11,
+            "end": 148,
             "epoch": 0,
-            "shard_id": "shd-code-train-f7edc679ba1d",
-            "span_id": "shd-code-train-f7edc679ba1d:3:0-128",
+            "shard_id": "shd-math_science-train-56bd36818176",
+            "span_id": "shd-math_science-train-56bd36818176:11:101-148",
+            "start": 101
+          },
+          {
+            "doc_id": "src_math_textbooks/train/00073",
+            "doc_index": 1,
+            "end": 81,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-d79ca19c09ac",
+            "span_id": "shd-math_science-train-d79ca19c09ac:1:0-81",
             "start": 0
           }
         ]
       },
       {
-        "candidate_id": "cand-000198",
+        "candidate_id": "cand-000196",
         "defer_count": 1,
         "first_step": 8,
-        "lane": "agentic",
-        "last_score": 0.3135751741344518,
+        "lane": "reasoning",
+        "last_score": 0.16871259466623675,
         "spans": [
           {
-            "doc_id": "src_agentic_tierA/train/00015",
-            "doc_index": 15,
-            "end": 103,
+            "doc_id": "src_reasoning_banded/train/00076",
+            "doc_index": 4,
+            "end": 117,
             "epoch": 0,
-            "shard_id": "shd-agentic-train-a5ba98a2da48",
-            "span_id": "shd-agentic-train-a5ba98a2da48:15:0-103",
+            "shard_id": "shd-reasoning-train-1c47f9da7dd9",
+            "span_id": "shd-reasoning-train-1c47f9da7dd9:4:0-117",
             "start": 0
           }
         ]
       }
     ],
-    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "loader_version": "tdes-loader/1.0+84c02a0e6f.6891f0",
     "recent": [
       [
         5,
         [
-          "ps-99b6cb6a4f55111e",
-          "ps-668738436a7e4e62",
+          "ps-b97d360ec399e333",
+          "ps-b27e5f19782b3ccb",
           "ps-c5596a0ef4619b43",
           "ps-551018ec09f6760d",
           "ps-28e1eb82cb22037f",
+          "ps-3594e2ea1243a83d",
+          "ps-8c77b2bcf7cd6204",
           "ps-ceee6ce1a7ed90f7",
-          "ps-45b13711f1b35578",
-          "ps-bd47ca04c9d091a0",
+          "ps-5a59fbd54783ae23",
           "ps-a4d356189be25b01",
-          "ps-ec4d392c0d3dd26e",
           "ps-9bbe586d96a2a11f",
-          "ps-7e96692bb4ddf98d",
-          "ps-38c3c0505999867e",
-          "ps-64fd3e99c80c47c6",
-          "ps-e3bbc7122b19c6c2",
+          "ps-01e70dfb483fa59a",
+          "ps-dc8e06fad5185d6f",
+          "ps-5df03310da2c968c",
+          "ps-e682fa47ffffb65d",
           "ps-1872bc19b96fc4d6"
         ]
       ],
@@ -174,63 +201,63 @@
         6,
         [
           "ps-5456af8a39cd725b",
+          "ps-843778e3356c6cc1",
           "ps-c5adcc156f6c3854",
           "ps-02e16ff158126531",
           "ps-16b953af8901b156",
-          "ps-3b21c49126665124",
+          "ps-bd47ca04c9d091a0",
           "ps-82089fa91996e8c4",
           "ps-c8602e39f501556b",
-          "ps-3002e754df8e7dea",
+          "ps-ec4d392c0d3dd26e",
           "ps-667d1e4523545abb",
-          "ps-31a7802cc3ea00cf",
           "ps-81c7c199c2dccc30",
-          "ps-e194a7bd74257eb6",
-          "ps-104af77537f04bcf",
-          "ps-11241571f3d0ea46",
+          "ps-122eca747ba1c42d",
+          "ps-41ef9c3d127fbc93",
+          "ps-178ff4edb686a637",
           "ps-ba2dd7a5cf540fb6",
-          "ps-18270c62d5e129dc"
+          "ps-21dd6889d0bbbf78"
         ]
       ],
       [
         7,
         [
+          "ps-3b21c49126665124",
           "ps-aaa3106cd053c9f2",
           "ps-ac0f34c408baed70",
           "ps-3798581188a91857",
           "ps-ef6a74a3fe5aa723",
-          "ps-8f4bbf98202e311d",
+          "ps-3002e754df8e7dea",
           "ps-e19753eba1a4b8f0",
           "ps-f6da8c8b88454de6",
-          "ps-8ed2b376577bf9dd",
+          "ps-31a7802cc3ea00cf",
           "ps-987a2b8927615ccd",
           "ps-692bbc1ebeebdc39",
-          "ps-d50df30f2d3c38f4",
           "ps-32a094049eea38bc",
-          "ps-c7797131729aa18c",
           "ps-a094d57135ed6d6a",
-          "ps-178ff4edb686a637",
-          "ps-9bd52048dc434853"
+          "ps-58aa6cd34daafd27",
+          "ps-2e5dbb70143fbf6b",
+          "ps-18270c62d5e129dc"
         ]
       ],
       [
         8,
         [
+          "ps-8f4bbf98202e311d",
           "ps-62f6128735b16d49",
           "ps-9759e172e0a0d4f7",
           "ps-e36f9d0452a9005d",
           "ps-4dec48492ccd1f3c",
-          "ps-b8f5f273d5247687",
           "ps-2f1fe61e31f95d85",
+          "ps-995df740e840fdb8",
           "ps-5ab4488638bced82",
           "ps-3a292a7972b013f9",
-          "ps-07cbd5a55b1a4f23",
           "ps-c426f14145405992",
-          "ps-0aef1594982b50eb",
-          "ps-96daa145cd517903",
-          "ps-b9b0d91722bd44b4",
+          "ps-d50df30f2d3c38f4",
+          "ps-3cb365018e42ad77",
           "ps-de8a13dd2b5739ec",
-          "ps-2e5dbb70143fbf6b",
-          "ps-363dd9b4f5e2c320"
+          "ps-4302fa5d2cbb3f3c",
+          "ps-bf577c98346ce184",
+          "ps-9bd52048dc434853"
         ]
       ]
     ],
@@ -250,6 +277,10 @@
             0
           ],
           [
+            51,
+            0
+          ],
+          [
             5,
             0
           ],
@@ -260,15 +291,11 @@
           [
             59,
             0
-          ],
-          [
-            45,
-            0
           ]
         ],
         "epoch": 0,
         "offset": 0,
-        "pos": 26
+        "pos": 24
       },
       "anneal_reserve": {
         "buffer": [],
@@ -309,25 +336,25 @@
         ],
         "epoch": 0,
         "offset": 0,
-        "pos": 41
+        "pos": 40
       },
       "general_web": {
         "buffer": [],
         "epoch": 0,
-        "offset": 2,
-        "pos": 37
+        "offset": 39,
+        "pos": 36
       },
       "indic": {
         "buffer": [],
         "epoch": 0,
-        "offset": 9,
-        "pos": 55
+        "offset": 82,
+        "pos": 56
       },
       "math_science": {
         "buffer": [],
         "epoch": 0,
-        "offset": 109,
-        "pos": 19
+        "offset": 255,
+        "pos": 18
       },
       "reasoning": {
         "buffer": [
@@ -356,20 +383,20 @@
             0
           ],
           [
-            58,
+            59,
             0
           ]
         ],
         "epoch": 0,
         "offset": 0,
-        "pos": 23
+        "pos": 26
       }
     }
   },
   "mode": "replay",
-  "optimizer_hash": "2d758512ee499448596ab4c2a3475aac55eeae7eb17d0854ab3eea214f35bb21",
+  "optimizer_hash": "5738fb32d115836c202a40cbbd9142a413dc11ab8f289e5f7292db54db756442",
   "optimizer_t": 12,
-  "previous_checkpoint": "ckpt-main-s00008-d8a1a817d2",
+  "previous_checkpoint": "ckpt-main-s00008-835ab9af05",
   "rng_state": {
     "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
     "seed": 20260801
@@ -381,5 +408,5 @@
     "step": 12
   },
   "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
-  "weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df"
+  "weights_hash": "312938f65fece25f9ac76929b052467937bb0361ea97319609f9b4dabd7a8b06"
 }

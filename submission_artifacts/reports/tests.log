@@ -14,8 +14,8 @@ test_protected_floor_override_and_deferral (tests.test_mixture_opus_ledger.OpusT
 test_stage_mismatch_rejection (tests.test_mixture_opus_ledger.OpusTests) ... ok
 test_triage (tests.test_mixture_opus_ledger.OpusTests) ... ok
 test_attention_is_isolated_per_segment (tests.test_packing_model.ModelTests) ... ok
-test_gradient_matches_finite_differences (tests.test_packing_model.ModelTests) ... ok
-test_optimizer_state_roundtrip (tests.test_packing_model.ModelTests) ... ok
+test_autograd_matches_finite_differences (tests.test_packing_model.ModelTests) ... ok
+test_training_is_bit_reproducible_and_optimizer_state_roundtrips (tests.test_packing_model.ModelTests) ... ok
 test_concat_chop_windows_continue_the_stream_exactly (tests.test_packing_model.PackingTests) ... ok
 test_masks_positions_attention_for_every_policy (tests.test_packing_model.PackingTests) ... ok
 test_packing_lab_ordering (tests.test_packing_model.PackingTests) ... ok
@@ -39,6 +39,6 @@ test_special_tokens_cannot_be_injected_from_text (tests.test_tokenizer.Tokenizer
 test_training_is_deterministic_and_hash_identifies_merges (tests.test_tokenizer.TokenizerTests) ... ok
 
 ----------------------------------------------------------------------
-Ran 38 tests in 11.695s
+Ran 38 tests in 46.341s
 
 OK
