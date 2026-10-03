@@ -220,5 +220,7 @@ every consumed sample from its span references, and recounts the tokens that
   "Loader wait" is the single-process analogue of GPU idle time.
 - The ledgers, manifests, shards and checkpoints are byte-reproducible for a given seed on a given
   machine. Wall-clock fields only appear in `run.log` and `perf/`.
+- Git does not keep the read-only bit, so in a fresh clone the committed shards are writable.
+  Their content and file hashes still verify. `python run_demo.py` regenerates and re-seals them.
 - Agentic samples longer than the 128-token window are dropped under `structure_preserving`, never
   cut. They are counted in `run.log` (`every_active_lane_has_packable_supply`).
