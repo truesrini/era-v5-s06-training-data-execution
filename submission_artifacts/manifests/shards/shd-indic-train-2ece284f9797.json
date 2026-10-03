@@ -1,0 +1,69 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "indic",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "2ece284f9797721b1fccc70d80aa343ae7068492340758752cbc965273f40b38",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_indic_ta_verified/train/00017",
+    "src_indic_ta_verified/train/00018",
+    "src_indic_ta_verified/train/00019",
+    "src_indic_ta_verified/train/00020",
+    "src_indic_ta_verified/train/00021",
+    "src_indic_ta_verified/train/00022",
+    "src_indic_ta_verified/train/00023",
+    "src_indic_ta_verified/train/00024",
+    "src_indic_ta_verified/train/00025",
+    "src_indic_ta_verified/train/00026",
+    "src_indic_ta_verified/train/00027",
+    "src_indic_ta_verified/train/00028",
+    "src_indic_ta_verified/train/00029",
+    "src_indic_ta_verified/train/00030",
+    "src_indic_ta_verified/train/00031",
+    "src_indic_ta_verified/train/00032",
+    "src_indic_ta_verified/train/00033",
+    "src_indic_ta_verified/train/00034",
+    "src_indic_ta_verified/train/00035",
+    "src_indic_ta_verified/train/00036",
+    "src_indic_ta_verified/train/00037",
+    "src_indic_ta_verified/train/00038",
+    "src_indic_ta_verified/train/00039",
+    "src_indic_ta_verified/train/00040"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "54248ee94b28fa114b04c80be4f0c4a96aa2cd81c0f915eb509d53fdb2660a8c",
+    "tokens.npy": "8e174aea70cd251d8d2377f2b287221940175a40e3a6659503e6a5e9327742b5",
+    "train_on.npy": "ffccb735bc67995886b76590d7abd819c19bf3b0fc2295e07b3705a806d0be58"
+  },
+  "language": [
+    "ta"
+  ],
+  "license": [
+    "cc-by-4.0"
+  ],
+  "loss_bearing_token_count": 3902,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "66c524a38b244212d6c28215ca25077868e0836ecfb657b1c144945bd88400b3",
+  "n_docs": 24,
+  "never_train": false,
+  "packing_policy": "concat_chop",
+  "parent_shard_ids": [],
+  "path": "shards/shd-indic-train-2ece284f9797",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Taml"
+  ],
+  "shard_id": "shd-indic-train-2ece284f9797",
+  "source_ids": [
+    "src_indic_ta_verified"
+  ],
+  "split": "train",
+  "token_count": 3902,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

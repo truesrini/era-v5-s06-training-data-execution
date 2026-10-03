@@ -1,0 +1,67 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "anneal_reserve",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "f9c9f81a72f57db32c488f34906384fe3b556ad9494eda7e4b2be7b4bad8da5e",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_anneal_curated/train/00048",
+    "src_anneal_curated/train/00049",
+    "src_anneal_curated/train/00050",
+    "src_anneal_curated/train/00051",
+    "src_anneal_curated/train/00052",
+    "src_anneal_curated/train/00053",
+    "src_anneal_curated/train/00054",
+    "src_anneal_curated/train/00055",
+    "src_anneal_curated/train/00056",
+    "src_anneal_curated/train/00057",
+    "src_anneal_curated/train/00058",
+    "src_anneal_curated/train/00059",
+    "src_anneal_curated/train/00060",
+    "src_anneal_curated/train/00061",
+    "src_anneal_curated/train/00062",
+    "src_anneal_curated/train/00063",
+    "src_anneal_curated/train/00064",
+    "src_anneal_curated/train/00065",
+    "src_anneal_curated/train/00066",
+    "src_anneal_curated/train/00067",
+    "src_anneal_curated/train/00068",
+    "src_anneal_curated/train/00069"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "d8ffbbae88719b126c10a0c310a2d1b9df408c1f4fea67f22f9c0e9f14b14adc",
+    "tokens.npy": "f912284e77ffe26a443d8f061842b9501562013a6ac9b84f61632dcf04ea1f7e",
+    "train_on.npy": "86e3e0a3b0ca0d511b5b0e1616ceee44a943434bbeb5055aa9ce0058a93c0ebe"
+  },
+  "language": [
+    "en+hi"
+  ],
+  "license": [
+    "internal-curated"
+  ],
+  "loss_bearing_token_count": 715,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "d719cc89c9d5167aaa49975ddafb76fe256ca90835adbfc1cbd33d4f661fca63",
+  "n_docs": 22,
+  "never_train": false,
+  "packing_policy": "structure_preserving",
+  "parent_shard_ids": [],
+  "path": "shards/shd-anneal_reserve-train-f9c9f81a72f5",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": "anneal",
+  "script": [
+    "Latn+Deva"
+  ],
+  "shard_id": "shd-anneal_reserve-train-f9c9f81a72f5",
+  "source_ids": [
+    "src_anneal_curated"
+  ],
+  "split": "train",
+  "token_count": 1238,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

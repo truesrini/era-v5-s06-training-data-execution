@@ -1,0 +1,399 @@
+{
+  "branch": "main",
+  "checkpoint_id": "ckpt-main-s00012-ae048d3549",
+  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "counters": {
+    "loss_tokens": 22610,
+    "nonpad_tokens": 24118,
+    "positions": 24576
+  },
+  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "global_step": 12,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "6264d04b58373bab559632cc745cb3fe5ebffbc9e2a7a32ed40098b54512d66c",
+      "offset": 123,
+      "path": "ledgers/main/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "08207cfc25c824341af2ccb57f991924f3500a942f6fbbc7fc9b96e2be19158d",
+      "offset": 207,
+      "path": "ledgers/main/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "0c6747fcf7adb39acc5a24382175d1d23c7bcd97f6e01e89b7257211aac76e11",
+      "offset": 358,
+      "path": "ledgers/main/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 303,
+    "deferred": [
+      {
+        "candidate_id": "cand-000277",
+        "defer_count": 1,
+        "first_step": 12,
+        "lane": "general_web",
+        "last_score": 0.4931331278007206,
+        "spans": [
+          {
+            "doc_id": "src_web_india_news/train/00013",
+            "doc_index": 4,
+            "end": 197,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-da1acf065374",
+            "span_id": "shd-general_web-train-da1acf065374:4:119-197",
+            "start": 119
+          },
+          {
+            "doc_id": "src_web_india_news/train/00054",
+            "doc_index": 21,
+            "end": 50,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-d198d7a136b1",
+            "span_id": "shd-general_web-train-d198d7a136b1:21:0-50",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000278",
+        "defer_count": 1,
+        "first_step": 12,
+        "lane": "general_web",
+        "last_score": 0.4161471454239881,
+        "spans": [
+          {
+            "doc_id": "src_web_india_news/train/00054",
+            "doc_index": 21,
+            "end": 178,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-d198d7a136b1",
+            "span_id": "shd-general_web-train-d198d7a136b1:21:50-178",
+            "start": 50
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000258",
+        "defer_count": 2,
+        "first_step": 11,
+        "lane": "code",
+        "last_score": 0.13608583821337605,
+        "spans": [
+          {
+            "doc_id": "src_code_permissive/train/00042",
+            "doc_index": 18,
+            "end": 122,
+            "epoch": 0,
+            "shard_id": "shd-code-train-f7edc679ba1d",
+            "span_id": "shd-code-train-f7edc679ba1d:18:0-122",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000285",
+        "defer_count": 1,
+        "first_step": 12,
+        "lane": "code",
+        "last_score": 0.07866029288177473,
+        "spans": [
+          {
+            "doc_id": "src_code_permissive/train/00024",
+            "doc_index": 0,
+            "end": 247,
+            "epoch": 0,
+            "shard_id": "shd-code-train-f7edc679ba1d",
+            "span_id": "shd-code-train-f7edc679ba1d:0:124-247",
+            "start": 124
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000290",
+        "defer_count": 1,
+        "first_step": 12,
+        "lane": "math_science",
+        "last_score": 0.18062552987786212,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00060",
+            "doc_index": 12,
+            "end": 219,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-56bd36818176",
+            "span_id": "shd-math_science-train-56bd36818176:12:91-219",
+            "start": 91
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000264",
+        "defer_count": 2,
+        "first_step": 11,
+        "lane": "math_science",
+        "last_score": 0.11141712563613577,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00066",
+            "doc_index": 18,
+            "end": 162,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-56bd36818176",
+            "span_id": "shd-math_science-train-56bd36818176:18:34-162",
+            "start": 34
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000296",
+        "defer_count": 1,
+        "first_step": 12,
+        "lane": "reasoning",
+        "last_score": -0.0385876381320372,
+        "spans": [
+          {
+            "doc_id": "src_reasoning_banded/train/00079",
+            "doc_index": 7,
+            "end": 119,
+            "epoch": 0,
+            "shard_id": "shd-reasoning-train-1c47f9da7dd9",
+            "span_id": "shd-reasoning-train-1c47f9da7dd9:7:0-119",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "recent": [
+      [
+        9,
+        [
+          "ps-41057a55cbf16ce0",
+          "ps-9940a04d8d8829f8",
+          "ps-dbddb243be60edec",
+          "ps-817b90f785686b76",
+          "ps-2b7218826a4d0ca7",
+          "ps-995df740e840fdb8",
+          "ps-290b5058f832e75b",
+          "ps-ab3e7113d50d80e2",
+          "ps-72327b1460b8ee77",
+          "ps-4585251733a2a0d1",
+          "ps-cbe4dcf901b88d83",
+          "ps-f05ca4ecdbaecb3f",
+          "ps-94df2e6877f562e3",
+          "ps-e9184c6b1306d56e",
+          "ps-ab0a1899ace5640c",
+          "ps-745bc89a60e7a2f3"
+        ]
+      ],
+      [
+        10,
+        [
+          "ps-cc7b469f9088258b",
+          "ps-05619c5554f0e425",
+          "ps-0a378cf688102ab7",
+          "ps-97ddc5924c90bdc4",
+          "ps-4e8d769efdecdf4b",
+          "ps-10c9a0caeb2dd63f",
+          "ps-343c84da65be4b76",
+          "ps-95ebdc9b7750a01a",
+          "ps-fc347b7ac72920ce",
+          "ps-c830ee646678b845",
+          "ps-312ab240adf2121f",
+          "ps-d6e15b1f0c5fc76b",
+          "ps-9db9e0aa0066b33f",
+          "ps-11b3f215ad552c77",
+          "ps-1878bff403397297",
+          "ps-379ba31daaea1337"
+        ]
+      ],
+      [
+        11,
+        [
+          "ps-572889c5dd9c194a",
+          "ps-fd92c2f92093f1ad",
+          "ps-3bbdd2ce515a2606",
+          "ps-0f30ae4ec506d065",
+          "ps-9fb355541b4b3046",
+          "ps-f65a25f02da2b320",
+          "ps-85cd5c2bc3f7d7df",
+          "ps-89ae2f95f861123d",
+          "ps-7e79a7daa32fba32",
+          "ps-17c03d5f63208f5a",
+          "ps-f5eb8a1674ab82e4",
+          "ps-a9fe01c994c9a9d6",
+          "ps-fbc5f71b9d6fc952",
+          "ps-eb128897014c7e63",
+          "ps-c6c78fd078b490f9",
+          "ps-2cf231e66eecab9e"
+        ]
+      ],
+      [
+        12,
+        [
+          "ps-a3cbe800d023f1b5",
+          "ps-8386666d053a401f",
+          "ps-8be33e2192729e20",
+          "ps-c9b7d57953938b56",
+          "ps-ec452e7e337f5e8c",
+          "ps-65a67a7aa3fcc8b5",
+          "ps-bd905f87afc91604",
+          "ps-50e6910d85adc969",
+          "ps-d289896bd6eccc1c",
+          "ps-06a3008bacb5c3ac",
+          "ps-6c7d27ffb80bb8c6",
+          "ps-3d069b84c25b4961",
+          "ps-d4e0a32a9cb37286",
+          "ps-50a7eb7758a0754d",
+          "ps-12fe6c56b1751093",
+          "ps-bb854f19ad8728f3"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            21,
+            0
+          ],
+          [
+            56,
+            0
+          ],
+          [
+            28,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            45,
+            0
+          ],
+          [
+            10,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 30
+      },
+      "anneal_reserve": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 0
+      },
+      "code": {
+        "buffer": [
+          [
+            30,
+            0
+          ],
+          [
+            66,
+            0
+          ],
+          [
+            82,
+            0
+          ],
+          [
+            174,
+            0
+          ],
+          [
+            102,
+            0
+          ],
+          [
+            118,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 60
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 199,
+        "pos": 52
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 97,
+        "pos": 79
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 219,
+        "pos": 33
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            13,
+            0
+          ],
+          [
+            46,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            72,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            66,
+            0
+          ],
+          [
+            48,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 31
+      }
+    }
+  },
+  "mode": "fresh",
+  "optimizer_hash": "2d758512ee499448596ab4c2a3475aac55eeae7eb17d0854ab3eea214f35bb21",
+  "optimizer_t": 12,
+  "previous_checkpoint": "ckpt-main-s00008-d8a1a817d2",
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "scheduler": {
+    "next_lr": 0.007894144344319015,
+    "step": 12
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df"
+}

@@ -1,0 +1,42 @@
+{
+  "docs": [
+    {
+      "benchmark_id": null,
+      "doc_hash": "60acd7676ecc81aa4701655f6e37a2ea95cb9d85c95792b19cc9c2bd0e52e55b",
+      "doc_id": "src_web_india_news/train/00057",
+      "doc_index": 0,
+      "kind": "plain",
+      "language": "en",
+      "length": 159,
+      "script": "Latn",
+      "source_id": "src_web_india_news",
+      "start": 0
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "423bb74d8eecbfeb714852d1719ae30f791bc7c3b838cad2ac321611014b6dec",
+      "doc_id": "src_web_india_news/train/00058",
+      "doc_index": 1,
+      "kind": "plain",
+      "language": "en",
+      "length": 150,
+      "script": "Latn",
+      "source_id": "src_web_india_news",
+      "start": 159
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "6e52492d8070a11f92b9adacfa3d79161fcd73605e056fea20dfddbb30465879",
+      "doc_id": "src_web_india_news/train/00059",
+      "doc_index": 2,
+      "kind": "plain",
+      "language": "en",
+      "length": 152,
+      "script": "Latn",
+      "source_id": "src_web_india_news",
+      "start": 309
+    }
+  ],
+  "format": "tdes-shard-v1",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

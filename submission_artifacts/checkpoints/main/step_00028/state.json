@@ -1,0 +1,415 @@
+{
+  "branch": "main",
+  "checkpoint_id": "ckpt-main-s00028-4a8c4a0bf9",
+  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "counters": {
+    "loss_tokens": 49930,
+    "nonpad_tokens": 55461,
+    "positions": 57344
+  },
+  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "global_step": 28,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "ada07bb493dd0bca82861d15dc53f8fdbea8201bfde8412aea2956b6a5697ec9",
+      "offset": 292,
+      "path": "ledgers/main/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "547f4143895add565a9d31561e36d4575d3b041dab6d6c6220c8836679fd0d6e",
+      "offset": 484,
+      "path": "ledgers/main/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "62447a7ef9e6c557df399146d49885f4301a9b31413c875e08b05f501ee3be5f",
+      "offset": 889,
+      "path": "ledgers/main/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 717,
+    "deferred": [
+      {
+        "candidate_id": "cand-000692",
+        "defer_count": 1,
+        "first_step": 28,
+        "lane": "code",
+        "last_score": -0.11150190940544823,
+        "spans": [
+          {
+            "doc_id": "src_code_permissive/train/00067",
+            "doc_index": 19,
+            "end": 194,
+            "epoch": 1,
+            "shard_id": "shd-code-train-c4632678cd6e",
+            "span_id": "shd-code-train-c4632678cd6e:19:118-194",
+            "start": 118
+          },
+          {
+            "doc_id": "src_code_permissive/train/00033",
+            "doc_index": 9,
+            "end": 166,
+            "epoch": 1,
+            "shard_id": "shd-code-train-f7edc679ba1d",
+            "span_id": "shd-code-train-f7edc679ba1d:9:119-166",
+            "start": 119
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000698",
+        "defer_count": 1,
+        "first_step": 28,
+        "lane": "indic",
+        "last_score": -0.11894543362273517,
+        "spans": [
+          {
+            "doc_id": "src_indic_hi_verified/train/00024",
+            "doc_index": 0,
+            "end": 138,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-3305107b346f",
+            "span_id": "shd-indic-train-3305107b346f:0:10-138",
+            "start": 10
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000697",
+        "defer_count": 1,
+        "first_step": 28,
+        "lane": "indic",
+        "last_score": -0.12645903518811333,
+        "spans": [
+          {
+            "doc_id": "src_indic_ta_verified/train/00050",
+            "doc_index": 9,
+            "end": 211,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-be029172628d",
+            "span_id": "shd-indic-train-be029172628d:9:177-211",
+            "start": 177
+          },
+          {
+            "doc_id": "src_indic_hi_verified/train/00045",
+            "doc_index": 21,
+            "end": 84,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-3305107b346f",
+            "span_id": "shd-indic-train-3305107b346f:21:0-84",
+            "start": 0
+          },
+          {
+            "doc_id": "src_indic_hi_verified/train/00024",
+            "doc_index": 0,
+            "end": 10,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-3305107b346f",
+            "span_id": "shd-indic-train-3305107b346f:0:0-10",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000702",
+        "defer_count": 1,
+        "first_step": 28,
+        "lane": "agentic",
+        "last_score": -0.0266724065859613,
+        "spans": [
+          {
+            "doc_id": "src_agentic_tierA/train/00067",
+            "doc_index": 19,
+            "end": 120,
+            "epoch": 0,
+            "shard_id": "shd-agentic-train-9f31a36166f3",
+            "span_id": "shd-agentic-train-9f31a36166f3:19:0-120",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000678",
+        "defer_count": 2,
+        "first_step": 27,
+        "lane": "anneal_reserve",
+        "last_score": -0.18297819833756224,
+        "spans": [
+          {
+            "doc_id": "src_anneal_curated/train/00042",
+            "doc_index": 18,
+            "end": 70,
+            "epoch": 0,
+            "shard_id": "shd-anneal_reserve-train-4d59d51d1e90",
+            "span_id": "shd-anneal_reserve-train-4d59d51d1e90:18:0-70",
+            "start": 0
+          },
+          {
+            "doc_id": "src_anneal_curated/train/00011",
+            "doc_index": 11,
+            "end": 52,
+            "epoch": 0,
+            "shard_id": "shd-anneal_reserve-train-eee78921d88c",
+            "span_id": "shd-anneal_reserve-train-eee78921d88c:11:0-52",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "recent": [
+      [
+        25,
+        [
+          "ps-f1d8781a5f7b2bf9",
+          "ps-2dd68a6dcba456ef",
+          "ps-2b67037ea0c8c621",
+          "ps-1cb43ae844e51025",
+          "ps-6c733c95622d82bd",
+          "ps-824c4520e0159e71",
+          "ps-2bd0881955faa918",
+          "ps-bcbe11ba8b3ab85a",
+          "ps-cacd08ea57147c57",
+          "ps-d2e0ecd400419ff2",
+          "ps-6a1580278b9f8038",
+          "ps-d58adbc2ee921587",
+          "ps-9c51d51a3f11b964",
+          "ps-02c9f649f2acd02d",
+          "ps-f5d8af995adf0dd9",
+          "ps-31e738e55c6f8be8"
+        ]
+      ],
+      [
+        26,
+        [
+          "ps-c43e32af4641120b",
+          "ps-22caf63bac915689",
+          "ps-995df740e840fdb8",
+          "ps-d2afb66f90e5caa2",
+          "ps-79f78f4f81028dc5",
+          "ps-bf43732b55fa390e",
+          "ps-0c33e6b939961cd8",
+          "ps-bae104dcdbe0b915",
+          "ps-2a6b2bddc9992d0c",
+          "ps-68939bf58779de51",
+          "ps-8f098386bfc506a7",
+          "ps-16a17fece448a9bc",
+          "ps-9a0d41d84bf85894",
+          "ps-8117737e07fe6286",
+          "ps-48e2fc3c4e73e44f",
+          "ps-db9a9af8073a8555"
+        ]
+      ],
+      [
+        27,
+        [
+          "ps-5ab4488638bced82",
+          "ps-8a8ab3cf8e421784",
+          "ps-63756b411d8c0e41",
+          "ps-45e9c80dec6636f6",
+          "ps-0d814f6cd046ef2e",
+          "ps-13ad5eaacb8e483f",
+          "ps-b9ca16fc349b7be8",
+          "ps-d2e46f895fd1205f",
+          "ps-cd6a0647a3975394",
+          "ps-b430597c9d529c26",
+          "ps-fa13ce6d37f0b1a0",
+          "ps-5c4c50d27628fe7b",
+          "ps-d818fbd36bd7caa5",
+          "ps-8c8f054691fb33f1",
+          "ps-5f6124be6f95e2ea",
+          "ps-75c4c2728b701a51"
+        ]
+      ],
+      [
+        28,
+        [
+          "ps-33030d46253e3924",
+          "ps-a727f239128d4b23",
+          "ps-eeb710108d835405",
+          "ps-393afdcad2ffbe7e",
+          "ps-cf9ac9098bd7891e",
+          "ps-d81f63ce4ade052e",
+          "ps-aba8a67016e5f575",
+          "ps-558f47c9cd56cb89",
+          "ps-c6c78fd078b490f9",
+          "ps-3d1979fbb9816b5b",
+          "ps-163a72609bab2c76",
+          "ps-5c90e8a7bfc8530d",
+          "ps-652762245e3a8d87",
+          "ps-6cc520b03f541ef7",
+          "ps-768bddc5b006fb93",
+          "ps-da2905a3037cc0e9"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            56,
+            0
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            61,
+            0
+          ],
+          [
+            31,
+            0
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            62,
+            0
+          ]
+        ],
+        "epoch": 1,
+        "offset": 0,
+        "pos": 0
+      },
+      "anneal_reserve": {
+        "buffer": [
+          [
+            48,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            34,
+            0
+          ],
+          [
+            69,
+            0
+          ],
+          [
+            38,
+            0
+          ],
+          [
+            30,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 48
+      },
+      "code": {
+        "buffer": [
+          [
+            61,
+            0
+          ],
+          [
+            38,
+            0
+          ],
+          [
+            63,
+            0
+          ],
+          [
+            170,
+            0
+          ],
+          [
+            150,
+            0
+          ],
+          [
+            160,
+            1
+          ]
+        ],
+        "epoch": 1,
+        "offset": 0,
+        "pos": 12
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 84,
+        "pos": 86
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 1,
+        "offset": 138,
+        "pos": 45
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 226,
+        "pos": 71
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            46,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            48,
+            0
+          ],
+          [
+            42,
+            0
+          ],
+          [
+            60,
+            0
+          ],
+          [
+            60,
+            1
+          ],
+          [
+            42,
+            1
+          ]
+        ],
+        "epoch": 1,
+        "offset": 0,
+        "pos": 16
+      }
+    }
+  },
+  "mode": "resume",
+  "optimizer_hash": "6113b9c7dff5b1af933b345d8de402f15357eec026c248fb0c73f3fb15ef87f1",
+  "optimizer_t": 28,
+  "previous_checkpoint": "ckpt-main-s00024-0e0d76e34d",
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "scheduler": {
+    "next_lr": 0.0012525250136123458,
+    "step": 28
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "4a8c4a0bf9e74a52fb83e66d4b67f9b7a13925673f299e519e0cdaed05216a61"
+}

@@ -1,0 +1,50 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "math_science",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "registered_eval",
+  "content_hash": "4f4e15f250fc4d8557c7f4e08ac7c6db04de54baf8a870c29e4574133420e052",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_math_textbooks/validation/00000",
+    "src_math_textbooks/validation/00001",
+    "src_math_textbooks/validation/00002",
+    "src_math_textbooks/validation/00003",
+    "src_math_textbooks/validation/00004"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "3f2eb2977f18c97e5fd933823992c37c517d1f76cfb05b54529b0da5c84df2e5",
+    "tokens.npy": "c027efbb820816eb6c685edcec25d246f4812e15ce90c0b5b24b29d20c331bf7",
+    "train_on.npy": "a72239c24f1fda7855e4f2a3d6a975390d7bdbb057372c487a1fc47d106332cd"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "cc-by-sa-4.0"
+  ],
+  "loss_bearing_token_count": 934,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "f02c81c186ad2adb9605bf377b7eece4ef1f125415c5bbb324682cd501f903c0",
+  "n_docs": 5,
+  "never_train": true,
+  "packing_policy": "concat_chop",
+  "parent_shard_ids": [],
+  "path": "shards/shd-math_science-validation-4f4e15f250fc",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-math_science-validation-4f4e15f250fc",
+  "source_ids": [
+    "src_math_textbooks"
+  ],
+  "split": "validation",
+  "token_count": 934,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

@@ -1,0 +1,1105 @@
+{
+  "format": "tdes-mixture-schedule-v1",
+  "global_batch_sequences": 16,
+  "lanes": [
+    "general_web",
+    "code",
+    "math_science",
+    "indic",
+    "reasoning",
+    "agentic",
+    "anneal_reserve"
+  ],
+  "protected_lanes": [
+    "indic",
+    "agentic",
+    "reasoning"
+  ],
+  "scarcity": {
+    "agentic": {
+      "available_unique_tokens": 7146,
+      "mitigation": "repeat existing data (repeated-pass number is ledgered)",
+      "planned_epochs": 1.236,
+      "requested_positions": 5888,
+      "requested_with_opus_overhead": 8832,
+      "status": "repeat"
+    },
+    "anneal_reserve": {
+      "available_unique_tokens": 4112,
+      "mitigation": "repeat existing data (repeated-pass number is ledgered)",
+      "planned_epochs": 1.588,
+      "requested_positions": 4352,
+      "requested_with_opus_overhead": 6528,
+      "status": "repeat"
+    },
+    "code": {
+      "available_unique_tokens": 17213,
+      "mitigation": "repeat existing data (repeated-pass number is ledgered)",
+      "planned_epochs": 1.049,
+      "requested_positions": 12032,
+      "requested_with_opus_overhead": 18048,
+      "status": "repeat"
+    },
+    "general_web": {
+      "available_unique_tokens": 30210,
+      "mitigation": "none",
+      "planned_epochs": 0.667,
+      "requested_positions": 13440,
+      "requested_with_opus_overhead": 20160,
+      "status": "ok"
+    },
+    "indic": {
+      "available_unique_tokens": 16835,
+      "mitigation": "repeat existing data (repeated-pass number is ledgered)",
+      "planned_epochs": 1.083,
+      "requested_positions": 12160,
+      "requested_with_opus_overhead": 18240,
+      "status": "repeat"
+    },
+    "math_science": {
+      "available_unique_tokens": 15258,
+      "mitigation": "repeat existing data (repeated-pass number is ledgered)",
+      "planned_epochs": 1.007,
+      "requested_positions": 10240,
+      "requested_with_opus_overhead": 15360,
+      "status": "repeat"
+    },
+    "reasoning": {
+      "available_unique_tokens": 9417,
+      "mitigation": "repeat existing data (repeated-pass number is ledgered)",
+      "planned_epochs": 1.183,
+      "requested_positions": 7424,
+      "requested_with_opus_overhead": 11136,
+      "status": "repeat"
+    }
+  },
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "sequence_length": 128,
+  "stages": [
+    {
+      "max_quota_deviation": 0.002917,
+      "mixture": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      },
+      "planned_share": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      },
+      "protected_floors": {
+        "agentic": 0.0625,
+        "indic": 0.125,
+        "reasoning": 0.0625
+      },
+      "quota_share": {
+        "agentic": 0.067708,
+        "anneal_reserve": 0.0,
+        "code": 0.197917,
+        "general_web": 0.322917,
+        "indic": 0.182292,
+        "math_science": 0.161458,
+        "reasoning": 0.067708
+      },
+      "sequence_length": 128,
+      "stage": "foundation",
+      "step_end": 12,
+      "step_start": 1,
+      "token_end": 24576,
+      "token_start": 0,
+      "warmup_steps": 2
+    },
+    {
+      "max_quota_deviation": 0.004375,
+      "mixture": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      },
+      "planned_share": {
+        "agentic": 0.0975,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.228333,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.134167
+      },
+      "protected_floors": {
+        "agentic": 0.0625,
+        "indic": 0.125,
+        "reasoning": 0.0625
+      },
+      "quota_share": {
+        "agentic": 0.098958,
+        "anneal_reserve": 0.0,
+        "code": 0.203125,
+        "general_web": 0.223958,
+        "indic": 0.177083,
+        "math_science": 0.161458,
+        "reasoning": 0.135417
+      },
+      "sequence_length": 128,
+      "stage": "reasoning_midtrain",
+      "step_end": 24,
+      "step_start": 13,
+      "token_end": 49152,
+      "token_start": 24576,
+      "warmup_steps": 2
+    },
+    {
+      "max_quota_deviation": 0.00662,
+      "mixture": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.3,
+        "code": 0.12,
+        "general_web": 0.0,
+        "indic": 0.2,
+        "math_science": 0.14,
+        "reasoning": 0.14
+      },
+      "planned_share": {
+        "agentic": 0.103138,
+        "anneal_reserve": 0.266627,
+        "code": 0.135175,
+        "general_web": 0.0,
+        "indic": 0.203423,
+        "math_science": 0.147245,
+        "reasoning": 0.144393
+      },
+      "protected_floors": {
+        "agentic": 0.0625,
+        "indic": 0.125,
+        "reasoning": 0.0625
+      },
+      "quota_share": {
+        "agentic": 0.109375,
+        "anneal_reserve": 0.265625,
+        "code": 0.132812,
+        "general_web": 0.0,
+        "indic": 0.203125,
+        "math_science": 0.140625,
+        "reasoning": 0.148438
+      },
+      "sequence_length": 128,
+      "stage": "anneal",
+      "step_end": 32,
+      "step_start": 25,
+      "token_end": 65536,
+      "token_start": 49152,
+      "warmup_steps": 2
+    }
+  ],
+  "steps": [
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 1,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 4,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 2,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 3,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 6,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 4,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 5,
+        "indic": 2,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "foundation",
+      "step": 5,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 6,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 7,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 4,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 8,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 9,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 10,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 6,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 11,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 5,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 1
+      },
+      "stage": "foundation",
+      "step": 12,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.07,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.32,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.07
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 0,
+        "code": 4,
+        "general_web": 4,
+        "indic": 2,
+        "math_science": 2,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 13,
+      "warmup": true,
+      "weights": {
+        "agentic": 0.08,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.286667,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.093333
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 4,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 14,
+      "warmup": true,
+      "weights": {
+        "agentic": 0.09,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.253333,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.116667
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 4,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 15,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 3,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 16,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 4,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 3
+      },
+      "stage": "reasoning_midtrain",
+      "step": 17,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 4,
+        "general_web": 3,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 18,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 4,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 19,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 3,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 20,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 4,
+        "indic": 2,
+        "math_science": 3,
+        "reasoning": 3
+      },
+      "stage": "reasoning_midtrain",
+      "step": 21,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 0,
+        "code": 4,
+        "general_web": 3,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 22,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 4,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 23,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 0,
+        "code": 3,
+        "general_web": 3,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "reasoning_midtrain",
+      "step": 24,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.22,
+        "indic": 0.18,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 2,
+        "code": 3,
+        "general_web": 0,
+        "indic": 4,
+        "math_science": 2,
+        "reasoning": 3
+      },
+      "stage": "anneal",
+      "step": 25,
+      "warmup": true,
+      "weights": {
+        "agentic": 0.117188,
+        "anneal_reserve": 0.117188,
+        "code": 0.203125,
+        "general_web": 0.0,
+        "indic": 0.21875,
+        "math_science": 0.179688,
+        "reasoning": 0.164063
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 3,
+        "code": 3,
+        "general_web": 0,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "anneal",
+      "step": 26,
+      "warmup": true,
+      "weights": {
+        "agentic": 0.107914,
+        "anneal_reserve": 0.215827,
+        "code": 0.158273,
+        "general_web": 0.0,
+        "indic": 0.208633,
+        "math_science": 0.158273,
+        "reasoning": 0.151079
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 5,
+        "code": 2,
+        "general_web": 0,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 3
+      },
+      "stage": "anneal",
+      "step": 27,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.3,
+        "code": 0.12,
+        "general_web": 0.0,
+        "indic": 0.2,
+        "math_science": 0.14,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 5,
+        "code": 2,
+        "general_web": 0,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 2
+      },
+      "stage": "anneal",
+      "step": 28,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.3,
+        "code": 0.12,
+        "general_web": 0.0,
+        "indic": 0.2,
+        "math_science": 0.14,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 5,
+        "code": 1,
+        "general_web": 0,
+        "indic": 3,
+        "math_science": 3,
+        "reasoning": 2
+      },
+      "stage": "anneal",
+      "step": 29,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.3,
+        "code": 0.12,
+        "general_web": 0.0,
+        "indic": 0.2,
+        "math_science": 0.14,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 1,
+        "anneal_reserve": 5,
+        "code": 2,
+        "general_web": 0,
+        "indic": 4,
+        "math_science": 2,
+        "reasoning": 2
+      },
+      "stage": "anneal",
+      "step": 30,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.3,
+        "code": 0.12,
+        "general_web": 0.0,
+        "indic": 0.2,
+        "math_science": 0.14,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 4,
+        "code": 2,
+        "general_web": 0,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 3
+      },
+      "stage": "anneal",
+      "step": 31,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.3,
+        "code": 0.12,
+        "general_web": 0.0,
+        "indic": 0.2,
+        "math_science": 0.14,
+        "reasoning": 0.14
+      }
+    },
+    {
+      "floor_counts": {
+        "agentic": 1,
+        "indic": 2,
+        "reasoning": 1
+      },
+      "quotas": {
+        "agentic": 2,
+        "anneal_reserve": 5,
+        "code": 2,
+        "general_web": 0,
+        "indic": 3,
+        "math_science": 2,
+        "reasoning": 2
+      },
+      "stage": "anneal",
+      "step": 32,
+      "warmup": false,
+      "weights": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.3,
+        "code": 0.12,
+        "general_web": 0.0,
+        "indic": 0.2,
+        "math_science": 0.14,
+        "reasoning": 0.14
+      }
+    }
+  ],
+  "total_steps": 32
+}

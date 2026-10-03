@@ -1,0 +1,102 @@
+{
+  "docs": [
+    {
+      "benchmark_id": null,
+      "doc_hash": "76686d01495e148c49eb85f1c1c1408f3b487521312e3de15a3161b61e326b81",
+      "doc_id": "src_agentic_tierA/train/00072",
+      "doc_index": 0,
+      "kind": "agentic",
+      "language": "en",
+      "length": 120,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 0
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "f6bbeaee94e668aa73b2541901a076edaef1b8beae0e966675179f94791cf077",
+      "doc_id": "src_agentic_tierA/train/00073",
+      "doc_index": 1,
+      "kind": "agentic",
+      "language": "en",
+      "length": 103,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 120
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "a7b19a8f7274e7d45bee867ca164c197959a7337fb33887d1cf3f20bf3e538ec",
+      "doc_id": "src_agentic_tierA/train/00074",
+      "doc_index": 2,
+      "kind": "agentic",
+      "language": "en",
+      "length": 131,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 223
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "1a368cb63e6ed7358faf6471ed508ab422da9b017dcac3e09b756eff47770bb1",
+      "doc_id": "src_agentic_tierA/train/00075",
+      "doc_index": 3,
+      "kind": "agentic",
+      "language": "en",
+      "length": 101,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 354
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "37fe343b2a17c364acdbd571322ab01d95bca129a86e0f3ea6880f5b5c8e59c3",
+      "doc_id": "src_agentic_tierA/train/00076",
+      "doc_index": 4,
+      "kind": "agentic",
+      "language": "en",
+      "length": 100,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 455
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "6ffbd4e39976e0851524da3de0ddb3a6d26ded61d7a59f9ba3a94698385d43e7",
+      "doc_id": "src_agentic_tierA/train/00077",
+      "doc_index": 5,
+      "kind": "agentic",
+      "language": "en",
+      "length": 131,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 555
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "d479a030dc6814fab265be2ea6d021fadc746cda40fbfff7ae291d61c0ada280",
+      "doc_id": "src_agentic_tierA/train/00078",
+      "doc_index": 6,
+      "kind": "agentic",
+      "language": "en",
+      "length": 99,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 686
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "b089eec64c13bc29b694c7e77310293e1b6c7063fc3d74bba83c120b504ab01b",
+      "doc_id": "src_agentic_tierA/train/00079",
+      "doc_index": 7,
+      "kind": "agentic",
+      "language": "en",
+      "length": 116,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 785
+    }
+  ],
+  "format": "tdes-shard-v1",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

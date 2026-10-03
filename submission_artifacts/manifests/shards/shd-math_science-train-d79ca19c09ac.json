@@ -1,0 +1,63 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "math_science",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "d79ca19c09ac886d337b828c5753f2b67c47fea3134b2bf52a3f8d82d2692d41",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_math_textbooks/train/00072",
+    "src_math_textbooks/train/00073",
+    "src_math_textbooks/train/00074",
+    "src_math_textbooks/train/00075",
+    "src_math_textbooks/train/00076",
+    "src_math_textbooks/train/00077",
+    "src_math_textbooks/train/00078",
+    "src_math_textbooks/train/00079",
+    "src_math_textbooks/train/00080",
+    "src_math_textbooks/train/00081",
+    "src_math_textbooks/train/00082",
+    "src_math_textbooks/train/00083",
+    "src_math_textbooks/train/00084",
+    "src_math_textbooks/train/00085",
+    "src_math_textbooks/train/00086",
+    "src_math_textbooks/train/00087",
+    "src_math_textbooks/train/00088",
+    "src_math_textbooks/train/00089"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "0e7655d4dd69460adfa5563c6962d162a5d38ef2a0c9f06ddcffbb56b6eb75af",
+    "tokens.npy": "92546d3f235824c6f5ff3b73e8cb3bedae0bc45ed6bc84ad32cf1b10ee77dc99",
+    "train_on.npy": "1e2d9af4a12aa3903c1a46efa2e1f6550645e28153cc7272b6fa35cbfc7c4743"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "cc-by-sa-4.0"
+  ],
+  "loss_bearing_token_count": 3013,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "6707b3a4ac9c94f4424f221e63eaa6017caf02ea0bcf85be93d51ea5d7a401b1",
+  "n_docs": 18,
+  "never_train": false,
+  "packing_policy": "concat_chop",
+  "parent_shard_ids": [],
+  "path": "shards/shd-math_science-train-d79ca19c09ac",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-math_science-train-d79ca19c09ac",
+  "source_ids": [
+    "src_math_textbooks"
+  ],
+  "split": "train",
+  "token_count": 3013,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

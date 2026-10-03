@@ -1,0 +1,151 @@
+import unittest
+
+import numpy as np
+
+from tests.helpers import env
+from tdes.config import LANE_POLICY
+from tdes.model import Adam, forward_backward, init_params
+from tdes.packing import LaneStream, build_sequence, lane_units, simulate_policy, verify_sequence
+
+
+def _stream(e, lane, buffer=8):
+    ms = {s: e.manifests[s] for s in e.catalog["admitted_train"] if e.manifests[s]["capability_lane"] == lane}
+    nl = {i for i in range(e.tokenizer.vocab_size) if b"\n" in e.tokenizer.token_bytes(i)}
+    units, _ = lane_units(lane, LANE_POLICY[lane], ms, e.store, e.cfg["train"]["seq_len"], nl)
+    return LaneStream(lane, LANE_POLICY[lane], units, e.cfg["train"]["seq_len"], e.cfg["seed"], buffer)
+
+
+class PackingTests(unittest.TestCase):
+    def test_masks_positions_attention_for_every_policy(self):
+        e = env()
+        L = e.cfg["train"]["seq_len"]
+        for lane in ("general_web", "code", "indic", "reasoning", "agentic", "anneal_reserve"):
+            st = _stream(e, lane)
+            for _ in range(12):
+                seq = build_sequence(st.next_spans(), e.store, L, lane, LANE_POLICY[lane])
+                self.assertEqual(verify_sequence(seq, e.store), [], (lane, seq.sample_id))
+                pad = seq.segment_ids == 0
+                self.assertTrue((seq.loss_mask[pad] == 0).all())
+                for k in range(1, len(seq.spans) + 1):
+                    idx = np.nonzero(seq.segment_ids == k)[0]
+                    self.assertEqual(seq.position_ids[idx].tolist(), list(range(len(idx))))
+                    self.assertEqual(seq.labels[idx[-1]], -1, "no target across a segment boundary")
+                att = seq.attention_mask()
+                for i in range(L):
+                    allowed = np.nonzero(att[i])[0]
+                    if seq.segment_ids[i] > 0:
+                        self.assertTrue((seq.segment_ids[allowed] == seq.segment_ids[i]).all())
+                        self.assertTrue((allowed <= i).all())
+
+    def test_structured_samples_never_split_and_context_has_no_loss(self):
+        e = env()
+        L = e.cfg["train"]["seq_len"]
+        st = _stream(e, "agentic")
+        for _ in range(10):
+            seq = build_sequence(st.next_spans(), e.store, L, "agentic", "structure_preserving")
+            for k, sp in enumerate(seq.spans, start=1):
+                doc = e.store.get(sp["shard_id"]).docs[sp["doc_index"]]
+                self.assertEqual((sp["start"], sp["end"]), (0, doc["length"]))
+                idx = np.nonzero(seq.segment_ids == k)[0]
+                targets_context = seq.train_on[idx[1:]] == 0
+                self.assertTrue((seq.loss_mask[idx[:-1]][targets_context] == 0).all())
+            self.assertLess(seq.n_loss, seq.n_tokens, "user/tool_obs tokens are context only")
+
+    def test_concat_chop_windows_continue_the_stream_exactly(self):
+        e = env()
+        st = _stream(e, "general_web")
+        prev = st.next_spans()
+        for _ in range(10):
+            cur = st.next_spans()
+            last, first = prev[-1], cur[0]
+            doc_len = e.store.get(last["shard_id"]).docs[last["doc_index"]]["length"]
+            if last["end"] < doc_len:
+                self.assertEqual((first["shard_id"], first["doc_index"], first["start"]),
+                                 (last["shard_id"], last["doc_index"], last["end"]))
+            else:
+                self.assertEqual(first["start"], 0)
+            self.assertEqual(sum(s["end"] - s["start"] for s in cur), e.cfg["train"]["seq_len"])
+            prev = cur
+
+    def test_stream_state_roundtrip_reproduces_sequences(self):
+        e = env()
+        for lane in ("general_web", "code", "agentic"):
+            a = _stream(e, lane)
+            for _ in range(7):
+                a.next_spans()
+            saved = a.state_dict()
+            want = [a.next_spans() for _ in range(9)]
+            b = _stream(e, lane)
+            b.load_state_dict(saved)
+            self.assertEqual([b.next_spans() for _ in range(9)], want, lane)
+
+    def test_packing_lab_ordering(self):
+        lengths = [30, 90, 20, 60, 100, 10, 40, 70]
+        res = {p: simulate_policy(lengths, p, 128, structured=True) for p in
+               ("pad_only", "greedy_first_fit", "best_fit_decreasing")}
+        self.assertLessEqual(res["pad_only"]["utilization"], res["greedy_first_fit"]["utilization"])
+        self.assertLessEqual(res["greedy_first_fit"]["sequences"], res["pad_only"]["sequences"])
+        self.assertFalse(simulate_policy(lengths, "concat_chop", 128, structured=True)["structure_safe"])
+
+
+class ModelTests(unittest.TestCase):
+    def _batch(self, rng, B=2, L=10):
+        seg = np.array([[1, 1, 1, 2, 2, 2, 2, 0, 0, 0], [1, 1, 1, 1, 1, 1, 2, 2, 2, 2]])
+        pos = np.zeros_like(seg)
+        for b in range(B):
+            for s in set(seg[b].tolist()) - {0}:
+                idx = np.nonzero(seg[b] == s)[0]
+                pos[b, idx] = np.arange(len(idx))
+        tok = rng.integers(0, 20, (B, L))
+        lab = rng.integers(0, 20, (B, L))
+        lm = ((rng.random((B, L)) > 0.3) & (seg > 0)).astype(float)
+        return tok, pos, seg, lab, lm
+
+    def test_gradient_matches_finite_differences(self):
+        rng = np.random.default_rng(0)
+        p = init_params(20, 8, 12, 10, 0, 0.3, "float64")
+        tok, pos, seg, lab, lm = self._batch(rng)
+        _, _, g = forward_backward(p, tok, pos, seg, lab, lm, 0.1)
+        worst = 0.0
+        for k in p:
+            for _ in range(4):
+                i = tuple(int(rng.integers(0, s)) for s in p[k].shape)
+                old = p[k][i]
+                p[k][i] = old + 1e-5
+                a = forward_backward(p, tok, pos, seg, lab, lm, 0.1, need_grad=False)[0]
+                p[k][i] = old - 1e-5
+                b = forward_backward(p, tok, pos, seg, lab, lm, 0.1, need_grad=False)[0]
+                p[k][i] = old
+                num = (a - b) / 2e-5
+                worst = max(worst, abs(num - g[k][i]) / (abs(num) + abs(g[k][i]) + 1e-9))
+        self.assertLess(worst, 1e-4)
+
+    def test_attention_is_isolated_per_segment(self):
+        rng = np.random.default_rng(1)
+        p = init_params(20, 8, 12, 10, 0, 0.3, "float64")
+        tok, pos, seg, lab, lm = self._batch(rng)
+        _, ce1, _ = forward_backward(p, tok, pos, seg, lab, np.ones_like(lm) * (seg > 0), 1.0, need_grad=False)
+        tok2 = tok.copy()
+        tok2[1, :6] = (tok2[1, :6] + 7) % 20          # change only segment 1 of row 1
+        _, ce2, _ = forward_backward(p, tok2, pos, seg, lab, np.ones_like(lm) * (seg > 0), 1.0, need_grad=False)
+        np.testing.assert_allclose(ce1[1, 6:], ce2[1, 6:], rtol=0, atol=1e-12)
+
+    def test_optimizer_state_roundtrip(self):
+        from tdes.config import small_config
+        cfg = small_config()
+        p = init_params(20, 8, 12, 10, 0, 0.3)
+        opt = Adam(p, cfg)
+        g = {k: np.ones_like(v) for k, v in p.items()}
+        opt.step(p, g, 1)
+        opt2 = Adam(p, cfg)
+        opt2.load_arrays(opt.state_arrays(), opt.t)
+        p1 = {k: v.copy() for k, v in p.items()}
+        opt.step(p1, g, 2)
+        p2 = {k: v.copy() for k, v in p.items()}
+        opt2.step(p2, g, 2)
+        for k in p:
+            np.testing.assert_array_equal(p1[k], p2[k])
+
+
+if __name__ == "__main__":
+    unittest.main()

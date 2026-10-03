@@ -1,0 +1,181 @@
+{
+  "decisions": [
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-agentic-train-a5ba98a2da48"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-agentic-train-9173827a9592"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-agentic-train-9f31a36166f3"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-agentic-train-c171a9233421"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-anneal_reserve-train-eee78921d88c"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-anneal_reserve-train-4d59d51d1e90"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-anneal_reserve-train-f9c9f81a72f5"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-code-train-6b4e59183e95"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-code-train-f7edc679ba1d"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-code-train-c4632678cd6e"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-code-train-c9bbe04bac8d"
+    },
+    {
+      "decision": "blocked",
+      "reason": "license ['unknown'] not allowed",
+      "shard_id": "shd-code-train-85006bfca373"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-general_web-train-e726c40dfb40"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-general_web-train-a40d1340a215"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-general_web-train-6610b2596e7e"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-general_web-train-7f6313c11dd2"
+    },
+    {
+      "decision": "quarantined",
+      "docs": {
+        "14": [
+          "test_ngram_overlap:144",
+          "canary:bench_mini_arith_v1"
+        ]
+      },
+      "reason": "eval overlap",
+      "shard_id": "shd-general_web-train-785bb33ff511"
+    },
+    {
+      "decision": "admitted",
+      "parent": "shd-general_web-train-785bb33ff511",
+      "reason": "derived clean shard",
+      "shard_id": "shd-general_web-train-896422f889e4"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-general_web-train-da1acf065374"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-general_web-train-d198d7a136b1"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-general_web-train-c44caa450caa"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-indic-train-8eadc41d7a86"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-indic-train-3305107b346f"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-indic-train-ca6702e9807e"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-indic-train-2ece284f9797"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-indic-train-be029172628d"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-math_science-train-551548043c5e"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-math_science-train-512d6b0ff386"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-math_science-train-56bd36818176"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-math_science-train-d79ca19c09ac"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-reasoning-train-c3f8074fcf9a"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-reasoning-train-fca2f5d1b1ce"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-reasoning-train-b92ef5e889e1"
+    },
+    {
+      "decision": "admitted",
+      "reason": "clean",
+      "shard_id": "shd-reasoning-train-1c47f9da7dd9"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "branch": "main",
+  "checkpoint_step": 20,
+  "checks": {
+    "matches_batch_planned_by_crashed_process": true,
+    "matches_uninterrupted_reference_run": true,
+    "next_step_is_checkpoint_plus_one": true
+  },
+  "expected_from_crashed_process": {
+    "batch_hash": "9ef54897a1eebff65964671ee16623a0d7dfcb50bc2ca664e069b87d3c49f39f",
+    "batch_id": "b00021-9ef54897a1ee",
+    "global_step": 21,
+    "sample_ids": [
+      "ps-7f9df89870e74b81",
+      "ps-796bd284a081ec8b",
+      "ps-c431c09c395f2272",
+      "ps-1c44c1f5a76c6063",
+      "ps-f1f3fc0cc2015fd4",
+      "ps-c62c4dff8f9fb48c",
+      "ps-a727f239128d4b23",
+      "ps-1fff9e01fae2ea32",
+      "ps-0313e4af0701c170",
+      "ps-91f07f58e5ea6912",
+      "ps-7ecd0618229e047e",
+      "ps-6ae9424c7ba2b771",
+      "ps-874df25d323cf814",
+      "ps-ec943686f52d778c",
+      "ps-d6819acc360f5588",
+      "ps-56441f302be55858"
+    ],
+    "seq": 205
+  },
+  "expected_from_uninterrupted_reference": {
+    "batch_hash": "9ef54897a1eebff65964671ee16623a0d7dfcb50bc2ca664e069b87d3c49f39f",
+    "batch_id": "b00021-9ef54897a1ee",
+    "global_step": 21,
+    "sample_ids": [
+      "ps-7f9df89870e74b81",
+      "ps-796bd284a081ec8b",
+      "ps-c431c09c395f2272",
+      "ps-1c44c1f5a76c6063",
+      "ps-f1f3fc0cc2015fd4",
+      "ps-c62c4dff8f9fb48c",
+      "ps-a727f239128d4b23",
+      "ps-1fff9e01fae2ea32",
+      "ps-0313e4af0701c170",
+      "ps-91f07f58e5ea6912",
+      "ps-7ecd0618229e047e",
+      "ps-6ae9424c7ba2b771",
+      "ps-874df25d323cf814",
+      "ps-ec943686f52d778c",
+      "ps-d6819acc360f5588",
+      "ps-56441f302be55858"
+    ],
+    "seq": 200
+  },
+  "expected_next_step": 21,
+  "final_step": 32,
+  "final_weights_hash": "5e49b0b888b74c6307a609f2430d50f4a316d4374f10752869812b9895c28656",
+  "ledger_offset": {
+    "last_hash": "f8a66e02261e3178fada001853f4fa5ec0bda9fc3e816a683ca1b1b7093829c0",
+    "offset": 205,
+    "path": "ledgers/main/consumption.jsonl"
+  },
+  "resume_latency_s": 0.479774,
+  "resumed_from": "ckpt-main-s00020-59ce18a967",
+  "resumed_next_batch": {
+    "batch_hash": "9ef54897a1eebff65964671ee16623a0d7dfcb50bc2ca664e069b87d3c49f39f",
+    "batch_id": "b00021-9ef54897a1ee",
+    "global_step": 21,
+    "sample_ids": [
+      "ps-7f9df89870e74b81",
+      "ps-796bd284a081ec8b",
+      "ps-c431c09c395f2272",
+      "ps-1c44c1f5a76c6063",
+      "ps-f1f3fc0cc2015fd4",
+      "ps-c62c4dff8f9fb48c",
+      "ps-a727f239128d4b23",
+      "ps-1fff9e01fae2ea32",
+      "ps-0313e4af0701c170",
+      "ps-91f07f58e5ea6912",
+      "ps-7ecd0618229e047e",
+      "ps-6ae9424c7ba2b771",
+      "ps-874df25d323cf814",
+      "ps-ec943686f52d778c",
+      "ps-d6819acc360f5588",
+      "ps-56441f302be55858"
+    ]
+  },
+  "rolled_back": {
+    "consumption": 4,
+    "learning": 0,
+    "opus": 31
+  },
+  "rolled_back_microbatches_reconsumed_identically": [
+    {
+      "crashed_hash": "6f352be35af5d84ceb7ef9097e8ccddd87ae6a9a94f66cc4ddd1db46776c88c3",
+      "match": true,
+      "microbatch_id": "b00021-9ef54897a1ee/r0/m0",
+      "resumed_hash": "6f352be35af5d84ceb7ef9097e8ccddd87ae6a9a94f66cc4ddd1db46776c88c3"
+    },
+    {
+      "crashed_hash": "23900f6c657eb8980254a8d164a16e2a789fa6aebdff8ea8bc36e3890c578431",
+      "match": true,
+      "microbatch_id": "b00021-9ef54897a1ee/r1/m0",
+      "resumed_hash": "23900f6c657eb8980254a8d164a16e2a789fa6aebdff8ea8bc36e3890c578431"
+    },
+    {
+      "crashed_hash": "bc26a722ecb1db01d77f16f7624b60f6c6bf43e744e749ac6072434fc00ce6f4",
+      "match": true,
+      "microbatch_id": "b00021-9ef54897a1ee/r0/m1",
+      "resumed_hash": "bc26a722ecb1db01d77f16f7624b60f6c6bf43e744e749ac6072434fc00ce6f4"
+    }
+  ]
+}

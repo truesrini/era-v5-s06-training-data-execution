@@ -1,0 +1,69 @@
+{
+  "benchmark_id": "bench_mini_arith_v1",
+  "capability_lane": "eval",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "registered_eval",
+  "content_hash": "3d6cd76c969c1944ce4fe87cc318f9aaa56d68ce8078c27d16bbf822ba4070f7",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "bench_mini_arith_v1/test/00000",
+    "bench_mini_arith_v1/test/00001",
+    "bench_mini_arith_v1/test/00002",
+    "bench_mini_arith_v1/test/00003",
+    "bench_mini_arith_v1/test/00004",
+    "bench_mini_arith_v1/test/00005",
+    "bench_mini_arith_v1/test/00006",
+    "bench_mini_arith_v1/test/00007",
+    "bench_mini_arith_v1/test/00008",
+    "bench_mini_arith_v1/test/00009",
+    "bench_mini_arith_v1/test/00010",
+    "bench_mini_arith_v1/test/00011",
+    "bench_mini_arith_v1/test/00012",
+    "bench_mini_arith_v1/test/00013",
+    "bench_mini_arith_v1/test/00014",
+    "bench_mini_arith_v1/test/00015",
+    "bench_mini_arith_v1/test/00016",
+    "bench_mini_arith_v1/test/00017",
+    "bench_mini_arith_v1/test/00018",
+    "bench_mini_arith_v1/test/00019",
+    "bench_mini_arith_v1/test/00020",
+    "bench_mini_arith_v1/test/00021",
+    "bench_mini_arith_v1/test/00022",
+    "bench_mini_arith_v1/test/00023"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "8f59a887454032aa100ac31b1230072e3e3456ad088b7fdcf7ebed4fc2fb3f48",
+    "tokens.npy": "34ec89d3ea032ce9bb5942618757cbc59e75105cfa73381d890d16f9c031d13b",
+    "train_on.npy": "862693bcdcc8ce2c8f1928fb7d124ba0f71c4e76f2218019504aeb865ad6e5a6"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "benchmark"
+  ],
+  "loss_bearing_token_count": 3788,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "b508cb6d0a2bda8868faecb6baffabe8f09a8a5fb8a3dc2b7da73c06529ae252",
+  "n_docs": 24,
+  "never_train": true,
+  "packing_policy": "eval_only",
+  "parent_shard_ids": [],
+  "path": "shards/shd-eval-test-3d6cd76c969c",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-eval-test-3d6cd76c969c",
+  "source_ids": [
+    "bench_mini_arith_v1"
+  ],
+  "split": "test",
+  "token_count": 3788,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

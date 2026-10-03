@@ -1,0 +1,381 @@
+{
+  "branch": "main",
+  "checkpoint_id": "ckpt-main-s00020-59ce18a967",
+  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "counters": {
+    "loss_tokens": 36837,
+    "nonpad_tokens": 39928,
+    "positions": 40960
+  },
+  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "global_step": 20,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "f8a66e02261e3178fada001853f4fa5ec0bda9fc3e816a683ca1b1b7093829c0",
+      "offset": 205,
+      "path": "ledgers/main/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "9139d347cfbaa4dc88c1fa561e69871b946196a73a1daae9913a067cbd534fca",
+      "offset": 345,
+      "path": "ledgers/main/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "bc2f19e93e8545272c807b3329c3716b45bdead7fad767be089dbe54ee628c73",
+      "offset": 609,
+      "path": "ledgers/main/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 511,
+    "deferred": [
+      {
+        "candidate_id": "cand-000483",
+        "defer_count": 1,
+        "first_step": 20,
+        "lane": "general_web",
+        "last_score": 0.4359656878502086,
+        "spans": [
+          {
+            "doc_id": "src_web_edu_crawl/train/00080",
+            "doc_index": 8,
+            "end": 135,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-7f6313c11dd2",
+            "span_id": "shd-general_web-train-7f6313c11dd2:8:7-135",
+            "start": 7
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000492",
+        "defer_count": 1,
+        "first_step": 20,
+        "lane": "math_science",
+        "last_score": -0.14821909552005336,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00043",
+            "doc_index": 19,
+            "end": 226,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-512d6b0ff386",
+            "span_id": "shd-math_science-train-512d6b0ff386:19:223-226",
+            "start": 223
+          },
+          {
+            "doc_id": "src_math_textbooks/train/00018",
+            "doc_index": 18,
+            "end": 125,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-551548043c5e",
+            "span_id": "shd-math_science-train-551548043c5e:18:0-125",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000491",
+        "defer_count": 1,
+        "first_step": 20,
+        "lane": "math_science",
+        "last_score": -0.15111851547335534,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00043",
+            "doc_index": 19,
+            "end": 223,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-512d6b0ff386",
+            "span_id": "shd-math_science-train-512d6b0ff386:19:95-223",
+            "start": 95
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000509",
+        "defer_count": 1,
+        "first_step": 20,
+        "lane": "indic",
+        "last_score": 0.004817461100132875,
+        "spans": [
+          {
+            "doc_id": "src_indic_hi_verified/train/00034",
+            "doc_index": 10,
+            "end": 129,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-3305107b346f",
+            "span_id": "shd-indic-train-3305107b346f:10:1-129",
+            "start": 1
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000498",
+        "defer_count": 1,
+        "first_step": 20,
+        "lane": "reasoning",
+        "last_score": -0.08796179792391161,
+        "spans": [
+          {
+            "doc_id": "src_reasoning_banded/train/00047",
+            "doc_index": 23,
+            "end": 113,
+            "epoch": 0,
+            "shard_id": "shd-reasoning-train-fca2f5d1b1ce",
+            "span_id": "shd-reasoning-train-fca2f5d1b1ce:23:0-113",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000501",
+        "defer_count": 1,
+        "first_step": 20,
+        "lane": "agentic",
+        "last_score": -0.006168391085500558,
+        "spans": [
+          {
+            "doc_id": "src_agentic_tierA/train/00048",
+            "doc_index": 0,
+            "end": 111,
+            "epoch": 0,
+            "shard_id": "shd-agentic-train-9f31a36166f3",
+            "span_id": "shd-agentic-train-9f31a36166f3:0:0-111",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "recent": [
+      [
+        17,
+        [
+          "ps-110d789ee5ed6f2e",
+          "ps-9d3522899f12d548",
+          "ps-f50c0e3c5f6f799b",
+          "ps-b1d96357405eb6b2",
+          "ps-6f93651a44d94f1f",
+          "ps-2b67037ea0c8c621",
+          "ps-1d8f5fbc23aeba71",
+          "ps-d319fede27f81c65",
+          "ps-1068c9fee9169df1",
+          "ps-d58ec94dd41b5c52",
+          "ps-9b52d5c85af9bcf1",
+          "ps-9da203bc3cab53cd",
+          "ps-bd66b659454f0c5a",
+          "ps-d4a62b5c9bf54f4a",
+          "ps-d2e46f895fd1205f",
+          "ps-301453890206ea4b"
+        ]
+      ],
+      [
+        18,
+        [
+          "ps-fc49cf43485d2740",
+          "ps-1b07241d5dce6cbb",
+          "ps-4c0182198445297a",
+          "ps-d5fb15af88840384",
+          "ps-d024ccf635b52e86",
+          "ps-1caa57e022165ccc",
+          "ps-cb64922c55fe2909",
+          "ps-55926b19f7e05087",
+          "ps-5d143a19981096d1",
+          "ps-1ee5308462286b22",
+          "ps-f2fe39fd54b2d6f0",
+          "ps-9d9d05ecd4e06111",
+          "ps-215e50a202d9d850",
+          "ps-d16f472fdce3160d",
+          "ps-9f783c28394cf06a",
+          "ps-6cfb1f9c5a370865"
+        ]
+      ],
+      [
+        19,
+        [
+          "ps-3bea906a435a3175",
+          "ps-c88d01e8afe86400",
+          "ps-8a9fcff642631fe6",
+          "ps-b825c8bb25da3daa",
+          "ps-e4194abb4c04118b",
+          "ps-48620c937c461c06",
+          "ps-6d1be8f99b59ffdc",
+          "ps-7282511fe7eda034",
+          "ps-a79e364cc99e17ad",
+          "ps-92fd09615c5cafc0",
+          "ps-b249d74acf689d82",
+          "ps-5cecf3b39bffb123",
+          "ps-b8434caeac27785c",
+          "ps-4dbdba07cfe71c0b",
+          "ps-89031353db5f1311",
+          "ps-e0e4f6fe9a4f27cf"
+        ]
+      ],
+      [
+        20,
+        [
+          "ps-40b787bb5066d1c9",
+          "ps-35994878913af956",
+          "ps-a0d1c02d7f351db1",
+          "ps-4a8d5640ac155e6b",
+          "ps-4dcf0abd984891e1",
+          "ps-6905dca1c0620d9c",
+          "ps-4f07be3999582e67",
+          "ps-a1f2e475d0dafd4b",
+          "ps-b853b44fe0d1cf2d",
+          "ps-70cf454e3fc98920",
+          "ps-25e33b3e002edaf1",
+          "ps-583a932f6b4eb6db",
+          "ps-cd6a0647a3975394",
+          "ps-2247e9c7eba6f1d4",
+          "ps-d3063f7a5ee5a6bb",
+          "ps-84c0b2eb50c03acd"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            56,
+            0
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            45,
+            0
+          ],
+          [
+            61,
+            0
+          ],
+          [
+            19,
+            0
+          ],
+          [
+            31,
+            0
+          ],
+          [
+            12,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 48
+      },
+      "anneal_reserve": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 0
+      },
+      "code": {
+        "buffer": [
+          [
+            42,
+            0
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            123,
+            0
+          ],
+          [
+            54,
+            0
+          ],
+          [
+            178,
+            0
+          ],
+          [
+            70,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 141
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 117,
+        "pos": 76
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 1,
+        "offset": 115,
+        "pos": 10
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 199,
+        "pos": 51
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            46,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            48,
+            0
+          ],
+          [
+            57,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            42,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 53
+      }
+    }
+  },
+  "mode": "fresh",
+  "optimizer_hash": "a80d0223aa54e80595a027a4b56f8b5158a4bcc48662d2b8939b919829dfd815",
+  "optimizer_t": 20,
+  "previous_checkpoint": "ckpt-main-s00016-1838ca64f7",
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "scheduler": {
+    "next_lr": 0.004013744221201749,
+    "step": 20
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "59ce18a9678fb5c06de51add74e893ca7ef171c16d09b25cf0eb494aa468e58d"
+}

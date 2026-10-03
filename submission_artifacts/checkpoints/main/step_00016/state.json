@@ -1,0 +1,430 @@
+{
+  "branch": "main",
+  "checkpoint_id": "ckpt-main-s00016-1838ca64f7",
+  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "counters": {
+    "loss_tokens": 29735,
+    "nonpad_tokens": 32031,
+    "positions": 32768
+  },
+  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "global_step": 16,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "260cb6ebd616f1a54ad7ccc824abbd253d127d5b1fd0649b8ff77f0160516cae",
+      "offset": 164,
+      "path": "ledgers/main/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "45307a490f83d5f1d15d2b4c679b79b4d92b10fc7f3935ab0692cb996495d1ee",
+      "offset": 276,
+      "path": "ledgers/main/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "e2a09c9caeb1c70ccb30ef384bc1a0352e61429b8696271efe4e27d3360c69f3",
+      "offset": 478,
+      "path": "ledgers/main/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 403,
+    "deferred": [
+      {
+        "candidate_id": "cand-000375",
+        "defer_count": 1,
+        "first_step": 16,
+        "lane": "general_web",
+        "last_score": 0.3716850279173229,
+        "spans": [
+          {
+            "doc_id": "src_web_edu_crawl/train/00004",
+            "doc_index": 4,
+            "end": 104,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-e726c40dfb40",
+            "span_id": "shd-general_web-train-e726c40dfb40:4:38-104",
+            "start": 38
+          },
+          {
+            "doc_id": "src_web_edu_crawl/train/00020",
+            "doc_index": 20,
+            "end": 62,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-e726c40dfb40",
+            "span_id": "shd-general_web-train-e726c40dfb40:20:0-62",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000351",
+        "defer_count": 2,
+        "first_step": 15,
+        "lane": "general_web",
+        "last_score": 0.32500706049430383,
+        "spans": [
+          {
+            "doc_id": "src_web_india_news/train/00051",
+            "doc_index": 18,
+            "end": 116,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-d198d7a136b1",
+            "span_id": "shd-general_web-train-d198d7a136b1:18:110-116",
+            "start": 110
+          },
+          {
+            "doc_id": "src_web_edu_crawl/train/00044",
+            "doc_index": 20,
+            "end": 120,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-a40d1340a215",
+            "span_id": "shd-general_web-train-a40d1340a215:20:0-120",
+            "start": 0
+          },
+          {
+            "doc_id": "src_web_edu_crawl/train/00041",
+            "doc_index": 17,
+            "end": 2,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-a40d1340a215",
+            "span_id": "shd-general_web-train-a40d1340a215:17:0-2",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000382",
+        "defer_count": 1,
+        "first_step": 16,
+        "lane": "math_science",
+        "last_score": -0.06934686608334002,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00086",
+            "doc_index": 14,
+            "end": 202,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-d79ca19c09ac",
+            "span_id": "shd-math_science-train-d79ca19c09ac:14:74-202",
+            "start": 74
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000385",
+        "defer_count": 1,
+        "first_step": 16,
+        "lane": "math_science",
+        "last_score": -0.09388738286481586,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00069",
+            "doc_index": 21,
+            "end": 136,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-56bd36818176",
+            "span_id": "shd-math_science-train-56bd36818176:21:8-136",
+            "start": 8
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000402",
+        "defer_count": 1,
+        "first_step": 16,
+        "lane": "indic",
+        "last_score": 0.0387306782367644,
+        "spans": [
+          {
+            "doc_id": "src_indic_hi_verified/train/00013",
+            "doc_index": 13,
+            "end": 88,
+            "epoch": 0,
+            "shard_id": "shd-indic-train-8eadc41d7a86",
+            "span_id": "shd-indic-train-8eadc41d7a86:13:53-88",
+            "start": 53
+          },
+          {
+            "doc_id": "src_indic_hi_verified/train/00037",
+            "doc_index": 13,
+            "end": 93,
+            "epoch": 0,
+            "shard_id": "shd-indic-train-3305107b346f",
+            "span_id": "shd-indic-train-3305107b346f:13:0-93",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000391",
+        "defer_count": 1,
+        "first_step": 16,
+        "lane": "reasoning",
+        "last_score": -0.07968833782262555,
+        "spans": [
+          {
+            "doc_id": "src_reasoning_banded/train/00006",
+            "doc_index": 6,
+            "end": 124,
+            "epoch": 0,
+            "shard_id": "shd-reasoning-train-c3f8074fcf9a",
+            "span_id": "shd-reasoning-train-c3f8074fcf9a:6:0-124",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000367",
+        "defer_count": 2,
+        "first_step": 15,
+        "lane": "agentic",
+        "last_score": -0.05102576948953531,
+        "spans": [
+          {
+            "doc_id": "src_agentic_tierA/train/00030",
+            "doc_index": 6,
+            "end": 120,
+            "epoch": 0,
+            "shard_id": "shd-agentic-train-9173827a9592",
+            "span_id": "shd-agentic-train-9173827a9592:6:0-120",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "recent": [
+      [
+        13,
+        [
+          "ps-4459e7ce1527ee98",
+          "ps-9251463fadf669dc",
+          "ps-b93abf4dd68c82b5",
+          "ps-00eef752630bdd85",
+          "ps-6063c4e517c331db",
+          "ps-2f6705ee6afb3dd6",
+          "ps-cb2017875f0973cc",
+          "ps-b87caf9cb02febbd",
+          "ps-f60f16743626ca52",
+          "ps-bfee41c88ca2b6e0",
+          "ps-354aa909dfe2595b",
+          "ps-d418358a3a1b64bb",
+          "ps-0011a0b7d7fc5073",
+          "ps-9805967a72d4f0a1",
+          "ps-f780cc8a5fd04bc6",
+          "ps-1d0e60c6c279eb33"
+        ]
+      ],
+      [
+        14,
+        [
+          "ps-5abedb13b35bcce7",
+          "ps-c1577e4d9ee44341",
+          "ps-93c26f85734ff13b",
+          "ps-fc2f7b302d48710c",
+          "ps-71fcf97e3dc17ebf",
+          "ps-313b3061d97c924e",
+          "ps-fc5f608def972662",
+          "ps-d9fbacfccbe71a5d",
+          "ps-d99fa93cb3ae5006",
+          "ps-3c1890d5b83ffa32",
+          "ps-2dd8182bd71f73d2",
+          "ps-2f89700a74db715c",
+          "ps-e833cbc2c6c3abef",
+          "ps-5473fcd5aa81276e",
+          "ps-ec22172b2ce265ab",
+          "ps-571c64951e2478b6"
+        ]
+      ],
+      [
+        15,
+        [
+          "ps-7196ee15c3327b1b",
+          "ps-e14f67f12558e1a9",
+          "ps-c5a916ec468957f1",
+          "ps-1cb4c2e461a8f08c",
+          "ps-51048b66c3205304",
+          "ps-4c4bc37af17b02de",
+          "ps-64ea2ae4210c5d55",
+          "ps-3c31ae4688c988c9",
+          "ps-1ecf10f9711e5b3a",
+          "ps-b62aff9aaa56c5f2",
+          "ps-2ec789ab08e221ec",
+          "ps-e2de0b6ffdc6c3c1",
+          "ps-876d1cab67d989c0",
+          "ps-b430597c9d529c26",
+          "ps-281543045fc5dfca",
+          "ps-cade528e72ca02f7"
+        ]
+      ],
+      [
+        16,
+        [
+          "ps-56efcf4d4af0cb42",
+          "ps-80a5f130ad21b674",
+          "ps-db320b08f9402126",
+          "ps-3055f06a8e4fc1c1",
+          "ps-7a187150c828b262",
+          "ps-fb34cea008a18b42",
+          "ps-f8b3cab0a208d918",
+          "ps-6c13f8ce9b6e3b31",
+          "ps-b58d23bafb51d207",
+          "ps-16cf71bb7d8973c9",
+          "ps-1c7efcc21b91ee5f",
+          "ps-1c45db025ec1239a",
+          "ps-bdc1ffb3544c3f49",
+          "ps-2f7d5ffacf20f5a8",
+          "ps-b9539aa198eee299",
+          "ps-c354867e75f46b18"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            56,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            45,
+            0
+          ],
+          [
+            10,
+            0
+          ],
+          [
+            61,
+            0
+          ],
+          [
+            19,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 42
+      },
+      "anneal_reserve": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 0
+      },
+      "code": {
+        "buffer": [
+          [
+            30,
+            0
+          ],
+          [
+            66,
+            0
+          ],
+          [
+            82,
+            0
+          ],
+          [
+            118,
+            0
+          ],
+          [
+            48,
+            0
+          ],
+          [
+            84,
+            0
+          ],
+          [
+            91,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 83
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 73,
+        "pos": 65
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 93,
+        "pos": 104
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 136,
+        "pos": 41
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            46,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            48,
+            0
+          ],
+          [
+            76,
+            0
+          ],
+          [
+            57,
+            0
+          ],
+          [
+            79,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 43
+      }
+    }
+  },
+  "mode": "fresh",
+  "optimizer_hash": "2de5d87c3ce8f9acf43e1eda3a88c44439b1dd18fa9d123a93fec28e5c142b64",
+  "optimizer_t": 16,
+  "previous_checkpoint": "ckpt-main-s00012-ae048d3549",
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "scheduler": {
+    "next_lr": 0.006003840142464886,
+    "step": 16
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "1838ca64f70deea4f248e2e3fb8b1c635e9bc5990aa5638b0393376247d36251"
+}

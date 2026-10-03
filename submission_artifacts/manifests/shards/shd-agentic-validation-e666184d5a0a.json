@@ -1,0 +1,49 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "agentic",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "registered_eval",
+  "content_hash": "e666184d5a0aa403d2286a98bb84d6cba43ff76591c786d0fa932538d3c0cd3a",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_agentic_tierA/validation/00000",
+    "src_agentic_tierA/validation/00001",
+    "src_agentic_tierA/validation/00002",
+    "src_agentic_tierA/validation/00003"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "a9e6b752a849cf8913ee77f1b1a5abdeae7dbde537c971c6cf110d8826526245",
+    "tokens.npy": "600ba05a74a1e845f9bed61bace25819bb9612166826044893b79c4077b29bef",
+    "train_on.npy": "cbdfb7ebf3118e49af198d859574b1698e4fc83f4d1e4004abd5c527f10db729"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "internal-generated"
+  ],
+  "loss_bearing_token_count": 250,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "c03c8c847a5831cea19bacd0836dca11185abd26a987c95dc1938a2a8d2b3b18",
+  "n_docs": 4,
+  "never_train": true,
+  "packing_policy": "structure_preserving",
+  "parent_shard_ids": [],
+  "path": "shards/shd-agentic-validation-e666184d5a0a",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-agentic-validation-e666184d5a0a",
+  "source_ids": [
+    "src_agentic_tierA"
+  ],
+  "split": "validation",
+  "token_count": 426,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

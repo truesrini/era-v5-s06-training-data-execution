@@ -1,0 +1,650 @@
+{
+  "command": "python run_demo.py",
+  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "format": "tdes-evidence-v1",
+  "generated_by": "tdes.evidence.build_evidence (from reports written by the run)",
+  "overall": "PASS",
+  "requirements": [
+    {
+      "checks": [
+        {
+          "check": "run_log_has_every_required_event",
+          "detail": "all 13 required events present: shards created, manifests validated, evaluation data blocked, mixture compiled, batches packed, OPUS decisions recorded, checkpoint saved, crash simulated, run resumed, historical stream replayed, branch forked, audit completed, performance measured",
+          "passed": true
+        },
+        {
+          "check": "run_log_has_required_pass_lines",
+          "detail": "[PASS] tokenizer_hash_verified, [PASS] eval_shard_blocked, [PASS] checkpoint_saved, [PASS] resume_next_batch_matched, [PASS] replay_hash_matched",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "run.log"
+      ],
+      "evidence_label": "run.log event sequence",
+      "id": "end_to_end",
+      "key_values": {
+        "events": {
+          "OPUS decisions recorded": true,
+          "audit completed": true,
+          "batches packed": true,
+          "branch forked": true,
+          "checkpoint saved": true,
+          "crash simulated": true,
+          "evaluation data blocked": true,
+          "historical stream replayed": true,
+          "manifests validated": true,
+          "mixture compiled": true,
+          "performance measured": true,
+          "run resumed": true,
+          "shards created": true
+        }
+      },
+      "requirement": "End-to-end execution",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "build.tokenizer_hash_verified",
+          "detail": "reloaded hash 6755ee6fea85c6d2 == lock 6755ee6fea85c6d2",
+          "passed": true
+        },
+        {
+          "check": "build.tokenizer_deterministic",
+          "detail": "29 documents re-encoded identically by the reloaded tokenizer",
+          "passed": true
+        },
+        {
+          "check": "build.tokenizer_nfc_stable",
+          "detail": "NFD-decomposed Hindi encodes to the same ids as NFC",
+          "passed": true
+        },
+        {
+          "check": "build.special_tokens_not_injectable",
+          "detail": "literal '<|assistant|>' in text encodes as bytes, not the control id",
+          "passed": true
+        },
+        {
+          "check": "build.all_manifests_bind_frozen_tokenizer",
+          "detail": "every manifest records tokenizer_hash 6755ee6fea85c6d2",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "manifests/tokenizer.lock.json",
+        "manifests/tokenizer.json",
+        "manifests/shards/shd-agentic-train-9173827a9592.json#tokenizer_hash"
+      ],
+      "evidence_label": "Manifest record",
+      "id": "tokenizer_integrity",
+      "key_values": {
+        "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+        "vocab_size": 649
+      },
+      "requirement": "Tokenizer integrity",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "build.manifests_validated",
+          "detail": "44/44 manifests: manifest hash, tokenizer hash, file hashes, content hash, sealed, lineage",
+          "passed": true
+        },
+        {
+          "check": "build.shard_files_immutable",
+          "detail": "write to shards/shd-agentic-train-9173827a9592/tokens.npy refused (read-only seal)",
+          "passed": true
+        },
+        {
+          "check": "build.license_gate_blocked_unknown_source",
+          "detail": "blocked: ['shd-code-train-85006bfca373']",
+          "passed": true
+        },
+        {
+          "check": "build.contaminated_shard_quarantined",
+          "detail": "quarantined ['shd-general_web-train-785bb33ff511']; derived ['shd-general_web-train-896422f889e4'] with parent lineage",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "manifests/shards/",
+        "manifests/catalog.json",
+        "reports/manifest_validation.json",
+        "reports/admission_report.json"
+      ],
+      "evidence_label": "Manifest validation report",
+      "id": "shards_manifests",
+      "key_values": {
+        "admitted_train": 32,
+        "n_shards": 44
+      },
+      "requirement": "Immutable shards and manifests",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "build.eval_shard_blocked",
+          "detail": "2 test shard(s) refused: test_shard_never_train",
+          "passed": true
+        },
+        {
+          "check": "build.validation_shard_blocked",
+          "detail": "7 validation shard(s) refused: validation_shard_never_gradient_bearing",
+          "passed": true
+        },
+        {
+          "check": "build.quarantined_shard_blocked",
+          "detail": "contaminated shard refused at pool entry",
+          "passed": true
+        },
+        {
+          "check": "build.eval_batch_blocked_at_serve_time",
+          "detail": "packed sequence holding a benchmark item rejected before training",
+          "passed": true
+        },
+        {
+          "check": "build.admitted_train_shards_clean",
+          "detail": "0 eval-overlapping docs across 32 admitted shards",
+          "passed": true
+        },
+        {
+          "check": "audit.no_eval_or_validation_token_in_any_trained_batch",
+          "detail": "158154 consumed tokens across 4 branches re-scanned against 2315 eval 12-gram fingerprints and shard permissions: 0 violations",
+          "passed": true
+        },
+        {
+          "check": "audit.validation_reads_are_gradient_free",
+          "detail": "13 validation reads logged, all eval-only (gradient=false)",
+          "passed": true
+        },
+        {
+          "check": "audit.blocked_events_recorded",
+          "detail": "12 block/quarantine events in the firewall ledger",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "ledgers/firewall.jsonl#seq=2 (test shard blocked)",
+        "ledgers/firewall.jsonl#seq=4 (validation shard blocked)",
+        "ledgers/firewall.jsonl#seq=12 (eval batch blocked)",
+        "ledgers/firewall.jsonl#seq=1 (shard quarantined)",
+        "manifests/eval_registry.json"
+      ],
+      "evidence_label": "Blocked-shard event",
+      "id": "evaluation_firewall",
+      "key_values": {
+        "scanned_consumed_tokens": 158154,
+        "violations": 0
+      },
+      "requirement": "Evaluation firewall",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "audit.packed_samples_rebuild_bit_exact",
+          "detail": "512 consumed samples rebuilt from span refs: sample ids, sequence hashes and loss-mask hashes identical",
+          "passed": true
+        },
+        {
+          "check": "audit.mask_and_position_invariants",
+          "detail": "512 samples: no loss on pads, no loss across segment ends, position ids reset per segment, block-causal attention, structured samples never split",
+          "passed": true
+        },
+        {
+          "check": "audit.lane_packing_policy_applied",
+          "detail": "every sample used its lane's packing policy",
+          "passed": true
+        },
+        {
+          "check": "audit.ledger_token_counts_reconstruct",
+          "detail": "ledger counts {'positions': 65536, 'nonpad_tokens': 63223, 'loss_tokens': 55875} == recount from shards {'positions': 65536, 'nonpad_tokens': 63223, 'loss_tokens': 55875}",
+          "passed": true
+        },
+        {
+          "check": "packed_batch_report_rebuilds",
+          "detail": "step 1 batch b00001-1804915c345f rebuilt sample by sample",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "reports/packed_batch_report.json",
+        "reports/audit_report.json#packing",
+        "reports/packing_policy_lab.json"
+      ],
+      "evidence_label": "Packed-batch report",
+      "id": "packing_correctness",
+      "key_values": {
+        "loss_bearing_fraction": 0.852585,
+        "utilization": 0.964706
+      },
+      "requirement": "Packing correctness",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "build.mixture_compiled",
+          "detail": "3 stages, 32 steps, schedule_hash=1bbc44a6a1b6",
+          "passed": true
+        },
+        {
+          "check": "build.protected_floors_in_every_step_quota",
+          "detail": "indic/agentic/reasoning floors reserved in all step quotas",
+          "passed": true
+        },
+        {
+          "check": "audit.actual_shares_equal_compiled_quotas",
+          "detail": "per stage, consumed sequences per lane equal the compiled per-step quotas exactly",
+          "passed": true
+        },
+        {
+          "check": "audit.planned_vs_actual_shares_within_tolerance",
+          "detail": "foundation max|dev|=0.0029 (tol 0.0200); reasoning_midtrain max|dev|=0.0044 (tol 0.0200); anneal max|dev|=0.0066 (tol 0.0200)",
+          "passed": true
+        },
+        {
+          "check": "audit.protected_floors_held_every_step",
+          "detail": "indic/agentic/reasoning floors met in all 32 committed steps (0 violations)",
+          "passed": true
+        },
+        {
+          "check": "audit.anneal_reserve_fenced",
+          "detail": "anneal-reserve shards consumed only in the anneal stage",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "manifests/mixture_schedule.json",
+        "reports/audit_report.json#mixture"
+      ],
+      "evidence_label": "Planned versus actual shares",
+      "id": "mixture_compliance",
+      "key_values": {
+        "anneal": {
+          "max_abs_deviation": 0.00662
+        },
+        "foundation": {
+          "max_abs_deviation": 0.002917
+        },
+        "reasoning_midtrain": {
+          "max_abs_deviation": 0.004375
+        }
+      },
+      "requirement": "Mixture compliance",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "audit.every_consumed_sample_has_accepted_decision",
+          "detail": "512/512 consumed samples link to an accepted OPUS record",
+          "passed": true
+        },
+        {
+          "check": "audit.all_decision_kinds_exercised",
+          "detail": "accepted=512 rejected=306 deferred=160 protected_floor_override=42; reasons={'proxy_utility_above_threshold': 445, 'quota_full_above_threshold': 160, 'protected_floor_override': 42, 'quota_fill_below_threshold': 25, 'low_proxy_utility': 273, 'quota_pressure': 29, 'stage_mismatch': 1, 'duplicate': 3}",
+          "passed": true
+        },
+        {
+          "check": "audit.rejected_or_deferred_candidates_never_consumed",
+          "detail": "0 rejected/deferred candidates were consumed",
+          "passed": true
+        },
+        {
+          "check": "audit.decision_records_complete",
+          "detail": "978 records carry 12 required fields",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "ledgers/main/opus.jsonl#seq=0 (accepted)",
+        "ledgers/main/opus.jsonl#seq=21 (rejected)",
+        "ledgers/main/opus.jsonl#seq=5 (deferred)",
+        "ledgers/main/opus.jsonl#seq=18 (protected_floor_override)",
+        "ledgers/main/opus.jsonl#seq=765 (stage_mismatch)"
+      ],
+      "evidence_label": "Candidate decision records",
+      "id": "opus_audit_trail",
+      "key_values": {
+        "protected_floor_overrides": 42,
+        "reasons": {
+          "duplicate": 3,
+          "low_proxy_utility": 273,
+          "protected_floor_override": 42,
+          "proxy_utility_above_threshold": 445,
+          "quota_fill_below_threshold": 25,
+          "quota_full_above_threshold": 160,
+          "quota_pressure": 29,
+          "stage_mismatch": 1
+        },
+        "status": {
+          "accepted": 512,
+          "deferred": 160,
+          "rejected": 306
+        }
+      },
+      "requirement": "OPUS audit trail",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "audit.ledger_hash_chains_valid",
+          "detail": "12 ledgers, 4490 records, every prev_hash/event_hash verified",
+          "passed": true
+        },
+        {
+          "check": "audit.committed_stream_has_no_gaps_or_repeats",
+          "detail": "steps 1..32 each committed exactly once (duplicates=[], gaps=[]); 4 uncommitted records superseded by an explicit rollback record",
+          "passed": true
+        },
+        {
+          "check": "audit.every_step_complete",
+          "detail": "each step has 8 microbatches whose samples equal the batch_planned sample list",
+          "passed": true
+        },
+        {
+          "check": "audit.checkpoints_bound_to_ledger_offsets",
+          "detail": "13 checkpoints: weights hash, ledger offset+hash, offset == own checkpoint_saved event, last committed step and weights agree",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "ledgers/main/consumption.jsonl",
+        "checkpoints/main/",
+        "reports/audit_report.json#checkpoints"
+      ],
+      "evidence_label": "Hash-chained ledger + checkpoint offsets",
+      "id": "consumption_ledger",
+      "key_values": {
+        "committed_steps": 32,
+        "duplicates": [],
+        "gaps": [],
+        "rolled_back_records": 4
+      },
+      "requirement": "Consumption ledger and checkpoints",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "resume_next_batch_matched",
+          "detail": "expected step 21: crashed-process plan b00021-9ef54897a1ee, reference b00021-9ef54897a1ee, resumed b00021-9ef54897a1ee",
+          "passed": true
+        },
+        {
+          "check": "rolled_back_microbatches_reconsumed_identically",
+          "detail": "3 microbatches consumed before the crash were re-served bit-identically",
+          "passed": true
+        },
+        {
+          "check": "audit.resumed_stream_equals_uninterrupted_run",
+          "detail": "32/32 batch hashes equal the reference run; final weights 5e49b0b888b7 == reference 5e49b0b888b7",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "reports/resume_report.json",
+        "ledgers/main/consumption.jsonl#seq=205 (plan written before the crash)",
+        "ledgers/reference/consumption.jsonl"
+      ],
+      "evidence_label": "Expected and resumed batch ids",
+      "id": "crash_recovery",
+      "key_values": {
+        "expected_batch_hash": "9ef54897a1eebff65964671ee16623a0d7dfcb50bc2ca664e069b87d3c49f39f",
+        "expected_batch_id": "b00021-9ef54897a1ee",
+        "reference_batch_id": "b00021-9ef54897a1ee",
+        "resumed_batch_hash": "9ef54897a1eebff65964671ee16623a0d7dfcb50bc2ca664e069b87d3c49f39f",
+        "resumed_batch_id": "b00021-9ef54897a1ee",
+        "resumed_from": "ckpt-main-s00020-59ce18a967"
+      },
+      "requirement": "Crash recovery",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "replay_hash_matched",
+          "detail": "8 steps [9, 16] rebuilt from ledger span refs",
+          "passed": true
+        },
+        {
+          "check": "audit.replay_ledger_matches_original",
+          "detail": "replay-main-s00008: 8 steps, batch hashes + token spans + post-step weights equal to 'main'",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "reports/replay_report.json",
+        "ledgers/replay-main-s00008/consumption.jsonl"
+      ],
+      "evidence_label": "Original and replay hashes",
+      "id": "replay",
+      "key_values": {
+        "interval": [
+          9,
+          16
+        ],
+        "steps": [
+          {
+            "global_step": 9,
+            "orig_batch_hash": "2c434e546e5bc87e5e23faa4c6784db5e2eda61baad947c23d3ca2f02c86f687",
+            "orig_weights_hash": "75e042373bff7c721b2562312ffdeac3d2d4718b5b9ae8662cf9efc98df0d57a",
+            "replay_batch_hash": "2c434e546e5bc87e5e23faa4c6784db5e2eda61baad947c23d3ca2f02c86f687",
+            "replay_weights_hash": "75e042373bff7c721b2562312ffdeac3d2d4718b5b9ae8662cf9efc98df0d57a"
+          },
+          {
+            "global_step": 10,
+            "orig_batch_hash": "e9dbe5c449e68be785616709facaf92fbc33eb8378af81ceabe0aeff7a64a770",
+            "orig_weights_hash": "cef8f372631501f9e65353000a9d48ef59c9c5423f786330bab096d498726d0c",
+            "replay_batch_hash": "e9dbe5c449e68be785616709facaf92fbc33eb8378af81ceabe0aeff7a64a770",
+            "replay_weights_hash": "cef8f372631501f9e65353000a9d48ef59c9c5423f786330bab096d498726d0c"
+          },
+          {
+            "global_step": 11,
+            "orig_batch_hash": "4c59360ce0a35ed916fa25cebd21a6251a93179a9002f3b03e24de446ee84a64",
+            "orig_weights_hash": "b53d182083a28ed7d8421b640778e1687ec7c9ca198ee43cb7461131847711cd",
+            "replay_batch_hash": "4c59360ce0a35ed916fa25cebd21a6251a93179a9002f3b03e24de446ee84a64",
+            "replay_weights_hash": "b53d182083a28ed7d8421b640778e1687ec7c9ca198ee43cb7461131847711cd"
+          },
+          {
+            "global_step": 12,
+            "orig_batch_hash": "83fe46adf6848bc1e397e81fb3d35ecd348ef1bbe4b08ad950a146a73b3e5890",
+            "orig_weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df",
+            "replay_batch_hash": "83fe46adf6848bc1e397e81fb3d35ecd348ef1bbe4b08ad950a146a73b3e5890",
+            "replay_weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df"
+          },
+          {
+            "global_step": 13,
+            "orig_batch_hash": "598047280e2a846e34ffb57d79b7d8b0c47e8a95a0c1641c50c7d3f4d65e7883",
+            "orig_weights_hash": "6ff290740f90f2100ab6437b27029553aebda8bcc8a66fc2ba2d43493e592f1b",
+            "replay_batch_hash": "598047280e2a846e34ffb57d79b7d8b0c47e8a95a0c1641c50c7d3f4d65e7883",
+            "replay_weights_hash": "6ff290740f90f2100ab6437b27029553aebda8bcc8a66fc2ba2d43493e592f1b"
+          },
+          {
+            "global_step": 14,
+            "orig_batch_hash": "0afa302c202a05a942509e638d031947c481d9dfdd9a66daec2a6f555029df45",
+            "orig_weights_hash": "330e17a9c50314675c8a611390fbb804c99a4d82e4bebc2f8e2ab5c8b365eee6",
+            "replay_batch_hash": "0afa302c202a05a942509e638d031947c481d9dfdd9a66daec2a6f555029df45",
+            "replay_weights_hash": "330e17a9c50314675c8a611390fbb804c99a4d82e4bebc2f8e2ab5c8b365eee6"
+          },
+          {
+            "global_step": 15,
+            "orig_batch_hash": "9d6048d75f4e216df73eb03eb2bd951e27d1016d711bf86a603cac0c06ae64b2",
+            "orig_weights_hash": "940c4e650ac984a2632d1f7a917086a920e16128c589d80f54a154fa26869af2",
+            "replay_batch_hash": "9d6048d75f4e216df73eb03eb2bd951e27d1016d711bf86a603cac0c06ae64b2",
+            "replay_weights_hash": "940c4e650ac984a2632d1f7a917086a920e16128c589d80f54a154fa26869af2"
+          },
+          {
+            "global_step": 16,
+            "orig_batch_hash": "05b741664b0055feac0266b1f8125221279cb3d546c2c0194328164f337d70d7",
+            "orig_weights_hash": "1838ca64f70deea4f248e2e3fb8b1c635e9bc5990aa5638b0393376247d36251",
+            "replay_batch_hash": "05b741664b0055feac0266b1f8125221279cb3d546c2c0194328164f337d70d7",
+            "replay_weights_hash": "1838ca64f70deea4f248e2e3fb8b1c635e9bc5990aa5638b0393376247d36251"
+          }
+        ]
+      },
+      "requirement": "Replay",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "fork_diverged_explicitly",
+          "detail": "fork-ad01c550 from ckpt-main-s00012-ae048d3549",
+          "passed": true
+        },
+        {
+          "check": "audit.fork_lineage_explicit",
+          "detail": "fork-ad01c550: first record is branch_forked at step 13 with the parent's ledger offset 123; lineage = main[1..12] + fork-ad01c550[13..20]",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "reports/fork_report.json",
+        "ledgers/fork-ad01c550/consumption.jsonl#seq=0",
+        "manifests/mixture_schedule.fork-ad01c550.json"
+      ],
+      "evidence_label": "Branch-forked record",
+      "id": "fork",
+      "key_values": {
+        "branch": "fork-ad01c550",
+        "divergence_step": 13,
+        "overrides": {
+          "mixture.stages.1.mixture": {
+            "agentic": 0.1,
+            "anneal_reserve": 0.0,
+            "code": 0.2,
+            "general_web": 0.12,
+            "indic": 0.28,
+            "math_science": 0.16,
+            "reasoning": 0.14
+          },
+          "opus.reject_quantile": 0.4
+        }
+      },
+      "requirement": "Fork from an earlier checkpoint",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "audit.every_consumed_sample_has_learning_record",
+          "detail": "512 sample learning records; 0 consumed samples without one",
+          "passed": true
+        },
+        {
+          "check": "audit.token_trace_reconciles_with_ledger",
+          "detail": "55875 token-level losses; per-sample means equal ledger loss_before and link to span/shard/doc",
+          "passed": true
+        },
+        {
+          "check": "audit.shard_report_cards_written",
+          "detail": "32 shard report cards (loss, ppl, delta, grad norm, OPUS score, class)",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "ledgers/main/learning.jsonl#seq=0",
+        "ledgers/main/token_trace/step_00001.npz",
+        "reports/learning_report.json"
+      ],
+      "evidence_label": "Loss linked to source data",
+      "id": "learning_trace",
+      "key_values": {
+        "classification_counts": {
+          "useful": 32
+        },
+        "example": {
+          "loss_after": 6.466786,
+          "loss_before": 6.475923,
+          "sample_id": "ps-7aae2e5c359122e3",
+          "spans": [
+            {
+              "doc_id": "src_web_edu_crawl/train/00008",
+              "loss_after": 6.466786,
+              "loss_before": 6.475923,
+              "n_loss_tokens": 127,
+              "repeated_pass": 1,
+              "shard_id": "shd-general_web-train-e726c40dfb40",
+              "span_id": "shd-general_web-train-e726c40dfb40:8:0-128"
+            }
+          ]
+        }
+      },
+      "requirement": "Learning trace",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "throughput_reconstructs_from_ledger",
+          "detail": "positions/non-pad/loss-bearing counts equal the audit recount {'loss_tokens': 55875, 'nonpad_tokens': 63223, 'positions': 65536}",
+          "passed": true
+        },
+        {
+          "check": "packing_utilization_at_least_0.90",
+          "detail": "utilization 0.964706",
+          "passed": true
+        },
+        {
+          "check": "beats_pad_only_baseline",
+          "detail": "0.964706 vs pad-only 0.73774 (x1.3077)",
+          "passed": true
+        },
+        {
+          "check": "useful_tokens_per_second_measured",
+          "detail": "4757.9 loss-bearing tok/s = 55875 / 11.7436 s",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "performance.json",
+        "perf/"
+      ],
+      "evidence_label": "Performance report",
+      "id": "throughput",
+      "key_values": {
+        "accepted_tokens_per_s_after_opus": 5383.6,
+        "loader_wait_fraction": 0.4338,
+        "packing_utilization": 0.964706,
+        "raw_tokens_per_s": 5580.55,
+        "replay_latency_s": 0.115756,
+        "resume_latency_s": 0.479774,
+        "useful_loss_bearing_tokens_per_s": 4757.9
+      },
+      "requirement": "Throughput",
+      "result": "PASS"
+    },
+    {
+      "checks": [
+        {
+          "check": "unit_tests_passed",
+          "detail": "38 tests, failures=0, errors=0",
+          "passed": true
+        }
+      ],
+      "evidence": [
+        "reports/tests.log"
+      ],
+      "evidence_label": "unittest run",
+      "id": "tests",
+      "key_values": {
+        "command": "python -m unittest discover -s tests -t . -v",
+        "errors": 0,
+        "failures": 0,
+        "passed": true,
+        "ran": 38,
+        "seconds": 12.36
+      },
+      "requirement": "Automated invariant tests",
+      "result": "PASS"
+    }
+  ],
+  "run_id": "v5s06-0e5b60c85f",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

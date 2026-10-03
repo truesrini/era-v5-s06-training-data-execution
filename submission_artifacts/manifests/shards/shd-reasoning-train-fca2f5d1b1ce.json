@@ -1,0 +1,69 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "reasoning",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "fca2f5d1b1ce3585948491860597a907f6845792ee3c478037ccb18fb0c0aa5a",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_reasoning_banded/train/00024",
+    "src_reasoning_banded/train/00025",
+    "src_reasoning_banded/train/00026",
+    "src_reasoning_banded/train/00027",
+    "src_reasoning_banded/train/00028",
+    "src_reasoning_banded/train/00029",
+    "src_reasoning_banded/train/00030",
+    "src_reasoning_banded/train/00031",
+    "src_reasoning_banded/train/00032",
+    "src_reasoning_banded/train/00033",
+    "src_reasoning_banded/train/00034",
+    "src_reasoning_banded/train/00035",
+    "src_reasoning_banded/train/00036",
+    "src_reasoning_banded/train/00037",
+    "src_reasoning_banded/train/00038",
+    "src_reasoning_banded/train/00039",
+    "src_reasoning_banded/train/00040",
+    "src_reasoning_banded/train/00041",
+    "src_reasoning_banded/train/00042",
+    "src_reasoning_banded/train/00043",
+    "src_reasoning_banded/train/00044",
+    "src_reasoning_banded/train/00045",
+    "src_reasoning_banded/train/00046",
+    "src_reasoning_banded/train/00047"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "9a43d296c5a69d83c481fc2f9d93cef6f8d13f3cb045b0f3f57e3880df926466",
+    "tokens.npy": "3f784140065676f977fad5b4b5fe638b0f6d2d5e2210a7fcbf6291e702b36f47",
+    "train_on.npy": "6eefe3639f62bce94dc9c70aa228341dbe2731b7569d8be22976a7284fcd1d5c"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "internal-generated"
+  ],
+  "loss_bearing_token_count": 1612,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "8089081319d91a4a5e6ddda459feec5a9ea31dbf76583eaba06fc121c3e37cda",
+  "n_docs": 24,
+  "never_train": false,
+  "packing_policy": "structure_preserving",
+  "parent_shard_ids": [],
+  "path": "shards/shd-reasoning-train-fca2f5d1b1ce",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-reasoning-train-fca2f5d1b1ce",
+  "source_ids": [
+    "src_reasoning_banded"
+  ],
+  "split": "train",
+  "token_count": 2815,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

@@ -1,0 +1,38 @@
+{
+  "cleaning_pipeline": {
+    "name": "tdes-clean",
+    "source_sha": "fbf559484b443c28a4afaef5207a3bcd2f0368dd32d5c6324921de9ada5d719b",
+    "steps": [
+      "unicode_nfc",
+      "strip_control_chars",
+      "strip_trailing_ws",
+      "exact_dedup_per_split"
+    ],
+    "version": "1.0"
+  },
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "dropped_duplicates": [
+    {
+      "doc_id": "src_web_edu_crawl/train/00110",
+      "duplicate_of": "src_web_edu_crawl/train/00000",
+      "split": "train"
+    },
+    {
+      "doc_id": "src_web_edu_crawl/train/00111",
+      "duplicate_of": "src_web_edu_crawl/train/00001",
+      "split": "train"
+    },
+    {
+      "doc_id": "src_web_edu_crawl/train/00112",
+      "duplicate_of": "src_web_edu_crawl/train/00002",
+      "split": "train"
+    },
+    {
+      "doc_id": "src_web_edu_crawl/train/00113",
+      "duplicate_of": "src_web_edu_crawl/train/00003",
+      "split": "train"
+    }
+  ],
+  "input_docs": 785,
+  "kept_docs": 781
+}

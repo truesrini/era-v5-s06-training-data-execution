@@ -1,0 +1,126 @@
+{
+  "docs": [
+    {
+      "benchmark_id": null,
+      "doc_hash": "b0144f2abd1077f55def7577ccd942dda9fa1155109fcf328a63bb56a10e5eb5",
+      "doc_id": "src_code_permissive/proxy/00000",
+      "doc_index": 0,
+      "kind": "code",
+      "language": "python",
+      "length": 356,
+      "script": "Latn",
+      "source_id": "src_code_permissive",
+      "start": 0
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "aa7e9f8fcdf587aa708e26911e1c56c53a14b0a14a5dee8c77ffc79dbf59c40c",
+      "doc_id": "src_code_permissive/proxy/00001",
+      "doc_index": 1,
+      "kind": "code",
+      "language": "python",
+      "length": 82,
+      "script": "Latn",
+      "source_id": "src_code_permissive",
+      "start": 356
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "7e5e191c7b9a38a08780ce2f2648100d3e93c1873baa5acd7b9b70de6551855e",
+      "doc_id": "src_code_permissive/proxy/00002",
+      "doc_index": 2,
+      "kind": "code",
+      "language": "python",
+      "length": 218,
+      "script": "Latn",
+      "source_id": "src_code_permissive",
+      "start": 438
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "da960e956284d9fd6b24ce33bcb530e1ff04a43931b52031497da51a5bff9722",
+      "doc_id": "src_math_textbooks/proxy/00000",
+      "doc_index": 3,
+      "kind": "plain",
+      "language": "en",
+      "length": 199,
+      "script": "Latn",
+      "source_id": "src_math_textbooks",
+      "start": 656
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "1395f48037579eb6fcd1f3d25409d812b224907ad91e8037288a5e0ffbfad1f6",
+      "doc_id": "src_math_textbooks/proxy/00001",
+      "doc_index": 4,
+      "kind": "plain",
+      "language": "en",
+      "length": 90,
+      "script": "Latn",
+      "source_id": "src_math_textbooks",
+      "start": 855
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "21ecc0132aec5551d8b1b0347976b0bae0e904b10aae6b8f7ff13ede1d256548",
+      "doc_id": "src_math_textbooks/proxy/00002",
+      "doc_index": 5,
+      "kind": "plain",
+      "language": "en",
+      "length": 186,
+      "script": "Latn",
+      "source_id": "src_math_textbooks",
+      "start": 945
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "ae00cfad57b4efd729fd4e409f76fc70cac457cbd208798d032ce09a178f6685",
+      "doc_id": "src_web_edu_crawl/proxy/00000",
+      "doc_index": 6,
+      "kind": "plain",
+      "language": "en",
+      "length": 135,
+      "script": "Latn",
+      "source_id": "src_web_edu_crawl",
+      "start": 1131
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "54691dde6191d8acacb8c21ff57f9c23ba4afc20bc9291ac0551070f5af4f8f6",
+      "doc_id": "src_web_edu_crawl/proxy/00001",
+      "doc_index": 7,
+      "kind": "plain",
+      "language": "en",
+      "length": 242,
+      "script": "Latn",
+      "source_id": "src_web_edu_crawl",
+      "start": 1266
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "941681d6ff59583f97e8d29b4b8620b0cae2410d60bc9beb4d5af42dc0c2010a",
+      "doc_id": "src_web_edu_crawl/proxy/00002",
+      "doc_index": 8,
+      "kind": "plain",
+      "language": "en",
+      "length": 134,
+      "script": "Latn",
+      "source_id": "src_web_edu_crawl",
+      "start": 1508
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "190a061fa6784a6480ef025f6eb21f34577a1008956fe512b1e4e72df4217c8e",
+      "doc_id": "src_web_edu_crawl/proxy/00003",
+      "doc_index": 9,
+      "kind": "plain",
+      "language": "en",
+      "length": 237,
+      "script": "Latn",
+      "source_id": "src_web_edu_crawl",
+      "start": 1642
+    }
+  ],
+  "format": "tdes-shard-v1",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

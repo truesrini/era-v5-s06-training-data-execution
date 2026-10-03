@@ -1,0 +1,69 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "general_web",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "a40d1340a2157a2c792d4abb65a21b610c8eb6c627353dd36da34e5e6facf9eb",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_web_edu_crawl/train/00024",
+    "src_web_edu_crawl/train/00025",
+    "src_web_edu_crawl/train/00026",
+    "src_web_edu_crawl/train/00027",
+    "src_web_edu_crawl/train/00028",
+    "src_web_edu_crawl/train/00029",
+    "src_web_edu_crawl/train/00030",
+    "src_web_edu_crawl/train/00031",
+    "src_web_edu_crawl/train/00032",
+    "src_web_edu_crawl/train/00033",
+    "src_web_edu_crawl/train/00034",
+    "src_web_edu_crawl/train/00035",
+    "src_web_edu_crawl/train/00036",
+    "src_web_edu_crawl/train/00037",
+    "src_web_edu_crawl/train/00038",
+    "src_web_edu_crawl/train/00039",
+    "src_web_edu_crawl/train/00040",
+    "src_web_edu_crawl/train/00041",
+    "src_web_edu_crawl/train/00042",
+    "src_web_edu_crawl/train/00043",
+    "src_web_edu_crawl/train/00044",
+    "src_web_edu_crawl/train/00045",
+    "src_web_edu_crawl/train/00046",
+    "src_web_edu_crawl/train/00047"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "9d4bed2f0a3ac9a875cbdf4ea663861aa29537a41a00fdd9594cd1e981cffb54",
+    "tokens.npy": "9b4989fb3480e2d4d63c57294f197fb68ced1bc4385a9572ec8cac02e1641e3a",
+    "train_on.npy": "38f21ada95ec478a0ebd5925b3341377123fc06aa01251e48110338e743c4250"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "cc-by-4.0"
+  ],
+  "loss_bearing_token_count": 4359,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "ab907c5cf68dfb43b3c86bed7dc3a365b36defc83e849486df87d261e28cb6e3",
+  "n_docs": 24,
+  "never_train": false,
+  "packing_policy": "concat_chop",
+  "parent_shard_ids": [],
+  "path": "shards/shd-general_web-train-a40d1340a215",
+  "provenance_tier": [
+    "B"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-general_web-train-a40d1340a215",
+  "source_ids": [
+    "src_web_edu_crawl"
+  ],
+  "split": "train",
+  "token_count": 4359,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

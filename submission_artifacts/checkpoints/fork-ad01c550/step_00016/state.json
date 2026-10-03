@@ -1,0 +1,300 @@
+{
+  "branch": "fork-ad01c550",
+  "checkpoint_id": "ckpt-fork-ad01c550-s00016-6a84451c0b",
+  "config_hash": "89766e18619f3bf5d244b1b6e44df9505cba9d51bb0b460551468edcb3a6fa5c",
+  "counters": {
+    "loss_tokens": 29728,
+    "nonpad_tokens": 32021,
+    "positions": 32768
+  },
+  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "global_step": 16,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "1d83565b3630f9443872c42a0eec42b44c0a092a83b20067d27927b9166d09b2",
+      "offset": 42,
+      "path": "ledgers/fork-ad01c550/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "d48371e73f9c56172c77fedf8c14dbe75d844e949db758ecb5ffa53b8a327f88",
+      "offset": 69,
+      "path": "ledgers/fork-ad01c550/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "a649d8dea3c8efc823ce48b4a7bec4905685ad3480f8913b639b6322c9287edc",
+      "offset": 133,
+      "path": "ledgers/fork-ad01c550/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 417,
+    "deferred": [
+      {
+        "candidate_id": "cand-000363",
+        "defer_count": 2,
+        "first_step": 15,
+        "lane": "general_web",
+        "last_score": 0.3968343798243967,
+        "spans": [
+          {
+            "doc_id": "src_web_india_news/train/00030",
+            "doc_index": 21,
+            "end": 180,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-da1acf065374",
+            "span_id": "shd-general_web-train-da1acf065374:21:52-180",
+            "start": 52
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000411",
+        "defer_count": 1,
+        "first_step": 16,
+        "lane": "agentic",
+        "last_score": -0.024594825358235272,
+        "spans": [
+          {
+            "doc_id": "src_agentic_tierA/train/00014",
+            "doc_index": 14,
+            "end": 125,
+            "epoch": 0,
+            "shard_id": "shd-agentic-train-a5ba98a2da48",
+            "span_id": "shd-agentic-train-a5ba98a2da48:14:0-125",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "recent": [
+      [
+        13,
+        [
+          "ps-4459e7ce1527ee98",
+          "ps-b93abf4dd68c82b5",
+          "ps-00eef752630bdd85",
+          "ps-6063c4e517c331db",
+          "ps-2f6705ee6afb3dd6",
+          "ps-cb2017875f0973cc",
+          "ps-b87caf9cb02febbd",
+          "ps-f60f16743626ca52",
+          "ps-bfee41c88ca2b6e0",
+          "ps-2dd8182bd71f73d2",
+          "ps-2f89700a74db715c",
+          "ps-e833cbc2c6c3abef",
+          "ps-9805967a72d4f0a1",
+          "ps-ec22172b2ce265ab",
+          "ps-f780cc8a5fd04bc6",
+          "ps-1d0e60c6c279eb33"
+        ]
+      ],
+      [
+        14,
+        [
+          "ps-9251463fadf669dc",
+          "ps-5abedb13b35bcce7",
+          "ps-c1577e4d9ee44341",
+          "ps-71fcf97e3dc17ebf",
+          "ps-313b3061d97c924e",
+          "ps-fc5f608def972662",
+          "ps-d9fbacfccbe71a5d",
+          "ps-d99fa93cb3ae5006",
+          "ps-3c1890d5b83ffa32",
+          "ps-3ad2c685a7f87594",
+          "ps-dfd4cb9d7f5ff7d0",
+          "ps-2ec789ab08e221ec",
+          "ps-e2de0b6ffdc6c3c1",
+          "ps-5473fcd5aa81276e",
+          "ps-b430597c9d529c26",
+          "ps-571c64951e2478b6"
+        ]
+      ],
+      [
+        15,
+        [
+          "ps-93c26f85734ff13b",
+          "ps-fc2f7b302d48710c",
+          "ps-7196ee15c3327b1b",
+          "ps-51048b66c3205304",
+          "ps-4c4bc37af17b02de",
+          "ps-64ea2ae4210c5d55",
+          "ps-3c31ae4688c988c9",
+          "ps-1ecf10f9711e5b3a",
+          "ps-16cf71bb7d8973c9",
+          "ps-1c7efcc21b91ee5f",
+          "ps-1c45db025ec1239a",
+          "ps-9ec86342107c0fa8",
+          "ps-2f7d5ffacf20f5a8",
+          "ps-d2e46f895fd1205f",
+          "ps-281543045fc5dfca",
+          "ps-cade528e72ca02f7"
+        ]
+      ],
+      [
+        16,
+        [
+          "ps-c5a916ec468957f1",
+          "ps-3055f06a8e4fc1c1",
+          "ps-7a187150c828b262",
+          "ps-fb34cea008a18b42",
+          "ps-f8b3cab0a208d918",
+          "ps-6c13f8ce9b6e3b31",
+          "ps-b58d23bafb51d207",
+          "ps-d58ec94dd41b5c52",
+          "ps-9b52d5c85af9bcf1",
+          "ps-9e94c75d7f5b5a29",
+          "ps-0928ec7423050a02",
+          "ps-a12e94798b1b4a6b",
+          "ps-4dbdba07cfe71c0b",
+          "ps-874df25d323cf814",
+          "ps-b9539aa198eee299",
+          "ps-c354867e75f46b18"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            56,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            45,
+            0
+          ],
+          [
+            10,
+            0
+          ],
+          [
+            61,
+            0
+          ],
+          [
+            19,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 43
+      },
+      "anneal_reserve": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 0
+      },
+      "code": {
+        "buffer": [
+          [
+            30,
+            0
+          ],
+          [
+            66,
+            0
+          ],
+          [
+            82,
+            0
+          ],
+          [
+            118,
+            0
+          ],
+          [
+            84,
+            0
+          ],
+          [
+            85,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 86
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 110,
+        "pos": 60
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 1,
+        "offset": 6,
+        "pos": 2
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 136,
+        "pos": 41
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            46,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            48,
+            0
+          ],
+          [
+            57,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            42,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 51
+      }
+    }
+  },
+  "mode": "fork",
+  "optimizer_hash": "784c9e1b2dc43eead07d14a3e420adeffa364c7f6d4805586e00d1dec61576d2",
+  "optimizer_t": 16,
+  "previous_checkpoint": "ckpt-main-s00012-ae048d3549",
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "98a36e9d6fc002829874b2f8eddd844f6f786e04588f1c3ff54a86fd5acd252e",
+  "scheduler": {
+    "next_lr": 0.006003840142464886,
+    "step": 16
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "6a84451c0b147e204898bfe737bec43f323b5d347c45a318b7e3abc9c854db13"
+}

@@ -1,0 +1,69 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "agentic",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "9f31a36166f3cc9dae86fa28a882f6bfd489a840e1c5712113477cc5d58d47ea",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_agentic_tierA/train/00048",
+    "src_agentic_tierA/train/00049",
+    "src_agentic_tierA/train/00050",
+    "src_agentic_tierA/train/00051",
+    "src_agentic_tierA/train/00052",
+    "src_agentic_tierA/train/00053",
+    "src_agentic_tierA/train/00054",
+    "src_agentic_tierA/train/00055",
+    "src_agentic_tierA/train/00056",
+    "src_agentic_tierA/train/00057",
+    "src_agentic_tierA/train/00058",
+    "src_agentic_tierA/train/00059",
+    "src_agentic_tierA/train/00060",
+    "src_agentic_tierA/train/00061",
+    "src_agentic_tierA/train/00062",
+    "src_agentic_tierA/train/00063",
+    "src_agentic_tierA/train/00064",
+    "src_agentic_tierA/train/00065",
+    "src_agentic_tierA/train/00066",
+    "src_agentic_tierA/train/00067",
+    "src_agentic_tierA/train/00068",
+    "src_agentic_tierA/train/00069",
+    "src_agentic_tierA/train/00070",
+    "src_agentic_tierA/train/00071"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "bd59f7db4a09991a3be9bc5ae3e5e99c076545729f6bcbad5afd409fb8f0413a",
+    "tokens.npy": "65d0631d95f664c5f1e95a7149aef005538ae4954ce8cabcbb9ca3d04ff52408",
+    "train_on.npy": "8ce031f2b8653d459527f996c77422b130f0e675981f934a98c3d273ab2a7361"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "internal-generated"
+  ],
+  "loss_bearing_token_count": 1872,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "385a70b4cf217e7a439a02461787236a266aa67383012ffd897b14c6d98ff996",
+  "n_docs": 24,
+  "never_train": false,
+  "packing_policy": "structure_preserving",
+  "parent_shard_ids": [],
+  "path": "shards/shd-agentic-train-9f31a36166f3",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-agentic-train-9f31a36166f3",
+  "source_ids": [
+    "src_agentic_tierA"
+  ],
+  "split": "train",
+  "token_count": 2890,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

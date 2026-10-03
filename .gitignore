@@ -1,0 +1,5 @@
+Background/
+__pycache__/
+*.pyc
+*.tmp/
+.claude/

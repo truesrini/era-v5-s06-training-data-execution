@@ -1,0 +1,1629 @@
+{
+  "classification_counts": {
+    "useful": 32
+  },
+  "classification_rule": "useful if mean token loss after the update is >0.005 nats lower than before, harmful if >0.005 higher, else neutral",
+  "opus_proxy_gap_by_lane": {
+    "agentic": {
+      "accepted_mean_candidate_loss": 5.7341,
+      "flag": "proxy may undervalue this lane",
+      "rejected_mean_candidate_loss": 6.0432
+    },
+    "anneal_reserve": {
+      "accepted_mean_candidate_loss": 5.7305,
+      "flag": "",
+      "rejected_mean_candidate_loss": 5.6003
+    },
+    "code": {
+      "accepted_mean_candidate_loss": 5.5383,
+      "flag": "",
+      "rejected_mean_candidate_loss": 5.2661
+    },
+    "general_web": {
+      "accepted_mean_candidate_loss": 5.7329,
+      "flag": "",
+      "rejected_mean_candidate_loss": 5.7183
+    },
+    "indic": {
+      "accepted_mean_candidate_loss": 6.2319,
+      "flag": "",
+      "rejected_mean_candidate_loss": 6.154
+    },
+    "math_science": {
+      "accepted_mean_candidate_loss": 5.5722,
+      "flag": "",
+      "rejected_mean_candidate_loss": 5.4167
+    },
+    "reasoning": {
+      "accepted_mean_candidate_loss": 5.4671,
+      "flag": "",
+      "rejected_mean_candidate_loss": 5.2763
+    }
+  },
+  "shards": [
+    {
+      "avg_token_loss": 5.79939,
+      "avg_token_ppl": 330.1,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 4,
+          "mean_loss": 9.099,
+          "preview": " I",
+          "token_id": 366
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.693,
+          "preview": "hopal",
+          "token_id": 576
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.531,
+          "preview": "ndore",
+          "token_id": 604
+        },
+        {
+          "count": 6,
+          "mean_loss": 8.306,
+          "preview": "unn",
+          "token_id": 519
+        },
+        {
+          "count": 6,
+          "mean_loss": 8.127,
+          "preview": "U",
+          "token_id": 94
+        }
+      ],
+      "lane": "agentic",
+      "loss_delta_after_exposure": -0.05742,
+      "loss_tokens": 1273,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.3436,
+      "mean_opus_score": 0.14163,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-agentic-train-9173827a9592",
+      "spans_trained": 19
+    },
+    {
+      "avg_token_loss": 5.68458,
+      "avg_token_ppl": 294.295,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 9.535,
+          "preview": "aipur",
+          "token_id": 608
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.528,
+          "preview": "adurai",
+          "token_id": 573
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.442,
+          "preview": "rain",
+          "token_id": 437
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.23,
+          "preview": "unn",
+          "token_id": 519
+        },
+        {
+          "count": 4,
+          "mean_loss": 8.011,
+          "preview": " I",
+          "token_id": 366
+        }
+      ],
+      "lane": "agentic",
+      "loss_delta_after_exposure": -0.01816,
+      "loss_tokens": 725,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.26414,
+      "mean_opus_score": 0.04166,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-agentic-train-9f31a36166f3",
+      "spans_trained": 10
+    },
+    {
+      "avg_token_loss": 5.82735,
+      "avg_token_ppl": 339.459,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 9.253,
+          "preview": "ndore",
+          "token_id": 604
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.978,
+          "preview": "hillong",
+          "token_id": 545
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.901,
+          "preview": "her",
+          "token_id": 518
+        },
+        {
+          "count": 3,
+          "mean_loss": 8.645,
+          "preview": " I",
+          "token_id": 366
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.222,
+          "preview": "unn",
+          "token_id": 519
+        }
+      ],
+      "lane": "agentic",
+      "loss_delta_after_exposure": -0.05607,
+      "loss_tokens": 942,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.32956,
+      "mean_opus_score": 0.16254,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-agentic-train-a5ba98a2da48",
+      "spans_trained": 14
+    },
+    {
+      "avg_token_loss": 5.63211,
+      "avg_token_ppl": 279.251,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 8.503,
+          "preview": "rain",
+          "token_id": 437
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.457,
+          "preview": " M",
+          "token_id": 348
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.393,
+          "preview": "hopal",
+          "token_id": 576
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.364,
+          "preview": "unn",
+          "token_id": 519
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.2,
+          "preview": "B",
+          "token_id": 75
+        }
+      ],
+      "lane": "agentic",
+      "loss_delta_after_exposure": -0.02959,
+      "loss_tokens": 190,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.29306,
+      "mean_opus_score": 0.04197,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-agentic-train-c171a9233421",
+      "spans_trained": 3
+    },
+    {
+      "avg_token_loss": 5.7387,
+      "avg_token_ppl": 310.661,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 15,
+          "mean_loss": 7.804,
+          "preview": " है",
+          "token_id": 411
+        },
+        {
+          "count": 12,
+          "mean_loss": 7.675,
+          "preview": "�",
+          "token_id": 152
+        },
+        {
+          "count": 3,
+          "mean_loss": 6.823,
+          "preview": "क",
+          "token_id": 579
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.81,
+          "preview": "�",
+          "token_id": 173
+        },
+        {
+          "count": 8,
+          "mean_loss": 6.801,
+          "preview": "8",
+          "token_id": 65
+        }
+      ],
+      "lane": "anneal_reserve",
+      "loss_delta_after_exposure": -0.02382,
+      "loss_tokens": 929,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.31574,
+      "mean_opus_score": -0.13611,
+      "model_phases": [
+        "anneal"
+      ],
+      "shard_id": "shd-anneal_reserve-train-4d59d51d1e90",
+      "spans_trained": 28
+    },
+    {
+      "avg_token_loss": 5.83917,
+      "avg_token_ppl": 343.494,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 10,
+          "mean_loss": 7.865,
+          "preview": " है",
+          "token_id": 411
+        },
+        {
+          "count": 11,
+          "mean_loss": 7.726,
+          "preview": "�",
+          "token_id": 152
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.817,
+          "preview": "�",
+          "token_id": 173
+        },
+        {
+          "count": 3,
+          "mean_loss": 6.807,
+          "preview": "क",
+          "token_id": 579
+        },
+        {
+          "count": 3,
+          "mean_loss": 6.76,
+          "preview": " 7",
+          "token_id": 476
+        }
+      ],
+      "lane": "anneal_reserve",
+      "loss_delta_after_exposure": -0.02156,
+      "loss_tokens": 672,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.32299,
+      "mean_opus_score": -0.12337,
+      "model_phases": [
+        "anneal"
+      ],
+      "shard_id": "shd-anneal_reserve-train-eee78921d88c",
+      "spans_trained": 20
+    },
+    {
+      "avg_token_loss": 5.66252,
+      "avg_token_ppl": 287.874,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 9,
+          "mean_loss": 7.926,
+          "preview": " है",
+          "token_id": 411
+        },
+        {
+          "count": 8,
+          "mean_loss": 7.756,
+          "preview": "�",
+          "token_id": 152
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.986,
+          "preview": "8",
+          "token_id": 65
+        },
+        {
+          "count": 5,
+          "mean_loss": 6.789,
+          "preview": "क",
+          "token_id": 579
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.664,
+          "preview": "ि",
+          "token_id": 415
+        }
+      ],
+      "lane": "anneal_reserve",
+      "loss_delta_after_exposure": -0.02511,
+      "loss_tokens": 669,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.29291,
+      "mean_opus_score": -0.15048,
+      "model_phases": [
+        "anneal"
+      ],
+      "shard_id": "shd-anneal_reserve-train-f9c9f81a72f5",
+      "spans_trained": 20
+    },
+    {
+      "avg_token_loss": 5.59913,
+      "avg_token_ppl": 270.192,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 12.389,
+          "preview": "Q",
+          "token_id": 90
+        },
+        {
+          "count": 1,
+          "mean_loss": 9.43,
+          "preview": "    ",
+          "token_id": 277
+        },
+        {
+          "count": 1,
+          "mean_loss": 9.288,
+          "preview": ">",
+          "token_id": 71
+        },
+        {
+          "count": 1,
+          "mean_loss": 9.035,
+          "preview": "ti",
+          "token_id": 489
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.655,
+          "preview": " te",
+          "token_id": 612
+        }
+      ],
+      "lane": "code",
+      "loss_delta_after_exposure": -0.06495,
+      "loss_tokens": 2409,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.34749,
+      "mean_opus_score": 0.18414,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-code-train-6b4e59183e95",
+      "spans_trained": 25
+    },
+    {
+      "avg_token_loss": 5.50021,
+      "avg_token_ppl": 244.742,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 12.126,
+          "preview": " B",
+          "token_id": 566
+        },
+        {
+          "count": 1,
+          "mean_loss": 11.071,
+          "preview": "W",
+          "token_id": 96
+        },
+        {
+          "count": 2,
+          "mean_loss": 9.135,
+          "preview": "Q",
+          "token_id": 90
+        },
+        {
+          "count": 1,
+          "mean_loss": 9.128,
+          "preview": "elf",
+          "token_id": 490
+        },
+        {
+          "count": 3,
+          "mean_loss": 9.025,
+          "preview": ">",
+          "token_id": 71
+        }
+      ],
+      "lane": "code",
+      "loss_delta_after_exposure": -0.06496,
+      "loss_tokens": 3171,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.34516,
+      "mean_opus_score": 0.10678,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-code-train-c4632678cd6e",
+      "spans_trained": 34
+    },
+    {
+      "avg_token_loss": 5.52585,
+      "avg_token_ppl": 251.101,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 9.7,
+          "preview": "oun",
+          "token_id": 420
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.873,
+          "preview": "ti",
+          "token_id": 489
+        },
+        {
+          "count": 3,
+          "mean_loss": 8.463,
+          "preview": "ma",
+          "token_id": 634
+        },
+        {
+          "count": 4,
+          "mean_loss": 8.107,
+          "preview": "rain",
+          "token_id": 437
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.917,
+          "preview": "ot",
+          "token_id": 349
+        }
+      ],
+      "lane": "code",
+      "loss_delta_after_exposure": -0.06829,
+      "loss_tokens": 2408,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.32547,
+      "mean_opus_score": 0.12498,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-code-train-c9bbe04bac8d",
+      "spans_trained": 27
+    },
+    {
+      "avg_token_loss": 5.43502,
+      "avg_token_ppl": 229.298,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 12.488,
+          "preview": "Q",
+          "token_id": 90
+        },
+        {
+          "count": 1,
+          "mean_loss": 9.769,
+          "preview": "Re",
+          "token_id": 419
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.358,
+          "preview": ">",
+          "token_id": 71
+        },
+        {
+          "count": 3,
+          "mean_loss": 8.115,
+          "preview": "rain",
+          "token_id": 437
+        },
+        {
+          "count": 7,
+          "mean_loss": 7.98,
+          "preview": "ver",
+          "token_id": 617
+        }
+      ],
+      "lane": "code",
+      "loss_delta_after_exposure": -0.06117,
+      "loss_tokens": 3245,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.32314,
+      "mean_opus_score": 0.10967,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-code-train-f7edc679ba1d",
+      "spans_trained": 33
+    },
+    {
+      "avg_token_loss": 5.63328,
+      "avg_token_ppl": 279.578,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 4,
+          "mean_loss": 8.58,
+          "preview": "D",
+          "token_id": 77
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.144,
+          "preview": "Reports",
+          "token_id": 440
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.076,
+          "preview": " Chennai",
+          "token_id": 620
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.054,
+          "preview": "ter",
+          "token_id": 351
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.019,
+          "preview": "ri",
+          "token_id": 450
+        }
+      ],
+      "lane": "general_web",
+      "loss_delta_after_exposure": -0.08045,
+      "loss_tokens": 2128,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.40194,
+      "mean_opus_score": 0.52807,
+      "model_phases": [
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-general_web-train-6610b2596e7e",
+      "spans_trained": 26
+    },
+    {
+      "avg_token_loss": 6.02053,
+      "avg_token_ppl": 411.796,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 2,
+          "mean_loss": 8.91,
+          "preview": "D",
+          "token_id": 77
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.423,
+          "preview": "ts",
+          "token_id": 307
+        },
+        {
+          "count": 5,
+          "mean_loss": 7.474,
+          "preview": " farmer",
+          "token_id": 627
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.118,
+          "preview": "way",
+          "token_id": 454
+        },
+        {
+          "count": 1,
+          "mean_loss": 7.002,
+          "preview": "her",
+          "token_id": 518
+        }
+      ],
+      "lane": "general_web",
+      "loss_delta_after_exposure": -0.09321,
+      "loss_tokens": 1841,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.25029,
+      "mean_opus_score": 0.46316,
+      "model_phases": [
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-general_web-train-7f6313c11dd2",
+      "spans_trained": 27
+    },
+    {
+      "avg_token_loss": 5.69637,
+      "avg_token_ppl": 297.785,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 9.29,
+          "preview": "ts",
+          "token_id": 307
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.916,
+          "preview": "way",
+          "token_id": 454
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.412,
+          "preview": " Jaipur",
+          "token_id": 618
+        },
+        {
+          "count": 6,
+          "mean_loss": 7.662,
+          "preview": "pur",
+          "token_id": 451
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.64,
+          "preview": "Nag",
+          "token_id": 646
+        }
+      ],
+      "lane": "general_web",
+      "loss_delta_after_exposure": -0.07465,
+      "loss_tokens": 2127,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.32222,
+      "mean_opus_score": 0.59055,
+      "model_phases": [
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-general_web-train-896422f889e4",
+      "spans_trained": 31
+    },
+    {
+      "avg_token_loss": 5.89831,
+      "avg_token_ppl": 364.42,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 4,
+          "mean_loss": 9.79,
+          "preview": " Jaipur",
+          "token_id": 618
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.597,
+          "preview": " for",
+          "token_id": 526
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.048,
+          "preview": "ter",
+          "token_id": 351
+        },
+        {
+          "count": 4,
+          "mean_loss": 7.367,
+          "preview": " farmer",
+          "token_id": 627
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.092,
+          "preview": " ol",
+          "token_id": 644
+        }
+      ],
+      "lane": "general_web",
+      "loss_delta_after_exposure": -0.09242,
+      "loss_tokens": 1081,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.37037,
+      "mean_opus_score": 0.49847,
+      "model_phases": [
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-general_web-train-a40d1340a215",
+      "spans_trained": 16
+    },
+    {
+      "avg_token_loss": 5.758,
+      "avg_token_ppl": 316.715,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 2,
+          "mean_loss": 7.858,
+          "preview": "her",
+          "token_id": 518
+        },
+        {
+          "count": 1,
+          "mean_loss": 7.658,
+          "preview": "D",
+          "token_id": 77
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.772,
+          "preview": " Kochi",
+          "token_id": 544
+        },
+        {
+          "count": 2,
+          "mean_loss": 6.757,
+          "preview": " st",
+          "token_id": 603
+        },
+        {
+          "count": 3,
+          "mean_loss": 6.599,
+          "preview": " Madurai",
+          "token_id": 582
+        }
+      ],
+      "lane": "general_web",
+      "loss_delta_after_exposure": -0.21942,
+      "loss_tokens": 297,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.32785,
+      "mean_opus_score": 0.68989,
+      "model_phases": [
+        "foundation"
+      ],
+      "shard_id": "shd-general_web-train-c44caa450caa",
+      "spans_trained": 5
+    },
+    {
+      "avg_token_loss": 5.68724,
+      "avg_token_ppl": 295.079,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 3,
+          "mean_loss": 8.47,
+          "preview": " M",
+          "token_id": 348
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.605,
+          "preview": "ill",
+          "token_id": 531
+        },
+        {
+          "count": 1,
+          "mean_loss": 7.483,
+          "preview": "pur",
+          "token_id": 451
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.477,
+          "preview": "Nag",
+          "token_id": 646
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.351,
+          "preview": "Reports",
+          "token_id": 440
+        }
+      ],
+      "lane": "general_web",
+      "loss_delta_after_exposure": -0.06247,
+      "loss_tokens": 2393,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.2719,
+      "mean_opus_score": 0.57229,
+      "model_phases": [
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-general_web-train-d198d7a136b1",
+      "spans_trained": 33
+    },
+    {
+      "avg_token_loss": 5.66828,
+      "avg_token_ppl": 289.537,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 2,
+          "mean_loss": 7.316,
+          "preview": "Nag",
+          "token_id": 646
+        },
+        {
+          "count": 1,
+          "mean_loss": 7.29,
+          "preview": "pur",
+          "token_id": 451
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.167,
+          "preview": " farmer",
+          "token_id": 627
+        },
+        {
+          "count": 1,
+          "mean_loss": 7.136,
+          "preview": "any",
+          "token_id": 383
+        },
+        {
+          "count": 2,
+          "mean_loss": 6.981,
+          "preview": "way",
+          "token_id": 454
+        }
+      ],
+      "lane": "general_web",
+      "loss_delta_after_exposure": -0.07069,
+      "loss_tokens": 1594,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.29399,
+      "mean_opus_score": 0.56908,
+      "model_phases": [
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-general_web-train-da1acf065374",
+      "spans_trained": 22
+    },
+    {
+      "avg_token_loss": 5.53185,
+      "avg_token_ppl": 252.611,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 3,
+          "mean_loss": 9.962,
+          "preview": " Jaipur",
+          "token_id": 618
+        },
+        {
+          "count": 1,
+          "mean_loss": 9.24,
+          "preview": "Reports",
+          "token_id": 440
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.476,
+          "preview": "ag",
+          "token_id": 628
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.462,
+          "preview": "way",
+          "token_id": 454
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.292,
+          "preview": "I",
+          "token_id": 82
+        }
+      ],
+      "lane": "general_web",
+      "loss_delta_after_exposure": -0.07049,
+      "loss_tokens": 1794,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.47613,
+      "mean_opus_score": 0.54363,
+      "model_phases": [
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-general_web-train-e726c40dfb40",
+      "spans_trained": 24
+    },
+    {
+      "avg_token_loss": 6.3801,
+      "avg_token_ppl": 589.988,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 4,
+          "mean_loss": 9.76,
+          "preview": "�",
+          "token_id": 189
+        },
+        {
+          "count": 1,
+          "mean_loss": 9.252,
+          "preview": "�",
+          "token_id": 184
+        },
+        {
+          "count": 5,
+          "mean_loss": 8.526,
+          "preview": "ா",
+          "token_id": 344
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.207,
+          "preview": "ி�",
+          "token_id": 302
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.184,
+          "preview": " த",
+          "token_id": 635
+        }
+      ],
+      "lane": "indic",
+      "loss_delta_after_exposure": -0.12441,
+      "loss_tokens": 2348,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.2632,
+      "mean_opus_score": 0.1404,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-indic-train-2ece284f9797",
+      "spans_trained": 35
+    },
+    {
+      "avg_token_loss": 6.23709,
+      "avg_token_ppl": 511.369,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 8.794,
+          "preview": "��",
+          "token_id": 638
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.63,
+          "preview": "�",
+          "token_id": 189
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.332,
+          "preview": "�",
+          "token_id": 163
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.199,
+          "preview": "ா",
+          "token_id": 344
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.031,
+          "preview": "த",
+          "token_id": 303
+        }
+      ],
+      "lane": "indic",
+      "loss_delta_after_exposure": -0.07074,
+      "loss_tokens": 2788,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.30868,
+      "mean_opus_score": 0.01746,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-indic-train-3305107b346f",
+      "spans_trained": 38
+    },
+    {
+      "avg_token_loss": 6.30622,
+      "avg_token_ppl": 547.967,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 2,
+          "mean_loss": 7.83,
+          "preview": "�",
+          "token_id": 182
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.583,
+          "preview": "��",
+          "token_id": 638
+        },
+        {
+          "count": 17,
+          "mean_loss": 7.544,
+          "preview": "क",
+          "token_id": 579
+        },
+        {
+          "count": 1,
+          "mean_loss": 7.284,
+          "preview": "�",
+          "token_id": 146
+        },
+        {
+          "count": 9,
+          "mean_loss": 7.234,
+          "preview": "े",
+          "token_id": 335
+        }
+      ],
+      "lane": "indic",
+      "loss_delta_after_exposure": -0.07748,
+      "loss_tokens": 3071,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.34617,
+      "mean_opus_score": -0.02419,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-indic-train-8eadc41d7a86",
+      "spans_trained": 42
+    },
+    {
+      "avg_token_loss": 5.95353,
+      "avg_token_ppl": 385.111,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 9.451,
+          "preview": "�",
+          "token_id": 184
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.585,
+          "preview": "�",
+          "token_id": 189
+        },
+        {
+          "count": 3,
+          "mean_loss": 8.403,
+          "preview": "�",
+          "token_id": 163
+        },
+        {
+          "count": 2,
+          "mean_loss": 8.241,
+          "preview": "ா",
+          "token_id": 344
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.364,
+          "preview": "�",
+          "token_id": 172
+        }
+      ],
+      "lane": "indic",
+      "loss_delta_after_exposure": -0.07503,
+      "loss_tokens": 1104,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.35768,
+      "mean_opus_score": -0.01955,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-indic-train-be029172628d",
+      "spans_trained": 18
+    },
+    {
+      "avg_token_loss": 6.24737,
+      "avg_token_ppl": 516.654,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 9.26,
+          "preview": "्",
+          "token_id": 416
+        },
+        {
+          "count": 2,
+          "mean_loss": 9.165,
+          "preview": "�",
+          "token_id": 182
+        },
+        {
+          "count": 2,
+          "mean_loss": 9.091,
+          "preview": "�",
+          "token_id": 189
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.94,
+          "preview": " म",
+          "token_id": 345
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.868,
+          "preview": " पु",
+          "token_id": 589
+        }
+      ],
+      "lane": "indic",
+      "loss_delta_after_exposure": -0.09412,
+      "loss_tokens": 2675,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.35651,
+      "mean_opus_score": 0.06682,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-indic-train-ca6702e9807e",
+      "spans_trained": 39
+    },
+    {
+      "avg_token_loss": 5.62694,
+      "avg_token_ppl": 277.811,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 7.997,
+          "preview": "F",
+          "token_id": 79
+        },
+        {
+          "count": 4,
+          "mean_loss": 7.674,
+          "preview": " hour",
+          "token_id": 537
+        },
+        {
+          "count": 6,
+          "mean_loss": 7.192,
+          "preview": " T",
+          "token_id": 409
+        },
+        {
+          "count": 5,
+          "mean_loss": 7.134,
+          "preview": "What",
+          "token_id": 578
+        },
+        {
+          "count": 4,
+          "mean_loss": 7.099,
+          "preview": "S",
+          "token_id": 92
+        }
+      ],
+      "lane": "math_science",
+      "loss_delta_after_exposure": -0.09123,
+      "loss_tokens": 2695,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.35862,
+      "mean_opus_score": 0.19298,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-math_science-train-512d6b0ff386",
+      "spans_trained": 39
+    },
+    {
+      "avg_token_loss": 5.65724,
+      "avg_token_ppl": 286.359,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 2,
+          "mean_loss": 8.693,
+          "preview": " T",
+          "token_id": 409
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.155,
+          "preview": "S",
+          "token_id": 92
+        },
+        {
+          "count": 1,
+          "mean_loss": 8.105,
+          "preview": " per",
+          "token_id": 459
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.159,
+          "preview": " hour",
+          "token_id": 537
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.098,
+          "preview": "What",
+          "token_id": 578
+        }
+      ],
+      "lane": "math_science",
+      "loss_delta_after_exposure": -0.05499,
+      "loss_tokens": 2558,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.30082,
+      "mean_opus_score": 0.19484,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-math_science-train-551548043c5e",
+      "spans_trained": 34
+    },
+    {
+      "avg_token_loss": 5.48697,
+      "avg_token_ppl": 241.525,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 8.165,
+          "preview": " bo",
+          "token_id": 362
+        },
+        {
+          "count": 1,
+          "mean_loss": 7.747,
+          "preview": "j",
+          "token_id": 115
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.315,
+          "preview": " 9",
+          "token_id": 494
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.256,
+          "preview": "am",
+          "token_id": 461
+        },
+        {
+          "count": 4,
+          "mean_loss": 7.117,
+          "preview": " hour",
+          "token_id": 537
+        }
+      ],
+      "lane": "math_science",
+      "loss_delta_after_exposure": -0.04598,
+      "loss_tokens": 2910,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.39761,
+      "mean_opus_score": 0.10922,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-math_science-train-56bd36818176",
+      "spans_trained": 40
+    },
+    {
+      "avg_token_loss": 5.42339,
+      "avg_token_ppl": 226.647,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 2,
+          "mean_loss": 7.129,
+          "preview": " hour",
+          "token_id": 537
+        },
+        {
+          "count": 4,
+          "mean_loss": 7.098,
+          "preview": "What",
+          "token_id": 578
+        },
+        {
+          "count": 5,
+          "mean_loss": 6.936,
+          "preview": " T",
+          "token_id": 409
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.881,
+          "preview": "00",
+          "token_id": 382
+        },
+        {
+          "count": 2,
+          "mean_loss": 6.8,
+          "preview": " f",
+          "token_id": 283
+        }
+      ],
+      "lane": "math_science",
+      "loss_delta_after_exposure": -0.03698,
+      "loss_tokens": 1934,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.31608,
+      "mean_opus_score": 0.04422,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-math_science-train-d79ca19c09ac",
+      "spans_trained": 29
+    },
+    {
+      "avg_token_loss": 5.92572,
+      "avg_token_ppl": 374.549,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 1,
+          "mean_loss": 8.792,
+          "preview": "fter",
+          "token_id": 397
+        },
+        {
+          "count": 3,
+          "mean_loss": 8.29,
+          "preview": "ks",
+          "token_id": 517
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.654,
+          "preview": " -",
+          "token_id": 637
+        },
+        {
+          "count": 1,
+          "mean_loss": 7.012,
+          "preview": " box",
+          "token_id": 456
+        },
+        {
+          "count": 3,
+          "mean_loss": 6.664,
+          "preview": " away",
+          "token_id": 548
+        }
+      ],
+      "lane": "reasoning",
+      "loss_delta_after_exposure": -0.06244,
+      "loss_tokens": 473,
+      "max_repeated_pass": 1,
+      "mean_grad_norm": 0.33683,
+      "mean_opus_score": 0.16959,
+      "model_phases": [
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-reasoning-train-1c47f9da7dd9",
+      "spans_trained": 7
+    },
+    {
+      "avg_token_loss": 5.42864,
+      "avg_token_ppl": 227.839,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 4,
+          "mean_loss": 9.278,
+          "preview": "ts",
+          "token_id": 307
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.679,
+          "preview": " -",
+          "token_id": 637
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.67,
+          "preview": "C",
+          "token_id": 76
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.582,
+          "preview": "fter",
+          "token_id": 397
+        },
+        {
+          "count": 2,
+          "mean_loss": 7.432,
+          "preview": "ks",
+          "token_id": 517
+        }
+      ],
+      "lane": "reasoning",
+      "loss_delta_after_exposure": -0.05598,
+      "loss_tokens": 1289,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.32604,
+      "mean_opus_score": -0.01346,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-reasoning-train-b92ef5e889e1",
+      "spans_trained": 19
+    },
+    {
+      "avg_token_loss": 5.39749,
+      "avg_token_ppl": 220.852,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 5,
+          "mean_loss": 9.506,
+          "preview": "ts",
+          "token_id": 307
+        },
+        {
+          "count": 3,
+          "mean_loss": 7.803,
+          "preview": "ks",
+          "token_id": 517
+        },
+        {
+          "count": 8,
+          "mean_loss": 7.188,
+          "preview": " away",
+          "token_id": 548
+        },
+        {
+          "count": 4,
+          "mean_loss": 7.079,
+          "preview": " 7",
+          "token_id": 476
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.93,
+          "preview": " 8",
+          "token_id": 471
+        }
+      ],
+      "lane": "reasoning",
+      "loss_delta_after_exposure": -0.03536,
+      "loss_tokens": 1205,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.35767,
+      "mean_opus_score": -0.0209,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-reasoning-train-c3f8074fcf9a",
+      "spans_trained": 18
+    },
+    {
+      "avg_token_loss": 5.36418,
+      "avg_token_ppl": 213.617,
+      "classification": "useful",
+      "high_perplexity_tokens": [
+        {
+          "count": 4,
+          "mean_loss": 7.481,
+          "preview": "ks",
+          "token_id": 517
+        },
+        {
+          "count": 9,
+          "mean_loss": 6.792,
+          "preview": " away",
+          "token_id": 548
+        },
+        {
+          "count": 8,
+          "mean_loss": 6.738,
+          "preview": " box",
+          "token_id": 456
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.722,
+          "preview": " 7",
+          "token_id": 476
+        },
+        {
+          "count": 1,
+          "mean_loss": 6.694,
+          "preview": "C",
+          "token_id": 76
+        }
+      ],
+      "lane": "reasoning",
+      "loss_delta_after_exposure": -0.03988,
+      "loss_tokens": 937,
+      "max_repeated_pass": 2,
+      "mean_grad_norm": 0.26766,
+      "mean_opus_score": -0.05982,
+      "model_phases": [
+        "anneal",
+        "foundation",
+        "reasoning_midtrain"
+      ],
+      "shard_id": "shd-reasoning-train-fca2f5d1b1ce",
+      "spans_trained": 14
+    }
+  ]
+}

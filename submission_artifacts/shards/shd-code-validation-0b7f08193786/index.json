@@ -1,0 +1,66 @@
+{
+  "docs": [
+    {
+      "benchmark_id": null,
+      "doc_hash": "f960950bef10ceef9127fe0bc44a8f38d1689a1ab28b46060cb007cd4758b0d0",
+      "doc_id": "src_code_permissive/validation/00000",
+      "doc_index": 0,
+      "kind": "code",
+      "language": "python",
+      "length": 92,
+      "script": "Latn",
+      "source_id": "src_code_permissive",
+      "start": 0
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "86c6b79784d3b435b370bf584226da3a48b1f60c675b5c09bf411a52e1c7a70e",
+      "doc_id": "src_code_permissive/validation/00001",
+      "doc_index": 1,
+      "kind": "code",
+      "language": "python",
+      "length": 195,
+      "script": "Latn",
+      "source_id": "src_code_permissive",
+      "start": 92
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "c05d56770ef7c8f9c75bb1076b9e8b639df9bc07ffedc195c76a32cfc0f6fb8f",
+      "doc_id": "src_code_permissive/validation/00002",
+      "doc_index": 2,
+      "kind": "code",
+      "language": "python",
+      "length": 281,
+      "script": "Latn",
+      "source_id": "src_code_permissive",
+      "start": 287
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "1aa4ae95c025c7e576371fb511b4755f1db859b6b558a67e723c4094e1b89752",
+      "doc_id": "src_code_permissive/validation/00003",
+      "doc_index": 3,
+      "kind": "code",
+      "language": "python",
+      "length": 287,
+      "script": "Latn",
+      "source_id": "src_code_permissive",
+      "start": 568
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "5a936d7d0d7f8f901d2555222ce755f33b7b0ce90a809b2eee90c40d58dbcdca",
+      "doc_id": "src_code_permissive/validation/00004",
+      "doc_index": 4,
+      "kind": "code",
+      "language": "python",
+      "length": 269,
+      "script": "Latn",
+      "source_id": "src_code_permissive",
+      "start": 855
+    }
+  ],
+  "format": "tdes-shard-v1",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

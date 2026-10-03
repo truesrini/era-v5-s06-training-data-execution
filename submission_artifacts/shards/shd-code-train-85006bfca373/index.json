@@ -1,0 +1,126 @@
+{
+  "docs": [
+    {
+      "benchmark_id": null,
+      "doc_hash": "865c3ed4a909e80da051016fa7188c1eb8202c8a700ceaf5ac813a807bea76df",
+      "doc_id": "src_code_scraped_unknown/train/00000",
+      "doc_index": 0,
+      "kind": "code",
+      "language": "python",
+      "length": 121,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 0
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "8f609f1d0d9bd923b0666964d09545f9ac21b6da57bf3fd750ce1d06c2269fb2",
+      "doc_id": "src_code_scraped_unknown/train/00001",
+      "doc_index": 1,
+      "kind": "code",
+      "language": "python",
+      "length": 240,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 121
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "22efb597cb09c127579610b90917850c1ddc24a46aa903237455db6f11803afb",
+      "doc_id": "src_code_scraped_unknown/train/00002",
+      "doc_index": 2,
+      "kind": "code",
+      "language": "python",
+      "length": 350,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 361
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "f7f8e8e917332bdd787c4e7a777387219f688237fb83bc249849070345f92f60",
+      "doc_id": "src_code_scraped_unknown/train/00003",
+      "doc_index": 3,
+      "kind": "code",
+      "language": "python",
+      "length": 70,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 711
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "450b2c2e57481f184c8976b47a025f17e8ddd9ddb0070688aa51f3f526187c4c",
+      "doc_id": "src_code_scraped_unknown/train/00004",
+      "doc_index": 4,
+      "kind": "code",
+      "language": "python",
+      "length": 80,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 781
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "a0f4d68277e82d9da2aa1afc44a0478ee2ba763065f6c44f481467cc0e1e2d25",
+      "doc_id": "src_code_scraped_unknown/train/00005",
+      "doc_index": 5,
+      "kind": "code",
+      "language": "python",
+      "length": 303,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 861
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "0bce13140abc8ad2aae77b163335968849ffe7915940b746a671cfc5f68e72c7",
+      "doc_id": "src_code_scraped_unknown/train/00006",
+      "doc_index": 6,
+      "kind": "code",
+      "language": "python",
+      "length": 58,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 1164
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "2e18823f8a86854a79364c6267caec6c6b13924a56917ad17db0d5d38b2105d6",
+      "doc_id": "src_code_scraped_unknown/train/00007",
+      "doc_index": 7,
+      "kind": "code",
+      "language": "python",
+      "length": 77,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 1222
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "e7fb74c82160941a741074983874c84f29a5f21e4bd7cae0b705c3734b1643d3",
+      "doc_id": "src_code_scraped_unknown/train/00008",
+      "doc_index": 8,
+      "kind": "code",
+      "language": "python",
+      "length": 202,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 1299
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "c353542418d214738cd9722282b49b315c869a96ea3c374b1de2c6bbb6310a07",
+      "doc_id": "src_code_scraped_unknown/train/00009",
+      "doc_index": 9,
+      "kind": "code",
+      "language": "python",
+      "length": 130,
+      "script": "Latn",
+      "source_id": "src_code_scraped_unknown",
+      "start": 1501
+    }
+  ],
+  "format": "tdes-shard-v1",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

@@ -1,0 +1,2290 @@
+{
+  "shd-agentic-train-9173827a9592": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "9173827a9592",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "2669",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-agentic-train-9f31a36166f3": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "9f31a36166f3",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "2890",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-agentic-train-a5ba98a2da48": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "a5ba98a2da48",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "2780",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-agentic-train-c171a9233421": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "c171a9233421",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "901",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-agentic-validation-e666184d5a0a": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "e666184d5a0a",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "426",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-anneal_reserve-train-4d59d51d1e90": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "4d59d51d1e90",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "1456",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-anneal_reserve-train-eee78921d88c": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "eee78921d88c",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "1418",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-anneal_reserve-train-f9c9f81a72f5": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "f9c9f81a72f5",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "1238",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-anneal_reserve-validation-bc79ac62a9a6": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "bc79ac62a9a6",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "169",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-code-train-6b4e59183e95": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "6b4e59183e95",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4715",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-code-train-85006bfca373": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "85006bfca373",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "1631",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-code-train-c4632678cd6e": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "c4632678cd6e",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4276",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-code-train-c9bbe04bac8d": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "c9bbe04bac8d",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3655",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-code-train-f7edc679ba1d": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "f7edc679ba1d",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4567",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-code-validation-0b7f08193786": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "0b7f08193786",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "1124",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-eval-test-3c9fd14fbdc2": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "3c9fd14fbdc2",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "1863",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-eval-test-3d6cd76c969c": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "3d6cd76c969c",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3788",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-6610b2596e7e": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "6610b2596e7e",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4654",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-785bb33ff511": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "785bb33ff511",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4026",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-7f6313c11dd2": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "7f6313c11dd2",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4322",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-896422f889e4": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "896422f889e4",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3812",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-a40d1340a215": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "a40d1340a215",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4359",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-c44caa450caa": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "c44caa450caa",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "461",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-d198d7a136b1": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "d198d7a136b1",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4295",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-da1acf065374": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "da1acf065374",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4140",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-train-e726c40dfb40": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "e726c40dfb40",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4167",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-general_web-validation-5f6e58cbbaf8": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "5f6e58cbbaf8",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "1065",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-indic-train-2ece284f9797": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "2ece284f9797",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3902",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-indic-train-3305107b346f": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "3305107b346f",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3462",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-indic-train-8eadc41d7a86": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "8eadc41d7a86",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3623",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-indic-train-be029172628d": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "be029172628d",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "2220",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-indic-train-ca6702e9807e": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "ca6702e9807e",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3628",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-indic-validation-5a2be7228ff9": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "5a2be7228ff9",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "927",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-math_science-train-512d6b0ff386": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "512d6b0ff386",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4122",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-math_science-train-551548043c5e": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "551548043c5e",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "4244",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-math_science-train-56bd36818176": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "56bd36818176",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3879",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-math_science-train-d79ca19c09ac": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "d79ca19c09ac",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "3013",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-math_science-validation-4f4e15f250fc": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "4f4e15f250fc",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "934",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-opus_proxy-proxy-59e96b021ebb": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "59e96b021ebb",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "1879",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-reasoning-train-1c47f9da7dd9": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "1c47f9da7dd9",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "948",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-reasoning-train-b92ef5e889e1": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "b92ef5e889e1",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "2830",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-reasoning-train-c3f8074fcf9a": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "c3f8074fcf9a",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "2824",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-reasoning-train-fca2f5d1b1ce": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "fca2f5d1b1ce",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "2815",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ],
+  "shd-reasoning-validation-d6e1a95c39e4": [
+    {
+      "check": "manifest_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "tokenizer_hash",
+      "detail": "6755ee6fea85",
+      "ok": true
+    },
+    {
+      "check": "file_hashes",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "sealed_read_only",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "content_hash",
+      "detail": "d6e1a95c39e4",
+      "ok": true
+    },
+    {
+      "check": "id_embeds_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "token_count",
+      "detail": "468",
+      "ok": true
+    },
+    {
+      "check": "index_tokenizer_hash",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "doc_ids",
+      "detail": "",
+      "ok": true
+    },
+    {
+      "check": "cleaning_lineage",
+      "detail": "",
+      "ok": true
+    }
+  ]
+}

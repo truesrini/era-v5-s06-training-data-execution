@@ -1,0 +1,372 @@
+{
+  "branch": "main",
+  "checkpoint_id": "ckpt-main-s00024-0e0d76e34d",
+  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "counters": {
+    "loss_tokens": 43813,
+    "nonpad_tokens": 47686,
+    "positions": 49152
+  },
+  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "global_step": 24,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "26a21c39a9c9c7bf47ba0db9126f75882fc1bc3791230fa85270b99b2d6a7ea6",
+      "offset": 251,
+      "path": "ledgers/main/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "271a406f565dfd761befbf7cdd295f128ecb04f4b85724245d73e597c024cca8",
+      "offset": 415,
+      "path": "ledgers/main/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "6839feb123e1f4abdba637bf4936c1889f08764a127f2c1089e5165fdd4e4359",
+      "offset": 765,
+      "path": "ledgers/main/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 612,
+    "deferred": [
+      {
+        "candidate_id": "cand-000586",
+        "defer_count": 1,
+        "first_step": 24,
+        "lane": "general_web",
+        "last_score": 0.42991562804392813,
+        "spans": [
+          {
+            "doc_id": "src_web_edu_crawl/train/00097",
+            "doc_index": 1,
+            "end": 134,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-896422f889e4",
+            "span_id": "shd-general_web-train-896422f889e4:1:6-134",
+            "start": 6
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000589",
+        "defer_count": 1,
+        "first_step": 24,
+        "lane": "code",
+        "last_score": -0.036751608350048065,
+        "spans": [
+          {
+            "doc_id": "src_code_permissive/train/00072",
+            "doc_index": 0,
+            "end": 123,
+            "epoch": 0,
+            "shard_id": "shd-code-train-c9bbe04bac8d",
+            "span_id": "shd-code-train-c9bbe04bac8d:0:0-123",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000590",
+        "defer_count": 1,
+        "first_step": 24,
+        "lane": "code",
+        "last_score": -0.059357835157469174,
+        "spans": [
+          {
+            "doc_id": "src_code_permissive/train/00071",
+            "doc_index": 23,
+            "end": 125,
+            "epoch": 0,
+            "shard_id": "shd-code-train-c4632678cd6e",
+            "span_id": "shd-code-train-c4632678cd6e:23:0-125",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000595",
+        "defer_count": 1,
+        "first_step": 24,
+        "lane": "math_science",
+        "last_score": -0.0393801668486027,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00083",
+            "doc_index": 11,
+            "end": 231,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-d79ca19c09ac",
+            "span_id": "shd-math_science-train-d79ca19c09ac:11:196-231",
+            "start": 196
+          },
+          {
+            "doc_id": "src_math_textbooks/train/00050",
+            "doc_index": 2,
+            "end": 86,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-56bd36818176",
+            "span_id": "shd-math_science-train-56bd36818176:2:0-86",
+            "start": 0
+          },
+          {
+            "doc_id": "src_math_textbooks/train/00029",
+            "doc_index": 5,
+            "end": 7,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-512d6b0ff386",
+            "span_id": "shd-math_science-train-512d6b0ff386:5:0-7",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000610",
+        "defer_count": 1,
+        "first_step": 24,
+        "lane": "reasoning",
+        "last_score": -0.049383869385083955,
+        "spans": [
+          {
+            "doc_id": "src_reasoning_banded/train/00048",
+            "doc_index": 0,
+            "end": 118,
+            "epoch": 0,
+            "shard_id": "shd-reasoning-train-b92ef5e889e1",
+            "span_id": "shd-reasoning-train-b92ef5e889e1:0:0-118",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "recent": [
+      [
+        21,
+        [
+          "ps-7f9df89870e74b81",
+          "ps-796bd284a081ec8b",
+          "ps-c431c09c395f2272",
+          "ps-1c44c1f5a76c6063",
+          "ps-f1f3fc0cc2015fd4",
+          "ps-c62c4dff8f9fb48c",
+          "ps-a727f239128d4b23",
+          "ps-1fff9e01fae2ea32",
+          "ps-0313e4af0701c170",
+          "ps-91f07f58e5ea6912",
+          "ps-7ecd0618229e047e",
+          "ps-6ae9424c7ba2b771",
+          "ps-874df25d323cf814",
+          "ps-ec943686f52d778c",
+          "ps-d6819acc360f5588",
+          "ps-56441f302be55858"
+        ]
+      ],
+      [
+        22,
+        [
+          "ps-8aea516b2a044de0",
+          "ps-de971ef346658936",
+          "ps-d820f73fc14d9248",
+          "ps-9d21484705040129",
+          "ps-f9e44a76217283ab",
+          "ps-38faf59ea7c83740",
+          "ps-1810ad0708360346",
+          "ps-889d908e19123ece",
+          "ps-b51732cbb0b1edb7",
+          "ps-86145d605ced0c10",
+          "ps-644e05d643ecde24",
+          "ps-46dd8614df055880",
+          "ps-ee143a2ee24d88cf",
+          "ps-b092ac900164ca3e",
+          "ps-216454d2a2cb7794",
+          "ps-7faa69b0d9adb6ea"
+        ]
+      ],
+      [
+        23,
+        [
+          "ps-07743348ca0c120f",
+          "ps-83ee15723b0533dd",
+          "ps-8a3d9098836a5367",
+          "ps-feb6fd7bdfb5d24e",
+          "ps-796edf5748a84979",
+          "ps-762cb72fdf3f6231",
+          "ps-2b4f01615a01e03c",
+          "ps-91f092e4abb1d30a",
+          "ps-1f129d1f7dda4fd7",
+          "ps-ad91b69e44d9c3fa",
+          "ps-4010032ed1d8651c",
+          "ps-be01645383a63df2",
+          "ps-e192bd510a631fe4",
+          "ps-fb4c03795481d325",
+          "ps-c890b2e44f512c6a",
+          "ps-79491b5c004a0980"
+        ]
+      ],
+      [
+        24,
+        [
+          "ps-9bc12847b8ad9340",
+          "ps-61f174e98308f50d",
+          "ps-810e053e648cb0b4",
+          "ps-2307e2fabb967098",
+          "ps-5efd44aab6851a57",
+          "ps-ce2678eb4035e078",
+          "ps-07fb2aa531bcb673",
+          "ps-3beacab7191e4f1a",
+          "ps-c9d9e0ca2e812f7a",
+          "ps-84c384c8ac7e62a1",
+          "ps-5d9796248cc9f9cc",
+          "ps-6d5c610b6c5a57d0",
+          "ps-99cf3967ceac5c92",
+          "ps-98d963722f56f03a",
+          "ps-01143fc3871fe9d2",
+          "ps-4b9cbbf67cd17f19"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            56,
+            0
+          ],
+          [
+            55,
+            0
+          ],
+          [
+            61,
+            0
+          ],
+          [
+            31,
+            0
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            62,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 56
+      },
+      "anneal_reserve": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 0
+      },
+      "code": {
+        "buffer": [
+          [
+            61,
+            0
+          ],
+          [
+            38,
+            0
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            152,
+            0
+          ],
+          [
+            63,
+            0
+          ],
+          [
+            170,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 180
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 84,
+        "pos": 86
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 1,
+        "offset": 182,
+        "pos": 25
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 7,
+        "pos": 61
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            46,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            48,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            42,
+            0
+          ],
+          [
+            60,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 68
+      }
+    }
+  },
+  "mode": "resume",
+  "optimizer_hash": "5553aac2424d80609c29979af3e68e171f436f14d7cba54dfff69f7b8c72bfd3",
+  "optimizer_t": 24,
+  "previous_checkpoint": "ckpt-main-s00020-59ce18a967",
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "scheduler": {
+    "next_lr": 0.0023180194846605367,
+    "step": 24
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "0e0d76e34d5fb3c7ffbda03946a691a82ceba0ff82e593e90b7d54c2c130f14c"
+}

@@ -1,0 +1,8 @@
+{
+  "command": "python -m unittest discover -s tests -t . -v",
+  "errors": 0,
+  "failures": 0,
+  "passed": true,
+  "ran": 38,
+  "seconds": 12.36
+}

@@ -1,0 +1,157 @@
+{
+  "admitted_train": [
+    "shd-agentic-train-9173827a9592",
+    "shd-agentic-train-9f31a36166f3",
+    "shd-agentic-train-a5ba98a2da48",
+    "shd-agentic-train-c171a9233421",
+    "shd-anneal_reserve-train-4d59d51d1e90",
+    "shd-anneal_reserve-train-eee78921d88c",
+    "shd-anneal_reserve-train-f9c9f81a72f5",
+    "shd-code-train-6b4e59183e95",
+    "shd-code-train-c4632678cd6e",
+    "shd-code-train-c9bbe04bac8d",
+    "shd-code-train-f7edc679ba1d",
+    "shd-general_web-train-6610b2596e7e",
+    "shd-general_web-train-7f6313c11dd2",
+    "shd-general_web-train-896422f889e4",
+    "shd-general_web-train-a40d1340a215",
+    "shd-general_web-train-c44caa450caa",
+    "shd-general_web-train-d198d7a136b1",
+    "shd-general_web-train-da1acf065374",
+    "shd-general_web-train-e726c40dfb40",
+    "shd-indic-train-2ece284f9797",
+    "shd-indic-train-3305107b346f",
+    "shd-indic-train-8eadc41d7a86",
+    "shd-indic-train-be029172628d",
+    "shd-indic-train-ca6702e9807e",
+    "shd-math_science-train-512d6b0ff386",
+    "shd-math_science-train-551548043c5e",
+    "shd-math_science-train-56bd36818176",
+    "shd-math_science-train-d79ca19c09ac",
+    "shd-reasoning-train-1c47f9da7dd9",
+    "shd-reasoning-train-b92ef5e889e1",
+    "shd-reasoning-train-c3f8074fcf9a",
+    "shd-reasoning-train-fca2f5d1b1ce"
+  ],
+  "checks": [
+    {
+      "detail": "reloaded hash 6755ee6fea85c6d2 == lock 6755ee6fea85c6d2",
+      "evidence": "manifests/tokenizer.lock.json",
+      "name": "tokenizer_hash_verified",
+      "passed": true
+    },
+    {
+      "detail": "29 documents re-encoded identically by the reloaded tokenizer",
+      "evidence": null,
+      "name": "tokenizer_deterministic",
+      "passed": true
+    },
+    {
+      "detail": "NFD-decomposed Hindi encodes to the same ids as NFC",
+      "evidence": null,
+      "name": "tokenizer_nfc_stable",
+      "passed": true
+    },
+    {
+      "detail": "literal '<|assistant|>' in text encodes as bytes, not the control id",
+      "evidence": null,
+      "name": "special_tokens_not_injectable",
+      "passed": true
+    },
+    {
+      "detail": "44/44 manifests: manifest hash, tokenizer hash, file hashes, content hash, sealed, lineage",
+      "evidence": "reports/manifest_validation.json",
+      "name": "manifests_validated",
+      "passed": true
+    },
+    {
+      "detail": "every manifest records tokenizer_hash 6755ee6fea85c6d2",
+      "evidence": "manifests/shards/*.json",
+      "name": "all_manifests_bind_frozen_tokenizer",
+      "passed": true
+    },
+    {
+      "detail": "write to shards/shd-agentic-train-9173827a9592/tokens.npy refused (read-only seal)",
+      "evidence": null,
+      "name": "shard_files_immutable",
+      "passed": true
+    },
+    {
+      "detail": "blocked: ['shd-code-train-85006bfca373']",
+      "evidence": "reports/admission_report.json",
+      "name": "license_gate_blocked_unknown_source",
+      "passed": true
+    },
+    {
+      "detail": "quarantined ['shd-general_web-train-785bb33ff511']; derived ['shd-general_web-train-896422f889e4'] with parent lineage",
+      "evidence": "ledgers/firewall.jsonl",
+      "name": "contaminated_shard_quarantined",
+      "passed": true
+    },
+    {
+      "detail": "2 test shard(s) refused: test_shard_never_train",
+      "evidence": "ledgers/firewall.jsonl#shard_blocked",
+      "name": "eval_shard_blocked",
+      "passed": true
+    },
+    {
+      "detail": "7 validation shard(s) refused: validation_shard_never_gradient_bearing",
+      "evidence": "ledgers/firewall.jsonl#shard_blocked",
+      "name": "validation_shard_blocked",
+      "passed": true
+    },
+    {
+      "detail": "contaminated shard refused at pool entry",
+      "evidence": null,
+      "name": "quarantined_shard_blocked",
+      "passed": true
+    },
+    {
+      "detail": "packed sequence holding a benchmark item rejected before training",
+      "evidence": "ledgers/firewall.jsonl#batch_blocked",
+      "name": "eval_batch_blocked_at_serve_time",
+      "passed": true
+    },
+    {
+      "detail": "0 eval-overlapping docs across 32 admitted shards",
+      "evidence": null,
+      "name": "admitted_train_shards_clean",
+      "passed": true
+    },
+    {
+      "detail": "packable tokens per lane {'general_web': 30210, 'code': 17213, 'math_science': 15258, 'indic': 16835, 'reasoning': 9417, 'agentic': 7146, 'anneal_reserve': 4112}; structured samples dropped as oversize {'general_web': 0, 'code': 0, 'math_science': 0, 'indic': 0, 'reasoning': 0, 'agentic': 16, 'anneal_reserve': 0}",
+      "evidence": null,
+      "name": "every_active_lane_has_packable_supply",
+      "passed": true
+    },
+    {
+      "detail": "3 stages, 32 steps, schedule_hash=1bbc44a6a1b6",
+      "evidence": "manifests/mixture_schedule.json",
+      "name": "mixture_compiled",
+      "passed": true
+    },
+    {
+      "detail": "indic/agentic/reasoning floors reserved in all step quotas",
+      "evidence": null,
+      "name": "protected_floors_in_every_step_quota",
+      "passed": true
+    }
+  ],
+  "license_blocked": [
+    "shd-code-train-85006bfca373"
+  ],
+  "n_shards": 44,
+  "quarantined": [
+    "shd-general_web-train-785bb33ff511"
+  ],
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "tokenizer": {
+    "file": "manifests/tokenizer.json",
+    "frozen": true,
+    "num_merges": 384,
+    "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+    "tokenizer_version": "tdes-bpe-v1-6755ee6fea85",
+    "trained_on_split": "train",
+    "vocab_size": 649
+  }
+}

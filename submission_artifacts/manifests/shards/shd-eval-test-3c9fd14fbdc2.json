@@ -1,0 +1,57 @@
+{
+  "benchmark_id": "bench_mini_hiqa_v1",
+  "capability_lane": "eval",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "registered_eval",
+  "content_hash": "3c9fd14fbdc26152293a4e4ad7e2eedcaf53362ddb8d527fca05814a6773a41b",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "bench_mini_hiqa_v1/test/00000",
+    "bench_mini_hiqa_v1/test/00001",
+    "bench_mini_hiqa_v1/test/00002",
+    "bench_mini_hiqa_v1/test/00003",
+    "bench_mini_hiqa_v1/test/00004",
+    "bench_mini_hiqa_v1/test/00005",
+    "bench_mini_hiqa_v1/test/00006",
+    "bench_mini_hiqa_v1/test/00007",
+    "bench_mini_hiqa_v1/test/00008",
+    "bench_mini_hiqa_v1/test/00009",
+    "bench_mini_hiqa_v1/test/00010",
+    "bench_mini_hiqa_v1/test/00011"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "f13dfe660992f8d9c82bd0f29a9b4140f8b396b6d95f97264839e8b6608ebe6d",
+    "tokens.npy": "3819cfc78194c0317d57a7fad093aaf173427141bc2863a4697f34e585b6e29d",
+    "train_on.npy": "677200dd37646b931671e12fcad22d20f16431a189df2568c6f7e82a1f0030a3"
+  },
+  "language": [
+    "hi"
+  ],
+  "license": [
+    "benchmark"
+  ],
+  "loss_bearing_token_count": 1863,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "c0bad0e3b11b3d33782fafa97b68ad8565f4d34e01f1a88554b6f1c47003cb0d",
+  "n_docs": 12,
+  "never_train": true,
+  "packing_policy": "eval_only",
+  "parent_shard_ids": [],
+  "path": "shards/shd-eval-test-3c9fd14fbdc2",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Deva"
+  ],
+  "shard_id": "shd-eval-test-3c9fd14fbdc2",
+  "source_ids": [
+    "bench_mini_hiqa_v1"
+  ],
+  "split": "test",
+  "token_count": 1863,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

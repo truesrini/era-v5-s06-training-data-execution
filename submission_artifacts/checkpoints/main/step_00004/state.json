@@ -1,0 +1,340 @@
+{
+  "branch": "main",
+  "checkpoint_id": "ckpt-main-s00004-7e7b48a44b",
+  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "counters": {
+    "loss_tokens": 7593,
+    "nonpad_tokens": 8066,
+    "positions": 8192
+  },
+  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "global_step": 4,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "ebaf34bf8e98d47aa18334e25df6c13287ba3e29b8517a6e408b7b5624185708",
+      "offset": 41,
+      "path": "ledgers/main/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "6cd1bf6c9c6d1f12788cb96ef1db3985c36e44d29dd9f8035d26225b136410b9",
+      "offset": 69,
+      "path": "ledgers/main/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "7b9e945f59506aced8d81ccbf122e92f903b2ff57e103756ad55de1a1e566bf0",
+      "offset": 120,
+      "path": "ledgers/main/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 102,
+    "deferred": [
+      {
+        "candidate_id": "cand-000083",
+        "defer_count": 1,
+        "first_step": 4,
+        "lane": "general_web",
+        "last_score": 0.4316813173251784,
+        "spans": [
+          {
+            "doc_id": "src_web_india_news/train/00002",
+            "doc_index": 16,
+            "end": 164,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-896422f889e4",
+            "span_id": "shd-general_web-train-896422f889e4:16:119-164",
+            "start": 119
+          },
+          {
+            "doc_id": "src_web_edu_crawl/train/00035",
+            "doc_index": 11,
+            "end": 83,
+            "epoch": 0,
+            "shard_id": "shd-general_web-train-a40d1340a215",
+            "span_id": "shd-general_web-train-a40d1340a215:11:0-83",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000085",
+        "defer_count": 1,
+        "first_step": 4,
+        "lane": "code",
+        "last_score": 0.29936210716718087,
+        "spans": [
+          {
+            "doc_id": "src_code_permissive/train/00086",
+            "doc_index": 14,
+            "end": 122,
+            "epoch": 0,
+            "shard_id": "shd-code-train-c9bbe04bac8d",
+            "span_id": "shd-code-train-c9bbe04bac8d:14:0-122",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000061",
+        "defer_count": 2,
+        "first_step": 3,
+        "lane": "math_science",
+        "last_score": 0.2639194274313129,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00085",
+            "doc_index": 13,
+            "end": 140,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-d79ca19c09ac",
+            "span_id": "shd-math_science-train-d79ca19c09ac:13:102-140",
+            "start": 102
+          },
+          {
+            "doc_id": "src_math_textbooks/train/00076",
+            "doc_index": 4,
+            "end": 90,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-d79ca19c09ac",
+            "span_id": "shd-math_science-train-d79ca19c09ac:4:0-90",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "recent": [
+      [
+        1,
+        [
+          "ps-7aae2e5c359122e3",
+          "ps-a0dd120469b649b7",
+          "ps-bde0838ef2db61f5",
+          "ps-5f43669ee4b2a1f2",
+          "ps-ceeb1bf74a5c3024",
+          "ps-555ca922130ef1de",
+          "ps-f51de9e5ebd399ab",
+          "ps-dbc1f3d917bf4fa6",
+          "ps-6a35b19fa4f0c7b6",
+          "ps-f3794d8ff21901e9",
+          "ps-02f7a4ac6875069c",
+          "ps-dd970736f34692c6",
+          "ps-0475a92a7ecf2959",
+          "ps-761ff290a4e19d7e",
+          "ps-205e40602bc53695",
+          "ps-845a1efedb2e2084"
+        ]
+      ],
+      [
+        2,
+        [
+          "ps-cffe5e0e19bf0ab7",
+          "ps-b9fe32944eceae46",
+          "ps-62dafaa9894e2578",
+          "ps-c05ccc811b1111cd",
+          "ps-8e85a129676f41c0",
+          "ps-151ae03de769fd65",
+          "ps-043c0f6ad7520863",
+          "ps-f36db1c24980061f",
+          "ps-a25cba8441b819f8",
+          "ps-4ca45d88717ef75e",
+          "ps-c86b878da09a02ef",
+          "ps-1666ad4c47f88df3",
+          "ps-83eb1098aa07a106",
+          "ps-19fca26564d29b50",
+          "ps-a8b60e8614b03bc8",
+          "ps-906dfd82ff8313dc"
+        ]
+      ],
+      [
+        3,
+        [
+          "ps-b97d360ec399e333",
+          "ps-3ca804f019423f74",
+          "ps-c0af19eafcccd451",
+          "ps-13238dc628b1a3a7",
+          "ps-ac4ff80ec821b0e3",
+          "ps-656dcb7b6a8f5883",
+          "ps-f0848ab72c89436b",
+          "ps-3594e2ea1243a83d",
+          "ps-e1a2b668c0d08c02",
+          "ps-9370c325be8eef4e",
+          "ps-fbffab523d5c6c75",
+          "ps-5c6ea7c49e78be0a",
+          "ps-3bda80713add7f75",
+          "ps-35b421ef68d83803",
+          "ps-86c16fa8a8241590",
+          "ps-c12be76e4e32210d"
+        ]
+      ],
+      [
+        4,
+        [
+          "ps-7c54cee52e605014",
+          "ps-d990264adfd1a6d9",
+          "ps-754a2f81b7d07fcb",
+          "ps-0ffaf337be31a3f3",
+          "ps-cab21fdb050a0756",
+          "ps-b27e5f19782b3ccb",
+          "ps-b8a6acabf2a01240",
+          "ps-33030d46253e3924",
+          "ps-8c77b2bcf7cd6204",
+          "ps-c55a29798047542b",
+          "ps-5a59fbd54783ae23",
+          "ps-5ee70781e956dca5",
+          "ps-76696f13c18af281",
+          "ps-8327eaf6eae651c4",
+          "ps-4c5c52ef5a9e4c78",
+          "ps-c624ea930dea07ff"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            1,
+            0
+          ],
+          [
+            21,
+            0
+          ],
+          [
+            56,
+            0
+          ],
+          [
+            28,
+            0
+          ],
+          [
+            51,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            55,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 15
+      },
+      "anneal_reserve": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 0
+      },
+      "code": {
+        "buffer": [
+          [
+            77,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            168,
+            0
+          ],
+          [
+            8,
+            0
+          ],
+          [
+            110,
+            0
+          ],
+          [
+            35,
+            0
+          ],
+          [
+            162,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 23
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 211,
+        "pos": 18
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 128,
+        "pos": 30
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 88,
+        "pos": 10
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            13,
+            0
+          ],
+          [
+            46,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            65,
+            0
+          ],
+          [
+            72,
+            0
+          ],
+          [
+            47,
+            0
+          ],
+          [
+            16,
+            0
+          ]
+        ],
+        "epoch": 0,
+        "offset": 0,
+        "pos": 14
+      }
+    }
+  },
+  "mode": "fresh",
+  "optimizer_hash": "5913135f7a70f97889cfe64cc3dc5a5624b2a26a4375fcc7da148909fed1d53d",
+  "optimizer_t": 4,
+  "previous_checkpoint": null,
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "scheduler": {
+    "next_lr": 0.009971704944519592,
+    "step": 4
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "7e7b48a44b58cb601e6c46caa079086222123e0867f3315924cda1ecf1c5c116"
+}

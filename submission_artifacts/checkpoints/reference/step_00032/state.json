@@ -1,0 +1,397 @@
+{
+  "branch": "reference",
+  "checkpoint_id": "ckpt-reference-s00032-5e49b0b888",
+  "config_hash": "0e5b60c85fbf8fcb8e6abbd31d19df677f8fd9caa2df368161fca811c9a1d301",
+  "counters": {
+    "loss_tokens": 55875,
+    "nonpad_tokens": 63223,
+    "positions": 65536
+  },
+  "dataloader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+  "global_step": 32,
+  "ledger_offsets": {
+    "consumption": {
+      "last_hash": "27e23a5d1ea0b104c2b90562b2a0bc3dbb40ea2fee0a9daf39cd5b157a045e0d",
+      "offset": 321,
+      "path": "ledgers/reference/consumption.jsonl"
+    },
+    "learning": {
+      "last_hash": "15f9ff0f89317490bb891ad4196fd6c5284d7757959ab5f7f9deb6d6eafb0fad",
+      "offset": 545,
+      "path": "ledgers/reference/learning.jsonl"
+    },
+    "opus": {
+      "last_hash": "30a46a72cd40be80ee704729d868cff9e93dd6343899208bfc44c6e84fae9013",
+      "offset": 978,
+      "path": "ledgers/reference/opus.jsonl"
+    }
+  },
+  "loader_state": {
+    "cand_counter": 822,
+    "deferred": [
+      {
+        "candidate_id": "cand-000770",
+        "defer_count": 2,
+        "first_step": 31,
+        "lane": "math_science",
+        "last_score": -0.17463801233957482,
+        "spans": [
+          {
+            "doc_id": "src_math_textbooks/train/00061",
+            "doc_index": 13,
+            "end": 171,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-56bd36818176",
+            "span_id": "shd-math_science-train-56bd36818176:13:150-171",
+            "start": 150
+          },
+          {
+            "doc_id": "src_math_textbooks/train/00078",
+            "doc_index": 6,
+            "end": 107,
+            "epoch": 0,
+            "shard_id": "shd-math_science-train-d79ca19c09ac",
+            "span_id": "shd-math_science-train-d79ca19c09ac:6:0-107",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000775",
+        "defer_count": 2,
+        "first_step": 31,
+        "lane": "indic",
+        "last_score": -0.1260516420972339,
+        "spans": [
+          {
+            "doc_id": "src_indic_ta_verified/train/00011",
+            "doc_index": 18,
+            "end": 143,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-ca6702e9807e",
+            "span_id": "shd-indic-train-ca6702e9807e:18:142-143",
+            "start": 142
+          },
+          {
+            "doc_id": "src_indic_hi_verified/train/00001",
+            "doc_index": 1,
+            "end": 127,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-8eadc41d7a86",
+            "span_id": "shd-indic-train-8eadc41d7a86:1:0-127",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000801",
+        "defer_count": 1,
+        "first_step": 32,
+        "lane": "indic",
+        "last_score": -0.14763186652485966,
+        "spans": [
+          {
+            "doc_id": "src_indic_hi_verified/train/00015",
+            "doc_index": 15,
+            "end": 101,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-8eadc41d7a86",
+            "span_id": "shd-indic-train-8eadc41d7a86:15:30-101",
+            "start": 30
+          },
+          {
+            "doc_id": "src_indic_hi_verified/train/00002",
+            "doc_index": 2,
+            "end": 57,
+            "epoch": 1,
+            "shard_id": "shd-indic-train-8eadc41d7a86",
+            "span_id": "shd-indic-train-8eadc41d7a86:2:0-57",
+            "start": 0
+          }
+        ]
+      },
+      {
+        "candidate_id": "cand-000821",
+        "defer_count": 1,
+        "first_step": 32,
+        "lane": "anneal_reserve",
+        "last_score": -0.16814377390604465,
+        "spans": [
+          {
+            "doc_id": "src_anneal_curated/train/00031",
+            "doc_index": 7,
+            "end": 63,
+            "epoch": 1,
+            "shard_id": "shd-anneal_reserve-train-4d59d51d1e90",
+            "span_id": "shd-anneal_reserve-train-4d59d51d1e90:7:0-63",
+            "start": 0
+          },
+          {
+            "doc_id": "src_anneal_curated/train/00064",
+            "doc_index": 16,
+            "end": 52,
+            "epoch": 1,
+            "shard_id": "shd-anneal_reserve-train-f9c9f81a72f5",
+            "span_id": "shd-anneal_reserve-train-f9c9f81a72f5:16:0-52",
+            "start": 0
+          }
+        ]
+      }
+    ],
+    "loader_version": "tdes-loader/1.0+6da5a50dec.6891f0",
+    "recent": [
+      [
+        29,
+        [
+          "ps-d061d7d7936a0463",
+          "ps-1e0c9d1dbe5bbb4c",
+          "ps-fbefc2cf083c9875",
+          "ps-f1cfcffcb40b3d8d",
+          "ps-9a672aa74551e200",
+          "ps-048a5d74a7865c59",
+          "ps-73b2f85facb19f50",
+          "ps-bf577c98346ce184",
+          "ps-463b5fd0c1705ca0",
+          "ps-f3af351a4c098159",
+          "ps-6a70e3fd83983666",
+          "ps-15ac62e1896b89e8",
+          "ps-57121b14f6b20211",
+          "ps-251c4f36ca84fd50",
+          "ps-c6243b7c0eebc5e6",
+          "ps-988db956991f97b8"
+        ]
+      ],
+      [
+        30,
+        [
+          "ps-430ca0d85af170d7",
+          "ps-343c84da65be4b76",
+          "ps-465ec80fc8e0969e",
+          "ps-21406afa0457ef14",
+          "ps-fd64453efae425d2",
+          "ps-b7a82fb1d9a91b2f",
+          "ps-0d235e9cd7937571",
+          "ps-58db0df3c7e6caef",
+          "ps-876d1cab67d989c0",
+          "ps-e3bbc7122b19c6c2",
+          "ps-bb854f19ad8728f3",
+          "ps-dd3d8a9ce1cf2e86",
+          "ps-a4947eb456e195a4",
+          "ps-af32e0c9e2a39cf1",
+          "ps-b94f6935b6088537",
+          "ps-e9e989745ce50177"
+        ]
+      ],
+      [
+        31,
+        [
+          "ps-0b07eb38d9db735b",
+          "ps-022afe2b0e4a717a",
+          "ps-7f4816f78bafab88",
+          "ps-329f7dc044c740b0",
+          "ps-f8643740911652d2",
+          "ps-870815a87366c450",
+          "ps-e8b79f8876326f0a",
+          "ps-64fd3e99c80c47c6",
+          "ps-178ff4edb686a637",
+          "ps-4dbdba07cfe71c0b",
+          "ps-cdf278c5388f362b",
+          "ps-714282148aa7f683",
+          "ps-a3435eec24eeac26",
+          "ps-61559abf50f1414c",
+          "ps-313c2c67cc76d323",
+          "ps-a0cb370df42f3543"
+        ]
+      ],
+      [
+        32,
+        [
+          "ps-1de4c610a167c84c",
+          "ps-d770388d3230526c",
+          "ps-f7c24a23d4cbcc34",
+          "ps-38cc56212ceac27a",
+          "ps-669618a18d3eefab",
+          "ps-7a3f914a49e7409f",
+          "ps-dd30f47b5fe94d66",
+          "ps-205e40602bc53695",
+          "ps-3cb1d2bd805feb67",
+          "ps-363dd9b4f5e2c320",
+          "ps-02c9f649f2acd02d",
+          "ps-184c9ac1da77f9fb",
+          "ps-afcc9f0a6b4c7988",
+          "ps-8117737e07fe6286",
+          "ps-8d49b14a3ab00357",
+          "ps-ff530b3718c29f3e"
+        ]
+      ]
+    ],
+    "streams": {
+      "agentic": {
+        "buffer": [
+          [
+            56,
+            0
+          ],
+          [
+            61,
+            0
+          ],
+          [
+            31,
+            0
+          ],
+          [
+            12,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            62,
+            0
+          ],
+          [
+            55,
+            1
+          ]
+        ],
+        "epoch": 1,
+        "offset": 0,
+        "pos": 8
+      },
+      "anneal_reserve": {
+        "buffer": [
+          [
+            59,
+            0
+          ],
+          [
+            34,
+            0
+          ],
+          [
+            69,
+            0
+          ],
+          [
+            51,
+            0
+          ],
+          [
+            59,
+            1
+          ],
+          [
+            65,
+            1
+          ]
+        ],
+        "epoch": 1,
+        "offset": 0,
+        "pos": 38
+      },
+      "code": {
+        "buffer": [
+          [
+            61,
+            0
+          ],
+          [
+            38,
+            0
+          ],
+          [
+            63,
+            0
+          ],
+          [
+            150,
+            0
+          ],
+          [
+            174,
+            1
+          ],
+          [
+            35,
+            1
+          ]
+        ],
+        "epoch": 1,
+        "offset": 0,
+        "pos": 21
+      },
+      "general_web": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 84,
+        "pos": 86
+      },
+      "indic": {
+        "buffer": [],
+        "epoch": 1,
+        "offset": 17,
+        "pos": 59
+      },
+      "math_science": {
+        "buffer": [],
+        "epoch": 0,
+        "offset": 83,
+        "pos": 81
+      },
+      "reasoning": {
+        "buffer": [
+          [
+            46,
+            0
+          ],
+          [
+            59,
+            0
+          ],
+          [
+            48,
+            0
+          ],
+          [
+            60,
+            0
+          ],
+          [
+            60,
+            1
+          ],
+          [
+            59,
+            1
+          ],
+          [
+            48,
+            1
+          ]
+        ],
+        "epoch": 1,
+        "offset": 0,
+        "pos": 48
+      }
+    }
+  },
+  "mode": "fresh",
+  "optimizer_hash": "7bf387a001a0bc48cdbc99c7e3444f8d0001aa4e17f835106492bbe363a835ed",
+  "optimizer_t": 32,
+  "previous_checkpoint": null,
+  "rng_state": {
+    "note": "all data randomness is derived from (seed, lane, epoch); model init from seed; no other RNG is consumed",
+    "seed": 20260801
+  },
+  "run_id": "v5s06-0e5b60c85f",
+  "schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "scheduler": {
+    "next_lr": 0.001,
+    "step": 32
+  },
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "weights_hash": "5e49b0b888b74c6307a609f2430d50f4a316d4374f10752869812b9895c28656"
+}

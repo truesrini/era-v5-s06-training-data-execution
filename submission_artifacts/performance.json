@@ -1,0 +1,126 @@
+{
+  "definitions": {
+    "accepted_tokens_per_s_after_opus": "non-pad tokens of OPUS-accepted samples / wall seconds",
+    "loader_wait_fraction": "share of wall time the trainer waited for the loader (packing + OPUS scoring); single-process analogue of GPU idle time",
+    "packing_utilization": "non-pad positions / all positions (recounted from shards by the audit)",
+    "raw_tokens_per_s": "token positions processed by the optimizer (incl. padding) / train-loop wall seconds",
+    "useful_loss_bearing_tokens_per_s": "positions with loss_mask=1 / train-loop wall seconds"
+  },
+  "main_run": {
+    "accepted_tokens_per_s_after_opus": 5383.6,
+    "checkpoint_s": 0.3487,
+    "firewall_s": 0.6299,
+    "ledger_io_s": 2.6224,
+    "loader_wait_fraction": 0.4338,
+    "loader_wait_s": 5.0944,
+    "loss_bearing_fraction": 0.852585,
+    "loss_bearing_tokens": 55875,
+    "nonpad_tokens": 63223,
+    "opus": {
+      "acceptance_rate": 0.5235,
+      "candidate_tokens_scored": 120821,
+      "decisions": {
+        "accepted": 512,
+        "deferred": 160,
+        "rejected": 306
+      },
+      "rejection_rate_by_lane": {
+        "agentic": 0.2262,
+        "anneal_reserve": 0.2857,
+        "code": 0.3333,
+        "general_web": 0.0904,
+        "indic": 0.484,
+        "math_science": 0.1866,
+        "reasoning": 0.4737
+      }
+    },
+    "opus_scoring_s": 4.2019,
+    "packing_utilization": 0.964706,
+    "packing_verify_s": 0.6216,
+    "pad_only_baseline_utilization": 0.73774,
+    "padding_fraction": 0.035294,
+    "positions": 65536,
+    "raw_tokens_per_s": 5580.55,
+    "replay_latency_s": 0.115756,
+    "resume_latency_s": 0.479774,
+    "segments": [
+      {
+        "accounted_through_step": 20,
+        "steps": 20,
+        "tag": "fresh",
+        "wall_s": 7.166459
+      },
+      {
+        "accounted_through_step": 32,
+        "steps": 12,
+        "tag": "resume",
+        "wall_s": 4.577177
+      }
+    ],
+    "shard_cache": {
+      "cache_hit_rate": 0.5902,
+      "cache_hits": 2078,
+      "cache_misses": 1443,
+      "mean_shard_read_ms": 1.162
+    },
+    "steps": 32,
+    "train_compute_s": 2.0916,
+    "useful_loss_bearing_tokens_per_s": 4757.9,
+    "utilization_by_lane": {
+      "agentic": 0.8682,
+      "anneal_reserve": 0.9324,
+      "code": 0.9435,
+      "general_web": 1.0,
+      "indic": 1.0,
+      "math_science": 1.0,
+      "reasoning": 0.9242
+    },
+    "utilization_gain_vs_pad_only": 1.3077,
+    "wall_s": 11.7436
+  },
+  "other_branches": [
+    {
+      "branch": "fork-ad01c550",
+      "loss_tokens": 14171,
+      "positions": 16384,
+      "steps": 8,
+      "tag": "fork",
+      "wall_s": 3.216689
+    },
+    {
+      "branch": "reference",
+      "loss_tokens": 55875,
+      "positions": 65536,
+      "steps": 32,
+      "tag": "fresh",
+      "wall_s": 10.93866
+    },
+    {
+      "branch": "replay-main-s00008",
+      "loss_tokens": 14711,
+      "positions": 16384,
+      "steps": 8,
+      "tag": "replay",
+      "wall_s": 1.626213
+    }
+  ],
+  "reconciliation": {
+    "all_match": true,
+    "ledger_recount": {
+      "loss_tokens": 55875,
+      "nonpad_tokens": 63223,
+      "positions": 65536
+    },
+    "match": {
+      "loss_tokens": true,
+      "nonpad_tokens": true,
+      "positions": true
+    },
+    "note": "perf counts come from the training processes; the audit recounts the same quantities by rebuilding every consumed sample from its span refs",
+    "perf_counts": {
+      "loss_tokens": 55875,
+      "nonpad_tokens": 63223,
+      "positions": 65536
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "branch": "fork-ad01c550",
+  "checks": {
+    "first_fork_batch_differs_from_parent": true,
+    "fork_ledger_starts_with_branch_forked": true,
+    "fork_starts_at_divergence_step": true
+  },
+  "divergence_step": 13,
+  "final_step": 20,
+  "final_weights_hash": "b528c9d4805892aff35df96a4ca54dd470eb3b41e2705eaa15368219f0dd1787",
+  "fork_schedule_hash": "98a36e9d6fc002829874b2f8eddd844f6f786e04588f1c3ff54a86fd5acd252e",
+  "overrides": {
+    "mixture.stages.1.mixture": {
+      "agentic": 0.1,
+      "anneal_reserve": 0.0,
+      "code": 0.2,
+      "general_web": 0.12,
+      "indic": 0.28,
+      "math_science": 0.16,
+      "reasoning": 0.14
+    },
+    "opus.reject_quantile": 0.4
+  },
+  "parent_branch": "main",
+  "parent_checkpoint": "ckpt-main-s00012-ae048d3549",
+  "parent_schedule_hash": "1bbc44a6a1b62e048f8342aded26a5330c61a933c0c06bdd3832b299f3395555",
+  "parent_weights_hash": "ae048d3549be0113d2549812a7aa17a55714ea36ed14d2cd0a6cfe3041a675df",
+  "steps": [
+    {
+      "differs": true,
+      "fork_batch_id": "b00013-aa85c2be97f4",
+      "global_step": 13,
+      "parent_batch_id": "b00013-598047280e2a"
+    },
+    {
+      "differs": true,
+      "fork_batch_id": "b00014-de9ea5b24afc",
+      "global_step": 14,
+      "parent_batch_id": "b00014-0afa302c202a"
+    },
+    {
+      "differs": true,
+      "fork_batch_id": "b00015-3a029791edc9",
+      "global_step": 15,
+      "parent_batch_id": "b00015-9d6048d75f4e"
+    },
+    {
+      "differs": true,
+      "fork_batch_id": "b00016-0132925353b4",
+      "global_step": 16,
+      "parent_batch_id": "b00016-05b741664b00"
+    },
+    {
+      "differs": true,
+      "fork_batch_id": "b00017-4d21f70228e8",
+      "global_step": 17,
+      "parent_batch_id": "b00017-4ee3221fd0be"
+    },
+    {
+      "differs": true,
+      "fork_batch_id": "b00018-5120fea89927",
+      "global_step": 18,
+      "parent_batch_id": "b00018-ec8234895107"
+    },
+    {
+      "differs": true,
+      "fork_batch_id": "b00019-bceeee925cf9",
+      "global_step": 19,
+      "parent_batch_id": "b00019-600015094a8e"
+    },
+    {
+      "differs": true,
+      "fork_batch_id": "b00020-ad9d0d5d7486",
+      "global_step": 20,
+      "parent_batch_id": "b00020-fd0ea65a01f4"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "general_web",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "da1acf0653749d231b6c5f65cc07dc7ff03b89b32031523b0432ad8a1289f4a2",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_web_india_news/train/00009",
+    "src_web_india_news/train/00010",
+    "src_web_india_news/train/00011",
+    "src_web_india_news/train/00012",
+    "src_web_india_news/train/00013",
+    "src_web_india_news/train/00014",
+    "src_web_india_news/train/00015",
+    "src_web_india_news/train/00016",
+    "src_web_india_news/train/00017",
+    "src_web_india_news/train/00018",
+    "src_web_india_news/train/00019",
+    "src_web_india_news/train/00020",
+    "src_web_india_news/train/00021",
+    "src_web_india_news/train/00022",
+    "src_web_india_news/train/00023",
+    "src_web_india_news/train/00024",
+    "src_web_india_news/train/00025",
+    "src_web_india_news/train/00026",
+    "src_web_india_news/train/00027",
+    "src_web_india_news/train/00028",
+    "src_web_india_news/train/00029",
+    "src_web_india_news/train/00030",
+    "src_web_india_news/train/00031",
+    "src_web_india_news/train/00032"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "8657f51b6b42296ce779e29e196feb191b9b9db8210d5b07db992ba2a9270703",
+    "tokens.npy": "ce503d6a9689c985364b101c7c2a1a8eff87851c8428294d22565b61243643da",
+    "train_on.npy": "a9b0bb68c4ca254073d6c68b3ad15d9e91bd388e20204148ab5a88b4bffc0ce8"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "licensed-news"
+  ],
+  "loss_bearing_token_count": 4140,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "295b857b3ef271c73ed045a0d2462b29d9b9a86d2fd0aef086f84825bceef078",
+  "n_docs": 24,
+  "never_train": false,
+  "packing_policy": "concat_chop",
+  "parent_shard_ids": [],
+  "path": "shards/shd-general_web-train-da1acf065374",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-general_web-train-da1acf065374",
+  "source_ids": [
+    "src_web_india_news"
+  ],
+  "split": "train",
+  "token_count": 4140,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

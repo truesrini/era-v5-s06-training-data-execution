@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.npy binary
+*.npz binary
+# generated artifacts are hash-verified byte for byte: never convert line endings
+submission_artifacts/** -text

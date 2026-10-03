@@ -1,0 +1,54 @@
+{
+  "docs": [
+    {
+      "benchmark_id": null,
+      "doc_hash": "527a1773bad0f678ddbfaecdde9f2f78cea963fb375900ccdb3f76b0c530a9ee",
+      "doc_id": "src_agentic_tierA/validation/00000",
+      "doc_index": 0,
+      "kind": "agentic",
+      "language": "en",
+      "length": 99,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 0
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "0d5e2b8a7215c26cf5d2acab341ebf4dd58e621dea2300016042a857ebcea5b7",
+      "doc_id": "src_agentic_tierA/validation/00001",
+      "doc_index": 1,
+      "kind": "agentic",
+      "language": "en",
+      "length": 103,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 99
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "546b980a686336b8110f57f741431c7c630c1a6ca07cdcefc11f0c7516b265ab",
+      "doc_id": "src_agentic_tierA/validation/00002",
+      "doc_index": 2,
+      "kind": "agentic",
+      "language": "en",
+      "length": 116,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 202
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "cc101b9a46d4dfbf73eb3545e1c67ad42672427da5559617267227f2e1ca2690",
+      "doc_id": "src_agentic_tierA/validation/00003",
+      "doc_index": 3,
+      "kind": "agentic",
+      "language": "en",
+      "length": 108,
+      "script": "Latn",
+      "source_id": "src_agentic_tierA",
+      "start": 318
+    }
+  ],
+  "format": "tdes-shard-v1",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

@@ -1,0 +1,1510 @@
+{
+  "checkpoints": [
+    {
+      "checkpoint_id": "ckpt-fork-ad01c550-s00016-6a84451c0b",
+      "consumption_bound": true,
+      "consumption_offset": 42,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 69,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 133,
+      "path": "checkpoints/fork-ad01c550/step_00016",
+      "step": 16,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-fork-ad01c550-s00020-b528c9d480",
+      "consumption_bound": true,
+      "consumption_offset": 83,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 138,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 277,
+      "path": "checkpoints/fork-ad01c550/step_00020",
+      "step": 20,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-main-s00004-7e7b48a44b",
+      "consumption_bound": true,
+      "consumption_offset": 41,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 69,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 120,
+      "path": "checkpoints/main/step_00004",
+      "step": 4,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-main-s00008-d8a1a817d2",
+      "consumption_bound": true,
+      "consumption_offset": 82,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 138,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 239,
+      "path": "checkpoints/main/step_00008",
+      "step": 8,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-main-s00012-ae048d3549",
+      "consumption_bound": true,
+      "consumption_offset": 123,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 207,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 358,
+      "path": "checkpoints/main/step_00012",
+      "step": 12,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-main-s00016-1838ca64f7",
+      "consumption_bound": true,
+      "consumption_offset": 164,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 276,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 478,
+      "path": "checkpoints/main/step_00016",
+      "step": 16,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-main-s00020-59ce18a967",
+      "consumption_bound": true,
+      "consumption_offset": 205,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 345,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 609,
+      "path": "checkpoints/main/step_00020",
+      "step": 20,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-main-s00024-0e0d76e34d",
+      "consumption_bound": true,
+      "consumption_offset": 251,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 415,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 765,
+      "path": "checkpoints/main/step_00024",
+      "step": 24,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-main-s00028-4a8c4a0bf9",
+      "consumption_bound": true,
+      "consumption_offset": 292,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 484,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 889,
+      "path": "checkpoints/main/step_00028",
+      "step": 28,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-main-s00032-5e49b0b888",
+      "consumption_bound": true,
+      "consumption_offset": 333,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 553,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 1010,
+      "path": "checkpoints/main/step_00032",
+      "step": 32,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-reference-s00032-5e49b0b888",
+      "consumption_bound": true,
+      "consumption_offset": 321,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 545,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 978,
+      "path": "checkpoints/reference/step_00032",
+      "step": 32,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-replay-main-s00008-s00012-ae048d3549",
+      "consumption_bound": true,
+      "consumption_offset": 42,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 69,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 0,
+      "path": "checkpoints/replay-main-s00008/step_00012",
+      "step": 12,
+      "weights_ok": true
+    },
+    {
+      "checkpoint_id": "ckpt-replay-main-s00008-s00016-1838ca64f7",
+      "consumption_bound": true,
+      "consumption_offset": 83,
+      "last_committed_step_matches": true,
+      "learning_bound": true,
+      "learning_offset": 138,
+      "offset_points_at_own_checkpoint_event": true,
+      "ok": true,
+      "opus_bound": true,
+      "opus_offset": 0,
+      "path": "checkpoints/replay-main-s00008/step_00016",
+      "step": 16,
+      "weights_ok": true
+    }
+  ],
+  "checks": [
+    {
+      "detail": "12 ledgers, 4490 records, every prev_hash/event_hash verified",
+      "evidence": null,
+      "name": "ledger_hash_chains_valid",
+      "passed": true,
+      "section": "ledgers"
+    },
+    {
+      "detail": "13 checkpoints: weights hash, ledger offset+hash, offset == own checkpoint_saved event, last committed step and weights agree",
+      "evidence": "reports/audit_report.json#checkpoints",
+      "name": "checkpoints_bound_to_ledger_offsets",
+      "passed": true,
+      "section": "checkpoints"
+    },
+    {
+      "detail": "steps 1..32 each committed exactly once (duplicates=[], gaps=[]); 4 uncommitted records superseded by an explicit rollback record",
+      "evidence": "ledgers/main/consumption.jsonl",
+      "name": "committed_stream_has_no_gaps_or_repeats",
+      "passed": true,
+      "section": "stream"
+    },
+    {
+      "detail": "each step has 8 microbatches whose samples equal the batch_planned sample list",
+      "evidence": null,
+      "name": "every_step_complete",
+      "passed": true,
+      "section": "stream"
+    },
+    {
+      "detail": "32/32 batch hashes equal the reference run; final weights 5e49b0b888b7 == reference 5e49b0b888b7",
+      "evidence": null,
+      "name": "resumed_stream_equals_uninterrupted_run",
+      "passed": true,
+      "section": "resume"
+    },
+    {
+      "detail": "158154 consumed tokens across 4 branches re-scanned against 2315 eval 12-gram fingerprints and shard permissions: 0 violations",
+      "evidence": null,
+      "name": "no_eval_or_validation_token_in_any_trained_batch",
+      "passed": true,
+      "section": "firewall"
+    },
+    {
+      "detail": "13 validation reads logged, all eval-only (gradient=false)",
+      "evidence": "ledgers/firewall.jsonl",
+      "name": "validation_reads_are_gradient_free",
+      "passed": true,
+      "section": "firewall"
+    },
+    {
+      "detail": "12 block/quarantine events in the firewall ledger",
+      "evidence": "ledgers/firewall.jsonl",
+      "name": "blocked_events_recorded",
+      "passed": true,
+      "section": "firewall"
+    },
+    {
+      "detail": "512 consumed samples rebuilt from span refs: sample ids, sequence hashes and loss-mask hashes identical",
+      "evidence": null,
+      "name": "packed_samples_rebuild_bit_exact",
+      "passed": true,
+      "section": "packing"
+    },
+    {
+      "detail": "512 samples: no loss on pads, no loss across segment ends, position ids reset per segment, block-causal attention, structured samples never split",
+      "evidence": null,
+      "name": "mask_and_position_invariants",
+      "passed": true,
+      "section": "packing"
+    },
+    {
+      "detail": "every sample used its lane's packing policy",
+      "evidence": null,
+      "name": "lane_packing_policy_applied",
+      "passed": true,
+      "section": "packing"
+    },
+    {
+      "detail": "ledger counts {'positions': 65536, 'nonpad_tokens': 63223, 'loss_tokens': 55875} == recount from shards {'positions': 65536, 'nonpad_tokens': 63223, 'loss_tokens': 55875}",
+      "evidence": null,
+      "name": "ledger_token_counts_reconstruct",
+      "passed": true,
+      "section": "packing"
+    },
+    {
+      "detail": "per stage, consumed sequences per lane equal the compiled per-step quotas exactly",
+      "evidence": null,
+      "name": "actual_shares_equal_compiled_quotas",
+      "passed": true,
+      "section": "mixture"
+    },
+    {
+      "detail": "foundation max|dev|=0.0029 (tol 0.0200); reasoning_midtrain max|dev|=0.0044 (tol 0.0200); anneal max|dev|=0.0066 (tol 0.0200)",
+      "evidence": "reports/audit_report.json#mixture",
+      "name": "planned_vs_actual_shares_within_tolerance",
+      "passed": true,
+      "section": "mixture"
+    },
+    {
+      "detail": "indic/agentic/reasoning floors met in all 32 committed steps (0 violations)",
+      "evidence": null,
+      "name": "protected_floors_held_every_step",
+      "passed": true,
+      "section": "mixture"
+    },
+    {
+      "detail": "anneal-reserve shards consumed only in the anneal stage",
+      "evidence": null,
+      "name": "anneal_reserve_fenced",
+      "passed": true,
+      "section": "mixture"
+    },
+    {
+      "detail": "512/512 consumed samples link to an accepted OPUS record",
+      "evidence": null,
+      "name": "every_consumed_sample_has_accepted_decision",
+      "passed": true,
+      "section": "opus"
+    },
+    {
+      "detail": "accepted=512 rejected=306 deferred=160 protected_floor_override=42; reasons={'proxy_utility_above_threshold': 445, 'quota_full_above_threshold': 160, 'protected_floor_override': 42, 'quota_fill_below_threshold': 25, 'low_proxy_utility': 273, 'quota_pressure': 29, 'stage_mismatch': 1, 'duplicate': 3}",
+      "evidence": "ledgers/main/opus.jsonl",
+      "name": "all_decision_kinds_exercised",
+      "passed": true,
+      "section": "opus"
+    },
+    {
+      "detail": "0 rejected/deferred candidates were consumed",
+      "evidence": null,
+      "name": "rejected_or_deferred_candidates_never_consumed",
+      "passed": true,
+      "section": "opus"
+    },
+    {
+      "detail": "978 records carry 12 required fields",
+      "evidence": null,
+      "name": "decision_records_complete",
+      "passed": true,
+      "section": "opus"
+    },
+    {
+      "detail": "512 sample learning records; 0 consumed samples without one",
+      "evidence": null,
+      "name": "every_consumed_sample_has_learning_record",
+      "passed": true,
+      "section": "learning"
+    },
+    {
+      "detail": "55875 token-level losses; per-sample means equal ledger loss_before and link to span/shard/doc",
+      "evidence": null,
+      "name": "token_trace_reconciles_with_ledger",
+      "passed": true,
+      "section": "learning"
+    },
+    {
+      "detail": "32 shard report cards (loss, ppl, delta, grad norm, OPUS score, class)",
+      "evidence": "reports/learning_report.json",
+      "name": "shard_report_cards_written",
+      "passed": true,
+      "section": "learning"
+    },
+    {
+      "detail": "replay-main-s00008: 8 steps, batch hashes + token spans + post-step weights equal to 'main'",
+      "evidence": null,
+      "name": "replay_ledger_matches_original",
+      "passed": true,
+      "section": "replay"
+    },
+    {
+      "detail": "fork-ad01c550: first record is branch_forked at step 13 with the parent's ledger offset 123; lineage = main[1..12] + fork-ad01c550[13..20]",
+      "evidence": null,
+      "name": "fork_lineage_explicit",
+      "passed": true,
+      "section": "fork"
+    }
+  ],
+  "firewall": {
+    "block_events": [
+      {
+        "actor": null,
+        "reason": null,
+        "seq": 1,
+        "shard_id": "shd-general_web-train-785bb33ff511",
+        "split": null,
+        "type": "shard_quarantined"
+      },
+      {
+        "actor": "drill:inject_test_shard_into_train_pool",
+        "reason": "test_shard_never_train",
+        "seq": 2,
+        "shard_id": "shd-eval-test-3d6cd76c969c",
+        "split": "test",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_test_shard_into_train_pool",
+        "reason": "test_shard_never_train",
+        "seq": 3,
+        "shard_id": "shd-eval-test-3c9fd14fbdc2",
+        "split": "test",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_validation_shard_into_train_pool",
+        "reason": "validation_shard_never_gradient_bearing",
+        "seq": 4,
+        "shard_id": "shd-agentic-validation-e666184d5a0a",
+        "split": "validation",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_validation_shard_into_train_pool",
+        "reason": "validation_shard_never_gradient_bearing",
+        "seq": 5,
+        "shard_id": "shd-anneal_reserve-validation-bc79ac62a9a6",
+        "split": "validation",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_validation_shard_into_train_pool",
+        "reason": "validation_shard_never_gradient_bearing",
+        "seq": 6,
+        "shard_id": "shd-code-validation-0b7f08193786",
+        "split": "validation",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_validation_shard_into_train_pool",
+        "reason": "validation_shard_never_gradient_bearing",
+        "seq": 7,
+        "shard_id": "shd-general_web-validation-5f6e58cbbaf8",
+        "split": "validation",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_validation_shard_into_train_pool",
+        "reason": "validation_shard_never_gradient_bearing",
+        "seq": 8,
+        "shard_id": "shd-indic-validation-5a2be7228ff9",
+        "split": "validation",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_validation_shard_into_train_pool",
+        "reason": "validation_shard_never_gradient_bearing",
+        "seq": 9,
+        "shard_id": "shd-math_science-validation-4f4e15f250fc",
+        "split": "validation",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_validation_shard_into_train_pool",
+        "reason": "validation_shard_never_gradient_bearing",
+        "seq": 10,
+        "shard_id": "shd-reasoning-validation-d6e1a95c39e4",
+        "split": "validation",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:inject_quarantined_shard",
+        "reason": "contamination_status=contaminated",
+        "seq": 11,
+        "shard_id": "shd-general_web-train-785bb33ff511",
+        "split": "train",
+        "type": "shard_blocked"
+      },
+      {
+        "actor": "drill:eval_tokens_in_candidate_batch",
+        "reason": "shard shd-eval-test-3c9fd14fbdc2 is not an admitted training shard",
+        "seq": 12,
+        "shard_id": null,
+        "split": null,
+        "type": "batch_blocked"
+      }
+    ],
+    "scanned_tokens": 158154,
+    "validation_reads": 13,
+    "violations": []
+  },
+  "fork": {
+    "branch": "fork-ad01c550",
+    "divergence_step": 13,
+    "lineage_steps": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "learning": {
+    "classification_counts": {
+      "useful": 32
+    },
+    "sample_records": 512,
+    "token_trace_rows": 55875
+  },
+  "ledger_chains": {
+    "ledgers/firewall.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 31
+    },
+    "ledgers/fork-ad01c550/consumption.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 83
+    },
+    "ledgers/fork-ad01c550/learning.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 138
+    },
+    "ledgers/fork-ad01c550/opus.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 277
+    },
+    "ledgers/main/consumption.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 333
+    },
+    "ledgers/main/learning.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 553
+    },
+    "ledgers/main/opus.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 1010
+    },
+    "ledgers/reference/consumption.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 321
+    },
+    "ledgers/reference/learning.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 545
+    },
+    "ledgers/reference/opus.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 978
+    },
+    "ledgers/replay-main-s00008/consumption.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 83
+    },
+    "ledgers/replay-main-s00008/learning.jsonl": {
+      "chain_ok": true,
+      "first_bad": null,
+      "records": 138
+    }
+  },
+  "mixture": {
+    "floor_violations": [],
+    "stages": [
+      {
+        "abs_deviation": {
+          "agentic": 0.002292,
+          "anneal_reserve": 0.0,
+          "code": 0.002083,
+          "general_web": 0.002917,
+          "indic": 0.002292,
+          "math_science": 0.001458,
+          "reasoning": 0.002292
+        },
+        "actual_equals_compiled_quota": true,
+        "actual_share_loss_tokens": {
+          "agentic": 0.040557,
+          "anneal_reserve": 0.0,
+          "code": 0.205705,
+          "general_web": 0.34613,
+          "indic": 0.195444,
+          "math_science": 0.172888,
+          "reasoning": 0.039275
+        },
+        "actual_share_sequences": {
+          "agentic": 0.067708,
+          "anneal_reserve": 0.0,
+          "code": 0.197917,
+          "general_web": 0.322917,
+          "indic": 0.182292,
+          "math_science": 0.161458,
+          "reasoning": 0.067708
+        },
+        "compiled_quota_share": {
+          "agentic": 0.067708,
+          "anneal_reserve": 0.0,
+          "code": 0.197917,
+          "general_web": 0.322917,
+          "indic": 0.182292,
+          "math_science": 0.161458,
+          "reasoning": 0.067708
+        },
+        "max_abs_deviation": 0.002917,
+        "planned_share": {
+          "agentic": 0.07,
+          "anneal_reserve": 0.0,
+          "code": 0.2,
+          "general_web": 0.32,
+          "indic": 0.18,
+          "math_science": 0.16,
+          "reasoning": 0.07
+        },
+        "protected_floors": {
+          "agentic": 0.0625,
+          "indic": 0.125,
+          "reasoning": 0.0625
+        },
+        "stage": "foundation",
+        "steps": [
+          1,
+          12
+        ],
+        "tolerance": 0.02
+      },
+      {
+        "abs_deviation": {
+          "agentic": 0.001458,
+          "anneal_reserve": 0.0,
+          "code": 0.003125,
+          "general_web": 0.004375,
+          "indic": 0.002917,
+          "math_science": 0.001458,
+          "reasoning": 0.00125
+        },
+        "actual_equals_compiled_quota": true,
+        "actual_share_loss_tokens": {
+          "agentic": 0.060086,
+          "anneal_reserve": 0.0,
+          "code": 0.214875,
+          "general_web": 0.256049,
+          "indic": 0.202283,
+          "math_science": 0.184738,
+          "reasoning": 0.08197
+        },
+        "actual_share_sequences": {
+          "agentic": 0.098958,
+          "anneal_reserve": 0.0,
+          "code": 0.203125,
+          "general_web": 0.223958,
+          "indic": 0.177083,
+          "math_science": 0.161458,
+          "reasoning": 0.135417
+        },
+        "compiled_quota_share": {
+          "agentic": 0.098958,
+          "anneal_reserve": 0.0,
+          "code": 0.203125,
+          "general_web": 0.223958,
+          "indic": 0.177083,
+          "math_science": 0.161458,
+          "reasoning": 0.135417
+        },
+        "max_abs_deviation": 0.004375,
+        "planned_share": {
+          "agentic": 0.0975,
+          "anneal_reserve": 0.0,
+          "code": 0.2,
+          "general_web": 0.228333,
+          "indic": 0.18,
+          "math_science": 0.16,
+          "reasoning": 0.134167
+        },
+        "protected_floors": {
+          "agentic": 0.0625,
+          "indic": 0.125,
+          "reasoning": 0.0625
+        },
+        "stage": "reasoning_midtrain",
+        "steps": [
+          13,
+          24
+        ],
+        "tolerance": 0.02
+      },
+      {
+        "abs_deviation": {
+          "agentic": 0.006237,
+          "anneal_reserve": 0.001002,
+          "code": 0.002363,
+          "general_web": 0.0,
+          "indic": 0.000298,
+          "math_science": 0.00662,
+          "reasoning": 0.004045
+        },
+        "actual_equals_compiled_quota": true,
+        "actual_share_loss_tokens": {
+          "agentic": 0.077848,
+          "anneal_reserve": 0.188194,
+          "code": 0.167966,
+          "general_web": 0.0,
+          "indic": 0.271763,
+          "math_science": 0.188277,
+          "reasoning": 0.105953
+        },
+        "actual_share_sequences": {
+          "agentic": 0.109375,
+          "anneal_reserve": 0.265625,
+          "code": 0.132812,
+          "general_web": 0.0,
+          "indic": 0.203125,
+          "math_science": 0.140625,
+          "reasoning": 0.148438
+        },
+        "compiled_quota_share": {
+          "agentic": 0.109375,
+          "anneal_reserve": 0.265625,
+          "code": 0.132812,
+          "general_web": 0.0,
+          "indic": 0.203125,
+          "math_science": 0.140625,
+          "reasoning": 0.148438
+        },
+        "max_abs_deviation": 0.00662,
+        "planned_share": {
+          "agentic": 0.103138,
+          "anneal_reserve": 0.266627,
+          "code": 0.135175,
+          "general_web": 0.0,
+          "indic": 0.203423,
+          "math_science": 0.147245,
+          "reasoning": 0.144393
+        },
+        "protected_floors": {
+          "agentic": 0.0625,
+          "indic": 0.125,
+          "reasoning": 0.0625
+        },
+        "stage": "anneal",
+        "steps": [
+          25,
+          32
+        ],
+        "tolerance": 0.02
+      }
+    ],
+    "tolerance_rule": "max(0.02, 2 / sequences_in_stage)"
+  },
+  "opus": {
+    "by_lane": {
+      "agentic": {
+        "accepted": 46,
+        "deferred": 19,
+        "rejected": 19
+      },
+      "anneal_reserve": {
+        "accepted": 34,
+        "deferred": 6,
+        "rejected": 16
+      },
+      "code": {
+        "accepted": 94,
+        "deferred": 30,
+        "rejected": 62
+      },
+      "general_web": {
+        "accepted": 105,
+        "deferred": 46,
+        "rejected": 15
+      },
+      "indic": {
+        "accepted": 95,
+        "deferred": 18,
+        "rejected": 106
+      },
+      "math_science": {
+        "accepted": 80,
+        "deferred": 29,
+        "rejected": 25
+      },
+      "reasoning": {
+        "accepted": 58,
+        "deferred": 12,
+        "rejected": 63
+      }
+    },
+    "protected_floor_overrides": 42,
+    "reasons": {
+      "duplicate": 3,
+      "low_proxy_utility": 273,
+      "protected_floor_override": 42,
+      "proxy_utility_above_threshold": 445,
+      "quota_fill_below_threshold": 25,
+      "quota_full_above_threshold": 160,
+      "quota_pressure": 29,
+      "stage_mismatch": 1
+    },
+    "records": 978,
+    "rejection_rate_by_lane": {
+      "agentic": 0.2262,
+      "anneal_reserve": 0.2857,
+      "code": 0.3333,
+      "general_web": 0.0904,
+      "indic": 0.484,
+      "math_science": 0.1866,
+      "reasoning": 0.4737
+    },
+    "status": {
+      "accepted": 512,
+      "deferred": 160,
+      "rejected": 306
+    }
+  },
+  "packing": {
+    "invariant_failures": [],
+    "loss_bearing_fraction": 0.852585,
+    "loss_tokens_by_lane": {
+      "agentic": 3130,
+      "anneal_reserve": 2270,
+      "code": 11233,
+      "general_web": 13255,
+      "indic": 11986,
+      "math_science": 10097,
+      "reasoning": 3904
+    },
+    "mismatches": [],
+    "positions_by_lane": {
+      "agentic": 5888,
+      "anneal_reserve": 4352,
+      "code": 12032,
+      "general_web": 13440,
+      "indic": 12160,
+      "math_science": 10240,
+      "reasoning": 7424
+    },
+    "rebuilt_samples": 512,
+    "totals": {
+      "loss_tokens": 55875,
+      "nonpad_tokens": 63223,
+      "positions": 65536
+    },
+    "utilization": 0.964706,
+    "utilization_by_lane": {
+      "agentic": 0.8682,
+      "anneal_reserve": 0.9324,
+      "code": 0.9435,
+      "general_web": 1.0,
+      "indic": 1.0,
+      "math_science": 1.0,
+      "reasoning": 0.9242
+    }
+  },
+  "queries": {
+    "what_preceded_the_largest_loss_spike": {
+      "loss_increase": 0.364413,
+      "opus_accepted_before_spike": [
+        {
+          "decision_id": "opd-00008-000",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.7870542866756185,
+          "shard_ids": [
+            "shd-general_web-train-d198d7a136b1",
+            "shd-general_web-train-da1acf065374"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-001",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.702113351047116,
+          "shard_ids": [
+            "shd-general_web-train-da1acf065374"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-002",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.6941353681849125,
+          "shard_ids": [
+            "shd-general_web-train-6610b2596e7e",
+            "shd-general_web-train-da1acf065374"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-003",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.6859040111272845,
+          "shard_ids": [
+            "shd-general_web-train-7f6313c11dd2",
+            "shd-general_web-train-e726c40dfb40"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-004",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.6433671924196652,
+          "shard_ids": [
+            "shd-general_web-train-896422f889e4",
+            "shd-general_web-train-d198d7a136b1"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-008",
+          "lane": "code",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.5078451110970515,
+          "shard_ids": [
+            "shd-code-train-c4632678cd6e"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-009",
+          "lane": "code",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.47130083391749883,
+          "shard_ids": [
+            "shd-code-train-c4632678cd6e"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-010",
+          "lane": "code",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.4710017123997284,
+          "shard_ids": [
+            "shd-code-train-f7edc679ba1d"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-011",
+          "lane": "code",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.4436596385560198,
+          "shard_ids": [
+            "shd-code-train-c4632678cd6e"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-014",
+          "lane": "math_science",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.49254551963972176,
+          "shard_ids": [
+            "shd-math_science-train-512d6b0ff386"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-015",
+          "lane": "math_science",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.429837995905257,
+          "shard_ids": [
+            "shd-math_science-train-512d6b0ff386",
+            "shd-math_science-train-551548043c5e"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-017",
+          "lane": "indic",
+          "reason": "protected_floor_override",
+          "score": 0.2652794069353118,
+          "shard_ids": [
+            "shd-indic-train-be029172628d",
+            "shd-indic-train-ca6702e9807e"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-018",
+          "lane": "indic",
+          "reason": "protected_floor_override",
+          "score": 0.24814592324198728,
+          "shard_ids": [
+            "shd-indic-train-be029172628d"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-019",
+          "lane": "indic",
+          "reason": "quota_fill_below_threshold",
+          "score": 0.20624196647633103,
+          "shard_ids": [
+            "shd-indic-train-ca6702e9807e"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-026",
+          "lane": "reasoning",
+          "reason": "protected_floor_override",
+          "score": 0.2504449987629131,
+          "shard_ids": [
+            "shd-reasoning-train-c3f8074fcf9a"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00008-028",
+          "lane": "agentic",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.3246105791938127,
+          "shard_ids": [
+            "shd-agentic-train-9173827a9592"
+          ],
+          "step": 8
+        },
+        {
+          "decision_id": "opd-00009-000",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.669004082734751,
+          "shard_ids": [
+            "shd-general_web-train-a40d1340a215"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-001",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.6653957475582873,
+          "shard_ids": [
+            "shd-general_web-train-a40d1340a215",
+            "shd-general_web-train-e726c40dfb40"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-002",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.6552873875509444,
+          "shard_ids": [
+            "shd-general_web-train-7f6313c11dd2",
+            "shd-general_web-train-896422f889e4"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-003",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.6451773804358402,
+          "shard_ids": [
+            "shd-general_web-train-e726c40dfb40"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-004",
+          "lane": "general_web",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.5933572969913152,
+          "shard_ids": [
+            "shd-general_web-train-6610b2596e7e",
+            "shd-general_web-train-a40d1340a215"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-008",
+          "lane": "code",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.4553340773363853,
+          "shard_ids": [
+            "shd-code-train-6b4e59183e95"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-009",
+          "lane": "code",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.42135217992982926,
+          "shard_ids": [
+            "shd-code-train-c9bbe04bac8d"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-010",
+          "lane": "code",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.39707988405015915,
+          "shard_ids": [
+            "shd-code-train-f7edc679ba1d"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-013",
+          "lane": "math_science",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.49164884122087954,
+          "shard_ids": [
+            "shd-math_science-train-512d6b0ff386",
+            "shd-math_science-train-56bd36818176"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-014",
+          "lane": "math_science",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.4322926495316696,
+          "shard_ids": [
+            "shd-math_science-train-551548043c5e"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-015",
+          "lane": "math_science",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.3965435269360803,
+          "shard_ids": [
+            "shd-math_science-train-512d6b0ff386",
+            "shd-math_science-train-56bd36818176"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-018",
+          "lane": "indic",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.3537858770219264,
+          "shard_ids": [
+            "shd-indic-train-8eadc41d7a86",
+            "shd-indic-train-ca6702e9807e"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-019",
+          "lane": "indic",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.32846863451890324,
+          "shard_ids": [
+            "shd-indic-train-ca6702e9807e"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-020",
+          "lane": "indic",
+          "reason": "quota_fill_below_threshold",
+          "score": 0.3281425744710712,
+          "shard_ids": [
+            "shd-indic-train-2ece284f9797",
+            "shd-indic-train-8eadc41d7a86"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-027",
+          "lane": "reasoning",
+          "reason": "protected_floor_override",
+          "score": 0.2022929717344067,
+          "shard_ids": [
+            "shd-reasoning-train-1c47f9da7dd9"
+          ],
+          "step": 9
+        },
+        {
+          "decision_id": "opd-00009-029",
+          "lane": "agentic",
+          "reason": "proxy_utility_above_threshold",
+          "score": 0.43831708230551814,
+          "shard_ids": [
+            "shd-agentic-train-a5ba98a2da48"
+          ],
+          "step": 9
+        }
+      ],
+      "spike_step": 9,
+      "stage": "foundation"
+    },
+    "which_shards_influenced_tokens": {
+      "shards": [
+        {
+          "lanes": [
+            "indic"
+          ],
+          "loss_tokens": 1011,
+          "shard_id": "shd-indic-train-8eadc41d7a86",
+          "spans": 17
+        },
+        {
+          "lanes": [
+            "math_science"
+          ],
+          "loss_tokens": 757,
+          "shard_id": "shd-math_science-train-56bd36818176",
+          "spans": 14
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 757,
+          "shard_id": "shd-general_web-train-d198d7a136b1",
+          "spans": 12
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 884,
+          "shard_id": "shd-general_web-train-e726c40dfb40",
+          "spans": 11
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 758,
+          "shard_id": "shd-general_web-train-6610b2596e7e",
+          "spans": 11
+        },
+        {
+          "lanes": [
+            "math_science"
+          ],
+          "loss_tokens": 755,
+          "shard_id": "shd-math_science-train-512d6b0ff386",
+          "spans": 11
+        },
+        {
+          "lanes": [
+            "indic"
+          ],
+          "loss_tokens": 756,
+          "shard_id": "shd-indic-train-3305107b346f",
+          "spans": 11
+        },
+        {
+          "lanes": [
+            "code"
+          ],
+          "loss_tokens": 979,
+          "shard_id": "shd-code-train-f7edc679ba1d",
+          "spans": 10
+        },
+        {
+          "lanes": [
+            "code"
+          ],
+          "loss_tokens": 860,
+          "shard_id": "shd-code-train-6b4e59183e95",
+          "spans": 10
+        },
+        {
+          "lanes": [
+            "math_science"
+          ],
+          "loss_tokens": 757,
+          "shard_id": "shd-math_science-train-d79ca19c09ac",
+          "spans": 10
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 758,
+          "shard_id": "shd-general_web-train-da1acf065374",
+          "spans": 10
+        },
+        {
+          "lanes": [
+            "code"
+          ],
+          "loss_tokens": 602,
+          "shard_id": "shd-code-train-c9bbe04bac8d",
+          "spans": 7
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 505,
+          "shard_id": "shd-general_web-train-a40d1340a215",
+          "spans": 6
+        },
+        {
+          "lanes": [
+            "math_science"
+          ],
+          "loss_tokens": 378,
+          "shard_id": "shd-math_science-train-551548043c5e",
+          "spans": 6
+        },
+        {
+          "lanes": [
+            "indic"
+          ],
+          "loss_tokens": 505,
+          "shard_id": "shd-indic-train-ca6702e9807e",
+          "spans": 6
+        },
+        {
+          "lanes": [
+            "indic"
+          ],
+          "loss_tokens": 505,
+          "shard_id": "shd-indic-train-be029172628d",
+          "spans": 6
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 378,
+          "shard_id": "shd-general_web-train-896422f889e4",
+          "spans": 5
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 252,
+          "shard_id": "shd-general_web-train-7f6313c11dd2",
+          "spans": 5
+        },
+        {
+          "lanes": [
+            "code"
+          ],
+          "loss_tokens": 598,
+          "shard_id": "shd-code-train-c4632678cd6e",
+          "spans": 5
+        },
+        {
+          "lanes": [
+            "reasoning"
+          ],
+          "loss_tokens": 335,
+          "shard_id": "shd-reasoning-train-b92ef5e889e1",
+          "spans": 5
+        },
+        {
+          "lanes": [
+            "agentic"
+          ],
+          "loss_tokens": 362,
+          "shard_id": "shd-agentic-train-9173827a9592",
+          "spans": 5
+        },
+        {
+          "lanes": [
+            "agentic"
+          ],
+          "loss_tokens": 203,
+          "shard_id": "shd-agentic-train-a5ba98a2da48",
+          "spans": 3
+        },
+        {
+          "lanes": [
+            "general_web"
+          ],
+          "loss_tokens": 253,
+          "shard_id": "shd-general_web-train-c44caa450caa",
+          "spans": 3
+        },
+        {
+          "lanes": [
+            "reasoning"
+          ],
+          "loss_tokens": 200,
+          "shard_id": "shd-reasoning-train-c3f8074fcf9a",
+          "spans": 3
+        },
+        {
+          "lanes": [
+            "reasoning"
+          ],
+          "loss_tokens": 138,
+          "shard_id": "shd-reasoning-train-1c47f9da7dd9",
+          "spans": 2
+        },
+        {
+          "lanes": [
+            "agentic"
+          ],
+          "loss_tokens": 144,
+          "shard_id": "shd-agentic-train-9f31a36166f3",
+          "spans": 2
+        },
+        {
+          "lanes": [
+            "reasoning"
+          ],
+          "loss_tokens": 136,
+          "shard_id": "shd-reasoning-train-fca2f5d1b1ce",
+          "spans": 2
+        },
+        {
+          "lanes": [
+            "indic"
+          ],
+          "loss_tokens": 126,
+          "shard_id": "shd-indic-train-2ece284f9797",
+          "spans": 1
+        },
+        {
+          "lanes": [
+            "agentic"
+          ],
+          "loss_tokens": 59,
+          "shard_id": "shd-agentic-train-c171a9233421",
+          "spans": 1
+        }
+      ],
+      "token_range": [
+        16384,
+        32768
+      ]
+    }
+  },
+  "replay": {
+    "branch": "replay-main-s00008",
+    "rows": [
+      {
+        "original": "2c434e546e5bc87e5e23faa4c6784db5e2eda61baad947c23d3ca2f02c86f687",
+        "replay": "2c434e546e5bc87e5e23faa4c6784db5e2eda61baad947c23d3ca2f02c86f687",
+        "step": 9,
+        "weights_equal": true
+      },
+      {
+        "original": "e9dbe5c449e68be785616709facaf92fbc33eb8378af81ceabe0aeff7a64a770",
+        "replay": "e9dbe5c449e68be785616709facaf92fbc33eb8378af81ceabe0aeff7a64a770",
+        "step": 10,
+        "weights_equal": true
+      },
+      {
+        "original": "4c59360ce0a35ed916fa25cebd21a6251a93179a9002f3b03e24de446ee84a64",
+        "replay": "4c59360ce0a35ed916fa25cebd21a6251a93179a9002f3b03e24de446ee84a64",
+        "step": 11,
+        "weights_equal": true
+      },
+      {
+        "original": "83fe46adf6848bc1e397e81fb3d35ecd348ef1bbe4b08ad950a146a73b3e5890",
+        "replay": "83fe46adf6848bc1e397e81fb3d35ecd348ef1bbe4b08ad950a146a73b3e5890",
+        "step": 12,
+        "weights_equal": true
+      },
+      {
+        "original": "598047280e2a846e34ffb57d79b7d8b0c47e8a95a0c1641c50c7d3f4d65e7883",
+        "replay": "598047280e2a846e34ffb57d79b7d8b0c47e8a95a0c1641c50c7d3f4d65e7883",
+        "step": 13,
+        "weights_equal": true
+      },
+      {
+        "original": "0afa302c202a05a942509e638d031947c481d9dfdd9a66daec2a6f555029df45",
+        "replay": "0afa302c202a05a942509e638d031947c481d9dfdd9a66daec2a6f555029df45",
+        "step": 14,
+        "weights_equal": true
+      },
+      {
+        "original": "9d6048d75f4e216df73eb03eb2bd951e27d1016d711bf86a603cac0c06ae64b2",
+        "replay": "9d6048d75f4e216df73eb03eb2bd951e27d1016d711bf86a603cac0c06ae64b2",
+        "step": 15,
+        "weights_equal": true
+      },
+      {
+        "original": "05b741664b0055feac0266b1f8125221279cb3d546c2c0194328164f337d70d7",
+        "replay": "05b741664b0055feac0266b1f8125221279cb3d546c2c0194328164f337d70d7",
+        "step": 16,
+        "weights_equal": true
+      }
+    ]
+  },
+  "resume_equivalence": {
+    "final_weights_equal": true,
+    "matching_steps": 32,
+    "total_steps": 32
+  },
+  "stream": {
+    "committed_steps": 32,
+    "duplicates": [],
+    "gaps": [],
+    "rolled_back_records": 4
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "docs": [
+    {
+      "benchmark_id": null,
+      "doc_hash": "a3ac7fe3c8012eeee36d916a1f51538629b090e39d91209eb5db03dd52f85c1b",
+      "doc_id": "src_reasoning_banded/validation/00000",
+      "doc_index": 0,
+      "kind": "reasoning",
+      "language": "en",
+      "length": 121,
+      "script": "Latn",
+      "source_id": "src_reasoning_banded",
+      "start": 0
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "5d27c3fa1b13524221e64f4ef86b19ae66a7d3501aa8f2a4a6c8d127cee8dee5",
+      "doc_id": "src_reasoning_banded/validation/00001",
+      "doc_index": 1,
+      "kind": "reasoning",
+      "language": "en",
+      "length": 120,
+      "script": "Latn",
+      "source_id": "src_reasoning_banded",
+      "start": 121
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "77026e25933532e092d242a101d8aa5718d21295ee0f784e68e4aa3328550582",
+      "doc_id": "src_reasoning_banded/validation/00002",
+      "doc_index": 2,
+      "kind": "reasoning",
+      "language": "en",
+      "length": 120,
+      "script": "Latn",
+      "source_id": "src_reasoning_banded",
+      "start": 241
+    },
+    {
+      "benchmark_id": null,
+      "doc_hash": "11673ead001290f26febacf3450a14854bbb2a5af75702ba44626a096e163e09",
+      "doc_id": "src_reasoning_banded/validation/00003",
+      "doc_index": 3,
+      "kind": "reasoning",
+      "language": "en",
+      "length": 107,
+      "script": "Latn",
+      "source_id": "src_reasoning_banded",
+      "start": 361
+    }
+  ],
+  "format": "tdes-shard-v1",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

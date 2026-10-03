@@ -1,0 +1,9 @@
+{
+  "file": "manifests/tokenizer.json",
+  "frozen": true,
+  "num_merges": 384,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85",
+  "trained_on_split": "train",
+  "vocab_size": 649
+}

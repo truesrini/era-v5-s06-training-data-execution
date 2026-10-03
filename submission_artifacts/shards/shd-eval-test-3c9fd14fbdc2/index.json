@@ -1,0 +1,150 @@
+{
+  "docs": [
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "c61e4968e247b4dc47644235cb6d5365b6cc2a94adb08c433b92e0c8233363ba",
+      "doc_id": "bench_mini_hiqa_v1/test/00000",
+      "doc_index": 0,
+      "kind": "plain",
+      "language": "hi",
+      "length": 158,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 0
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "bd41723e45d8d1f02f668800a2624379449a1c70a25a584ad4fabc1e3b5b70ea",
+      "doc_id": "bench_mini_hiqa_v1/test/00001",
+      "doc_index": 1,
+      "kind": "plain",
+      "language": "hi",
+      "length": 155,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 158
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "eb8d3183459e268963d9ecf24199db42bdd1929dfe78699be559f7d1ed7631f6",
+      "doc_id": "bench_mini_hiqa_v1/test/00002",
+      "doc_index": 2,
+      "kind": "plain",
+      "language": "hi",
+      "length": 151,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 313
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "520f0f32cc86186d49addbfdaea0aff35f56316427d92c829bcc50482be8dead",
+      "doc_id": "bench_mini_hiqa_v1/test/00003",
+      "doc_index": 3,
+      "kind": "plain",
+      "language": "hi",
+      "length": 155,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 464
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "b962020112d406a44accd9ba86e2d6e06bbb1143db177f51ff6fa6e0f44dec8f",
+      "doc_id": "bench_mini_hiqa_v1/test/00004",
+      "doc_index": 4,
+      "kind": "plain",
+      "language": "hi",
+      "length": 155,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 619
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "380f632f32b059dec1ea7737790e786133ad3edb4b7fa1a53f6e66b85cf424e4",
+      "doc_id": "bench_mini_hiqa_v1/test/00005",
+      "doc_index": 5,
+      "kind": "plain",
+      "language": "hi",
+      "length": 158,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 774
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "57c7769edb0c9b5d51571324fd3a81592cedabaa4bde6bb904326b6ca776df51",
+      "doc_id": "bench_mini_hiqa_v1/test/00006",
+      "doc_index": 6,
+      "kind": "plain",
+      "language": "hi",
+      "length": 149,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 932
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "8127003dd9d7e1d0ac858aadadf34bf4d1380aea150beb13b95bcd21a755cffa",
+      "doc_id": "bench_mini_hiqa_v1/test/00007",
+      "doc_index": 7,
+      "kind": "plain",
+      "language": "hi",
+      "length": 159,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 1081
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "8e8ea5c2f888607440d47578314f1d208a76864791a09c5bba9d9df37158a1d1",
+      "doc_id": "bench_mini_hiqa_v1/test/00008",
+      "doc_index": 8,
+      "kind": "plain",
+      "language": "hi",
+      "length": 155,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 1240
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "356f28a704429172d707077ece0c01df778a25820b8a08e9c8b38fa41235952d",
+      "doc_id": "bench_mini_hiqa_v1/test/00009",
+      "doc_index": 9,
+      "kind": "plain",
+      "language": "hi",
+      "length": 154,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 1395
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "b8b05c1d31407c4dfbb10ebe2153039c526fb67dc30dfd4b1b600d4cc39ea178",
+      "doc_id": "bench_mini_hiqa_v1/test/00010",
+      "doc_index": 10,
+      "kind": "plain",
+      "language": "hi",
+      "length": 158,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 1549
+    },
+    {
+      "benchmark_id": "bench_mini_hiqa_v1",
+      "doc_hash": "6fb1139ebfec0ec54a37944fb0d8090677962b6a4df6943855fd0d49ac2c7b4d",
+      "doc_id": "bench_mini_hiqa_v1/test/00011",
+      "doc_index": 11,
+      "kind": "plain",
+      "language": "hi",
+      "length": 156,
+      "script": "Deva",
+      "source_id": "bench_mini_hiqa_v1",
+      "start": 1707
+    }
+  ],
+  "format": "tdes-shard-v1",
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa"
+}

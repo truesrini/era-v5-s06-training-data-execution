@@ -1,0 +1,69 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "math_science",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "551548043c5e31a64e1d94c9bceaa904c820a35a09a0b405a7fe4c94afe1d0b9",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_math_textbooks/train/00000",
+    "src_math_textbooks/train/00001",
+    "src_math_textbooks/train/00002",
+    "src_math_textbooks/train/00003",
+    "src_math_textbooks/train/00004",
+    "src_math_textbooks/train/00005",
+    "src_math_textbooks/train/00006",
+    "src_math_textbooks/train/00007",
+    "src_math_textbooks/train/00008",
+    "src_math_textbooks/train/00009",
+    "src_math_textbooks/train/00010",
+    "src_math_textbooks/train/00011",
+    "src_math_textbooks/train/00012",
+    "src_math_textbooks/train/00013",
+    "src_math_textbooks/train/00014",
+    "src_math_textbooks/train/00015",
+    "src_math_textbooks/train/00016",
+    "src_math_textbooks/train/00017",
+    "src_math_textbooks/train/00018",
+    "src_math_textbooks/train/00019",
+    "src_math_textbooks/train/00020",
+    "src_math_textbooks/train/00021",
+    "src_math_textbooks/train/00022",
+    "src_math_textbooks/train/00023"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "42d976ad18e453ce3c759ae7974f8c9144653eada91dec7f4f666b126a90db46",
+    "tokens.npy": "e65e7fce220ff0dd8648397a475acc91682fdc8057127715a71490706a0e368a",
+    "train_on.npy": "845dcad212a3e47355b694284bceb731eca27d9d4ee18b7d9bb2e03501cd65b3"
+  },
+  "language": [
+    "en"
+  ],
+  "license": [
+    "cc-by-sa-4.0"
+  ],
+  "loss_bearing_token_count": 4244,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "9dafc491db11f94f7ba660b83676e9d7a6f91fa490c130d04d8a23e384c9e027",
+  "n_docs": 24,
+  "never_train": false,
+  "packing_policy": "concat_chop",
+  "parent_shard_ids": [],
+  "path": "shards/shd-math_science-train-551548043c5e",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Latn"
+  ],
+  "shard_id": "shd-math_science-train-551548043c5e",
+  "source_ids": [
+    "src_math_textbooks"
+  ],
+  "split": "train",
+  "token_count": 4244,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}

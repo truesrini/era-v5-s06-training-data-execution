@@ -1,0 +1,44 @@
+test_demo_succeeds_and_evidence_passes (tests.test_end_to_end.EndToEndTests) ... ok
+test_evidence_fails_when_an_artifact_is_tampered (tests.test_end_to_end.EndToEndTests)
+Evidence is derived, not asserted: corrupting a ledger record must flip the audit. ... ok
+test_fork_is_explicit (tests.test_end_to_end.EndToEndTests) ... ok
+test_replay_reproduces_ids_spans_hashes_and_weights (tests.test_end_to_end.EndToEndTests) ... ok
+test_resume_neither_skips_nor_repeats (tests.test_end_to_end.EndToEndTests) ... ok
+test_run_log_has_required_lines (tests.test_end_to_end.EndToEndTests) ... ok
+test_hash_chain_detects_tampering (tests.test_mixture_opus_ledger.LedgerTests) ... ok
+test_rollback_is_appended_not_deleted (tests.test_mixture_opus_ledger.LedgerTests) ... ok
+test_invalid_plans_are_rejected (tests.test_mixture_opus_ledger.MixtureTests) ... ok
+test_quotas_floors_and_shares (tests.test_mixture_opus_ledger.MixtureTests) ... ok
+test_loader_state_roundtrip (tests.test_mixture_opus_ledger.OpusTests) ... ok
+test_protected_floor_override_and_deferral (tests.test_mixture_opus_ledger.OpusTests) ... ok
+test_stage_mismatch_rejection (tests.test_mixture_opus_ledger.OpusTests) ... ok
+test_triage (tests.test_mixture_opus_ledger.OpusTests) ... ok
+test_attention_is_isolated_per_segment (tests.test_packing_model.ModelTests) ... ok
+test_gradient_matches_finite_differences (tests.test_packing_model.ModelTests) ... ok
+test_optimizer_state_roundtrip (tests.test_packing_model.ModelTests) ... ok
+test_concat_chop_windows_continue_the_stream_exactly (tests.test_packing_model.PackingTests) ... ok
+test_masks_positions_attention_for_every_policy (tests.test_packing_model.PackingTests) ... ok
+test_packing_lab_ordering (tests.test_packing_model.PackingTests) ... ok
+test_stream_state_roundtrip_reproduces_sequences (tests.test_packing_model.PackingTests) ... ok
+test_structured_samples_never_split_and_context_has_no_loss (tests.test_packing_model.PackingTests) ... ok
+test_admitted_shards_carry_no_eval_overlap (tests.test_shards_firewall.FirewallTests) ... ok
+test_build_is_reproducible (tests.test_shards_firewall.FirewallTests) ... ok
+test_never_train_shards_refused_at_pool_entry (tests.test_shards_firewall.FirewallTests) ... ok
+test_ngram_fingerprint_detects_copy (tests.test_shards_firewall.FirewallTests) ... ok
+test_serve_time_check_blocks_eval_and_validation_tokens (tests.test_shards_firewall.FirewallTests) ... ok
+test_contaminated_shard_has_clean_derivative_with_lineage (tests.test_shards_firewall.ShardTests) ... ok
+test_every_manifest_validates (tests.test_shards_firewall.ShardTests) ... ok
+test_modified_shard_is_refused (tests.test_shards_firewall.ShardTests) ... ok
+test_shard_files_are_sealed (tests.test_shards_firewall.ShardTests) ... ok
+test_wrong_tokenizer_hash_fails_validation (tests.test_shards_firewall.ShardTests) ... ok
+test_frozen_tokenizer_rejects_wrong_or_tampered_file (tests.test_tokenizer.TokenizerTests) ... ok
+test_loss_map_for_agentic_sample (tests.test_tokenizer.TokenizerTests) ... ok
+test_nfc_normalisation_is_indic_safe (tests.test_tokenizer.TokenizerTests) ... ok
+test_same_text_same_ids_and_roundtrip (tests.test_tokenizer.TokenizerTests) ... ok
+test_special_tokens_cannot_be_injected_from_text (tests.test_tokenizer.TokenizerTests) ... ok
+test_training_is_deterministic_and_hash_identifies_merges (tests.test_tokenizer.TokenizerTests) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 11.695s
+
+OK

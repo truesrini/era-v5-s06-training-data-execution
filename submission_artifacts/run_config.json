@@ -1,0 +1,131 @@
+{
+  "corpus": {
+    "scale": 1.0
+  },
+  "demo": {
+    "crash_after_microbatches": 3,
+    "crash_at_step": 21,
+    "fork_from_step": 12,
+    "fork_overrides": {
+      "mixture.stages.1.mixture": {
+        "agentic": 0.1,
+        "anneal_reserve": 0.0,
+        "code": 0.2,
+        "general_web": 0.12,
+        "indic": 0.28,
+        "math_science": 0.16,
+        "reasoning": 0.14
+      },
+      "opus.reject_quantile": 0.4
+    },
+    "fork_steps": 8,
+    "replay_from_step": 8,
+    "replay_to_step": 16
+  },
+  "mixture": {
+    "max_epochs": 10.0,
+    "stages": [
+      {
+        "end_frac": 0.375,
+        "mixture": {
+          "agentic": 0.07,
+          "anneal_reserve": 0.0,
+          "code": 0.2,
+          "general_web": 0.32,
+          "indic": 0.18,
+          "math_science": 0.16,
+          "reasoning": 0.07
+        },
+        "protected_floors": {
+          "agentic": 0.0625,
+          "indic": 0.125,
+          "reasoning": 0.0625
+        },
+        "stage": "foundation"
+      },
+      {
+        "end_frac": 0.75,
+        "mixture": {
+          "agentic": 0.1,
+          "anneal_reserve": 0.0,
+          "code": 0.2,
+          "general_web": 0.22,
+          "indic": 0.18,
+          "math_science": 0.16,
+          "reasoning": 0.14
+        },
+        "protected_floors": {
+          "agentic": 0.0625,
+          "indic": 0.125,
+          "reasoning": 0.0625
+        },
+        "stage": "reasoning_midtrain"
+      },
+      {
+        "end_frac": 1.0,
+        "mixture": {
+          "agentic": 0.1,
+          "anneal_reserve": 0.3,
+          "code": 0.12,
+          "general_web": 0.0,
+          "indic": 0.2,
+          "math_science": 0.14,
+          "reasoning": 0.14
+        },
+        "protected_floors": {
+          "agentic": 0.0625,
+          "indic": 0.125,
+          "reasoning": 0.0625
+        },
+        "stage": "anneal"
+      }
+    ],
+    "warmup_steps": 2
+  },
+  "model": {
+    "d_ff": 96,
+    "d_model": 48,
+    "dtype": "float32",
+    "init_std": 0.05
+  },
+  "opus": {
+    "dup_window_steps": 4,
+    "enabled": true,
+    "extra_candidates_frac": 0.5,
+    "max_defer": 2,
+    "proxy_lanes": [
+      "general_web",
+      "code",
+      "math_science"
+    ],
+    "proxy_sequences": 4,
+    "refill_rounds": 2,
+    "reject_quantile": 0.3
+  },
+  "seed": 20260801,
+  "shards": {
+    "max_docs_per_shard": 24
+  },
+  "tokenizer": {
+    "num_merges": 384
+  },
+  "train": {
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "checkpoint_every": 4,
+    "eps": 1e-08,
+    "grad_accum": 4,
+    "grad_clip": 1.0,
+    "lr": 0.01,
+    "micro_batch": 2,
+    "min_lr_frac": 0.1,
+    "packing_buffer": 8,
+    "seq_len": 128,
+    "total_steps": 32,
+    "warmup_steps": 4,
+    "weight_decay": 0.01,
+    "world_size": 2
+  }
+}

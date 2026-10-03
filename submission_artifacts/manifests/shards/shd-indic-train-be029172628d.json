@@ -1,0 +1,59 @@
+{
+  "benchmark_id": null,
+  "capability_lane": "indic",
+  "cleaning_pipeline_hash": "f6151a93de29cf0481434da669185390cc7a23180373d557d58c5d69234c336c",
+  "contamination_status": "clean",
+  "content_hash": "be029172628d2e3d129938235725f3419301c7283adac7ffb00f2194e087f4e7",
+  "dedup_status": "exact_dedup_v1",
+  "doc_ids": [
+    "src_indic_ta_verified/train/00041",
+    "src_indic_ta_verified/train/00042",
+    "src_indic_ta_verified/train/00043",
+    "src_indic_ta_verified/train/00044",
+    "src_indic_ta_verified/train/00045",
+    "src_indic_ta_verified/train/00046",
+    "src_indic_ta_verified/train/00047",
+    "src_indic_ta_verified/train/00048",
+    "src_indic_ta_verified/train/00049",
+    "src_indic_ta_verified/train/00050",
+    "src_indic_ta_verified/train/00051",
+    "src_indic_ta_verified/train/00052",
+    "src_indic_ta_verified/train/00053",
+    "src_indic_ta_verified/train/00054"
+  ],
+  "eval_overlap": null,
+  "files": {
+    "index.json": "b29cbbefa4a5c85f3ae082cc7506c57a699ea9545b24f97bb323aaa40b812ae0",
+    "tokens.npy": "38b8a3cb81f883e92753366a1af7b8cb5bcdc3d2502fa47cdee69f527c6220a3",
+    "train_on.npy": "c1a3bd7e89a0ad5b1c8fb1af3e3e5c31448fb892ad9133bb39faa36bdaec66a4"
+  },
+  "language": [
+    "ta"
+  ],
+  "license": [
+    "cc-by-4.0"
+  ],
+  "loss_bearing_token_count": 2220,
+  "manifest_format": "tdes-manifest-v1",
+  "manifest_hash": "eeb6ab2c242aac754b1bf9a98963c5aa1ef389a65154c2f71f2f1c122fe9b3ba",
+  "n_docs": 14,
+  "never_train": false,
+  "packing_policy": "concat_chop",
+  "parent_shard_ids": [],
+  "path": "shards/shd-indic-train-be029172628d",
+  "provenance_tier": [
+    "A"
+  ],
+  "reserve": null,
+  "script": [
+    "Taml"
+  ],
+  "shard_id": "shd-indic-train-be029172628d",
+  "source_ids": [
+    "src_indic_ta_verified"
+  ],
+  "split": "train",
+  "token_count": 2220,
+  "tokenizer_hash": "6755ee6fea85c6d219f81fc8ccd3f865cd44f6d8a6bdca0dd0f1ce8b561e40fa",
+  "tokenizer_version": "tdes-bpe-v1-6755ee6fea85"
+}
